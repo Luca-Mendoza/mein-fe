@@ -1,0 +1,293 @@
+<section class="container-home">
+  <div class="left">
+    <header
+      class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding"
+    >
+      <div class="home-header__content">
+        <h1 class="home-header__title">
+          <a class="home-header__title-link" href="/">Luca D. Mendoza</a>
+        </h1>
+        <h2 class="home-header__subtitle">Senior Frontend Engineer</h2>
+        <p class="home-header__description">
+          I build pixel-perfect, engaging,<br />
+          and accessible digital experiences.
+        </p>
+        <nav
+          class="home-nav home-nav--hidden home-nav--lg"
+          aria-label="In-page jump links"
+        >
+          <ul class="home-nav__list">
+            <li class="home-nav__item">
+              <a
+                (click)="sectionAbout()"
+                class="home-nav__link home-nav__link--group"
+              >
+                <span
+                  class="home-nav__indicator home-nav__indicator--transition home-nav__indicator--hover home-nav__indicator--focus home-nav__indicator--motion"
+                ></span>
+                <span
+                  class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  >About</span
+                >
+              </a>
+            </li>
+            <li class="home-nav__item">
+              <a
+                class="home-nav__link home-nav__link--group"
+                (click)="sectionExperience()"
+              >
+                <span
+                  class="home-nav__indicator home-nav__indicator--transition home-nav__indicator--hover home-nav__indicator--focus home-nav__indicator--motion"
+                ></span>
+                <span
+                  class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  >Experience</span
+                >
+              </a>
+            </li>
+            <li class="home-nav__item">
+              <a
+                class="home-nav__link home-nav__link--group home-nav__link--active"
+                href="#sectionProjects"
+              >
+                <span
+                  class="home-nav__indicator home-nav__indicator--transition home-nav__indicator--hover home-nav__indicator--focus home-nav__indicator--motion"
+                ></span>
+                <span
+                  class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  >Projects</span
+                >
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <ul class="home-social" aria-label="Social media">
+        <li class="home-social__item">
+          <a
+            class="home-social__link home-social__link--github"
+            href="https://github.com/bchiang7"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="GitHub (opens in a new tab)"
+            title="GitHub"
+          >
+            <span class="sr-only">GitHub</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="home-social__icon"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="home-social__item">
+          <a
+            class="home-social__link home-social__link--linkedin"
+            href="https://www.linkedin.com/in/luca-alberto-daniel-mendoza-470575180/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="LinkedIn (opens in a new tab)"
+            title="LinkedIn"
+          >
+            <span class="sr-only">LinkedIn</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="home-social__icon"
+            >
+              <path
+                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <!-- <li class="home-social__item">
+          <a
+            class="home-social__link home-social__link--codepen"
+            href="https://codepen.io/bchiang7"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="CodePen (opens in a new tab)"
+            title="CodePen"
+          >
+            <span class="sr-only">CodePen</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="home-social__icon"
+            >
+              <path
+                d="M3.06 41.732L32 60.932l28.94-19.2V22.268L32 3.068l-28.94 19.2zm57.878 0L32 22.268 3.06 41.732m0-19.463L32 41.47l28.94-19.2M32 3.068v19.2m0 19.463v19.2"
+                stroke-width="5"
+              ></path>
+            </svg>
+          </a>
+        </li> -->
+        <!-- <li class="home-social__item">
+          <a
+            class="home-social__link home-social__link--instagram"
+            href="https://instagram.com/bchiang7"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Instagram (opens in a new tab)"
+            title="Instagram"
+          >
+            <span class="sr-only">Instagram</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1000 1000"
+              fill="currentColor"
+              class="home-social__icon"
+            >
+              <path
+                d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.26-75.21-10-92.82-16.6-23.35-9-40.11-19.7-57.5-37.1s-28.1-34.18-37.08-57.53c-6.56-17.59-14.31-44.05-16.57-92.83-2.57-53-3.36-68.41-3.61-203.74s.77-150.74,3.39-203.71c2.29-48.79,10.06-75.23,16.62-92.84,9-23.38,19.7-40.1,37.08-57.5,17.42-17.4,34.17-28.1,57.52-37.07,17.62-6.57,44.06-14.34,92.8-16.6,53-2.57,68.44-3.36,203.75-3.62,135.34.26,150.78.77,203.78,3.39,48.74,2.28,75.21,10.05,92.81,16.61,23.34,9,40.08,19.7,57.47,37.1,17.41,17.4,28.1,34.17,37.08,57.5,6.56,17.6,14.31,44.06,16.6,92.85,2.56,53,3.36,68.41,3.61,203.75s-.77,150.74-3.4,203.71c-2.27,48.75-10,75.23-16.61,92.83-9,23.35-19.7,40.08-37.1,57.47-17.41,17.42-34.17,28.1-57.5,37.08-17.59,6.56-44.05,14.31-92.83,16.6-53,2.56-68.41,3.36-203.75,3.61s-150.77-.77-203.75-3.39"
+              ></path>
+              <path
+                d="M500,243.13A257.39,257.39,0,1,0,757.38,500,257.39,257.39,0,0,0,500,243.13m0,426.53A169.14,169.14,0,1,1,669.15,500,169.14,169.14,0,0,1,500,669.66"
+              ></path>
+              <path
+                d="M830.18,181.56a60.29,60.29,0,1,0,60.28,60.28,60.28,60.28,0,0,0-60.28-60.28"
+              ></path>
+            </svg>
+          </a>
+        </li> -->
+        <!-- <li class="home-social__item">
+          <a
+            class="home-social__link home-social__link--twitter"
+            href="https://twitter.com/bchiang7"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Twitter (opens in a new tab)"
+            title="Twitter"
+          >
+            <span class="sr-only">Twitter</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="home-social__icon"
+            >
+              <path
+                d="M22.46 6c-.77.35-1.59.57-2.46.68a4.2 4.2 0 001.92-2.31 8.18 8.18 0 01-2.62 1A4.1 4.1 0 0016.44 4c-2.26 0-4.1 1.84-4.1 4.1 0 .32.03.63.1.92-3.41-.17-6.43-1.8-8.45-4.27-.35.6-.55 1.3-.55 2.04 0 1.41.72 2.65 1.82 3.38a4.05 4.05 0 01-1.86-.52v.05c0 1.97 1.4 3.61 3.26 3.99-.34.1-.71.15-1.08.15-.27 0-.53-.03-.78-.08.53 1.65 2.07 2.86 3.9 2.89a8.23 8.23 0 01-5.09 1.76c-.33 0-.65-.02-.97-.06a11.61 11.61 0 006.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.53.8-.57 1.5-1.28 2.05-2.09z"
+              ></path>
+            </svg>
+          </a>
+        </li> -->
+      </ul>
+    </header>
+    <!-- <main class="home-main">
+      <section id="about" class="home-section">
+        <h2 class="home-section__title">About Me</h2>
+        <p class="home-section__description">
+          I'm a highly motivated front-end developer...
+        </p>
+      </section>
+      <section id="experience" class="home-section">
+        <h2 class="home-section__title">Experience</h2>
+        <p class="home-section__description">
+          With over 10 years of experience in web development...
+        </p>
+      </section>
+      <section id="projects" class="home-section">
+        <h2 class="home-section__title">Projects</h2>
+        <p class="home-section__description">
+          I've worked on numerous projects ranging from...
+        </p>
+      </section>
+    </main> -->
+  </div>
+
+  <div class="right">
+    <div class="items">
+      <div class="item item__about">
+        <section id="sectionAbout" class="section section__about">
+          <p>
+            Back in 2012, I decided to try my hand at creating custom Tumblr
+            themes and tumbled head first into the rabbit hole of coding and web
+            development.
+          </p>
+
+          <p>
+            Fast-forward to today, and I’ve had the privilege of building
+            software for an advertising agency, a start-up, a huge corporation,
+            and a digital product studio. My main focus these days is building
+            accessible user interfaces for our customers at Klaviyo. I most
+            enjoy building software in the sweet spot where design and
+            engineering meet — things that look good but are also built well
+            under the hood.
+          </p>
+
+          <p>
+            In my free time, I've also released an online video course that
+            covers everything you need to know to build a web app with the
+            Spotify API. When I’m not at the computer, I’m usually rock
+            climbing, reading, hanging out with my wife and two cats, or running
+            around Hyrule searching for Korok seeds K o r o k s e e d s .
+          </p>
+        </section>
+      </div>
+      <div class="item item__experience">
+        <section id="sectionExperience" class="section section__experience">
+          <div class="experience">
+            <div class="date"><span>2024 — Present</span></div>
+            <div class="info">
+              <h3>Senior Frontend Engineer, Accessibility ·</h3>
+
+              <p>
+                Build and maintain critical components used to construct
+                Klaviyo’s frontend, across the whole product. Work closely with
+                cross-functional teams, including developers, designers, and
+                product managers, to implement and advocate for best practices
+                in web accessibility.
+              </p>
+            </div>
+          </div>
+          <div class="experience">
+            <div class="date"><span>2024 — Present</span></div>
+            <div class="info">
+              <h3>Senior Frontend Engineer, Accessibility ·</h3>
+
+              <p>
+                Build and maintain critical components used to construct
+                Klaviyo’s frontend, across the whole product. Work closely with
+                cross-functional teams, including developers, designers, and
+                product managers, to implement and advocate for best practices
+                in web accessibility.
+              </p>
+            </div>
+          </div>
+          <div class="experience">
+            <div class="date"><span>2024 — Present</span></div>
+            <div class="info">
+              <h3>Senior Frontend Engineer, Accessibility ·</h3>
+
+              <p>
+                Build and maintain critical components used to construct
+                Klaviyo’s frontend, across the whole product. Work closely with
+                cross-functional teams, including developers, designers, and
+                product managers, to implement and advocate for best practices
+                in web accessibility.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="item item__projects">
+        <section id="sectionProjects" class="section section__projects">
+          projects
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

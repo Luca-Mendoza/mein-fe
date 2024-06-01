@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Estilo genérico para los scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: auto;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b4c4e00;
+  border-radius: 6px;
+
+  &:hover {
+    background: #45454500;
+  }
+}
+
+// .circle {
+//   // width: 200px; /* Ajusta el tamaño del círculo según tus necesidades */
+//   // height: 200px; /* Ajusta el tamaño del círculo según tus necesidades */
+//   // border-radius: 50%; /* Hace que el div sea un círculo */
+//   background: radial-gradient(
+//     circle at 40px 40px,
+//     transparent 0%,
+//     rgb(197, 194, 194) 150px
+//   );
+//   // position: absolute; /* Hace que el círculo sea fijo en la ventana del navegador */
+//   // pointer-events: none; /* Para que el círculo no afecte los eventos del ratón */
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+// }
+
+/* Cambia la posición del círculo al mover el ratón */
+// body:hover .circle {
+//   top: calc(var(--mouse-y) - 50px);
+//   left: calc(var(--mouse-x) - 50px);
+// }
+// .cursor-light {
+//   position: fixed;
+//   width: 400px;
+//   height: 400px;
+//   border-radius: 50%;
+//   background-image: radial-gradient(
+//     circle,
+//     rgba(255, 255, 255, 0.1) 0%,
+//     hsl(222, 47%, 11%) 70%
+//   );
+//   // pointer-events: none;
+//   transition: transform 0.3s ease-out;
+//   z-index: 9999;
+// }
