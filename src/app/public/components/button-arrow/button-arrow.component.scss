@@ -1,0 +1,67 @@
+.button-arrow {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-shadow: 0px 0px 5px hsl(0deg 0% 100% / 50%);
+}
+
+.button-arrow span {
+  padding-bottom: 7px;
+  letter-spacing: 1.8px;
+  line-height: 20px;
+  font-size: 14px;
+  padding-right: 0;
+  // text-transform: uppercase;
+}
+
+.button-arrow svg {
+  // transform: rotate(-35deg);
+  transform: translateY(3px);
+  transition: all 0.3s ease;
+}
+
+.button-arrow:hover svg {
+  // transform: rotate(-35deg);
+  transform: translateY(-5px);
+  margin-left: 5px;
+}
+.button-arrow:hover span,
+.button-arrow:hover svg path,
+.button-arrow:hover svg {
+  text-shadow: 1px 1px 5px hsla(188, 89%, 39%, 0.5);
+
+  color: #00718f;
+  fill: #00718f;
+}
+
+.button-arrow:active svg {
+  // transform: scale(0.8);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  // text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00718f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.button-arrow:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

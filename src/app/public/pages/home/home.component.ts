@@ -1,10 +1,11 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { ButtonArrowComponent } from '../../components/button-arrow/button-arrow.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ButtonArrowComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
