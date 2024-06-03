@@ -11,13 +11,4 @@ import { MaterialModule } from './shared/material/material.module';
 })
 export class AppComponent {
   title = 'main-fe';
-
-  mouseX: number = 0;
-  mouseY: number = 0;
-
-  @HostListener('document:mousemove', ['$event'])
-  onMousemove(event: MouseEvent) {
-    this.mouseX = event.clientX;
-    this.mouseY = event.clientY;
-  }
 }

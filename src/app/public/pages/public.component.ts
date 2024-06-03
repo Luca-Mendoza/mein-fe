@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,4 +8,13 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './public.component.html',
   styleUrl: './public.component.scss',
 })
-export class PublicComponent {}
+export class PublicComponent {
+  mouseX: number = 0;
+  mouseY: number = 0;
+
+  @HostListener('document:mousemove', ['$event'])
+  onMousemove(event: MouseEvent) {
+    this.mouseX = event.clientX;
+    this.mouseY = event.clientY;
+  }
+}

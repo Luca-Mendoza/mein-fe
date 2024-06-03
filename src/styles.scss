@@ -28,24 +28,6 @@ body {
   }
 }
 
-// .circle {
-//   // width: 200px; /* Ajusta el tamaño del círculo según tus necesidades */
-//   // height: 200px; /* Ajusta el tamaño del círculo según tus necesidades */
-//   // border-radius: 50%; /* Hace que el div sea un círculo */
-//   background: radial-gradient(
-//     circle at 40px 40px,
-//     transparent 0%,
-//     rgb(197, 194, 194) 150px
-//   );
-//   // position: absolute; /* Hace que el círculo sea fijo en la ventana del navegador */
-//   // pointer-events: none; /* Para que el círculo no afecte los eventos del ratón */
-//   height: 100%;
-//   width: 100%;
-//   position: absolute;
-//   top: 0px;
-//   left: 0px;
-// }
-
 /* Cambia la posición del círculo al mover el ratón */
 // body:hover .circle {
 //   top: calc(var(--mouse-y) - 50px);
