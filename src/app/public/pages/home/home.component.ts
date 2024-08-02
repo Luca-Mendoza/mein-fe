@@ -1,16 +1,34 @@
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ButtonArrowComponent } from '../../components/button-arrow/button-arrow.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonArrowComponent],
+  imports: [CommonModule, RouterModule, ButtonArrowComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  // Definir el enlace activo
+  activeLink: string = 'About';
+
+  // Definir los enlaces de navegación
+  navLinks = [
+    { text: 'About', href: '#sectionAbout' },
+    { text: 'Experience', href: '#sectionExperience' },
+    { text: 'Projects', href: '#sectionProjects' },
+  ];
+
+  // Método para establecer el enlace activo
+  setActiveLink(link: any) {
+    this.activeLink = link.text;
+
+    console.log({ activeLink: this.activeLink });
+  }
 
   sectionAbout() {
     const elemento = document.getElementById('sectionAbout');

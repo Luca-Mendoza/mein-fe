@@ -7,56 +7,36 @@
         <h1 class="home-header__title">
           <a class="home-header__title-link" href="/">Luca D. Mendoza</a>
         </h1>
-        <h2 class="home-header__subtitle">Senior Frontend Engineer</h2>
+        <h2 class="home-header__subtitle">Web Developer</h2>
         <p class="home-header__description">
-          I build pixel-perfect, engaging,<br />
-          and accessible digital experiences.
+          "Crafting dynamic scalable web solutions <br />with a passion for
+          technology."
         </p>
         <nav
           class="home-nav home-nav--hidden home-nav--lg"
           aria-label="In-page jump links"
         >
           <ul class="home-nav__list">
-            <li class="home-nav__item">
+            <li class="home-nav__item" *ngFor="let link of navLinks">
               <a
-                (click)="sectionAbout()"
+                (click)="setActiveLink(link)"
+                [ngClass]="{
+                  'home-nav__item--active': activeLink === link.text
+                }"
                 class="home-nav__link home-nav__link--group"
+                [attr.href]="link.href"
               >
                 <span
-                  class="home-nav__indicator home-nav__indicator--transition home-nav__indicator--hover home-nav__indicator--focus home-nav__indicator--motion"
+                  [ngClass]="{
+                    'home-nav__indicator--active': activeLink === link.text
+                  }"
+                  class="home-nav__indicator"
                 ></span>
                 <span
                   class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
-                  >About</span
                 >
-              </a>
-            </li>
-            <li class="home-nav__item">
-              <a
-                class="home-nav__link home-nav__link--group"
-                (click)="sectionExperience()"
-              >
-                <span
-                  class="home-nav__indicator home-nav__indicator--transition home-nav__indicator--hover home-nav__indicator--focus home-nav__indicator--motion"
-                ></span>
-                <span
-                  class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
-                  >Experience</span
-                >
-              </a>
-            </li>
-            <li class="home-nav__item">
-              <a
-                class="home-nav__link home-nav__link--group home-nav__link--active"
-                href="#sectionProjects"
-              >
-                <span
-                  class="home-nav__indicator home-nav__indicator--transition home-nav__indicator--hover home-nav__indicator--focus home-nav__indicator--motion"
-                ></span>
-                <span
-                  class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
-                  >Projects</span
-                >
+                  {{ link.text }}
+                </span>
               </a>
             </li>
           </ul>
@@ -213,27 +193,24 @@
       <div class="item item__about">
         <section id="sectionAbout" class="section section__about">
           <p>
-            Back in 2012, I decided to try my hand at creating custom Tumblr
-            themes and tumbled head first into the rabbit hole of coding and web
-            development.
+            I started in programming in 2019 by taking online courses. I was
+            captivated by the idea of building applications to make others'
+            daily work easier, so I enrolled at the Faculty of Exact Sciences at
+            Unicen to study Systems Engineering and University Technology in IT
+            Application Development, with a focus on web application
+            development. I completed the first year but was unable to continue
+            due to class schedules, as I had another job to pay the rent.
           </p>
 
           <p>
-            Fast-forward to today, and I’ve had the privilege of building
-            software for an advertising agency, a start-up, a huge corporation,
-            and a digital product studio. My main focus these days is building
-            accessible user interfaces for our customers at Klaviyo. I most
-            enjoy building software in the sweet spot where design and
-            engineering meet — things that look good but are also built well
-            under the hood.
+            I continued my career by taking Udemy courses in my free time,
+            specializing in Frontend development with Angular. In 2022, I began
+            working at "Siete Ideas," developing logistics applications.
           </p>
 
           <p>
-            In my free time, I've also released an online video course that
-            covers everything you need to know to build a web app with the
-            Spotify API. When I’m not at the computer, I’m usually rock
-            climbing, reading, hanging out with my wife and two cats, or running
-            around Hyrule searching for Korok seeds K o r o k s e e d s .
+            In my free time, I usually enjoy hiking in the Tandil hills or going
+            to the gym.
           </p>
         </section>
       </div>
@@ -306,7 +283,7 @@
         <section id="sectionProjects" class="section section__projects">
           <div class="experience">
             <div class="avatar">
-              <img src="./../../../../assets/imgs/proyect_01.jpg" alt="" />
+              <img src="./../../../../assets/imgs/protect_01.png" alt="" />
             </div>
             <div class="info">
               <h3>Senior Frontend Engineer, Accessibility ·</h3>
