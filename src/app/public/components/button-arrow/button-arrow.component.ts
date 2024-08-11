@@ -8,4 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonArrowComponent {
   @Input() text!: string;
+  @Input() pdfUrl!: string; // URL del PDF
+
+  openPdf() {
+    if (this.pdfUrl) {
+      window.open(this.pdfUrl, '_blank');
+    } else {
+      console.error('PDF URL is not provided.');
+    }
+  }
 }

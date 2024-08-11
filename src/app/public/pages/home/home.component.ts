@@ -15,6 +15,7 @@ export class HomeComponent {
 
   // Definir el enlace activo
   activeLink: string = 'About';
+  pdfUrl: any = './../../../../assets/data/Luca-mendoza-Currículum.pdf';
 
   // Definir los enlaces de navegación
   navLinks = [

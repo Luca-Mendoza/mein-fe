@@ -1,93 +1,94 @@
 <section class="container-home">
-  <div class="left">
-    <header
-      class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding"
-    >
-      <div class="home-header__content">
-        <h1 class="home-header__title">
-          <a class="home-header__title-link" href="/">Luca D. Mendoza</a>
-        </h1>
-        <h2 class="home-header__subtitle">Web Developer</h2>
-        <p class="home-header__description">
-          "Crafting dynamic scalable web solutions <br />with a passion for
-          technology."
-        </p>
-        <nav
-          class="home-nav home-nav--hidden home-nav--lg"
-          aria-label="In-page jump links"
-        >
-          <ul class="home-nav__list">
-            <li class="home-nav__item" *ngFor="let link of navLinks">
-              <a
-                (click)="setActiveLink(link)"
-                [ngClass]="{
-                  'home-nav__item--active': activeLink === link.text
-                }"
-                class="home-nav__link home-nav__link--group"
-                [attr.href]="link.href"
-              >
-                <span
+  <div class="home">
+    <div class="left">
+      <header
+        class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding"
+      >
+        <div class="home-header__content">
+          <h1 class="home-header__title">
+            <a class="home-header__title-link" href="/">Luca D. Mendoza</a>
+          </h1>
+          <h2 class="home-header__subtitle">Web Developer</h2>
+          <p class="home-header__description">
+            "Crafting dynamic scalable web solutions <br />with a passion for
+            technology."
+          </p>
+          <nav
+            class="home-nav home-nav--hidden home-nav--lg"
+            aria-label="In-page jump links"
+          >
+            <ul class="home-nav__list">
+              <li class="home-nav__item" *ngFor="let link of navLinks">
+                <a
+                  (click)="setActiveLink(link)"
                   [ngClass]="{
-                    'home-nav__indicator--active': activeLink === link.text
+                    'home-nav__item--active': activeLink === link.text
                   }"
-                  class="home-nav__indicator"
-                ></span>
-                <span
-                  class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  class="home-nav__link home-nav__link--group"
+                  [attr.href]="link.href"
                 >
-                  {{ link.text }}
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <ul class="home-social" aria-label="Social media">
-        <li class="home-social__item">
-          <a
-            class="home-social__link home-social__link--github"
-            href="https://github.com/Luca-Mendoza"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="GitHub (opens in a new tab)"
-            title="GitHub"
-          >
-            <span class="sr-only">GitHub</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="home-social__icon"
+                  <span
+                    [ngClass]="{
+                      'home-nav__indicator--active': activeLink === link.text
+                    }"
+                    class="home-nav__indicator"
+                  ></span>
+                  <span
+                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  >
+                    {{ link.text }}
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="home-social" aria-label="Social media">
+          <li class="home-social__item">
+            <a
+              class="home-social__link home-social__link--github"
+              href="https://github.com/Luca-Mendoza"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub (opens in a new tab)"
+              title="GitHub"
             >
-              <path
-                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12"
-              />
-            </svg>
-          </a>
-        </li>
-        <li class="home-social__item">
-          <a
-            class="home-social__link home-social__link--linkedin"
-            href="https://www.linkedin.com/in/luca-alberto-daniel-mendoza-470575180/"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="LinkedIn (opens in a new tab)"
-            title="LinkedIn"
-          >
-            <span class="sr-only">LinkedIn</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="home-social__icon"
+              <span class="sr-only">GitHub</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="home-social__icon"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="home-social__item">
+            <a
+              class="home-social__link home-social__link--linkedin"
+              href="https://www.linkedin.com/in/luca-alberto-daniel-mendoza-470575180/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="LinkedIn (opens in a new tab)"
+              title="LinkedIn"
             >
-              <path
-                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
-              ></path>
-            </svg>
-          </a>
-        </li>
-        <!-- <li class="home-social__item">
+              <span class="sr-only">LinkedIn</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="home-social__icon"
+              >
+                <path
+                  d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <!-- <li class="home-social__item">
           <a
             class="home-social__link home-social__link--codepen"
             href="https://codepen.io/bchiang7"
@@ -114,7 +115,7 @@
             </svg>
           </a>
         </li> -->
-        <!-- <li class="home-social__item">
+          <!-- <li class="home-social__item">
           <a
             class="home-social__link home-social__link--instagram"
             href="https://instagram.com/bchiang7"
@@ -142,7 +143,7 @@
             </svg>
           </a>
         </li> -->
-        <!-- <li class="home-social__item">
+          <!-- <li class="home-social__item">
           <a
             class="home-social__link home-social__link--twitter"
             href="https://twitter.com/bchiang7"
@@ -164,9 +165,9 @@
             </svg>
           </a>
         </li> -->
-      </ul>
-    </header>
-    <!-- <main class="home-main">
+        </ul>
+      </header>
+      <!-- <main class="home-main">
       <section id="about" class="home-section">
         <h2 class="home-section__title">About Me</h2>
         <p class="home-section__description">
@@ -186,111 +187,106 @@
         </p>
       </section>
     </main> -->
-  </div>
+    </div>
 
-  <div class="right">
-    <div class="items">
-      <div class="item item__about">
-        <section id="sectionAbout" class="section section__about">
-          <p>
-            I started in programming in 2019 by taking online courses. I was
-            captivated by the idea of building applications to make others'
-            daily work easier, so I enrolled at the Faculty of Exact Sciences at
-            Unicen to study Systems Engineering and University Technology in IT
-            Application Development, with a focus on web application
-            development. I completed the first year but was unable to continue
-            due to class schedules, as I had another job to pay the rent.
-          </p>
+    <div class="right">
+      <div class="items">
+        <div class="item item__about">
+          <section id="sectionAbout" class="section section__about">
+            <p>
+              I started in programming in 2019 by taking online courses. I was
+              captivated by the idea of building applications to make others'
+              daily work easier, so I enrolled at the Faculty of Exact Sciences
+              at Unicen to study Systems Engineering and University Technology
+              in IT Application Development, with a focus on web application
+              development. I completed the first year but was unable to continue
+              due to class schedules, as I had another job to pay the rent.
+            </p>
 
-          <p>
-            I continued my career by taking Udemy courses in my free time,
-            specializing in Frontend development with Angular. In 2022, I began
-            working at "Siete Ideas," developing logistics applications.
-          </p>
+            <p>
+              I continued my career by taking Udemy courses in my free time,
+              specializing in Frontend development with Angular. In 2022, I
+              began working at "Siete Ideas," developing logistics applications.
+            </p>
 
-          <p>
-            In my free time, I usually enjoy hiking in the Tandil hills or going
-            to the gym.
-          </p>
-        </section>
-      </div>
-      <div class="item item__experience">
-        <section id="sectionExperience" class="section section__experience">
-          <!-- <div class="experience">
-            <div class="date"><span>2024 — Present</span></div>
-            <div class="info">
-              <h3>Senior Frontend Engineer, Accessibility ·</h3>
-
-              <p>
-                Build and maintain critical components used to construct
-                Klaviyo’s frontend, across the whole product. Work closely with
-                cross-functional teams, including developers, designers, and
-                product managers, to implement and advocate for best practices
-                in web accessibility.
-              </p>
-            </div>
-          </div> -->
-          <div class="experience">
-            <div class="date"><span>2022 — Present</span></div>
-            <div class="info">
-              <h3>SSR Frontend Web Developer · Siete Ideas</h3>
-              <p>
-                Develop and maintain web applications using Angular. Implement
-                responsive and attractive user interfaces, create reusable
-                components, and integrate RESTful services. Conduct unit and
-                integration testing, maintain the application, and manage
-                production deployments.
-              </p>
-              <div class="chips">
-                <div class="chip">Angular</div>
-                <div class="chip">HTML</div>
-                <div class="chip">CSS</div>
-                <div class="chip">TypeScript</div>
-                <div class="chip">Angular Material</div>
-                <div class="chip">Fuse</div>
-                <div class="chip">Jasmine</div>
-                <div class="chip">Karma</div>
-                <div class="chip">Git</div>
-                <div class="chip">Scrum</div>
+            <p>
+              In my free time, I usually enjoy hiking in the Tandil hills or
+              going to the gym.
+            </p>
+          </section>
+        </div>
+        <div class="item item__experience">
+          <section id="sectionExperience" class="section section__experience">
+            <div class="experience">
+              <div class="date"><span>2022 — Present</span></div>
+              <div class="info">
+                <h3>
+                  <app-button-arrow
+                    [pdfUrl]="'http://www.sieteideas.com.ar/'"
+                    [text]="'SSR Frontend Web Developer · Siete Ideas'"
+                  ></app-button-arrow>
+                </h3>
+                <p>
+                  Develop and maintain web applications using Angular. Implement
+                  responsive and attractive user interfaces, create reusable
+                  components, and integrate RESTful services. Conduct unit and
+                  integration testing, maintain the application, and manage
+                  production deployments.
+                </p>
+                <div class="chips">
+                  <div class="chip">Angular</div>
+                  <div class="chip">HTML</div>
+                  <div class="chip">CSS</div>
+                  <div class="chip">TypeScript</div>
+                  <div class="chip">Angular Material</div>
+                  <div class="chip">Fuse</div>
+                  <div class="chip">Jasmine</div>
+                  <div class="chip">Karma</div>
+                  <div class="chip">Git</div>
+                  <div class="chip">Scrum</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="actions">
-            <app-button-arrow [text]="'View Full Résumé'"></app-button-arrow>
-          </div>
-        </section>
-      </div>
-      <div class="item item__projects">
-        <section id="sectionProjects" class="section section__projects">
-          <div class="experience">
-            <div class="avatar">
-              <img src="./../../../../assets/imgs/protect_01.png" alt="" />
+            <div class="actions">
+              <app-button-arrow
+                [pdfUrl]="pdfUrl"
+                [text]="'View Full Portfolio'"
+              ></app-button-arrow>
             </div>
-            <div class="info">
-              <h3>E-commerce Application Development with MEAN+G</h3>
-              <p>
-                Developed a comprehensive e-commerce platform using the MEAN
-                stack (MongoDB, Express.js, Angular, Node.js) combined with
-                GraphQL. The project involved implementing payment processing
-                with Stripe, automatic email notifications with Nodemailer, and
-                deploying the application on various platforms including
-                Netlify, Heroku, and MongoDB Atlas.
-              </p>
-              <div class="chips">
-                <div class="chip">MongoDB</div>
-                <div class="chip">Node.js</div>
-                <div class="chip">Express.js</div>
-                <div class="chip">Angular</div>
-                <div class="chip">GraphQL</div>
-                <div class="chip">Stripe</div>
-                <div class="chip">Nodemailer</div>
-                <div class="chip">Netlify</div>
-                <div class="chip">Heroku</div>
+          </section>
+        </div>
+        <div class="item item__projects">
+          <section id="sectionProjects" class="section section__projects">
+            <div class="experience">
+              <div class="avatar">
+                <img src="./../../../../assets/imgs/protect_01.png" alt="" />
+              </div>
+              <div class="info">
+                <h3>E-commerce Application Development with MEAN+G</h3>
+                <p>
+                  Developed a comprehensive e-commerce platform using the MEAN
+                  stack (MongoDB, Express.js, Angular, Node.js) combined with
+                  GraphQL. The project involved implementing payment processing
+                  with Stripe, automatic email notifications with Nodemailer,
+                  and deploying the application on various platforms including
+                  Netlify, Heroku, and MongoDB Atlas.
+                </p>
+                <div class="chips">
+                  <div class="chip">MongoDB</div>
+                  <div class="chip">Node.js</div>
+                  <div class="chip">Express.js</div>
+                  <div class="chip">Angular</div>
+                  <div class="chip">GraphQL</div>
+                  <div class="chip">Stripe</div>
+                  <div class="chip">Nodemailer</div>
+                  <div class="chip">Netlify</div>
+                  <div class="chip">Heroku</div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
   </div>
