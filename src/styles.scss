@@ -12,19 +12,19 @@ body {
 /* Estilo genérico para los scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
-  height: auto;
+  height: 50px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #4b4c4e00;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4b4c4e00;
+  background: rgba(11, 164, 188, 0.3);
   border-radius: 6px;
 
   &:hover {
-    background: #45454500;
+    background: rgba(11, 164, 188, 0.8);
   }
 }
 
