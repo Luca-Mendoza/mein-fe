@@ -232,7 +232,7 @@ p {
 
           .experience {
             color: white;
-            width: 90%;
+            // width: 90%;
             // height: 120px;
             display: flex;
             flex-direction: column;
@@ -241,9 +241,9 @@ p {
             gap: 0.5rem;
             // margin: 1rem 0;
             border-radius: 12px;
-            padding: 1rem;
 
             @include mixins.tablets {
+              width: 90%;
               flex-direction: row;
               padding: 1rem 1.5rem;
               gap: 1rem;
@@ -300,7 +300,6 @@ p {
 
           .experience {
             color: white;
-            width: 90%;
             // height: 120px;
             display: flex;
             flex-direction: column-reverse;
@@ -308,10 +307,12 @@ p {
             gap: 1rem;
             margin: 1rem 0;
             border-radius: 12px;
-            padding: 1rem 1.5rem;
 
             @include mixins.tablets {
               flex-direction: row;
+              width: 90%;
+              padding: 1rem 1.5rem;
+
             }
 
             .avatar {
