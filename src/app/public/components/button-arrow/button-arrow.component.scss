@@ -14,14 +14,14 @@
   padding-bottom: 7px;
   letter-spacing: 1.8px;
   line-height: 20px;
-  font-size: 12px;
+  font-size: 1rem;
   padding-right: 0;
   // text-transform: uppercase;
 
   
-  @include mixins.tablets {
-    font-size: 14px;
-  }
+  // @include mixins.tablets {
+  //   font-size: 14px;
+  // }
 
 }
 

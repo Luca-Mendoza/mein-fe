@@ -20,14 +20,10 @@ li {
   padding: 0; /* Quita el padding por defecto */
 }
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.5);
-
-  @include mixins.tablets {
-    font-size: 1rem;
-  }
 }
 .container-home {
   width: 100vw;
@@ -289,14 +285,8 @@ p {
               }
 
               p {
-                // font-size: 0.8rem;
-                font-size: 11px;
+                font-size: .8rem;
                 line-height: 1.2rem;
-
-                @include mixins.tablets {
-                  font-size: 0.8rem;
-                  line-height: 1.5rem;
-                }
               }
             }
           }
@@ -342,7 +332,7 @@ p {
               }
 
               p {
-                font-size: 0.8rem;
+                font-size: .8rem;
                 line-height: 1.2rem;
               }
             }
