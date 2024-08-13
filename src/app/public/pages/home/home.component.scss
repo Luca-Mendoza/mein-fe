@@ -377,9 +377,11 @@ p {
 }
 
 .home-nav__item--active {
+  transition: all 0.5s ease-out;
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); /* Sombra de texto */
 }
 .home-nav__indicator--active {
+  transition: all 0.5s ease-out;
   width: 64px !important;
   background-color: white;
 }

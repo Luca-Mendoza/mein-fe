@@ -22,6 +22,34 @@
                 <a
                   (click)="setActiveLink(link)"
                   [ngClass]="{
+                    'home-nav__item--active': activeLink === link.text 
+                  }"
+                  class="home-nav__link home-nav__link--group"
+                >
+                  <span
+                    [ngClass]="{
+                      'home-nav__indicator--active': activeLink === link.text
+                    }"
+                    class="home-nav__indicator"
+                  ></span>
+                  <span
+                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  >
+                    {{ link.text }}
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- <nav
+            class="home-nav home-nav--hidden home-nav--lg"
+            aria-label="In-page jump links"
+          >
+            <ul class="home-nav__list">
+              <li class="home-nav__item" *ngFor="let link of navLinks">
+                <a
+                  (click)="setActiveLink(link)"
+                  [ngClass]="{
                     'home-nav__item--active': activeLink === link.text
                   }"
                   class="home-nav__link home-nav__link--group"
@@ -41,7 +69,7 @@
                 </a>
               </li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
         <ul class="home-social" aria-label="Social media">
           <li class="home-social__item">
@@ -189,8 +217,8 @@
     </main> -->
     </div>
 
-    <div class="right">
-      <div class="items">
+    <div  class="right">
+      <div #scrollContainer class="items">
         <div class="item item__about">
           <section id="sectionAbout" class="section section__about">
             <h2>About</h2>
@@ -297,7 +325,7 @@
               </div>
             </div>
           </section>
-          <section id="sectionProjects" class="section section__projects">
+          <section class="section section__projects">
             <div class="experience experience--rever-column">
               <div class="avatar">
                 <img src="assets/imgs/porfolio_web.png" alt="porfolio_web" />
