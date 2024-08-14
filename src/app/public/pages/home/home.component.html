@@ -20,9 +20,9 @@
             <ul class="home-nav__list">
               <li class="home-nav__item" *ngFor="let link of navLinks">
                 <a
-                  (click)="setActiveLink(link)"
+                  (click)="scrollToSection(link.id)"
                   [ngClass]="{
-                    'home-nav__item--active': activeLink === link.text 
+                    'home-nav__item--active': activeLink === link.text
                   }"
                   class="home-nav__link home-nav__link--group"
                 >
@@ -41,35 +41,6 @@
               </li>
             </ul>
           </nav>
-          <!-- <nav
-            class="home-nav home-nav--hidden home-nav--lg"
-            aria-label="In-page jump links"
-          >
-            <ul class="home-nav__list">
-              <li class="home-nav__item" *ngFor="let link of navLinks">
-                <a
-                  (click)="setActiveLink(link)"
-                  [ngClass]="{
-                    'home-nav__item--active': activeLink === link.text
-                  }"
-                  class="home-nav__link home-nav__link--group"
-                  [attr.href]="link.href"
-                >
-                  <span
-                    [ngClass]="{
-                      'home-nav__indicator--active': activeLink === link.text
-                    }"
-                    class="home-nav__indicator"
-                  ></span>
-                  <span
-                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
-                  >
-                    {{ link.text }}
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav> -->
         </div>
         <ul class="home-social" aria-label="Social media">
           <li class="home-social__item">
@@ -116,108 +87,11 @@
               </svg>
             </a>
           </li>
-          <!-- <li class="home-social__item">
-          <a
-            class="home-social__link home-social__link--codepen"
-            href="https://codepen.io/bchiang7"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="CodePen (opens in a new tab)"
-            title="CodePen"
-          >
-            <span class="sr-only">CodePen</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 64 64"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="home-social__icon"
-            >
-              <path
-                d="M3.06 41.732L32 60.932l28.94-19.2V22.268L32 3.068l-28.94 19.2zm57.878 0L32 22.268 3.06 41.732m0-19.463L32 41.47l28.94-19.2M32 3.068v19.2m0 19.463v19.2"
-                stroke-width="5"
-              ></path>
-            </svg>
-          </a>
-        </li> -->
-          <!-- <li class="home-social__item">
-          <a
-            class="home-social__link home-social__link--instagram"
-            href="https://instagram.com/bchiang7"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Instagram (opens in a new tab)"
-            title="Instagram"
-          >
-            <span class="sr-only">Instagram</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1000 1000"
-              fill="currentColor"
-              class="home-social__icon"
-            >
-              <path
-                d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.26-75.21-10-92.82-16.6-23.35-9-40.11-19.7-57.5-37.1s-28.1-34.18-37.08-57.53c-6.56-17.59-14.31-44.05-16.57-92.83-2.57-53-3.36-68.41-3.61-203.74s.77-150.74,3.39-203.71c2.29-48.79,10.06-75.23,16.62-92.84,9-23.38,19.7-40.1,37.08-57.5,17.42-17.4,34.17-28.1,57.52-37.07,17.62-6.57,44.06-14.34,92.8-16.6,53-2.57,68.44-3.36,203.75-3.62,135.34.26,150.78.77,203.78,3.39,48.74,2.28,75.21,10.05,92.81,16.61,23.34,9,40.08,19.7,57.47,37.1,17.41,17.4,28.1,34.17,37.08,57.5,6.56,17.6,14.31,44.06,16.6,92.85,2.56,53,3.36,68.41,3.61,203.75s-.77,150.74-3.4,203.71c-2.27,48.75-10,75.23-16.61,92.83-9,23.35-19.7,40.08-37.1,57.47-17.41,17.42-34.17,28.1-57.5,37.08-17.59,6.56-44.05,14.31-92.83,16.6-53,2.56-68.41,3.36-203.75,3.61s-150.77-.77-203.75-3.39"
-              ></path>
-              <path
-                d="M500,243.13A257.39,257.39,0,1,0,757.38,500,257.39,257.39,0,0,0,500,243.13m0,426.53A169.14,169.14,0,1,1,669.15,500,169.14,169.14,0,0,1,500,669.66"
-              ></path>
-              <path
-                d="M830.18,181.56a60.29,60.29,0,1,0,60.28,60.28,60.28,60.28,0,0,0-60.28-60.28"
-              ></path>
-            </svg>
-          </a>
-        </li> -->
-          <!-- <li class="home-social__item">
-          <a
-            class="home-social__link home-social__link--twitter"
-            href="https://twitter.com/bchiang7"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Twitter (opens in a new tab)"
-            title="Twitter"
-          >
-            <span class="sr-only">Twitter</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="home-social__icon"
-            >
-              <path
-                d="M22.46 6c-.77.35-1.59.57-2.46.68a4.2 4.2 0 001.92-2.31 8.18 8.18 0 01-2.62 1A4.1 4.1 0 0016.44 4c-2.26 0-4.1 1.84-4.1 4.1 0 .32.03.63.1.92-3.41-.17-6.43-1.8-8.45-4.27-.35.6-.55 1.3-.55 2.04 0 1.41.72 2.65 1.82 3.38a4.05 4.05 0 01-1.86-.52v.05c0 1.97 1.4 3.61 3.26 3.99-.34.1-.71.15-1.08.15-.27 0-.53-.03-.78-.08.53 1.65 2.07 2.86 3.9 2.89a8.23 8.23 0 01-5.09 1.76c-.33 0-.65-.02-.97-.06a11.61 11.61 0 006.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.53.8-.57 1.5-1.28 2.05-2.09z"
-              ></path>
-            </svg>
-          </a>
-        </li> -->
         </ul>
       </header>
-      <!-- <main class="home-main">
-      <section id="about" class="home-section">
-        <h2 class="home-section__title">About Me</h2>
-        <p class="home-section__description">
-          I'm a highly motivated front-end developer...
-        </p>
-      </section>
-      <section id="experience" class="home-section">
-        <h2 class="home-section__title">Experience</h2>
-        <p class="home-section__description">
-          With over 10 years of experience in web development...
-        </p>
-      </section>
-      <section id="projects" class="home-section">
-        <h2 class="home-section__title">Projects</h2>
-        <p class="home-section__description">
-          I've worked on numerous projects ranging from...
-        </p>
-      </section>
-    </main> -->
     </div>
 
-    <div  class="right">
+    <div class="right">
       <div #scrollContainer class="items">
         <div class="item item__about">
           <section id="sectionAbout" class="section section__about">
