@@ -16,11 +16,11 @@
   border-radius: 50%; /* Hace que el div sea un círculo */
   background: radial-gradient(
     circle,
-    rgb(11, 164, 188) 0%,
-    hsla(188, 89%, 39%) 20%,
-    hsla(188, 89%, 39%) 40%,
-    hsla(188, 89%, 39%) 60%,
-    hsla(188, 89%, 39%) 80%,
+    #0ba4bc 0%,
+    #0ba4bc 20%,
+    #0ba4bc 40%,
+    #0ba4bc 60%,
+    #0ba4bc 80%,
     rgba(15, 21, 47, 0) 100%
   );
   position: absolute; /* Hace que el círculo sea fijo en la ventana del navegador */
