@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   // Definir el enlace activo
   activeLink: string = 'About';
-  pdfUrl: any = './../../../../assets/data/luca-d-mendoza.cv.pdf';
+  pdfUrl: any = './../../../../assets/data/luca_d_mendoza.pdf';
 
   // Definir los enlaces de navegación
   navLinks = [
