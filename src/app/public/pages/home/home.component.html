@@ -2,7 +2,8 @@
   <div class="home">
     <div class="left">
       <header
-        class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding">
+        class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding"
+      >
         <div class="home-header__content">
           <h1 class="home-header__title">
             <a class="home-header__title-link" href="/">Luca D. Mendoza</a>
@@ -12,17 +13,28 @@
             "Crafting dynamic scalable web solutions <br />with a passion for
             technology."
           </p>
-          <nav class="home-nav home-nav--hidden home-nav--lg" aria-label="In-page jump links">
+          <nav
+            class="home-nav home-nav--hidden home-nav--lg"
+            aria-label="In-page jump links"
+          >
             <ul class="home-nav__list">
               <li class="home-nav__item" *ngFor="let link of navLinks">
-                <a (click)="scrollToSection(link.id)" [ngClass]="{
+                <a
+                  (click)="scrollToSection(link.id)"
+                  [ngClass]="{
                     'home-nav__item--active': activeLink === link.text
-                  }" class="home-nav__link home-nav__link--group">
-                  <span [ngClass]="{
-                      'home-nav__indicator--active': activeLink === link.text
-                    }" class="home-nav__indicator"></span>
+                  }"
+                  class="home-nav__link home-nav__link--group"
+                >
                   <span
-                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus">
+                    [ngClass]="{
+                      'home-nav__indicator--active': activeLink === link.text
+                    }"
+                    class="home-nav__indicator"
+                  ></span>
+                  <span
+                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
+                  >
                     {{ link.text }}
                   </span>
                 </a>
@@ -32,24 +44,46 @@
         </div>
         <ul class="home-social" aria-label="Social media">
           <li class="home-social__item">
-            <a class="home-social__link home-social__link--github" href="https://github.com/Luca-Mendoza"
-              target="_blank" rel="noreferrer noopener" aria-label="GitHub (opens in a new tab)" title="GitHub">
+            <a
+              class="home-social__link home-social__link--github"
+              href="https://github.com/Luca-Mendoza"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub (opens in a new tab)"
+              title="GitHub"
+            >
               <span class="sr-only">GitHub</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="home-social__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="home-social__icon"
+              >
                 <path
-                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12" />
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12"
+                />
               </svg>
             </a>
           </li>
           <li class="home-social__item">
-            <a class="home-social__link home-social__link--linkedin"
-              href="https://www.linkedin.com/in/luca-d-mendoza-470575180/" target="_blank" rel="noreferrer noopener"
-              aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+            <a
+              class="home-social__link home-social__link--linkedin"
+              href="https://www.linkedin.com/in/luca-d-mendoza-470575180/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="LinkedIn (opens in a new tab)"
+              title="LinkedIn"
+            >
               <span class="sr-only">LinkedIn</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="home-social__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="home-social__icon"
+              >
                 <path
-                  d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
-                </path>
+                  d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                ></path>
               </svg>
             </a>
           </li>
@@ -72,7 +106,8 @@
             </p>
 
             <p>
-              In 2022,began working at "Siete Ideas," Frontend development with Angular.
+              In 2022,began working at "Siete Ideas," Frontend development with
+              Angular.
             </p>
 
             <p>
@@ -85,11 +120,16 @@
           <section id="sectionExperience" class="section section__experience">
             <h2>Experience</h2>
             <div class="experience">
-              <div class="date"><span>2022 — Present</span></div>
+              <div class="date">
+                <span>2022 — Present</span><span>Full-Time</span>
+              </div>
+
               <div class="info">
                 <h3>
-                  <app-button-arrow [pdfUrl]="'http://www.sieteideas.com.ar/'"
-                    [text]="'SSR Frontend Web Developer · Siete Ideas'"></app-button-arrow>
+                  <app-button-arrow
+                    [pdfUrl]="'http://www.sieteideas.com.ar/'"
+                    [text]="'SSR Frontend Web Developer · Siete Ideas'"
+                  ></app-button-arrow>
                 </h3>
                 <p>
                   Develop and maintain web applications using Angular. Implement
@@ -114,18 +154,26 @@
             </div>
 
             <div class="experience">
-              <div class="date"><span>2023 — Present</span></div>
+              <div class="date">
+                <span>2023 — Present</span><span>Part-Time</span>
+              </div>
               <div class="info">
                 <h3>
-                  <app-button-arrow [pdfUrl]="'https://eventloop.club'"
-                    [text]="'SSR Frontend Developer · Event Loop'"></app-button-arrow>
+                  <app-button-arrow
+                    [pdfUrl]="'https://eventloop.club'"
+                    [text]="'SSR Frontend Developer · Event Loop Club'"
+                  ></app-button-arrow>
                 </h3>
                 <p>
-                  I'm part of the founding team of this personal project developed with a group of colleagues. I serve
-                  as a semi-senior Angular developer, contributing to the design and development of modern and efficient
-                  web applications. My focus includes building reusable components, integrating RESTful services, and
-                  performing unit and integration testing to ensure product quality. Additionally, I collaborate on the
-                  planning and execution of technical strategies to drive the project's growth.
+                  I'm part of the founding team of this personal project
+                  developed with a group of colleagues. I serve as a semi-senior
+                  Angular developer, contributing to the design and development
+                  of modern and efficient web applications. My focus includes
+                  building reusable components, integrating RESTful services,
+                  and performing unit and integration testing to ensure product
+                  quality. Additionally, I collaborate on the planning and
+                  execution of technical strategies to drive the project's
+                  growth.
                 </p>
                 <div class="chips">
                   <div class="chip">Angular Material</div>
@@ -133,6 +181,8 @@
                   <div class="chip">NgRx</div>
                   <div class="chip">CSS</div>
                   <div class="chip">Git</div>
+                  <div class="chip">ClickUp</div>
+                  <div class="chip">Figma</div>
                   <div class="chip">HTML</div>
                   <div class="chip">Tailwind</div>
                   <div class="chip">TypeScript</div>
@@ -141,7 +191,10 @@
             </div>
 
             <div class="actions">
-              <app-button-arrow [pdfUrl]="pdfUrl" [text]="'Download Portfolio'"></app-button-arrow>
+              <app-button-arrow
+                [pdfUrl]="pdfUrl"
+                [text]="'Download Portfolio'"
+              ></app-button-arrow>
             </div>
           </section>
         </div>
@@ -154,9 +207,12 @@
               </div>
               <div class="info">
                 <h3>
-                  <app-button-arrow [pdfUrl]="
+                  <app-button-arrow
+                    [pdfUrl]="
                       'https://github.com/Luca-Mendoza/Frontend-meang-online-shop'
-                    " [text]="'Frontend Web Developer · E-commerce'"></app-button-arrow>
+                    "
+                    [text]="'Frontend Web Developer · E-commerce'"
+                  ></app-button-arrow>
                 </h3>
                 <p>
                   Developed a comprehensive e-commerce platform using the MEAN
@@ -187,8 +243,10 @@
               </div>
               <div class="info">
                 <h3>
-                  <app-button-arrow [pdfUrl]="'https://lucadmendoza.dev/'"
-                    [text]="'Frontend Web Developer · Porfolio web '"></app-button-arrow>
+                  <app-button-arrow
+                    [pdfUrl]="'https://lucadmendoza.dev/'"
+                    [text]="'Frontend Web Developer · Porfolio web '"
+                  ></app-button-arrow>
                 </h3>
                 <p>
                   Developed and designed a portfolio website using Angular and
