@@ -1,0 +1,29 @@
+<div class="w-full h-full flex justify-between items-center text-white">
+  <!-- Botón para ir al elemento previo -->
+  <ng-container *ngIf="prevLink; else disabledPrev">
+    <a [routerLink]="prevLink" class="flex text-[11px] md:text-base items-center gap-2 hover:text-gray-300">
+      <lucide-icon name="chevron-left" class="w-5 h-5"></lucide-icon>
+      <span>{{ prevLabel }}</span>
+    </a>
+  </ng-container>
+  <ng-template #disabledPrev>
+    <span class="flex text-[11px] md:text-base items-center gap-2 opacity-50 cursor-not-allowed">
+      <lucide-icon name="chevron-left" class="w-5 h-5"></lucide-icon>
+      <span>{{ prevLabel }}</span>
+    </span>
+  </ng-template>
+
+  <!-- Botón para ir al elemento siguiente -->
+  <ng-container *ngIf="nextLink; else disabledNext">
+    <a [routerLink]="nextLink" class="flex text-[11px] md:text-base items-center gap-2 hover:text-gray-300">
+      <span>{{ nextLabel }}</span>
+      <lucide-icon name="chevron-right" class="w-5 h-5"></lucide-icon>
+    </a>
+  </ng-container>
+  <ng-template #disabledNext>
+    <span class="flex text-[11px] md:text-base items-center gap-2 opacity-50 cursor-not-allowed">
+      <span>{{ nextLabel }}</span>
+      <lucide-icon name="chevron-right" class="w-5 h-5"></lucide-icon>
+    </span>
+  </ng-template>
+</div>

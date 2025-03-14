@@ -10,11 +10,12 @@ import {
 import { ButtonArrowComponent } from '../../components/button-arrow/button-arrow.component';
 import { RouterModule } from '@angular/router';
 import { debounceTime, fromEvent, map } from 'rxjs';
+import { LucideModule } from '@shared/lucide/lucide.module';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ButtonArrowComponent],
+  imports: [CommonModule, RouterModule, ButtonArrowComponent, LucideModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -26,6 +27,40 @@ export class HomeComponent implements OnInit {
   // Definir el enlace activo
   activeLink: string = 'About';
   pdfUrl: any = './../../../../assets/data/luca_d_mendoza.pdf';
+  technologies: string[] = [
+    // 🏗 Frontend
+    "Angular 9 → 19",
+    "Angular Material",
+    "Tailwind CSS",
+    "CSS",
+    "SCSS",
+    "HTML",
+    "JavaScript",
+    "TypeScript",
+    "RxJS",
+
+    // 🖥 Backend
+    "Node.js",
+    "NestJS",
+    "GraphQL",
+
+    // 🚀 DevOps & Herramientas
+    "Docker",
+    "CI/CD (GitHub Actions)",
+    "Git",
+    "GitHub",
+    "DBeaver",
+
+    // 📌 Gestión de proyectos
+    "ClickUp",
+    "Jira",
+    "Trello",
+    "Scrum",
+
+    // 🛠 Extensiones y otros
+    "GitGraph (VS Code)"
+  ];
+
 
   // Definir los enlaces de navegación
   navLinks = [
@@ -38,7 +73,7 @@ export class HomeComponent implements OnInit {
     @Inject(DOCUMENT) private _document: any,
     @Inject(PLATFORM_ID) private platformId: Object,
     private elRef: ElementRef
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.scrollEventSubscribe();
@@ -149,4 +184,17 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
+  openPdf() {
+
+    if (this.pdfUrl) {
+      window.open(this.pdfUrl, '_blank');
+    }
+
+
+    else {
+      console.error('PDF URL is not provided.');
+    }
+  }
+
 }

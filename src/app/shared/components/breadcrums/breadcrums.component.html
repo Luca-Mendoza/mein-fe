@@ -1,0 +1,53 @@
+<div class="">
+  <div class="flex items-center space-x-2">
+    <!-- Icono de inicio si lo deseas -->
+    <!-- <ng-container *ngIf="breadcrumbLinks.length > 0">
+      <a
+        [routerLink]="breadcrumbLinks[0].path"
+        class="flex items-center text-white hover:text-gray-300"
+      >
+        <lucide-icon size="24" name="home"></lucide-icon>
+        {{ breadcrumbLinks[0].label }}
+      </a>
+    </ng-container> -->
+
+    <!-- Sección de Breadcrumbs -->
+    <ng-container *ngFor="let breadcrumb of breadcrumbLinks; let last = last">
+      <!-- <span *ngIf="!last" class="text-white opacity-60">/</span> -->
+      <a
+        *ngIf="!last"
+        [routerLink]="breadcrumb.path"
+        class="text-cyan-400 text-base hover:text-gray-300 opacity-60 font-semibold"
+      >
+        <span class="flex items-center space-x-1">
+          <lucide-icon
+            *ngIf="breadcrumb.icon"
+            [name]="breadcrumb.icon"
+            class="w-4 h-4 mb-1"
+          ></lucide-icon>
+          <span>{{ breadcrumb.label }}</span>
+        </span>
+      </a>
+      <!-- <span *ngIf="last" class="text-white font-semibold">{{
+        breadcrumb.label
+      }}</span> -->
+    </ng-container>
+  </div>
+
+  <!-- Título principal -->
+  <!-- <div class="mt-4">
+    <span
+      class="text-2xl font-extrabold text-white opacity-80 uppercase tracking-wider"
+      >{{ title }}</span
+    >
+  </div> -->
+
+  <!-- Subtítulo
+  <div *ngIf="subtitle" class="mt-2">
+    <span
+      class="text-xl font-extrabold text-white opacity-60 uppercase tracking-wider"
+      >{{ subtitle }}</span
+    >
+  </div>
+ -->
+</div>
