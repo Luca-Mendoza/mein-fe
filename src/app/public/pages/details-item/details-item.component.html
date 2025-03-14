@@ -1,1 +1,284 @@
-<p>details-item works!</p>
+<div class="w-screen h-screen flex flex-col justify-center items-center">
+  <!-- Navegación de regreso -->
+  <div
+    class="max-w-[745px] mx-4 w-[calc(100%-1rem)] min-h-[40px] flex justify-between items-center py-4 border-b border-white/10"
+  >
+    <app-breadcrums
+      [title]="'Dashboard'"
+      [subtitle]="'Overview'"
+      [breadcrumbLinks]="[
+        { label: 'Home', path: '', icon: 'arrow-left' },
+        { label: 'Dashboard', path: '/dashboard', icon: 'grid' }
+      ]"
+    ></app-breadcrums>
+
+    <div>
+      <p class="text-base text-white/50 !m-0 uppercase">
+        {{ item.type }}
+      </p>
+    </div>
+    <div>
+      <!-- Botón redondo con hover y efecto de copiar URL -->
+      <div
+        class="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer hover:bg-cyan-700/10 hover:text-cyan-700 transition-colors"
+        (click)="copyToClipboard()"
+      >
+        <lucide-icon
+          name="copy"
+          size="20"
+          class="text-white transition-colors"
+        ></lucide-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center h-full w-full gap-4">
+    <div
+      class="flex justify-center gap-2 h-full w-full overflow-y-auto max-h-[calc(100vh-140px)] px-4"
+    >
+      <div class="flex flex-col gap-2 max-w-[745px]">
+        <!-- Título del proyecto/experiencia -->
+        <div class="sticky top-0 w-full backdrop-blur-md p-4 z-10">
+          <div
+            class="flex flex-col md:flex-row justify-start items-start gap-2 mb-2"
+          >
+            <div class="md:flex-2">
+              <div class="-translate-x-[8px]">
+                <h1
+                  class="text-3xl font-extrabold text-white flex items-center gap-2 !m-0"
+                >
+                  <lucide-icon name="building-2"></lucide-icon>
+                  {{ item.company }}
+                </h1>
+              </div>
+
+              <p class="text-base text-white/50 flex items-center gap-2 !m-0">
+                <lucide-icon size="16" name="briefcase-business"></lucide-icon>
+                {{ item.title }}
+              </p>
+            </div>
+
+            <div
+              class="md:flex-1 w-full h-full flex md:justify-end md:items-center gap-4"
+            >
+              <div
+                class="w-[70%] flex flex-col md:justify-end md:items-end gap-2 h-[70%]"
+              >
+                <div class="flex items-center gap-2">
+                  <lucide-icon
+                    name="calendar"
+                    size="16"
+                    class="text-white/50"
+                  ></lucide-icon>
+                  <p
+                    class="uppercase tracking-widest text-white/50 text-[0.7rem] md:leading-6 !m-0"
+                  >
+                    {{ item.date }}
+                  </p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <lucide-icon
+                    name="clock"
+                    size="16"
+                    class="text-white/50"
+                  ></lucide-icon>
+                  <p
+                    class="uppercase tracking-widest text-white/50 text-[0.7rem] md:leading-6 !m-0"
+                  >
+                    {{ item.duration }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información del proyecto/experiencia -->
+        <div class="space-y-4 mb-6 md:px-4">
+          <div class="flex items-center gap-2">
+            <lucide-icon
+              name="circle-user-round"
+              size="16"
+              class="text-cyan-400"
+            ></lucide-icon>
+            <h3 class="text-base font-semibold text-white !m-0">
+              Role and Responsibilities
+            </h3>
+          </div>
+          <p class="text-gray-300 tracking-wide leading-relaxed">
+            {{ item.description }}
+          </p>
+        </div>
+
+        <!-- Descripción del Proyecto/Experiencia -->
+        <div class="space-y-4 mb-6 md:px-4">
+          <h3
+            class="flex items-center gap-2 text-base font-semibold text-white tracking-wide"
+          >
+            <lucide-icon
+              name="FileText"
+              size="16"
+              class="text-cyan-400"
+            ></lucide-icon>
+            Project Description
+          </h3>
+          <p class="text-gray-300 tracking-wide leading-relaxed">
+            {{ item.project_description }}
+          </p>
+        </div>
+
+        <!-- Desafíos y Soluciones -->
+        <div class="space-y-4 mb-6 md:px-4">
+          <h3 class="flex items-center gap-2 text-white">
+            <lucide-icon
+              name="lightbulb"
+              size="16"
+              class="text-cyan-400"
+            ></lucide-icon>
+            Challenges and Solutions
+          </h3>
+          <div class="flex flex-col gap-2">
+            <div
+              *ngFor="let challenge of item.challenges"
+              class="min-h-[50px] w-full bg-white/5 py-4 px-6 rounded-lg shadow-md backdrop-blur-md"
+            >
+              <h4 class="text-cyan-400 font-semibold">{{ challenge.title }}</h4>
+              <p class="text-gray-300 !m-0">{{ challenge.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aprendizajes Clave -->
+        <div class="space-y-4 mb-6 md:px-4">
+          <h3 class="flex items-center gap-2 text-base text-white">
+            <lucide-icon
+              name="lamp-desk"
+              size="16"
+              class="text-cyan-400"
+            ></lucide-icon>
+            Key Learnings
+          </h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li class="py-2 !m-0" *ngFor="let learning of item.learnings">
+              {{ learning }}
+            </li>
+          </ul>
+        </div>
+
+        @if(item?.soft_skills){
+        <div class="space-y-4 mb-6 md:px-4">
+          <h3 class="flex items-center gap-2 text-base text-white">
+            <lucide-icon
+              name="book-marked"
+              size="16"
+              class="text-cyan-400"
+            ></lucide-icon>
+            Soft Skills
+          </h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li class="py-2 !m-0" *ngFor="let soft_skill of item.soft_skills">
+              {{ soft_skill }}
+            </li>
+          </ul>
+        </div>
+        }
+
+        <!-- Tecnologías utilizadas -->
+        <div class="space-y-4 mb-6 md:px-4">
+          <h3 class="flex items-center text-base font-semibold text-white">
+            <lucide-icon
+              class="text-cyan-400"
+              name="chevron-left"
+              size="16"
+            ></lucide-icon>
+            <lucide-icon
+              class="text-cyan-400"
+              name="chevron-right"
+              size="16"
+            ></lucide-icon>
+            <span class="ml-2">Technologies Used</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              *ngFor="let tech of item.technologies"
+              class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+            >
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Enlaces del Proyecto/Experiencia -->
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-end gap-4 mb-6"
+        >
+          <!-- Bloque específico para proyectos -->
+          <ng-container *ngIf="!isExperience; else experienceLinks">
+            <a
+              *ngIf="item.links.github_backend"
+              [href]="item.links.github_backend"
+              target="_blank"
+              class="inline-flex justify-center md:justify-start items-center bg-green-900/40 hover:bg-green-700/50 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
+              Go to Github Back-end
+            </a>
+            <a
+              *ngIf="item.links.github_frontend"
+              [href]="item.links.github_frontend"
+              target="_blank"
+              class="inline-flex justify-center md:justify-start items-center bg-red-900/40 hover:bg-red-700/50 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
+              Go to Github Front-end
+            </a>
+            <a
+              *ngIf="item.links.link"
+              [href]="item.links.link"
+              target="_blank"
+              class="inline-flex justify-center md:justify-start items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              <div class="w-auto h-[24px]">
+                <img
+                  class="w-full h-full"
+                  [src]="item.links.assets"
+                  alt="logo"
+                />
+              </div>
+              Go to {{ item.links.name }}
+            </a>
+          </ng-container>
+          <!-- Bloque para experiencias -->
+          <ng-template #experienceLinks>
+            <a
+              *ngIf="item.links.link"
+              [href]="item.links.link"
+              target="_blank"
+              class="inline-flex justify-center md:justify-start items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              <div class="w-[40px] h-[24px]">
+                <img
+                  class="w-full h-full"
+                  [src]="item.links.assets"
+                  alt="logo"
+                />
+              </div>
+              Go to {{ item.links.name }}
+            </a>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="max-w-[745px] w-[calc(100%-1rem)] h-[60px] border-t border-white/10 mt-4 py-4 my-2"
+  >
+    <app-navigation
+      [prevLabel]="prevLabel"
+      [nextLabel]="nextLabel"
+      [prevLink]="prevLink"
+      [nextLink]="nextLink"
+    ></app-navigation>
+  </div>
+</div>
