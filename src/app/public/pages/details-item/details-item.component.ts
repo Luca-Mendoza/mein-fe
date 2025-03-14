@@ -52,8 +52,8 @@ export class DetailsItemComponent implements OnInit {
         this.isExperience = true;
         this.currentIndex = this.experiences.findIndex(exp => exp.id === id);
         this.setNavigationLinks(this.experiences);
-        this.prevLabel = 'Experiencia Anterior';
-        this.nextLabel = 'Experiencia Siguiente';
+        this.prevLabel = 'Previous Experience';
+        this.nextLabel = 'Next Experience';
         return;
       }
 
@@ -64,13 +64,13 @@ export class DetailsItemComponent implements OnInit {
         this.isExperience = false;
         this.currentIndex = this.projects.findIndex(proj => proj.id === id);
         this.setNavigationLinks(this.projects);
-        this.prevLabel = 'Proyecto Anterior';
-        this.nextLabel = 'Proyecto Siguiente';
+        this.prevLabel = 'Previous Project';
+        this.nextLabel = 'Next Project';
         return;
       }
 
       // Si no se encuentra en ninguno, redirigir a 404
-      console.error('Elemento no encontrado con el id:', id);
+      console.error('Element not found with id:', id);
       this.router.navigate(['/404']);
     });
   }
@@ -91,7 +91,7 @@ export class DetailsItemComponent implements OnInit {
   copyToClipboard() {
     const url = window.location.href;
     navigator.clipboard.writeText(url).then(() => {
-      this._snackBar.open('¡Enlace copiado al portapapeles!', 'Cerrar', {
+      this._snackBar.open('¡Link copied to clipboard!', 'Cerrar', {
         duration: 3000,
         verticalPosition: 'top',
         horizontalPosition: 'right',
@@ -99,7 +99,7 @@ export class DetailsItemComponent implements OnInit {
       });
 
     }).catch(err => {
-      this._snackBar.open('Error al copiar al portapapeles: ' + err, 'Cerrar', { panelClass: ['!bg-cyan-700/50', 'custom-snackbar'] });
+      this._snackBar.open('Error copying to clipboard: ' + err, 'Cerrar', { panelClass: ['!bg-cyan-700/50', 'custom-snackbar'] });
 
     });
   }
