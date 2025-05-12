@@ -6,6 +6,7 @@ import {
   OnInit,
   PLATFORM_ID,
   ViewChild,
+  OnDestroy,
 } from '@angular/core';
 import { ButtonArrowComponent } from '../../components/button-arrow/button-arrow.component';
 import { RouterModule } from '@angular/router';
@@ -19,10 +20,9 @@ import { LucideModule } from '@shared/lucide/lucide.module';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
-
-  scrollEvent$!: any;
+  private observer: IntersectionObserver | null = null;
 
   // Definir el enlace activo
   activeLink: string = 'About';
@@ -76,113 +76,78 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.scrollEventSubscribe();
-  }
-
-  // Desplazamiento suave al hacer clic en un enlace de navegación
-  scrollToSection(sectionId: string) {
-    const offset = 80; // Ajusta este valor si es necesario
-    const elemento = this._document.getElementById(sectionId);
-
-    if (elemento) {
-      // Obtener la posición relativa del elemento respecto al contenedor de scroll
-      const containerRect =
-        this.scrollContainer.nativeElement.getBoundingClientRect();
-      const elementoRect = elemento.getBoundingClientRect();
-
-      // Calcular la posición para el desplazamiento teniendo en cuenta el offset
-      const elementoPosicion =
-        elementoRect.top -
-        containerRect.top +
-        this.scrollContainer.nativeElement.scrollTop -
-        offset;
-
-      // Realizar el desplazamiento suave
-      this.scrollContainer.nativeElement.scrollTo({
-        top: elementoPosicion,
-        behavior: 'smooth',
-      });
-
-      this.setActiveLink(
-        this.navLinks.find((link) => link.id === sectionId)!.text
-      );
+    if (isPlatformBrowser(this.platformId)) {
+      this.setupIntersectionObserver();
     }
   }
 
-  // Actualizar el enlace activo según el scroll
-  private setupScrollEvent() {
-    fromEvent(this.scrollContainer.nativeElement, 'scroll')
-      .pipe(map(() => this.scrollContainer.nativeElement.scrollTop))
-      .subscribe((scrollTop) => {
-        this.updateActiveLink(scrollTop);
+  private setupIntersectionObserver() {
+    const options = {
+      root: this.scrollContainer.nativeElement,
+      rootMargin: '-10% 0px -70% 0px', // Adjusted margins for better detection
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5] // Multiple thresholds for more accurate detection
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      // Sort entries by intersection ratio to find the most visible section
+      const visibleEntry = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleEntry) {
+        const sectionId = visibleEntry.target.id;
+        const link = this.navLinks.find(link => link.id === sectionId);
+        if (link) {
+          this.setActiveLink(link.text);
+        }
+      }
+    }, options);
+
+    // Observe all sections
+    this.navLinks.forEach(link => {
+      const section = this._document.getElementById(link.id);
+      if (section) {
+        this.observer?.observe(section);
+      }
+    });
+  }
+
+  // Update scrollToSection to use smooth scrolling with better positioning
+  scrollToSection(sectionId: string) {
+    const section = this._document.getElementById(sectionId);
+    if (section) {
+      const container = this.scrollContainer.nativeElement;
+      const containerRect = container.getBoundingClientRect();
+      const sectionRect = section.getBoundingClientRect();
+      
+      // Calculate the position to scroll to, considering the container's scroll position
+      const scrollPosition = sectionRect.top - containerRect.top + container.scrollTop - 40; // Increased offset for better positioning
+      
+      container.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
       });
+
+      // Update active link immediately when clicking
+      const link = this.navLinks.find(link => link.id === sectionId);
+      if (link) {
+        this.setActiveLink(link.text);
+      }
+    }
+  }
+
+  // Remove the old scroll event handling methods since we're using Intersection Observer
+  private scrollEventSubscribe() {
+    // This method can be removed as we're using Intersection Observer
   }
 
   private updateActiveLink(scrollTop: number) {
-    // const sections = this.navLinks.map((link) =>
-    //   this._document.getElementById(link.id)
-    // );
-    // if (sections.length) {
-    //   const sectionPositions = sections.map((section) =>
-    //     section
-    //       ? section.getBoundingClientRect().top +
-    //         this.scrollContainer.nativeElement.scrollTop
-    //       : 0
-    //   );
-    //   const offset = 0; // Ajustar según sea necesario
-    //   // Actualizar el enlace activo basado en la posición del scroll
-    //   const currentIndex = sectionPositions.findIndex(
-    //     (position, index) =>
-    //       scrollTop >= position &&
-    //       (index === sectionPositions.length - 1 ||
-    //         scrollTop < sectionPositions[index + 1])
-    //   );
-    //   if (currentIndex !== -1) {
-    //     this.setActiveLink(this.navLinks[currentIndex].text);
-    //   }
-    // }
+    // This method can be removed as we're using Intersection Observer
   }
 
   // Función para establecer el enlace activo
   private setActiveLink(linkText: string) {
     this.activeLink = linkText;
-  }
-
-  private scrollEventSubscribe() {
-    this.scrollEvent$ = fromEvent(
-      this.scrollContainer.nativeElement,
-      'scroll'
-    ).pipe(
-      map(() => this.scrollContainer.nativeElement.scrollTop),
-      debounceTime(0) // Ajusta el tiempo según tus necesidades
-    );
-
-    let previousLink: string | null = null;
-
-    this.scrollEvent$.subscribe((scrollTop: number) => {
-      const container = this.scrollContainer.nativeElement;
-      const containerHeight = container.clientHeight;
-      const contentHeight = container.scrollHeight;
-
-      let newLink: string | null = null;
-
-      // Comprobar si se ha llegado al final del contenedor
-      if (scrollTop + containerHeight >= contentHeight) {
-        newLink = 'Projects';
-      } else if (scrollTop < 30) {
-        newLink = 'About';
-      } else if (scrollTop > 291) {
-        newLink = 'Projects';
-      } else if (scrollTop > 200) {
-        newLink = 'Experience';
-      }
-
-      // Solo actualiza el enlace activo si ha cambiado
-      if (newLink && newLink !== previousLink) {
-        this.setActiveLink(newLink);
-        previousLink = newLink;
-      }
-    });
   }
 
   openPdf() {
@@ -197,4 +162,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  ngOnDestroy() {
+    // Clean up the observer when component is destroyed
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
 }
