@@ -377,148 +377,147 @@
           >
             Projects
           </h2>
-          <section
-            class="section section__projects group cursor-pointer"
-            routerLink="d/portfolio"
-          >
-            <div class="experience experience--rever-column">
-              <div class="avatar">
-                <img src="assets/imgs/porfolio_web.png" alt="porfolio_web" />
-              </div>
-              <div class="info">
-                <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
-                  <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
-                    Web Frontend Engineer · Porfolio web
-                  </span>
-                </h3>
-                <p>
-                  Developed and designed a portfolio website using Angular and
-                  Angular Material. This project showcases various frontend
-                  skills, including the use of CSS/SCSS for styling and
-                  Git/GitHub for version control. The site is fully responsive
-                  and optimized for performance, offering an engaging and
-                  interactive user experience.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <div
-                    *ngFor="let tech of technologies"
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    {{ tech }}
-                  </div>
+          <section id="sectionProjects" class="section section__projects">
+            <div class="section__projects-content">
+              <div
+                class="experience experience--rever-column group cursor-pointer"
+                routerLink="d/portfolio"
+              >
+                <div class="avatar">
+                  <img src="assets/imgs/porfolio_web.png" alt="porfolio_web" />
                 </div>
-
-                <div class="mt-4 w-full flex justify-end">
-                  <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                <div class="info">
+                  <h3
+                    class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
                   >
                     <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                      class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
                     >
-                      See more information
+                      Web Frontend Engineer · Porfolio web
                     </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            id="sectionProjects"
-            class="section section__projects group cursor-pointer"
-            routerLink="d/gamezonia"
-          >
-            <div class="experience">
-              <div class="avatar">
-                <img src="assets/imgs/protect_01.png" alt="protect_01" />
-              </div>
-              <div class="info">
-                <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
-                  <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
-                    Web Engineer · Gamezonia
-                  </span>
-                </h3>
-                <p>
-                  Developed a comprehensive e-commerce platform using the MEAN
-                  stack (MongoDB, Express.js, Angular, Node.js) combined with
-                  GraphQL. The project involved implementing payment processing
-                  with Stripe, automatic email notifications with Nodemailer,
-                  and deploying the application on various platforms including
-                  Netlify, Heroku, and MongoDB Atlas.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Angular
+                  </h3>
+                  <p>
+                    Developed and designed a portfolio website using Angular and
+                    Angular Material. This project showcases various frontend
+                    skills, including the use of CSS/SCSS for styling and
+                    Git/GitHub for version control. The site is fully responsive
+                    and optimized for performance, offering an engaging and
+                    interactive user experience.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <div
+                      *ngFor="let tech of technologies"
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      {{ tech }}
+                    </div>
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Express.js
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    GraphQL
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Heroku
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    MongoDB
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Netlify
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Node.js
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Nodemailer
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Stripe
-                  </div>
-                </div>
 
-                <div class="mt-4 w-full flex justify-end">
-                  <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                  <div class="mt-4 w-full flex justify-end">
+                    <button
+                      class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                    >
+                      <span
+                        class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                      >
+                        See more information
+                      </span>
+                      <lucide-icon
+                        name="arrow-right"
+                        class="w-5 h-5 group-hover:text-[#00718f]"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="experience group cursor-pointer"
+                routerLink="d/gamezonia"
+              >
+                <div class="avatar">
+                  <img src="assets/imgs/protect_01.png" alt="protect_01" />
+                </div>
+                <div class="info">
+                  <h3
+                    class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
                   >
                     <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                      class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
                     >
-                      See more information
+                      Web Engineer · Gamezonia
                     </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
-                  </button>
+                  </h3>
+                  <p>
+                    Developed a comprehensive e-commerce platform using the MEAN
+                    stack (MongoDB, Express.js, Angular, Node.js) combined with
+                    GraphQL. The project involved implementing payment processing
+                    with Stripe, automatic email notifications with Nodemailer,
+                    and deploying the application on various platforms including
+                    Netlify, Heroku, and MongoDB Atlas.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Angular
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Express.js
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      GraphQL
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Heroku
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      MongoDB
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Netlify
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Node.js
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Nodemailer
+                    </div>
+                    <div
+                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                    >
+                      Stripe
+                    </div>
+                  </div>
+
+                  <div class="mt-4 w-full flex justify-end">
+                    <button
+                      class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                    >
+                      <span
+                        class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                      >
+                        See more information
+                      </span>
+                      <lucide-icon
+                        name="arrow-right"
+                        class="w-5 h-5 group-hover:text-[#00718f]"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
