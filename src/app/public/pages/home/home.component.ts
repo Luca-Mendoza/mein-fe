@@ -12,11 +12,13 @@ import { ButtonArrowComponent } from '../../components/button-arrow/button-arrow
 import { RouterModule } from '@angular/router';
 import { debounceTime, fromEvent, map } from 'rxjs';
 import { LucideModule } from '@shared/lucide/lucide.module';
+import { TranslatePipe } from '@shared/pipes/translate.pipe';
+import { LanguageSelectorComponent } from '@shared/components/language-selector/language-selector.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ButtonArrowComponent, LucideModule],
+  imports: [CommonModule, RouterModule, ButtonArrowComponent, LucideModule, TranslatePipe, LanguageSelectorComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -60,7 +62,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     // 🛠 Extensiones y otros
     "GitGraph (VS Code)"
   ];
-
 
   // Definir los enlaces de navegación
   navLinks = [

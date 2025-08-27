@@ -1,3 +1,8 @@
+<!-- Selector de idioma flotante en esquina superior derecha -->
+<div class="floating-language-selector">
+  <app-language-selector></app-language-selector>
+</div>
+
 <section class="container-home">
   <div class="home">
     <div class="left flex-col">
@@ -5,14 +10,15 @@
         class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding"
       >
         <div class="home-header__content">
+          
           <h1 class="home-header__title">
-            <a class="home-header__title-link" href="/">Luca D. Mendoza</a>
+            <a class="home-header__title-link" href="/">{{ 'HOME.TITLE' | translate }}</a>
           </h1>
-          <h2 class="home-header__subtitle">Web Developer</h2>
+          <h2 class="home-header__subtitle">{{ 'HOME.SUBTITLE' | translate }}</h2>
           <p class="home-header__description">
-            "Crafting dynamic scalable web solutions <br />with a passion for
-            technology."
+            {{ 'HOME.DESCRIPTION' | translate }}
           </p>
+          
           <nav
             class="home-nav home-nav--hidden home-nav--lg"
             aria-label="In-page jump links"
@@ -35,7 +41,7 @@
                   <span
                     class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
                   >
-                    {{ link.text }}
+                    {{ 'COMMON.' + link.text.toUpperCase() | translate }}
                   </span>
                 </a>
               </li>
@@ -92,7 +98,7 @@
       <span
         class="p-4 hidden lg:block w-full text-center text-sm text-white/20"
       >
-        © 2025 Luca D. Mendoza. All rights reserved.
+        © 2025 Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
       </span>
     </div>
 
@@ -100,42 +106,35 @@
       <div #scrollContainer class="items">
         <div class="item item__about">
           <h2
-            class="w-full px-4 text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)]"
+            class="w-full px-4 text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
           >
-            About
+            {{ 'HOME.ABOUT_SECTION.TITLE' | translate }}
           </h2>
           <section id="sectionAbout" class="section section__about">
-            <p>
-              I started programming in 2019 by taking online courses. I was
-              captivated by the idea of building applications to make others'
-              daily work easier, so I enrolled at the Faculty of Exact Sciences
-              at Unicen to study Systems Engineering and University Technology
-              in IT Application Development, with a focus on web application
-              development.
+            <p class="min-h-[4.5rem] leading-relaxed">
+              {{ 'HOME.ABOUT_SECTION.PARAGRAPH_1' | translate }}
             </p>
 
-            <p>
-              In 2022,began working at "Siete Ideas," Frontend development with
-              Angular.
+            <p class="min-h-[2.5rem] leading-relaxed">
+              {{ 'HOME.ABOUT_SECTION.PARAGRAPH_2' | translate }}
             </p>
 
-            <p>
-              In my free time, I usually enjoy hiking in the Tandil hills or
-              going to the gym.
+            <p class="min-h-[2.5rem] leading-relaxed">
+              {{ 'HOME.ABOUT_SECTION.PARAGRAPH_3' | translate }}
             </p>
           </section>
         </div>
         <div class="item item__experience">
           <h2
-            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)]"
+            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
           >
-            Experience
+            {{ 'HOME.EXPERIENCE_SECTION.TITLE' | translate }}
           </h2>
           <section id="sectionExperience" class="section section__experience">
-            <div
-              class="experience my-2 group cursor-pointer"
-              routerLink="d/event_loop_club"
-            >
+                         <div
+               class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+               routerLink="d/event_loop_club"
+             >
               <div
                 class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center"
               >
@@ -148,27 +147,19 @@
                   >Part-Time</span
                 >
               </div>
-              <div class="info">
-                <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
-                  <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
-                    SSR Frontend Developer · Event Loop Club
-                  </span>
-                </h3>
-                <p>
-                  I'm part of the founding team of this personal project
-                  developed with a group of colleagues. I serve as a semi-senior
-                  Angular developer, contributing to the design and development
-                  of modern and efficient web applications. My focus includes
-                  building reusable components, integrating RESTful services,
-                  and performing unit and integration testing to ensure product
-                  quality. Additionally, I collaborate on the planning and
-                  execution of technical strategies to drive the project's
-                  growth.
-                </p>
+                             <div class="info flex flex-col h-full flex-1 min-w-0">
+                 <h3
+                   class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
+                 >
+                   <span
+                     class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                   >
+                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.TITLE' | translate }}
+                   </span>
+                 </h3>
+                 <p class="flex-grow">
+                   {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DESCRIPTION' | translate }}
+                 </p>
                 <!-- <div class="flex flex-wrap gap-2">
                   <span
                     *ngFor="let tech of item.technologies"
@@ -230,14 +221,14 @@
                   </div>
                 </div>
 
-                <div class="mt-4 w-full flex justify-end">
+                <div class="mt-auto w-full flex justify-end">
                   <button
                     class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
                   >
                     <span
                       class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
                     >
-                      See more information
+                      {{ 'COMMON.SEE_MORE_INFO' | translate }}
                     </span>
                     <lucide-icon
                       name="arrow-right"
@@ -247,10 +238,10 @@
                 </div>
               </div>
             </div>
-            <div
-              class="experience my-2 group cursor-pointer"
-              routerLink="d/siete_ideas"
-            >
+                         <div
+               class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+               routerLink="d/siete_ideas"
+             >
               <div
                 class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center"
               >
@@ -264,23 +255,19 @@
                 >
               </div>
 
-              <div class="info">
-                <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
-                  <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
-                    SSR Frontend Web Developer · Siete Ideas
-                  </span>
-                </h3>
-                <p>
-                  Develop and maintain web applications using Angular. Implement
-                  responsive and attractive user interfaces, create reusable
-                  components, and integrate RESTful services. Conduct unit and
-                  integration testing, maintain the application, and manage
-                  production deployments.
-                </p>
+                             <div class="info flex flex-col h-full flex-1 min-w-0">
+                 <h3
+                   class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
+                 >
+                   <span
+                     class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                   >
+                     {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.TITLE' | translate }}
+                   </span>
+                 </h3>
+                 <p class="flex-grow">
+                   {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DESCRIPTION' | translate }}
+                 </p>
                 <div class="flex flex-wrap gap-2">
                   <div
                     class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
@@ -334,14 +321,14 @@
                   </div>
                 </div>
 
-                <div class="mt-4 w-full flex justify-end">
+                <div class="mt-auto w-full flex justify-end">
                   <button
                     class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
                   >
                     <span
                       class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
                     >
-                      See more information
+                      {{ 'COMMON.SEE_MORE_INFO' | translate }}
                     </span>
                     <lucide-icon
                       name="arrow-right"
@@ -360,7 +347,7 @@
                 <span
                   class="pb-1 relative after:block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-cyan-400 after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100"
                 >
-                  Download Portfolio
+                  {{ 'COMMON.DOWNLOAD_PORTFOLIO' | translate }}
                 </span>
 
                 <lucide-icon
@@ -373,160 +360,210 @@
         </div>
         <div class="item item__projects">
           <h2
-            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)]"
+            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
           >
-            Projects
+            {{ 'HOME.PROJECTS_SECTION.TITLE' | translate }}
           </h2>
-          <section id="sectionProjects" class="section section__projects">
-            <div class="section__projects-content">
-              <div
-                class="experience experience--rever-column group cursor-pointer"
-                routerLink="d/portfolio"
-              >
-                <div class="avatar">
-                  <img src="assets/imgs/porfolio_web.png" alt="porfolio_web" />
-                </div>
-                <div class="info">
-                  <h3
-                    class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                  >
-                    <span
-                      class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
-                      Web Frontend Engineer · Porfolio web
-                    </span>
-                  </h3>
-                  <p>
-                    Developed and designed a portfolio website using Angular and
-                    Angular Material. This project showcases various frontend
-                    skills, including the use of CSS/SCSS for styling and
-                    Git/GitHub for version control. The site is fully responsive
-                    and optimized for performance, offering an engaging and
-                    interactive user experience.
-                  </p>
-                  <div class="flex flex-wrap gap-2">
-                    <div
-                      *ngFor="let tech of technologies"
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      {{ tech }}
-                    </div>
-                  </div>
-
-                  <div class="mt-4 w-full flex justify-end">
-                    <button
-                      class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                     <section id="sectionProjects" class="section section__projects">
+             <div class="section__projects-content max-w-full flex flex-col items-center w-full">
+                             <div
+                 class="experience experience--rever-column group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+                 routerLink="d/portfolio"
+               >
+                 <div class="avatar w-24 h-24 flex-shrink-0">
+                   <img src="assets/imgs/porfolio_web.png" alt="porfolio_web" class="w-full h-full object-cover rounded-md" />
+                 </div>
+                                   <div class="info flex flex-col h-full flex-1 min-w-0">
+                    <h3
+                      class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
                     >
                       <span
-                        class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                        class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
                       >
-                        See more information
+                        {{ 'HOME.PROJECTS_SECTION.PORTFOLIO.TITLE' | translate }}
                       </span>
-                      <lucide-icon
-                        name="arrow-right"
-                        class="w-5 h-5 group-hover:text-[#00718f]"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="experience group cursor-pointer"
-                routerLink="d/gamezonia"
-              >
-                <div class="avatar">
-                  <img src="assets/imgs/protect_01.png" alt="protect_01" />
-                </div>
-                <div class="info">
-                  <h3
-                    class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                  >
-                    <span
-                      class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
-                      Web Engineer · Gamezonia
-                    </span>
-                  </h3>
-                  <p>
-                    Developed a comprehensive e-commerce platform using the MEAN
-                    stack (MongoDB, Express.js, Angular, Node.js) combined with
-                    GraphQL. The project involved implementing payment processing
-                    with Stripe, automatic email notifications with Nodemailer,
-                    and deploying the application on various platforms including
-                    Netlify, Heroku, and MongoDB Atlas.
-                  </p>
-                  <div class="flex flex-wrap gap-2">
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Angular
+                    </h3>
+                    <p class="flex-grow">
+                      {{ 'HOME.PROJECTS_SECTION.PORTFOLIO.DESCRIPTION' | translate }}
+                    </p>
+                                       <div class="flex flex-wrap gap-2 mb-4">
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Angular 9 → 19
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Angular Material
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Tailwind CSS
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        CSS
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        SCSS
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        HTML
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        JavaScript
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        TypeScript
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        RxJS
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Node.js
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        NestJS
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        GraphQL
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Docker
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        CI/CD (GitHub Actions)
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Git
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        GitHub
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        DBeaver
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        ClickUp
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Jira
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Trello
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        Scrum
+                      </div>
+                      <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                        GitGraph (VS Code)
+                      </div>
                     </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Express.js
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      GraphQL
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Heroku
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      MongoDB
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Netlify
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Node.js
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Nodemailer
-                    </div>
-                    <div
-                      class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                    >
-                      Stripe
-                    </div>
-                  </div>
 
-                  <div class="mt-4 w-full flex justify-end">
-                    <button
-                      class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                   <div class="mt-auto w-full flex justify-end">
+                     <button
+                       class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                     >
+                       <span
+                         class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                       >
+                         {{ 'COMMON.SEE_MORE_INFO' | translate }}
+                       </span>
+                       <lucide-icon
+                         name="arrow-right"
+                         class="w-5 h-5 group-hover:text-[#00718f]"
+                       />
+                     </button>
+                   </div>
+                 </div>
+               </div>
+                             <div
+                 class="experience group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+                 routerLink="d/gamezonia"
+               >
+                 <div class="avatar w-24 h-24 flex-shrink-0">
+                   <img src="assets/imgs/protect_01.png" alt="protect_01" class="w-full h-full object-cover rounded-md" />
+                 </div>
+                                   <div class="info flex flex-col h-full flex-1 min-w-0">
+                    <h3
+                      class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
                     >
                       <span
-                        class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                        class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
                       >
-                        See more information
+                        {{ 'HOME.PROJECTS_SECTION.GAMEZONIA.TITLE' | translate }}
                       </span>
-                      <lucide-icon
-                        name="arrow-right"
-                        class="w-5 h-5 group-hover:text-[#00718f]"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    </h3>
+                    <p class="flex-grow">
+                      {{ 'HOME.PROJECTS_SECTION.GAMEZONIA.DESCRIPTION' | translate }}
+                    </p>
+                   <div class="flex flex-wrap gap-2 mb-4">
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Angular
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Express.js
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       GraphQL
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Heroku
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       MongoDB
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Netlify
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Node.js
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Nodemailer
+                     </div>
+                     <div
+                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
+                     >
+                       Stripe
+                     </div>
+                   </div>
+
+                   <div class="mt-auto w-full flex justify-end">
+                     <button
+                       class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                     >
+                       <span
+                         class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                       >
+                         {{ 'COMMON.SEE_MORE_INFO' | translate }}
+                       </span>
+                       <lucide-icon
+                         name="arrow-right"
+                         class="w-5 h-5 group-hover:text-[#00718f]"
+                       />
+                     </button>
+                   </div>
+                 </div>
+               </div>
             </div>
           </section>
         </div>
         <span
           class="block lg:hidden w-full text-center text-sm text-white/20 p-4"
         >
-          © 2025 Luca D. Mendoza. All rights reserved.
+          © 2025 Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
         </span>
       </div>
     </div>

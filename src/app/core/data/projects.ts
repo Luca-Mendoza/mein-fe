@@ -132,7 +132,7 @@ export const projects = [
             },
             {
                 "title": "Siete Ideas",
-                "description": "Como SSR Frontend Web Developer en 'Siete Ideas', desarrollé y mantuve aplicaciones web responsivas, implementando componentes UI robustos con Angular y Angular Material. La integración de servicios RESTful y la realización de pruebas unitarias e integrales fueron fundamentales para garantizar la calidad y confiabilidad del producto en un entorno dinámico."
+                "description": "Como Frontend Web Developer en 'Siete Ideas', desarrollé y mantuve aplicaciones web responsivas, implementando componentes UI robustos con Angular y Angular Material. La integración de servicios RESTful y la realización de pruebas unitarias e integrales fueron fundamentales para garantizar la calidad y confiabilidad del producto en un entorno dinámico."
             },
             {
                 "title": "Proyectos Diversos",
@@ -162,7 +162,7 @@ export const projects = [
         ],
         "links": {
             "github": "https://github.com/username/portfolio",
-            "live": "https://portfolio.example.com"
+            "live": "https://lucadmendoza.dev/"
         },
         "images": [
             "/assets/portfolio-preview.png"
@@ -328,7 +328,7 @@ export const projects_ingles = [
             },
             {
                 "title": "Siete Ideas",
-                "description": "As an SSR Frontend Web Developer at 'Siete Ideas', I developed and maintained responsive web applications, implementing robust UI components with Angular and Angular Material. Integrating RESTful services and performing unit and integration tests were fundamental to ensuring product quality and reliability in a dynamic environment."
+                "description": "As an Frontend Engineer at 'Siete Ideas', I developed and maintained responsive web applications, implementing robust UI components with Angular and Angular Material. Integrating RESTful services and performing unit and integration tests were fundamental to ensuring product quality and reliability in a dynamic environment."
             },
             {
                 "title": "Various Projects",
@@ -358,7 +358,7 @@ export const projects_ingles = [
         ],
         "links": {
             "github": "https://github.com/username/portfolio",
-            "live": "https://portfolio.example.com"
+            "live": "https://lucadmendoza.dev/"
         },
         "images": [
             "/assets/portfolio-preview.png"

@@ -1,18 +1,20 @@
 <div class="w-screen h-screen flex flex-col justify-center items-center">
+  <!-- Selector de idioma flotante -->
+  <div class="floating-language-selector">
+    <app-language-selector></app-language-selector>
+  </div>
+  
   <!-- Navegación de regreso -->
   <div
     class="max-w-[745px] mx-4 w-[calc(100%-1rem)] min-h-[40px] flex justify-between items-center py-4 border-b border-white/10"
   >
-    <app-breadcrums
-      [title]="'Dashboard'"
-      [subtitle]="'Overview'"
-      [breadcrumbLinks]="[
-        { label: 'Home', path: '', icon: 'arrow-left' },
-        { label: 'Dashboard', path: '/dashboard', icon: 'grid' }
-      ]"
-    ></app-breadcrums>
+         <app-breadcrums
+       [title]="'Dashboard'"
+       [subtitle]="'Overview'"
+       [breadcrumbLinks]="breadcrumbLinks"
+     ></app-breadcrums>
 
-    <div>
+    <div class="flex items-center gap-4">
       <p class="text-base text-white/50 !m-0 uppercase">
         {{ item.type }}
       </p>
@@ -102,7 +104,7 @@
               class="text-cyan-400"
             ></lucide-icon>
             <h3 class="text-base font-semibold text-white !m-0">
-              Role and Responsibilities
+              {{ 'COMMON.ROLE_AND_RESPONSIBILITIES' | translate }}
             </h3>
           </div>
           <p class="text-gray-300 tracking-wide leading-relaxed">
@@ -120,7 +122,7 @@
               size="16"
               class="text-cyan-400"
             ></lucide-icon>
-            Project Description
+            {{ 'COMMON.PROJECT_DESCRIPTION' | translate }}
           </h3>
           <p class="text-gray-300 tracking-wide leading-relaxed">
             {{ item.project_description }}
@@ -135,7 +137,7 @@
               size="16"
               class="text-cyan-400"
             ></lucide-icon>
-            Challenges and Solutions
+            {{ 'COMMON.CHALLENGES_AND_SOLUTIONS' | translate }}
           </h3>
           <div class="flex flex-col gap-2">
             <div
@@ -156,7 +158,7 @@
               size="16"
               class="text-cyan-400"
             ></lucide-icon>
-            Key Learnings
+            {{ 'COMMON.KEY_LEARNINGS' | translate }}
           </h3>
           <ul class="list-disc list-inside text-gray-300 space-y-2">
             <li class="py-2 !m-0" *ngFor="let learning of item.learnings">
@@ -173,7 +175,7 @@
               size="16"
               class="text-cyan-400"
             ></lucide-icon>
-            Soft Skills
+            {{ 'COMMON.SOFT_SKILLS' | translate }}
           </h3>
           <ul class="list-disc list-inside text-gray-300 space-y-2">
             <li class="py-2 !m-0" *ngFor="let soft_skill of item.soft_skills">
@@ -196,7 +198,7 @@
               name="chevron-right"
               size="16"
             ></lucide-icon>
-            <span class="ml-2">Technologies Used</span>
+            <span class="ml-2">{{ 'COMMON.TECHNOLOGIES_USED' | translate }}</span>
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
@@ -210,62 +212,74 @@
 
         <!-- Enlaces del Proyecto/Experiencia -->
         <div
-          class="flex flex-col md:flex-row md:items-center md:justify-end gap-4 mb-6"
+        class="flex flex-col md:flex-row gap-4 mb-6 w-full"
         >
-          <!-- Bloque específico para proyectos -->
-          <ng-container *ngIf="!isExperience; else experienceLinks">
-            <a
-              *ngIf="item.links.github_backend"
-              [href]="item.links.github_backend"
-              target="_blank"
-              class="inline-flex justify-center md:justify-start items-center bg-green-900/40 hover:bg-green-700/50 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
-              Go to Github Back-end
-            </a>
-            <a
-              *ngIf="item.links.github_frontend"
-              [href]="item.links.github_frontend"
-              target="_blank"
-              class="inline-flex justify-center md:justify-start items-center bg-red-900/40 hover:bg-red-700/50 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
-              Go to Github Front-end
-            </a>
-            <a
-              *ngIf="item.links.link"
-              [href]="item.links.link"
-              target="_blank"
-              class="inline-flex justify-center md:justify-start items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              <div class="w-auto h-[24px]">
-                <img
-                  class="w-full h-full"
-                  [src]="item.links.assets"
-                  alt="logo"
-                />
-              </div>
-              Go to {{ item.links.name }}
-            </a>
-          </ng-container>
-          <!-- Bloque para experiencias -->
-          <ng-template #experienceLinks>
-            <a
-              *ngIf="item.links.link"
-              [href]="item.links.link"
-              target="_blank"
-              class="inline-flex justify-center md:justify-start items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              <div class="w-[40px] h-[24px]">
-                <img
-                  class="w-full h-full"
-                  [src]="item.links.assets"
-                  alt="logo"
-                />
-              </div>
-              Go to {{ item.links.name }}
-            </a>
-          </ng-template>
+                     <!-- Bloque específico para proyectos -->
+           @if (!isExperience) {
+             @if (item.links?.github_backend) {
+               <a
+                 [href]="item.links.github_backend"
+                 target="_blank"
+                 class="w-full flex justify-center md:justify-start items-center bg-green-900/40 hover:bg-green-700/50 text-white px-4 py-3 rounded-md transition-colors"
+               >
+                 <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
+                 {{ 'COMMON.GO_TO_GITHUB_BACKEND' | translate }}
+               </a>
+             }
+             @if (item.links?.github_frontend) {
+               <a
+                 [href]="item.links.github_frontend"
+                 target="_blank"
+                 class="w-full flex justify-center md:justify-start items-center bg-red-900/40 hover:bg-red-700/50 text-white px-4 py-3 rounded-md transition-colors"
+               >
+                 <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
+                 {{ 'COMMON.GO_TO_GITHUB_FRONTEND' | translate }}
+               </a>
+             }
+             @if (item.links?.github && !item.links?.github_backend && !item.links?.github_frontend) {
+               <a
+                 [href]="item.links.github"
+                 target="_blank"
+                 class="w-full flex justify-center md:justify-start items-center bg-slate-700 hover:bg-slate-600 text-white px-4 py-3 rounded-md transition-colors"
+               >
+                 <lucide-icon name="github" size="24" class="mr-2"></lucide-icon>
+                 {{ 'COMMON.GO_TO_GITHUB' | translate }}
+               </a>
+             }
+             @if (item.links?.link) {
+               <a
+                 [href]="item.links.link"
+                 target="_blank"
+                 class="w-full flex justify-center md:justify-start items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-3 rounded-md transition-colors"
+               >
+                 <div class="w-auto h-[24px]">
+                   <img
+                     class="w-full h-full"
+                     [src]="item.links.assets"
+                     alt="logo"
+                   />
+                 </div>
+                 {{ 'COMMON.GO_TO' | translate }} {{ item.links.name }}
+               </a>
+             }
+           } @else {
+             @if (item.links?.link) {
+               <a
+                 [href]="item.links.link"
+                 target="_blank"
+                 class="w-full flex justify-center md:justify-start items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-3 rounded-md transition-colors"
+               >
+                 <div class="w-[40px] h-[24px]">
+                   <img
+                     class="w-full h-full"
+                     [src]="item.links.assets"
+                     alt="logo"
+                   />
+                 </div>
+                 {{ 'COMMON.GO_TO' | translate }} {{ item.links.name }}
+               </a>
+             }
+           }
         </div>
       </div>
     </div>

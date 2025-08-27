@@ -401,3 +401,30 @@ p {
 .home-nav__text--active {
   color: white;
 }
+
+.floating-language-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.language-selector-container {
+  margin: 0 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+    margin: 0 0 2.5rem 0;
+  }
+}

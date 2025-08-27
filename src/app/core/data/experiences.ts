@@ -2,12 +2,12 @@ export const experiences = [
   {
     "id": 'event_loop_club',
     "type": "experience",
-    "title": "SSR Frontend Web Developer",
+    "title": "Frontend Engineer",
     "company": "Event Loop Club",
     "date": "2023 — Present",
     "position": "Frontend Developer",
     "duration": "Part-Time",
-    "description": "Desarrollador Frontend Semi-Senior en un proyecto Angular con SSR. Mis responsabilidades incluyen mantener y optimizar el código existente, crear componentes reutilizables, y realizar refactorizaciones para integrar nuevas funcionalidades. Además, colaboro estrechamente con el equipo para mejorar la arquitectura, asegurando una aplicación escalable y de alto rendimiento.",
+    "description": "Desarrollador Frontend en un proyecto Angular con SSR. Mis responsabilidades incluyen mantener y optimizar el código existente, crear componentes reutilizables, y realizar refactorizaciones para integrar nuevas funcionalidades. Además, colaboro estrechamente con el equipo para mejorar la arquitectura, asegurando una aplicación escalable y de alto rendimiento.",
     "project_description": "Ticketera innovadora que permite a los productores publicar y gestionar sus eventos de manera integral. La aplicación facilita la gestión de eventos en tiempo real desde su dashboard, permitiendo controlar desde la publicación hasta el seguimiento de cada actividad. Trabajé de la mano con diseñadores y desarrolladores de backend para implementar una interfaz intuitiva y componentes reutilizables, garantizando una experiencia óptima en cualquier dispositivo. La solución aporta a los productores una herramienta completa para el control y la actualización de sus eventos en tiempo real, mejorando la eficiencia en la gestión y la interacción con el público.",
     "technologies": [
       "Angular",
@@ -60,7 +60,7 @@ export const experiences = [
     "date": "2022 — Present",
     "position": "Frontend Developer",
     "duration": "Full-Time",
-    "description": "Desarrollador Frontend Semi-Senior en un proyecto Angular utilizando la plantilla Fuse. Responsable de la migración y actualización de la arquitectura del proyecto, implementación de componentes reutilizables y mejora del rendimiento general de la aplicación.",
+    "description": "Desarrollador Frontend en un proyecto Angular utilizando la plantilla Fuse. Responsable de la migración y actualización de la arquitectura del proyecto, implementación de componentes reutilizables y mejora del rendimiento general de la aplicación.",
     "project_description": "Trabajé en la actualización y modernización de una plataforma basada en Angular y Fuse. Se llevaron a cabo dos migraciones clave para mejorar la escalabilidad y la mantenibilidad del código. Además, colaboré en el desarrollo de nuevas funcionalidades y optimización del flujo de trabajo.",
     "technologies": [
       "Angular",
@@ -79,7 +79,7 @@ export const experiences = [
       "name": "sieteideas.com",
       "assets": "assets/imgs/7ideas_logo_dark.svg"
     },
-    "role": "Desarrollador Frontend Semi-Senior",
+    "role": "Desarrollador Frontend",
     "challenges": [
       {
         "title": "Migración de Angular 11 con módulos a Angular 18 con standalone",
@@ -108,12 +108,12 @@ export const experiences_ingles = [
   {
     "id": "event_loop_club",
     "type": "experience",
-    "title": "SSR Frontend Web Developer",
+    "title": "Frontend Engineer",
     "company": "Event Loop Club",
     "date": "2023 — Present",
     "position": "Frontend Developer",
     "duration": "Part-Time",
-    "description": "Semi-Senior Frontend Developer in an Angular project with SSR. My responsibilities include maintaining and optimizing existing code, creating reusable components, and refactoring to integrate new functionalities. Additionally, I work closely with the team to improve the architecture, ensuring a scalable and high-performance application.",
+    "description": "Frontend Developer in an Angular project with SSR. My responsibilities include maintaining and optimizing existing code, creating reusable components, and refactoring to integrate new functionalities. Additionally, I work closely with the team to improve the architecture, ensuring a scalable and high-performance application.",
     "project_description": "An innovative ticketing platform that enables producers to publish and manage their events comprehensively. The application facilitates real-time event management from the dashboard, allowing control from publication to tracking of every activity. I collaborated with designers and backend developers to implement an intuitive interface and reusable components, ensuring an optimal experience on any device. The solution provides producers with a complete tool for controlling and updating their events in real time, improving management efficiency and audience interaction.",
     "technologies": [
       "Angular",
@@ -166,7 +166,7 @@ export const experiences_ingles = [
     "date": "2022 — Present",
     "position": "Frontend Developer",
     "duration": "Full-Time",
-    "description": "Semi-Senior Frontend Developer in an Angular project using the Fuse template. Responsible for migrating and updating the project's architecture, implementing reusable components, and improving overall application performance.",
+    "description": "Frontend Developer in an Angular project using the Fuse template. Responsible for migrating and updating the project's architecture, implementing reusable components, and improving overall application performance.",
     "project_description": "I worked on updating and modernizing a platform based on Angular and Fuse. Two key migrations were carried out to improve scalability and code maintainability. Additionally, I collaborated on developing new functionalities and optimizing workflow.",
     "technologies": [
       "Angular",
