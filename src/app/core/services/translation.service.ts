@@ -46,7 +46,7 @@ export class TranslationService {
           TITLE: "About",
           PARAGRAPH_1: "I started programming in 2019 by taking online courses. I was captivated by the idea of building applications to make others' daily work easier, so I enrolled at the Faculty of Exact Sciences at Unicen to study Systems Engineering and University Technology in IT Application Development, with a focus on web application development.",
           PARAGRAPH_2: "In 2022, began working at \"Siete Ideas,\" Frontend development with Angular.",
-          PARAGRAPH_3: "In my free time, I usually enjoy hiking in the Tandil hills or going to the gym."
+          PARAGRAPH_3: "In my free time, I usually enjoy hiking in the Tandil."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experience",

@@ -14,6 +14,7 @@ import { debounceTime, fromEvent, map } from 'rxjs';
 import { LucideModule } from '@shared/lucide/lucide.module';
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import { LanguageSelectorComponent } from '@shared/components/language-selector/language-selector.component';
+import { TranslationService } from '@core/services/translation.service';
 
 @Component({
   selector: 'app-home',
@@ -25,10 +26,11 @@ import { LanguageSelectorComponent } from '@shared/components/language-selector/
 export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
   private observer: IntersectionObserver | null = null;
+  private languageSubscription: any;
 
   // Definir el enlace activo
   activeLink: string = 'About';
-  pdfUrl: any = './../../../../assets/data/luca_d_mendoza.pdf';
+  pdfUrl: string = '';
   technologies: string[] = [
     // 🏗 Frontend
     "Angular 9 → 19",
@@ -73,12 +75,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(DOCUMENT) private _document: any,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private elRef: ElementRef
+    private elRef: ElementRef,
+    private translationService: TranslationService
   ) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.setupIntersectionObserver();
+      this.updatePdfUrl();
+      
+      // Suscribirse a cambios de idioma para actualizar la URL del PDF
+      this.languageSubscription = this.translationService.currentLanguage$.subscribe(() => {
+        this.updatePdfUrl();
+      });
     }
   }
 
@@ -167,6 +176,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Clean up the observer when component is destroyed
     if (this.observer) {
       this.observer.disconnect();
+    }
+    
+    // Clean up the language subscription
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
+  }
+
+  private updatePdfUrl(): void {
+    const currentLanguage = this.translationService.getCurrentLanguage();
+    if (currentLanguage === 'es') {
+      this.pdfUrl = './../../../../assets/data/luca_d_mendoza_es.pdf';
+    } else {
+      this.pdfUrl = './../../../../assets/data/luca_d_mendoza_us.pdf';
     }
   }
 }
