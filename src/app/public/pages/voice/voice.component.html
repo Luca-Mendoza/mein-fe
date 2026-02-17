@@ -1,0 +1,76 @@
+<div class="voice-page">
+  <div class="floating-language-selector">
+    <app-language-selector></app-language-selector>
+  </div>
+
+  <a routerLink="/" class="voice-page__mini-logo" aria-label="Home">
+    <span class="voice-page__mini-logo-name">{{ 'VOICE_PAGE.HERO_TITLE' | translate }}</span>
+    <span class="voice-page__mini-logo-subtitle">{{ 'VOICE_PAGE.HERO_SUBTITLE' | translate }}</span>
+  </a>
+
+  <div class="voice-page__container">
+    <section class="voice-page__video-section">
+      <div class="voice-page__video-wrapper">
+        <!-- Placeholder: reemplazar VIDEO_URL por tu URL de YouTube/Vimeo o usar <video> para archivo local -->
+        <p class="voice-page__video-placeholder">
+          {{ 'VOICE_PAGE.VIDEO_PLACEHOLDER' | translate }}
+        </p>
+        <!-- Ejemplo con iframe (descomentar y setear videoUrl en el componente si usas embed):
+        <iframe
+          *ngIf="videoUrl"
+          [src]="videoUrl"
+          title="Video introduction"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        -->
+      </div>
+    </section>
+
+    <section class="voice-page__context">
+      <p class="voice-page__context-text">
+        {{ 'VOICE_PAGE.CONTEXT_PARAGRAPH_1' | translate }}
+      </p>
+      <p class="voice-page__context-text">
+        {{ 'VOICE_PAGE.CONTEXT_PARAGRAPH_2' | translate }}
+      </p>
+      <p class="voice-page__context-text">
+        {{ 'VOICE_PAGE.CONTEXT_PARAGRAPH_3' | translate }}
+      </p>
+      <p class="voice-page__context-text voice-page__context-text--personal">
+        {{ 'VOICE_PAGE.CONTEXT_PERSONAL' | translate }}
+      </p>
+    </section>
+
+    <section class="voice-page__ctas">
+      <a
+        (click)="openPdf()"
+        class="voice-page__btn voice-page__btn--primary"
+        role="button"
+      >
+        <lucide-icon name="file-text" class="voice-page__btn-icon"></lucide-icon>
+        {{ 'VOICE_PAGE.CTA_RESUME' | translate }}
+      </a>
+      <a
+        href="https://www.linkedin.com/in/luca-d-mendoza-470575180/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="voice-page__btn voice-page__btn--secondary"
+      >
+        <lucide-icon name="linkedin" class="voice-page__btn-icon"></lucide-icon>
+        LinkedIn
+      </a>
+      <a
+        href="mailto:mendoza.d.luca@gmail.com"
+        class="voice-page__btn voice-page__btn--outline"
+      >
+        <lucide-icon name="mail" class="voice-page__btn-icon"></lucide-icon>
+        {{ 'VOICE_PAGE.CTA_CONTACT' | translate }}
+      </a>
+    </section>
+
+    <p class="voice-page__footer-note">
+      {{ 'VOICE_PAGE.FOOTER_NOTE' | translate }}
+    </p>
+  </div>
+</div>

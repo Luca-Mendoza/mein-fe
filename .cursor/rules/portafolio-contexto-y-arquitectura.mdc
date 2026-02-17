@@ -1,0 +1,61 @@
+---
+description: Contexto acordado del portafolio (CV, video, voice, cards) y guía de arquitectura Angular
+globs: src/app/**/*
+alwaysApply: false
+---
+
+# Portafolio – Contexto y arquitectura
+
+## Objetivo del producto
+Portafolio profesional de **Senior Front-End Developer (Angular)**. Público: reclutadores, tech leads, RRHH. El CV vende; el video humaniza; el portafolio prueba. Sin humo, sin diluir el foco en Frontend Angular.
+
+## Mensaje de marca
+- **Rol único:** Senior Front-End Developer (Angular).
+- **Refuerzo:** Experiencia real en productos en producción (no demos). Full Stack solo como contexto/soporte, no como título.
+- **Claridad:** Un empleo full-time (Siete Ideas) + proyectos independientes (XTECHARG, Event Loop Club), explicado sin generar dudas de “varios trabajos en blanco”.
+
+## Estructura de contenido acordada
+
+### HOME (lado derecho, orden de scroll)
+1. **Hero:** Nombre + rol + una frase clara.
+2. **Bloque video (nuevo):** Debajo del hero, antes de Experiencia.
+   - Título breve: "Quick introduction" / "Presentación breve".
+   - Subtítulo: Senior Front-End Developer (Angular), aplicaciones a gran escala y productos reales.
+   - Botón: "Ver presentación completa" / "Watch full introduction" → navega a `/voice`.
+   - No embeber video grande en home; el botón lleva a /voice.
+3. **Experiencia (cards):** Orden y copy:
+   - **Primera – Siete Ideas** (Full-time, estabilidad)
+   - **Segunda – XTECHARG** (Independent, liderazgo frontend-led)
+   - **Tercera – Event Loop Club** (Independent, colaboración)
+   Cada card: rol, empresa, tipo (Full-time / Independent), fechas, 3–4 bullets máx. Detalle técnico solo al hacer clic en "Ver más información".
+4. **Sobre mí:** Texto corto (3–4 líneas) que complemente el video sin repetirlo. Sin biografía larga.
+5. **Proyectos:** Solo 2 (Portfolio web, Gamezonia con aclaración de proyecto previo). Textos breves.
+6. **Descargar portafolio** y resto según diseño actual.
+
+### Ruta /voice (página dedicada)
+- **Propósito:** Un solo link estable para CV, QR, LinkedIn. Genera confianza; no es duplicar home.
+- **Contenido:** Hero (nombre + rol), video principal (60–75 s), texto de contexto breve (full-time + independientes, sin sonar defensivo), CTAs (CV, LinkedIn, contacto).
+- **No:** Landing larga, CV duplicado, bio extensa.
+
+### Copy de cards de Experiencia (preview en HOME)
+- **Siete Ideas:** "Large-scale Angular applications in production • Reusable components, performance & maintainability • REST API integration and unit/integration testing"
+- **XTECHARG:** "Large-scale Angular application (frontend-led) • NgRx state management & frontend architecture • Backend APIs built with NestJS to support frontend needs • Real product running in production"
+- **Event Loop Club:** "Angular application used in production • Reusable UI components & state management • Collaboration with designers and backend teams"
+
+### Video
+- Un video “master” (60–75 s): quién soy, qué hago, productos reales, full-time + independientes, qué busco. Inglés y español. En /voice; en HOME solo CTA que lleve a /voice.
+
+## Arquitectura Angular deseada
+- **Organización por features:** En lugar de solo `public/pages/`, avanzar hacia módulos/carpetas por funcionalidad (home, voice, experience, shared, core).
+- **Core:** Servicios singleton (traducción, configuración). Ya existe `core/` con services y data.
+- **Shared:** Componentes, pipes, directivas reutilizables. Ya existe `shared/`.
+- **Features:** Cada feature con su routing y componentes. Lazy loading por ruta donde aplique.
+- **Rutas:** Mantener rutas actuales; agregar `voice` como ruta lazy-loaded. Rutas claras y modularizadas.
+- **Un concepto por archivo;** archivos relacionados en la misma carpeta (componente + HTML + CSS).
+- **Evitar:** Carpetas gigantes de “components” genéricos; nombres vagos (helpers, utils sueltos). Preferir SharedModule/exportaciones explícitas.
+
+## Criterios de implementación
+- Textos y rutas en coherencia con el CV (Senior Front-End Developer Angular, sin contradicciones).
+- Accesibilidad y responsive; botones y CTAs claros.
+- Video: si es embed externo (YouTube/Vimeo), sanitizar URL; si es local, usar `<video>` con poster. Lazy load del módulo /voice.
+- No inventar contenido que no esté acordado; ante dudas, priorizar claridad y profesionalidad.

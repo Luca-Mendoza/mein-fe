@@ -1,0 +1,129 @@
+// @use "@angular/material" as mat;
+// @use "./variables.scss" as v;
+
+// // @include mat.core();
+
+// $angular-primary: mat.m2-define-palette(mat.$m2-blue-palette, 500, 100, 900);
+// $angular-accent: mat.m2-define-palette(
+//   mat.$m2-orange-palette,
+//   A200,
+//   A100,
+//   A400
+// );
+// $angular-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+// $angular-dark-theme: mat.m2-define-dark-theme(
+//   (
+//     color: (
+//       primary: $angular-primary,
+//       accent: $angular-accent,
+//       warn: $angular-warn,
+//     ),
+//   )
+// );
+
+// @include mat.all-component-themes($angular-dark-theme);
+
+
+// /* Establece un borde de 4px en todos los botones con clases mat- */
+// // *[class*="mat-"] button {
+// //   border: 1px solid v.$border-color; /* El color puede ser cualquier valor hexadecimal que prefieras */
+// //   border-radius: 4px;
+// // }
+
+// // /* Aplica estilos solo a los botones con la directiva mat-raised-button */
+// // button[mat-raised-button] {
+// //   background-color: #2196f3 !important; /* Fondo al pasar el mouse */
+// //   // border-color: #1976d2; /* Color del borde en hover */
+// //   color: white; /* Color del texto en hover */
+// // }
+
+// // button[mat-raised-button]:hover {
+// //   background-color: #2196f3; /* Fondo al pasar el mouse */
+// //   // border-color: #1976d2; /* Color del borde en hover */
+// //   color: white; /* Color del texto en hover */
+// // }
+
+// // /* Asegura que el box-sizing y márgenes/paddings estén configurados correctamente */
+// //  .mat-mdc-notch-piece {
+// //   border: none !important;
+// // }
+
+// mat-drawer-container {
+//   overflow: visible;
+//   background: #000;
+//   height: auto;
+// }
+
+// mat-drawer-content {
+//   background: linear-gradient(to top, v.$bg-primary 70%, #000 100%);
+//   min-height: 100vh; /* Para que cubra toda la pantalla */
+//   display: block;
+// }
+
+// mat-drawer {
+//   max-width: 290px !important;
+//   border-top-right-radius: 0 !important;
+//   border-bottom-right-radius: 0 !important;
+//   border-top-left-radius: 0 !important;
+//   border-bottom-left-radius: 0 !important;
+// }
+
+// /* Establece el radio del borde del contenedor del diálogo */
+// .mat-mdc-dialog-container {
+//   --mdc-dialog-container-shape: 0px; /* Ajusta el valor según tus necesidades */
+//   --mdc-dialog-container-color: transparent !important;
+// }
+
+// .custom-dialog-container {
+//   background-color: transparent !important;
+// }
+
+// .mat-mdc-form-field-flex {
+//   border: none !important;
+//   position: relative;
+//   display: flex;
+//   align-items: stretch;
+//   border-radius: 6px;
+//   padding: 0 16px;
+// }
+
+// .mat-mdc-text-field-wrapper {
+//   border: none !important;
+//   padding: 0 !important;
+// }
+
+// @media only screen and (max-width: v.$phone) {
+//   ::ng-deep .mat-mdc-dialog-content {
+//     padding: 1rem !important;
+//   }
+// }
+
+// ::ng-deep {
+//   .mat-mdc-table .mat-mdc-row:hover,
+//   .mat-mdc-table .mat-mdc-footer-row:hover {
+//     cursor: pointer;
+//     background-color: v.$hover !important;
+//     opacity: 0.8;
+//   }
+// }
+
+// .mat-elevation-z8,
+// .mat-mdc-elevation-specific.mat-elevation-z8 {
+//   box-shadow: none;
+// }
+
+// .dialog-container {
+//   background: v.$background-secondary;
+//   border-radius: 4px;
+//   width: 100%;
+//   border: 1px solid v.$border-color;
+// }
+
+// .dialog-actions {
+//   justify-content: flex-end;
+//   padding-right: 1rem;
+//   padding-bottom: 1rem;
+// }
+
+// .mdc-notched-outline__notch { border-right: none; }
