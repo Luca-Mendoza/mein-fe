@@ -1,10 +1,10 @@
 {
-  "name": "main-fe",
-  "version": "0.0.0",
+  "name": "lucadmendoza-portfolio",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host=0.0.0.0 --disable-host-check",
-    "build": "ng build",
+    "start": "ng serve --host=0.0.0.0",
+    "build": "ng build && cp dist/main-fe/browser/index.html dist/main-fe/browser/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve-mobil": "ng serve --host=0.0.0.0",

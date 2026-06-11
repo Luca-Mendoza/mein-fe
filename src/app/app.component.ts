@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from './shared/material/material.module';
 import { SplashScreenComponent } from '@shared/components/splash-screen/splash-screen.component';
@@ -11,5 +11,5 @@ import { SplashScreenComponent } from '@shared/components/splash-screen/splash-s
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'main-fe';
+  title = 'lucadmendoza-portfolio';
 }

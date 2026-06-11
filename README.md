@@ -1,33 +1,54 @@
-# MainFe
+# Luca D. Mendoza — Personal Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+> Live: [lucadmendoza.dev](https://lucadmendoza.dev) · Angular 17 · SSR · GitHub Pages
 
-## Development server
+Personal portfolio for Luca D. Mendoza, Senior Front-End Engineer specialized in Angular and production-grade web applications.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Stack
 
-## Code scaffolding
+- Framework: Angular 17 with SSR/prerender
+- UI: Angular Material, Tailwind CSS, SCSS
+- Language: TypeScript
+- Reactive layer: RxJS
+- i18n: custom ES/EN translation service
+- Deployment: GitHub Pages with custom domain
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project Structure
+
+```text
+src/app/
+  core/              Services and portfolio data
+  public/
+    components/      Public UI components
+    pages/           Home, voice, details and error pages
+  shared/            Pipes, animations, Material and Lucide modules
+```
+
+## Local Development
+
+```bash
+npm install
+npm start
+```
+
+The app runs at `http://localhost:4200`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm run build
+```
 
-## Running unit tests
+The build outputs to `dist/main-fe/browser` and creates `404.html` for GitHub Pages path routing.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deploy
 
-## Running end-to-end tests
+Deploys are handled by GitHub Actions on pushes to `main`. Manual deploy is also available:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npx ng deploy --cname=lucadmendoza.dev --base-href="/"
+```
 
-## Further help
+## Author
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Deploy Github Pages
-
-`ng build `
-
-`npx ng deploy --cname=lucadmendoza.dev --base-href="/"`
+Luca D. Mendoza · [LinkedIn](https://www.linkedin.com/in/luca-d-mendoza-470575180/) · [GitHub](https://github.com/Luca-Mendoza)

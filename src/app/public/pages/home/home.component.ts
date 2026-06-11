@@ -10,11 +10,12 @@ import {
 } from '@angular/core';
 import { ButtonArrowComponent } from '../../components/button-arrow/button-arrow.component';
 import { RouterModule } from '@angular/router';
-import { debounceTime, fromEvent, map } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { LucideModule } from '@shared/lucide/lucide.module';
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import { LanguageSelectorComponent } from '@shared/components/language-selector/language-selector.component';
 import { TranslationService } from '@core/services/translation.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -26,10 +27,11 @@ import { TranslationService } from '@core/services/translation.service';
 export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
   private observer: IntersectionObserver | null = null;
-  private languageSubscription: any;
+  private languageSubscription?: Subscription;
 
   // Definir el enlace activo
   activeLink: string = 'About';
+  currentYear = new Date().getFullYear();
   pdfUrl: string = '';
   technologies: string[] = [
     // 🏗 Frontend
@@ -76,10 +78,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     @Inject(DOCUMENT) private _document: any,
     @Inject(PLATFORM_ID) private platformId: Object,
     private elRef: ElementRef,
-    private translationService: TranslationService
+    private translationService: TranslationService,
+    private meta: Meta,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
+    this.setSeoMetadata();
+
     if (isPlatformBrowser(this.platformId)) {
       this.setupIntersectionObserver();
       this.updatePdfUrl();
@@ -89,6 +95,20 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.updatePdfUrl();
       });
     }
+  }
+
+  private setSeoMetadata(): void {
+    const title = 'Luca D. Mendoza — Senior Front-End Engineer';
+    const description =
+      'Senior Front-End Engineer specialized in Angular, TypeScript, RxJS, NgRx and NestJS. Explore experience, projects and contact information.';
+
+    this.titleService.setTitle(title);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ property: 'og:title', content: title });
+    this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.updateTag({ property: 'og:url', content: 'https://lucadmendoza.dev/' });
+    this.meta.updateTag({ name: 'twitter:title', content: title });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
   }
 
   private setupIntersectionObserver() {

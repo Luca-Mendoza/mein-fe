@@ -25,7 +25,9 @@
             <ul class="home-nav__list">
               <li class="home-nav__item" *ngFor="let link of navLinks">
                 <a
-                  (click)="scrollToSection(link.id)"
+                  [href]="link.href"
+                  (click)="$event.preventDefault(); scrollToSection(link.id)"
+                  [attr.aria-current]="activeLink === link.text ? 'location' : null"
                   [ngClass]="{
                     'home-nav__item--active': activeLink === link.text
                   }"
@@ -97,7 +99,7 @@
       <span
         class="p-4 hidden lg:block w-full text-center text-sm text-white/20"
       >
-        © 2025 Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
+        © {{ currentYear }} Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
       </span>
     </div>
 
@@ -113,15 +115,6 @@
             <p class="min-h-[2rem] leading-relaxed text-white/90 mb-4">
               {{ 'HOME.INTRO_VIDEO.SUBTITLE' | translate }}
             </p>
-            <div class="intro-video-cta-wrap">
-              <a
-                [routerLink]="['/voice']"
-                class="intro-video-cta"
-              >
-                <lucide-icon name="play" class="intro-video-cta__icon"></lucide-icon>
-                <span class="intro-video-cta__text">{{ 'HOME.INTRO_VIDEO.CTA' | translate }}</span>
-              </a>
-            </div>
           </section>
         </div>
         <div class="item item__experience">
@@ -495,6 +488,8 @@
               <button
                 (click)="openPdf()"
                 class="cursor-pointer flex items-center gap-3 text-white transition-all duration-300 hover:text-[#00718f] text-sm tracking-widest relative group"
+                type="button"
+                aria-label="Download portfolio PDF"
               >
                 <span
                   class="pb-1 relative after:block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-cyan-400 after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100"
@@ -733,7 +728,7 @@
         <span
           class="block lg:hidden w-full text-center text-sm text-white/20 p-4"
         >
-          © 2025 Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
+          © {{ currentYear }} Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
         </span>
       </div>
     </div>

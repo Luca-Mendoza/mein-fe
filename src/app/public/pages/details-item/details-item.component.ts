@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LucideModule } from '../../../shared/lucide/lucide.module';
 import { MaterialModule } from '../../../shared/material/material.module';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -9,16 +9,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslationService, Language } from '@core/services/translation.service';
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import { LanguageSelectorComponent } from '@shared/components/language-selector/language-selector.component';
+import { Subscription } from 'rxjs';
 
-
-interface Experience {
-  id: string;
-  // Add other properties as needed
-}
-
-interface Project {
-  id: string;
-  // Add other properties as needed
+interface DetailAction {
+  href: string;
+  label: string;
+  icon: string;
+  variant: 'primary' | 'secondary';
 }
 
 @Component({
@@ -28,7 +25,7 @@ interface Project {
   templateUrl: './details-item.component.html',
   styleUrl: './details-item.component.scss'
 })
-export class DetailsItemComponent implements OnInit {
+export class DetailsItemComponent implements OnInit, OnDestroy {
   item: any;
   isExperience: boolean = true;
   currentIndex: number = 0;
@@ -38,6 +35,7 @@ export class DetailsItemComponent implements OnInit {
   nextLabel: string = '';
   currentLanguage: Language = 'en';
   breadcrumbLinks: any[] = [];
+  private subscriptions = new Subscription();
 
   constructor(
     private route: ActivatedRoute, 
@@ -47,25 +45,24 @@ export class DetailsItemComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // Suscribirse al idioma actual
-    this.translationService.currentLanguage$.subscribe(lang => {
-      this.currentLanguage = lang;
-      this.loadItemData();
-      this.updateBreadcrumbs();
-    });
+    this.subscriptions.add(this.route.params.subscribe(params => {
+      this.loadItemById(params['id']);
+    }));
 
-    // Cargar datos iniciales
-    this.loadItemData();
+    this.subscriptions.add(this.translationService.currentLanguage$.subscribe(lang => {
+      this.currentLanguage = lang;
+      const id = this.item?.id || this.route.snapshot.paramMap.get('id');
+      if (id) {
+        this.loadItemById(id);
+      }
+      this.updateBreadcrumbs();
+    }));
     
-    // Inicializar breadcrumbs
     this.updateBreadcrumbs();
   }
 
-  private loadItemData() {
-    this.route.params.subscribe(params => {
-      const id = params['id'];
-      this.loadItemById(id);
-    });
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 
   private loadItemById(id: string) {
@@ -94,10 +91,26 @@ export class DetailsItemComponent implements OnInit {
     
     this.item = {
       id: 'event_loop_club',
+      type: this.detailCopy('Experience', 'Experiencia'),
       company: 'Event Loop Club',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.TITLE'),
       date: '2023 - PRESENT',
       duration: this.translationService.translate('DETAILS.PART_TIME'),
+      summary: this.detailCopy(
+        'Angular ticketing platform for event producers, focused on reusable UI, SSR, dashboard workflows and production-ready frontend delivery.',
+        'Plataforma Angular de ticketing para productores de eventos, enfocada en UI reutilizable, SSR, flujos de dashboard y entrega frontend lista para producción.'
+      ),
+      focus: [
+        this.detailCopy('Frontend architecture', 'Arquitectura frontend'),
+        'SSR',
+        this.detailCopy('Reusable components', 'Componentes reutilizables'),
+        this.detailCopy('Team collaboration', 'Colaboración de equipo')
+      ],
+      highlights: [
+        this.detailCopy('Led Angular frontend delivery and component structure.', 'Lideré el desarrollo frontend Angular y la estructura de componentes.'),
+        this.detailCopy('Improved producer workflows for event publishing and management.', 'Mejoré flujos para publicación y gestión de eventos.'),
+        this.detailCopy('Collaborated closely with design and backend teams.', 'Colaboré de cerca con diseño y backend.')
+      ],
       description: this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
       challenges: challenges,
@@ -124,10 +137,26 @@ export class DetailsItemComponent implements OnInit {
     
     this.item = {
       id: 'siete_ideas',
+      type: this.detailCopy('Experience', 'Experiencia'),
       company: 'Siete Ideas',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.TITLE'),
-      date: '2022 - PRESENT',
+      date: '2022 - 2026',
       duration: this.translationService.translate('DETAILS.FULL_TIME'),
+      summary: this.detailCopy(
+        'Production Angular work focused on migrations, maintainability, reusable UI and reliable REST integrations in business applications.',
+        'Trabajo Angular en producción enfocado en migraciones, mantenibilidad, UI reutilizable e integraciones REST confiables en aplicaciones de negocio.'
+      ),
+      focus: [
+        this.detailCopy('Angular migrations', 'Migraciones Angular'),
+        this.detailCopy('Reusable UI', 'UI reutilizable'),
+        this.detailCopy('REST integration', 'Integración REST'),
+        this.detailCopy('Performance', 'Performance')
+      ],
+      highlights: [
+        this.detailCopy('Modernized Angular/Fuse codebases across major version upgrades.', 'Modernicé bases Angular/Fuse en migraciones importantes de versión.'),
+        this.detailCopy('Built and maintained responsive production features.', 'Construí y mantuve funcionalidades responsivas en producción.'),
+        this.detailCopy('Strengthened testing, performance and delivery practices.', 'Fortalecí prácticas de testing, performance y entrega.')
+      ],
       description: this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
       challenges: challenges,
@@ -153,10 +182,26 @@ export class DetailsItemComponent implements OnInit {
 
     this.item = {
       id: 'xtech',
+      type: this.detailCopy('Experience', 'Experiencia'),
       company: 'XTECHARG',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.XTECH.TITLE'),
       date: '2024 - PRESENT',
       duration: this.translationService.translate('DETAILS.FULL_TIME'),
+      summary: this.detailCopy(
+        'B2B SaaS platform built from scratch as co-founder and technical lead, covering Angular architecture, NestJS APIs, payments, security and deployment.',
+        'Plataforma SaaS B2B construida desde cero como cofundador y líder técnico, cubriendo arquitectura Angular, APIs NestJS, pagos, seguridad y despliegue.'
+      ),
+      focus: [
+        this.detailCopy('Technical leadership', 'Liderazgo técnico'),
+        this.detailCopy('Angular architecture', 'Arquitectura Angular'),
+        'NestJS',
+        this.detailCopy('Payments and security', 'Pagos y seguridad')
+      ],
+      highlights: [
+        this.detailCopy('Designed the full-stack architecture from zero.', 'Diseñé la arquitectura full-stack desde cero.'),
+        this.detailCopy('Implemented modular APIs, RBAC, auth flows and payment providers.', 'Implementé APIs modulares, RBAC, autenticación y proveedores de pago.'),
+        this.detailCopy('Led code reviews, roadmap decisions and production delivery.', 'Lideré code reviews, decisiones de roadmap y entregas a producción.')
+      ],
       description: this.translationService.translate('HOME.EXPERIENCE_SECTION.XTECH.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.EXPERIENCE_SECTION.XTECH.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
       challenges: challenges,
@@ -184,10 +229,26 @@ export class DetailsItemComponent implements OnInit {
     
     this.item = {
       id: 'portfolio',
+      type: this.detailCopy('Project', 'Proyecto'),
       company: 'Portfolio Web',
       title: this.translationService.translate('HOME.PROJECTS_SECTION.PORTFOLIO.TITLE'),
       date: '2024',
       duration: 'Personal Project',
+      summary: this.detailCopy(
+        'Personal portfolio built as a professional product surface: bilingual content, Angular SSR, case-study pages, SEO and responsive UI.',
+        'Portfolio personal construido como superficie profesional: contenido bilingue, Angular SSR, paginas de caso, SEO y UI responsiva.'
+      ),
+      focus: [
+        'Angular SSR',
+        'SEO',
+        this.detailCopy('Bilingual UX', 'UX bilingue'),
+        this.detailCopy('Responsive UI', 'UI responsiva')
+      ],
+      highlights: [
+        this.detailCopy('Centralized professional experience into readable case studies.', 'Centralicé la experiencia profesional en casos de estudio legibles.'),
+        this.detailCopy('Optimized metadata, social previews and GitHub Pages deployment.', 'Optimicé metadata, previews sociales y deploy en GitHub Pages.'),
+        this.detailCopy('Built a focused interface for recruiters and technical reviewers.', 'Construí una interfaz enfocada en recruiters y revisores técnicos.')
+      ],
       description: this.translationService.translate('HOME.PROJECTS_SECTION.PORTFOLIO.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.PROJECTS_SECTION.PORTFOLIO.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
       challenges: challenges,
@@ -216,10 +277,26 @@ export class DetailsItemComponent implements OnInit {
     
     this.item = {
       id: 'gamezonia',
+      type: this.detailCopy('Project', 'Proyecto'),
       company: 'Gamezonia',
       title: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.TITLE'),
       date: '2023',
       duration: 'Personal Project',
+      summary: this.detailCopy(
+        'MEAN+GraphQL e-commerce project with admin workflows, authentication, payments, email notifications and cloud deployment.',
+        'Proyecto ecommerce MEAN+GraphQL con panel administrativo, autenticación, pagos, notificaciones por email y despliegue cloud.'
+      ),
+      focus: [
+        'Angular',
+        'GraphQL',
+        this.detailCopy('E-commerce', 'Ecommerce'),
+        this.detailCopy('Cloud deployment', 'Deploy cloud')
+      ],
+      highlights: [
+        this.detailCopy('Built the storefront and admin panel flows.', 'Construí flujos de tienda y panel administrativo.'),
+        this.detailCopy('Integrated JWT authentication, Stripe and Nodemailer.', 'Integré autenticación JWT, Stripe y Nodemailer.'),
+        this.detailCopy('Deployed frontend, backend and database on cloud platforms.', 'Desplegué frontend, backend y base de datos en plataformas cloud.')
+      ],
       description: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
       challenges: challenges,
@@ -275,12 +352,66 @@ export class DetailsItemComponent implements OnInit {
         label: this.translationService.translate('COMMON.HOME'), 
         path: '', 
         icon: 'arrow-left' 
-      },
-      { 
-        label: this.translationService.translate('COMMON.DASHBOARD'), 
-        path: '/dashboard', 
-        icon: 'grid' 
       }
     ];
+  }
+
+  getVisibleLinks(): DetailAction[] {
+    if (!this.item?.links) {
+      return [];
+    }
+
+    const links = this.item.links;
+    const actions: DetailAction[] = [];
+
+    if (links.link) {
+      actions.push({
+        href: links.link,
+        label: `${this.translationService.translate('COMMON.GO_TO')} ${links.name}`,
+        icon: 'external-link',
+        variant: 'primary'
+      });
+    }
+
+    if (links.github) {
+      actions.push({
+        href: links.github,
+        label: this.translationService.translate('COMMON.GO_TO_GITHUB'),
+        icon: 'github',
+        variant: 'secondary'
+      });
+    }
+
+    if (links.github_frontend) {
+      actions.push({
+        href: links.github_frontend,
+        label: this.translationService.translate('COMMON.GO_TO_GITHUB_FRONTEND'),
+        icon: 'github',
+        variant: 'secondary'
+      });
+    }
+
+    if (links.github_backend) {
+      actions.push({
+        href: links.github_backend,
+        label: this.translationService.translate('COMMON.GO_TO_GITHUB_BACKEND'),
+        icon: 'github',
+        variant: 'secondary'
+      });
+    }
+
+    return actions;
+  }
+
+  trackByText(index: number, value: string): string {
+    return value || `${index}`;
+  }
+
+  trackByChallenge(index: number, challenge: { title: string }): string {
+    return challenge?.title || `${index}`;
+  }
+
+  private detailCopy(en: string, es: string): string {
+    return this.currentLanguage === 'es' ? es : en;
   }
 }

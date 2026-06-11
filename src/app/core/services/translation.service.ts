@@ -30,6 +30,8 @@ export class TranslationService {
         KEY_LEARNINGS: "Key Learnings",
         SOFT_SKILLS: "Skills",
         TECHNOLOGIES_USED: "Technologies Used",
+        FOCUS: "Focus",
+        IMPACT: "Impact",
         GO_TO_GITHUB_BACKEND: "Go to Github Back-end",
         GO_TO_GITHUB_FRONTEND: "Go to Github Front-end",
         GO_TO_GITHUB: "Go to Github",
@@ -57,8 +59,7 @@ export class TranslationService {
         },
         INTRO_VIDEO: {
           TITLE: "About Me",
-          SUBTITLE: "Senior Front-End Engineer specialized in Angular, with over five years working on applications that evolve in real-world environments. I focus on building clear and maintainable solutions, prioritizing architecture, performance, and technical decisions that support product growth.",
-          CTA: "Watch full introduction"
+          SUBTITLE: "Senior Front-End Engineer specialized in Angular, with over five years working on applications that evolve in real-world environments. I focus on building clear and maintainable solutions, prioritizing architecture, performance, and technical decisions that support product growth."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experience",
@@ -124,7 +125,7 @@ export class TranslationService {
           SIETE_IDEAS: {
             TITLE: "Frontend Developer · Siete Ideas",
             PREVIEW: "Large-scale Angular applications in production • Reusable components, performance & maintainability • REST API integration and unit/integration testing",
-            DESCRIPTION: "Develop and maintain web applications using Angular. Implement responsive and attractive user interfaces, create reusable components, and integrate RESTful services. Conduct unit and integration testing, maintain the application, and manage production deployments.",
+            DESCRIPTION: "Developed and maintained web applications using Angular. Implemented responsive and attractive user interfaces, created reusable components, and integrated RESTful services. Conducted unit and integration testing, maintained the application, and supported production deployments.",
             EMPLOYMENT_STATUS: "Full-Time",
             LINKEDIN_LABEL: "Siete Ideas",
             LINKEDIN_URL: "https://www.linkedin.com/company/siete-ideas",
@@ -165,7 +166,7 @@ export class TranslationService {
                 "NestJS",
                 "Node.js"
               ],
-              DURATION: "2022 — Present",
+              DURATION: "2022 — 2026",
               EMPLOYMENT_TYPE: "Full-Time",
               LINKS: {
                 WEBSITE: "sieteideas.com",
@@ -457,6 +458,8 @@ export class TranslationService {
         KEY_LEARNINGS: "Aprendizajes Clave",
         SOFT_SKILLS: "Habilidades",
         TECHNOLOGIES_USED: "Tecnologías Utilizadas",
+        FOCUS: "Foco",
+        IMPACT: "Impacto",
         GO_TO_GITHUB_BACKEND: "Ir a Github Back-end",
         GO_TO_GITHUB_FRONTEND: "Ir a Github Front-end",
         GO_TO_GITHUB: "Ir a Github",
@@ -484,8 +487,7 @@ export class TranslationService {
         },
         INTRO_VIDEO: {
           TITLE: "Sobre mí",
-          SUBTITLE: "Senior Front-End Engineer especializado en Angular, con más de cinco años trabajando en aplicaciones que evolucionan en entornos reales. Me enfoco en construir soluciones claras y mantenibles, priorizando la arquitectura, el rendimiento y decisiones técnicas que acompañen el crecimiento del producto.",
-          CTA: "Ver presentación completa"
+          SUBTITLE: "Senior Front-End Engineer especializado en Angular, con más de cinco años trabajando en aplicaciones que evolucionan en entornos reales. Me enfoco en construir soluciones claras y mantenibles, priorizando la arquitectura, el rendimiento y decisiones técnicas que acompañen el crecimiento del producto."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experiencia",
@@ -551,7 +553,7 @@ export class TranslationService {
           SIETE_IDEAS: {
             TITLE: "Frontend Developer · Siete Ideas",
             PREVIEW: "Aplicaciones Angular a gran escala en producción • Componentes reutilizables, performance y mantenibilidad • Integración de APIs REST y testing unitario e integral",
-            DESCRIPTION: "Desarrollo y mantengo aplicaciones web usando Angular. Implemento interfaces de usuario responsivas y atractivas, creo componentes reutilizables e integro servicios RESTful. Realizo pruebas unitarias e integrales, mantengo la aplicación y gestiono despliegues de producción.",
+            DESCRIPTION: "Desarrollé y mantuve aplicaciones web usando Angular. Implementé interfaces de usuario responsivas y atractivas, creé componentes reutilizables e integré servicios RESTful. Realicé pruebas unitarias e integrales, mantuve la aplicación y apoyé despliegues de producción.",
             EMPLOYMENT_STATUS: "Jornada completa",
             LINKEDIN_LABEL: "Siete Ideas",
             LINKEDIN_URL: "https://www.linkedin.com/company/siete-ideas",
@@ -593,7 +595,7 @@ export class TranslationService {
                 "NestJS",
                 "Node.js"
               ],
-              DURATION: "2022 — Presente",
+              DURATION: "2022 — 2026",
               EMPLOYMENT_TYPE: "Tiempo Completo",
               LINKS: {
                 WEBSITE: "sieteideas.com",

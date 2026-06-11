@@ -8,7 +8,7 @@ describe('ButtonArrowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ButtonArrowComponent]
+      imports: [ButtonArrowComponent]
     })
     .compileComponents();
     

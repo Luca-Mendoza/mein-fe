@@ -117,6 +117,9 @@ import {
   Download,
   Play,
   Linkedin,
+  Target,
+  Sparkles,
+  Code2,
 } from 'lucide-angular';
 
 export const LUCIDE_MODULES = [
@@ -247,7 +250,10 @@ export const LUCIDE_MODULES = [
     BookMarked,
     Download,
     Play,
-    Linkedin
+    Linkedin,
+    Target,
+    Sparkles,
+    Code2
   }),
 ];
 

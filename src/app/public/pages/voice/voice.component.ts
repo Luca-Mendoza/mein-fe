@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import { TranslationService } from '@core/services/translation.service';
 import { LucideModule } from '@shared/lucide/lucide.module';
 import { LanguageSelectorComponent } from '@shared/components/language-selector/language-selector.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-voice',
@@ -19,11 +20,29 @@ import { LanguageSelectorComponent } from '@shared/components/language-selector/
   templateUrl: './voice.component.html',
   styleUrl: './voice.component.scss',
 })
-export class VoiceComponent {
+export class VoiceComponent implements OnInit {
   pdfUrl = '';
 
-  constructor(private translationService: TranslationService) {
+  constructor(
+    private translationService: TranslationService,
+    private meta: Meta,
+    private titleService: Title
+  ) {
     this.updatePdfUrl();
+  }
+
+  ngOnInit(): void {
+    const title = 'Voice Introduction — Luca D. Mendoza';
+    const description =
+      'A short introduction from Luca D. Mendoza, Senior Front-End Engineer and Angular specialist.';
+
+    this.titleService.setTitle(title);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ property: 'og:title', content: title });
+    this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.updateTag({ property: 'og:url', content: 'https://lucadmendoza.dev/voice' });
+    this.meta.updateTag({ name: 'twitter:title', content: title });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
   }
 
   private updatePdfUrl(): void {

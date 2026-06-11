@@ -463,49 +463,6 @@ p {
   }
 }
 
-/* Contenedor del botón de video: alineado a la derecha */
-.intro-video-cta-wrap {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-/* Botón de video intro: estilo sutil que combina con tags y acentos cyan de la app */
-.intro-video-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: rgba(34, 211, 238, 0.95); /* cyan-400 */
-  background-color: transparent;
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  transition: border-color 0.2s ease, color 0.2s ease;
-
-  &:hover {
-    border-color: rgba(34, 211, 238, 0.45);
-    color: rgba(34, 211, 238, 1);
-  }
-
-  .intro-video-cta__icon {
-    width: 1rem;
-    height: 1rem;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .intro-video-cta__text {
-    letter-spacing: 0.02em;
-  }
-}
-
 /* Sección Let's Connect: mismo ritmo visual que Intro */
 .section__connect {
   .connect-link {

@@ -57,9 +57,9 @@ export const experiences = [
     "type": "experience",
     "title": "Frontend Developer",
     "company": "Siete Ideas",
-    "date": "2022 — Present",
+    "date": "2022 — 2026",
     "position": "Frontend Developer",
-    "duration": "Professional Independent",
+    "duration": "Full-Time",
     "description": "Desarrollador Frontend en un proyecto Angular utilizando la plantilla Fuse. Responsable de la migración y actualización de la arquitectura del proyecto, implementación de componentes reutilizables y mejora del rendimiento general de la aplicación.",
     "project_description": "Trabajé en la actualización y modernización de una plataforma basada en Angular y Fuse. Se llevaron a cabo dos migraciones clave para mejorar la escalabilidad y la mantenibilidad del código. Además, colaboré en el desarrollo de nuevas funcionalidades y optimización del flujo de trabajo.",
     "technologies": [
@@ -287,9 +287,9 @@ export const experiences_ingles = [
     "type": "experience",
     "title": "Frontend Developer",
     "company": "Siete Ideas",
-    "date": "2022 — Present",
+    "date": "2022 — 2026",
     "position": "Frontend Developer",
-    "duration": "Professional Independent",
+    "duration": "Full-Time",
     "description": "Frontend Developer in an Angular project using the Fuse template. Responsible for migrating and updating the project's architecture, implementing reusable components, and improving overall application performance.",
     "project_description": "I worked on updating and modernizing a platform based on Angular and Fuse. Two key migrations were carried out to improve scalability and code maintainability. Additionally, I collaborated on developing new functionalities and optimizing workflow.",
     "technologies": [

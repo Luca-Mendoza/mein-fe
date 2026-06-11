@@ -171,7 +171,7 @@ export const projects = [
             "location": "Boedo, CABA, Argentina",
             "mobile": "1123923591",
             "email": "mendoza.d.luca@gmail.com",
-            "linkedin": "https://www.linkedin.com/in/luca-dmendoza-470575180"
+            "linkedin": "https://www.linkedin.com/in/luca-d-mendoza-470575180"
         },
         "aptitudes": [
             "Apollo GraphQL",
@@ -189,7 +189,7 @@ export const projects = [
             "Angular: De cero a experto (Angular 10+)",
             "Fundamentos de la gestión del tiempo"
         ],
-        "profile_summary": "Soy Luca Alberto Daniel Mendoza, actualmente me desempeño como Desarrollador SSR Frontend en Siete Ideas, destacando en la creación de aplicaciones web con Angular y aplicando competencias clave en diseño de UI y desarrollo de UX para soluciones digitales avanzadas. He colaborado estrechamente con mi equipo para desarrollar interfaces intuitivas y componentes reutilizables que mejoran la escalabilidad y el mantenimiento del software. Mi enfoque en la integración de APIs RESTful, Apollo GraphQL, Docker, Redux.js y NestJS refleja mi compromiso con la innovación y la excelencia técnica, impulsando el éxito colectivo a través de la colaboración y el apoyo mutuo."
+        "profile_summary": "Soy Luca Alberto Daniel Mendoza, Senior Front-End Engineer especializado en Angular. Construyo aplicaciones escalables y mantenibles, con foco en arquitectura frontend, rendimiento, UI/UX e integración con APIs. Fui Frontend Developer en Siete Ideas entre 2022 y 2026, y actualmente soy cofundador de XTECHARG y Event Loop Club."
     }
 
 ]
@@ -367,7 +367,7 @@ export const projects_ingles = [
             "location": "Boedo, CABA, Argentina",
             "mobile": "1123923591",
             "email": "mendoza.d.luca@gmail.com",
-            "linkedin": "https://www.linkedin.com/in/luca-dmendoza-470575180"
+            "linkedin": "https://www.linkedin.com/in/luca-d-mendoza-470575180"
         },
         "aptitudes": [
             "Apollo GraphQL",
@@ -385,6 +385,6 @@ export const projects_ingles = [
             "Angular: From Zero to Expert (Angular 10+)",
             "Time Management Fundamentals"
         ],
-        "profile_summary": "I am Luca Alberto Daniel Mendoza, currently working as an SSR Frontend Developer at Siete Ideas, specializing in creating web applications with Angular and leveraging key skills in UI design and UX development for advanced digital solutions. I have closely collaborated with my team to develop intuitive interfaces and reusable components that enhance software scalability and maintainability. My focus on integrating RESTful APIs, Apollo GraphQL, Docker, Redux.js, and NestJS reflects my commitment to innovation and technical excellence, driving collective success through collaboration and mutual support."
+        "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Front-End Engineer specialized in Angular. I build scalable and maintainable applications with a focus on frontend architecture, performance, UI/UX, and API integration. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I am currently co-founder of XTECHARG and Event Loop Club."
     }
 ];
