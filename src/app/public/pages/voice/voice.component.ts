@@ -34,7 +34,7 @@ export class VoiceComponent implements OnInit {
   ngOnInit(): void {
     const title = 'Voice Introduction — Luca D. Mendoza';
     const description =
-      'A short introduction from Luca D. Mendoza, Senior Front-End Engineer and Angular specialist.';
+      'A short introduction from Luca D. Mendoza, Senior Full-Stack Engineer and product engineer.';
 
     this.titleService.setTitle(title);
     this.meta.updateTag({ name: 'description', content: description });

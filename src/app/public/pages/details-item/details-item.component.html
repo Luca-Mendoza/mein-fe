@@ -5,7 +5,7 @@
     <app-language-selector></app-language-selector>
   </div>
 
-  @if (item) {
+  <ng-container *ngIf="item">
     <header class="details-shell details-topbar">
       <a routerLink="/" class="details-home-link" aria-label="Back to home">
         <lucide-icon name="arrow-left" size="18"></lucide-icon>
@@ -73,31 +73,101 @@
         </aside>
       </section>
 
-      <section class="details-shell details-overview" aria-label="Highlights">
-        <div class="overview-card">
-          <h2>
-            <lucide-icon name="target" size="18"></lucide-icon>
-            {{ 'COMMON.FOCUS' | translate }}
-          </h2>
-          <div class="details-tags">
-            <span *ngFor="let focus of item.focus; trackBy: trackByText">
-              {{ focus }}
-            </span>
-          </div>
-        </div>
+      <ng-container *ngIf="hasImages; else noMedia">
+        <section class="details-shell details-media-layout" aria-label="Project media and highlights">
+          <div class="details-media">
+            <div class="media-header">
+              <div class="media-title">
+                <span class="media-badge" aria-hidden="true">
+                  <lucide-icon name="camera" size="16"></lucide-icon>
+                </span>
+                <h2 id="media-title">{{ mediaTitle }}</h2>
+              </div>
+              <div class="media-controls">
+                <button type="button" class="media-control" (click)="prevImage()" [disabled]="currentImageIndex === 0" aria-label="Previous image">
+                  <lucide-icon name="chevron-left" size="18"></lucide-icon>
+                </button>
+                <button type="button" class="media-control" (click)="nextImage()" [disabled]="item.images && currentImageIndex === item.images.length - 1" aria-label="Next image">
+                  <lucide-icon name="chevron-right" size="18"></lucide-icon>
+                </button>
+              </div>
+            </div>
 
-        <div class="overview-card overview-card--wide">
-          <h2>
-            <lucide-icon name="sparkles" size="18"></lucide-icon>
-            {{ 'COMMON.IMPACT' | translate }}
-          </h2>
-          <ul class="check-list">
-            <li *ngFor="let highlight of item.highlights; trackBy: trackByText">
-              {{ highlight }}
-            </li>
-          </ul>
-        </div>
-      </section>
+            <div class="media-display">
+              <img
+                class="media-display__image"
+                [src]="currentImage.src"
+                [alt]="currentImage.alt || item.company"
+              />
+              <div class="media-thumbs">
+                <button
+                  type="button"
+                  class="media-thumb"
+                  *ngFor="let image of item.images; let idx = index"
+                  [class.media-thumb--active]="idx === currentImageIndex"
+                  (click)="showImage(idx)"
+                  [attr.aria-label]="(currentLanguage === 'es' ? 'Ver imagen ' : 'View image ') + (idx + 1)"
+                >
+                  <img [src]="image.src" [alt]="image.alt || item.company" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="details-media-summary">
+            <div class="overview-card">
+              <h2>
+                <lucide-icon name="target" size="18"></lucide-icon>
+                {{ 'COMMON.FOCUS' | translate }}
+              </h2>
+              <div class="details-tags">
+                <span *ngFor="let focus of item.focus; trackBy: trackByText">
+                  {{ focus }}
+                </span>
+              </div>
+            </div>
+
+            <div class="overview-card overview-card--wide">
+              <h2>
+                <lucide-icon name="sparkles" size="18"></lucide-icon>
+                {{ 'COMMON.IMPACT' | translate }}
+              </h2>
+              <ul class="check-list">
+                <li *ngFor="let highlight of item.highlights; trackBy: trackByText">
+                  {{ highlight }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </ng-container>
+      <ng-template #noMedia>
+        <section class="details-shell details-overview" aria-label="Highlights">
+          <div class="overview-card">
+            <h2>
+              <lucide-icon name="target" size="18"></lucide-icon>
+              {{ 'COMMON.FOCUS' | translate }}
+            </h2>
+            <div class="details-tags">
+              <span *ngFor="let focus of item.focus; trackBy: trackByText">
+                {{ focus }}
+              </span>
+            </div>
+          </div>
+
+          <div class="overview-card overview-card--wide">
+            <h2>
+              <lucide-icon name="sparkles" size="18"></lucide-icon>
+              {{ 'COMMON.IMPACT' | translate }}
+            </h2>
+            <ul class="check-list">
+              <li *ngFor="let highlight of item.highlights; trackBy: trackByText">
+                {{ highlight }}
+              </li>
+            </ul>
+          </div>
+        </section>
+      </ng-template>
 
       <section class="details-shell details-grid" aria-label="Detail sections">
         <article class="detail-section">
@@ -150,8 +220,7 @@
           </ul>
         </article>
 
-        @if (item?.soft_skills) {
-          <article class="detail-section">
+        <article *ngIf="item?.soft_skills" class="detail-section">
             <h2>
               <lucide-icon name="book-marked" size="18"></lucide-icon>
               {{ 'COMMON.SOFT_SKILLS' | translate }}
@@ -162,7 +231,6 @@
               </li>
             </ul>
           </article>
-        }
 
         <article class="detail-section detail-section--full">
           <h2>
@@ -177,8 +245,7 @@
         </article>
       </section>
 
-      @if (getVisibleLinks().length) {
-        <section class="details-shell details-actions" aria-label="External links">
+      <section *ngIf="getVisibleLinks().length" class="details-shell details-actions" aria-label="External links">
           <a
             *ngFor="let action of getVisibleLinks()"
             [href]="action.href"
@@ -187,22 +254,21 @@
             class="details-action"
             [class.details-action--secondary]="action.variant === 'secondary'"
           >
-            @if (action.variant === 'primary' && item.links?.assets) {
-              <img
-                [src]="item.links.assets"
-                [alt]="item.company"
-                class="details-action__logo"
-              />
-            } @else {
-              <lucide-icon [name]="action.icon" size="20"></lucide-icon>
-            }
+            <img
+              *ngIf="action.variant === 'primary' && item.links?.assets"
+              [src]="item.links.assets"
+              [alt]="item.company"
+              class="details-action__logo"
+            />
+            <lucide-icon
+              *ngIf="!(action.variant === 'primary' && item.links?.assets)"
+              [name]="action.icon"
+              size="20"
+            ></lucide-icon>
             <span>{{ action.label }}</span>
-            @if (action.variant === 'primary') {
-              <lucide-icon name="external-link" size="18"></lucide-icon>
-            }
+            <lucide-icon *ngIf="action.variant === 'primary'" name="external-link" size="18"></lucide-icon>
           </a>
         </section>
-      }
     </main>
 
     <footer class="details-shell details-footer">
@@ -213,5 +279,5 @@
         [nextLink]="nextLink"
       ></app-navigation>
     </footer>
-  }
+  </ng-container>
 </div>

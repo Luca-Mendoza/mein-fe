@@ -98,9 +98,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private setSeoMetadata(): void {
-    const title = 'Luca D. Mendoza — Senior Front-End Engineer';
+    const title = 'Luca D. Mendoza — Senior Full-Stack Engineer';
     const description =
-      'Senior Front-End Engineer specialized in Angular, TypeScript, RxJS, NgRx and NestJS. Explore experience, projects and contact information.';
+      'Senior Full-Stack Engineer specialized in Angular, NestJS, TypeORM, PostgreSQL and cloud deployment. Explore experience, projects and contact information.';
 
     this.titleService.setTitle(title);
     this.meta.updateTag({ name: 'description', content: description });

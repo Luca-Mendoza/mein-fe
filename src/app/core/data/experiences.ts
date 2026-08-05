@@ -2,12 +2,12 @@ export const experiences = [
   {
     "id": 'event_loop_club',
     "type": "experience",
-    "title": "Frontend Engineer",
+    "title": "Core Full-Stack Engineer",
     "company": "Event Loop Club",
     "date": "2023 — Present",
-    "position": "Frontend Developer",
+    "position": "Core Full-Stack Engineer",
     "duration": "Part-Time",
-    "description": "Desarrollador Frontend en un proyecto Angular con SSR. Mis responsabilidades incluyen mantener y optimizar el código existente, crear componentes reutilizables, y realizar refactorizaciones para integrar nuevas funcionalidades. Además, colaboro estrechamente con el equipo para mejorar la arquitectura, asegurando una aplicación escalable y de alto rendimiento.",
+    "description": "Ingeniero Full-Stack Central en un proyecto Angular SSR. Mis responsabilidades incluyen coordinar componentes frontend modulares, alinear servicios backend compartidos, optimizar la arquitectura y colaborar ágilmente con diseño y backend para entregar una solución escalable.",
     "project_description": "Ticketera innovadora que permite a los productores publicar y gestionar sus eventos de manera integral. La aplicación facilita la gestión de eventos en tiempo real desde su dashboard, permitiendo controlar desde la publicación hasta el seguimiento de cada actividad. Trabajé de la mano con diseñadores y desarrolladores de backend para implementar una interfaz intuitiva y componentes reutilizables, garantizando una experiencia óptima en cualquier dispositivo. La solución aporta a los productores una herramienta completa para el control y la actualización de sus eventos en tiempo real, mejorando la eficiencia en la gestión y la interacción con el público.",
     "technologies": [
       "Angular",
@@ -27,11 +27,11 @@ export const experiences = [
     "images": ["/assets/placeholder.svg"],
     "links": {
       "github": "",
-      "link": "https://eventloop.club/",
-      "name": "evenloop.club",
+      "link": "https://eventloop.ar/",
+      "name": "eventloop.ar",
       "assets": "assets/imgs/eventloop_logo.webp"
     },
-    "role": "Desarrollador Frontend Principal",
+    "role": "Ingeniero Full-Stack Central",
     "challenges": [
       {
         "title": "Migración a Angular 19 Standalone",
@@ -104,18 +104,18 @@ export const experiences = [
   {
     "id": 'xtecharg',
     "type": "experience",
-    "title": "Founder & Full-Stack Lead Engineer",
+    "title": "Lead Full-Stack Engineer",
     "company": "XTECHARG",
     "date": "2024 — Present",
-    "position": "Founder & Technical Lead - Full-Stack Developer",
+    "position": "Lead Full-Stack Engineer",
     "duration": "Professional Independent",
     "employment_type": "Professional Independent",
     "employment_status": "Professional Independentnal Independent",
     "linkedIn_label": "XTECHARG",
     "linkedIn_url": "https://www.linkedin.com/company/xtecharg",
-    "description": "Fundador y líder técnico de XTECHARG, una plataforma B2B SaaS escalable que automatiza procesos de negocio y facilita transacciones comerciales directas. Arquitecto y desarrollador full-stack responsable de diseñar e implementar la arquitectura completa desde cero. Dirijo un equipo de desarrollo, defino la estrategia técnica, implemento patrones empresariales avanzados y garantizo la calidad del código mediante testing exhaustivo. La plataforma maneja miles de transacciones concurrentes con tecnología de punta, garantizando escalabilidad, seguridad y performance en producción.",
+    "description": "Lead Full-Stack Engineer of XTECHARG, a scalable B2B SaaS platform that automates business processes and supports commercial transactions. I designed and implemented the complete architecture from NestJS backend to Angular frontend, with PostgreSQL/TypeORM, OAuth2 security, OpenAI integrations and containerized deployment.",
     "project_description": "XTECHARG es una plataforma B2B SaaS robusta diseñada para optimizar la gestión comercial e integrar múltiples canales de venta. La aplicación maneja flujos complejos de pedidos, pagos multimoneda y promociones inteligentes. Implementé una arquitectura escalable con módulos especializados: autenticación OAuth2 + JWT, integración de múltiples métodos de pago (Mercado Pago, CoinPayments, transferencias), sistema de lealtad, promociones y descuentos, procesamiento de facturación, y dashboards analíticos. La plataforma está optimizada para rendimiento, seguridad y mantenibilidad con PostgreSQL + Docker/Dokploy.",
-    "executive_summary": "Fundador y líder técnico de XTECHARG, una plataforma B2B SaaS escalable que automatiza procesos de negocio y facilita transacciones comerciales directas. Arquitecto y desarrollador full-stack responsable de diseñar e implementar la arquitectura completa desde cero. Dirijo un equipo de desarrollo, defino la estrategia técnica, implemento patrones empresariales avanzados y garantizo la calidad del código mediante testing exhaustivo. La plataforma maneja miles de transacciones concurrentes con tecnología de punta, garantizando escalabilidad, seguridad y performance en producción.",
+    "executive_summary": "Lead Full-Stack Engineer of XTECHARG, a scalable B2B SaaS platform that automates business processes and supports commercial transactions. I designed and implemented the complete architecture from NestJS backend to Angular frontend, with PostgreSQL/TypeORM, OAuth2 security, OpenAI integrations and containerized deployment.",
     "key_features": [
       "Multi-module architecture with 15+ specialized NestJS modules",
       "Multi-payment method integration (Mercado Pago, CoinPayments, manual transfers)",
@@ -257,8 +257,8 @@ export const experiences_ingles = [
     "images": ["/assets/placeholder.svg"],
     "links": {
       "github": "",
-      "link": "https://eventloop.club/",
-      "name": "evenloop.club",
+      "link": "https://eventloop.ar/",
+      "name": "eventloop.ar",
       "assets": "assets/imgs/eventloop_logo.webp"
     },
     "role": "Lead Frontend Developer",

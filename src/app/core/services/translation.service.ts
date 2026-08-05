@@ -42,38 +42,38 @@ export class TranslationService {
       },
       HOME: {
         TITLE: "Luca D. Mendoza",
-        SUBTITLE: "Senior Front-End Engineer",
-        DESCRIPTION: "Specialized in Angular architecture, scalable front-end systems,<br>and product-oriented engineering.",
-        OPEN_TO_FREELANCE: "Open to freelance work and collaboration opportunities.",
+        SUBTITLE: "Senior Full-Stack Engineer / Product Engineer",
+        DESCRIPTION: "Delivers Angular frontend systems, NestJS backend services, and cloud-native deployment pipelines for global remote teams.",
+        OPEN_TO_FREELANCE: "Open to remote full-stack and product engineering roles worldwide.",
         LETS_CONNECT: {
           TITLE: "Let's Connect",
-          DESCRIPTION: "I'm currently open to freelance and remote opportunities — especially exciting Angular or frontend-focused projects. If you have something in mind, feel free to ",
+          DESCRIPTION: "I'm available for remote full-stack and product engineering opportunities — especially for teams building Angular, NestJS, and scalable SaaS platforms. If you have something in mind, feel free to ",
           LINK_TEXT: "reach out"
         },
         ABOUT_SECTION: {
           TITLE: "About",
-          SUMMARY: "Senior Front-End Developer specialized in Angular. I build scalable, maintainable applications and work on real products in production. I value clean code, clear communication, and ownership of the frontend.",
+          SUMMARY: "Senior Full-Stack Engineer with end-to-end ownership across frontend, backend, and deployment. I solve complex product problems with a data-driven mindset and reliable execution.",
           PARAGRAPH_1: "I started programming in 2019 by taking online courses. I was captivated by the idea of building applications to make others' daily work easier, so I enrolled at the Faculty of Exact Sciences at Unicen to study Systems Engineering and University Technology in IT Application Development, with a focus on web application development.",
-          PARAGRAPH_2: "In 2022, began working at \"Siete Ideas,\" Frontend development with Angular.",
+          PARAGRAPH_2: "In 2022, began working at \"Siete Ideas,\" Frontend development with Angular while expanding toward backend and product engineering.",
           PARAGRAPH_3: "In my free time, I usually enjoy hiking in the Tandil."
         },
         INTRO_VIDEO: {
           TITLE: "About Me",
-          SUBTITLE: "Senior Front-End Engineer specialized in Angular, with over five years working on applications that evolve in real-world environments. I focus on building clear and maintainable solutions, prioritizing architecture, performance, and technical decisions that support product growth."
+          SUBTITLE: "Senior Full-Stack Engineer and Product Engineer specialized in Angular and NestJS, with over five years building product-grade systems that combine architecture, backend services, and deployment automation."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experience",
           EVENT_LOOP_CLUB: {
             DATE_FROM: "2023",
-            TITLE: "Co-founder & Frontend Engineer · Event Loop Club",
-            PREVIEW: "Co-founder • Angular application in production • Frontend lead with basic backend support • Collaboration with designers and backend teams",
-            DESCRIPTION: "Co-founder of this project developed with a group of developers. I lead as Frontend Engineer, building modern Angular applications with reusable components, state management, and REST integration. I also support with basic backend tasks when needed. I contribute to technical strategy, unit and integration testing, and collaboration with designers and the backend team.",
+            TITLE: "Founder & Full-Stack Engineer · Event Loop Club",
+            PREVIEW: "Founding team SaaS platform • Shared architecture, Git workflows, agile delivery • Modular Angular and backend collaboration",
+            DESCRIPTION: "Founder & Full-Stack Engineer in a multifunctional team building event operations and ticketing tools. I delivered modular Angular UI, aligned API contracts, and helped synchronize backend integration with agile processes.",
             EMPLOYMENT_STATUS: "Professional Independent",
             LINKEDIN_LABEL: "Eventloop.ar",
             LINKEDIN_URL: "https://www.linkedin.com/company/eventloop-club",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Co-founder and Frontend Engineer in an Angular project with SSR. I lead frontend development: maintaining and optimizing code, creating reusable components, and integrating new features. I also help with basic backend tasks when required. I work closely with the team on architecture and technical decisions, ensuring a scalable and high-performance application."
+                DESCRIPTION: "Founder & Full-Stack Engineer on an Angular SSR platform. I collaborate across architecture, Git delivery, modular frontend components, shared backend services, and agile execution. I maintain code quality, optimize performance, and ensure alignment between product goals and technical delivery."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "An innovative ticketing platform that enables producers to publish and manage their events comprehensively. The application facilitates real-time event management from the dashboard, allowing control from publication to tracking of every activity. I collaborated with designers and backend developers to implement an intuitive interface and reusable components, ensuring an optimal experience on any device. The solution provides producers with a complete tool for controlling and updating their events in real time, improving management efficiency and audience interaction."
@@ -115,10 +115,10 @@ export class TranslationService {
               DURATION: "2023 — Present",
               EMPLOYMENT_TYPE: "Part-Time",
               LINKS: {
-                WEBSITE: "eventloop.club",
+                WEBSITE: "eventloop.ar",
                 LOGO: "assets/imgs/eventloop_logo.webp",
                 GITHUB: "",
-                LINK: "https://eventloop.club/"
+                LINK: "https://eventloop.ar/"
               }
             }
           },
@@ -178,19 +178,19 @@ export class TranslationService {
           },
           XTECH: {
             DATE_FROM: "2024",
-            TITLE: "Co-founder & Full-Stack Lead Engineer · XTECHARG",
-            PREVIEW: "Large-scale Angular application (frontend-led) • NgRx state management & frontend architecture • Backend APIs built with NestJS to support frontend needs • Real product running in production",
-            DESCRIPTION: "Co-founder and Technical Lead of XTECHARG, a scalable B2B SaaS platform that automates business processes and facilitates direct commercial transactions. Full-stack architect and developer responsible for designing and implementing the entire platform architecture from scratch. Leading the development team, defining technical strategy, implementing advanced enterprise patterns, and ensuring code quality through exhaustive testing.",
+            TITLE: "Lead Full-Stack Engineer · XTECHARG",
+            PREVIEW: "Large-scale Angular application • NgRx state management • NestJS backend APIs • OAuth2, OpenAI, PostgreSQL, Docker/Dokploy",
+            DESCRIPTION: "Lead full-stack engineer for XTECHARG, a scalable B2B SaaS platform that automates business processes and enables direct commercial transactions. I designed and delivered the full architecture: NestJS backend, PostgreSQL/TypeORM data layer, OAuth2 security, OpenAI logic, Angular frontend, and Docker/Dokploy deployment pipelines.",
             EMPLOYMENT_STATUS: "Professional Independent",
             LINKEDIN_LABEL: "XTECHARG",
             LINKEDIN_URL: "https://www.linkedin.com/company/xtecharg",
-            EXECUTIVE_SUMMARY: "Co-founder and Technical Lead of XTECHARG, a scalable B2B SaaS platform that automates business processes and facilitates direct commercial transactions. Full-stack architect and developer responsible for designing and implementing the entire platform architecture from scratch. I lead the development team, define technical strategy, implement advanced enterprise patterns, and ensure code quality through exhaustive testing. The platform handles thousands of concurrent transactions with cutting-edge technology, guaranteeing scalability, security, and performance in production.",
+            EXECUTIVE_SUMMARY: "Lead full-stack engineer for XTECHARG, a scalable B2B SaaS platform that automates business processes and enables direct commercial transactions. I designed and delivered the full architecture: NestJS backend, PostgreSQL/TypeORM data layer, OAuth2 security, OpenAI logic, Angular frontend, and Docker/Dokploy deployment pipelines. The platform handles thousands of concurrent transactions with cutting-edge technology, guaranteeing scalability, security, and production performance.",
             KEY_FEATURES: "Multi-module architecture with 15+ specialized NestJS modules · Multi-payment method integration · Advanced user authentication with OAuth2 + JWT tokens · Loyalty and promotional benefits system · Invoicing module with PDF generation · Complete order lifecycle management · Admin dashboard with analytics · Role-based access control (RBAC) · Responsive Angular Material + Tailwind CSS UI",
             TECHNICAL_ARCHITECTURE: "Backend: NestJS 11.0 with TypeScript, PostgreSQL + TypeORM, OAuth2 + JWT, modular architecture with 15+ independent modules. Frontend: Angular 19 Standalone, NgRx state management, Angular Material + Tailwind CSS. Database: PostgreSQL 8.16 with TypeORM, advanced index optimization and query optimization, connection pooling. Security: OAuth2 + JWT with refresh tokens in httpOnly cookies, granular RBAC, adaptive rate limiting.",
             METRICS: "Code Quality: >80% test coverage on critical logic, 100% TypeScript strict mode, 0 ESLint errors. Scalability: 1000+ simultaneous users, 15+ independent modules, 50+ API endpoints.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "As Co-founder and Technical Lead, I architect and implement the entire platform from zero, making strategic decisions on technology stack, system design, and team structure. I lead the development team, conduct code reviews, mentor junior developers, and ensure adherence to best practices. My responsibilities include backend API design with NestJS, frontend optimization with Angular 19 Standalone, database architecture and optimization, security implementation, and DevOps/CI-CD pipeline management. I define the technical roadmap, evaluate new technologies, and balance business requirements with engineering excellence."
+                DESCRIPTION: "As Lead Full-Stack Engineer, I architect and implement the platform from scratch, making strategic decisions on stack selection, system design, and deployment strategy. I manage development workflows, conduct code reviews, optimize performance, and align backend, frontend, and DevOps delivery with product objectives. My responsibilities include backend API design with NestJS, frontend optimization with Angular 19 Standalone, database architecture and optimization, security implementation, and DevOps/CI-CD pipeline management."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "XTECHARG is a B2B SaaS platform that automates business processes and enables direct commercial transactions. The system integrates Angular 19 Standalone with NestJS modular REST APIs for scalability, PostgreSQL with strategic indexing and optimization, and Docker/Dokploy for containerization and deployment. The platform integrates payment gateways (Mercado Pago, CoinPayments), implements OAuth2/Google API authentication with JWT, and provides comprehensive logging. All data communication uses secure HTTPS with proper validation."
@@ -281,8 +281,8 @@ export class TranslationService {
         PROJECTS_SECTION: {
           TITLE: "Projects",
           PORTFOLIO: {
-            TITLE: "Web Frontend Engineer · Portfolio",
-            DESCRIPTION: "Developed and designed a portfolio website using Angular and Angular Material. This project showcases various frontend skills, including the use of CSS/SCSS for styling and Git/GitHub for version control. The site is fully responsive and optimized for performance, offering an engaging and interactive user experience.",
+            TITLE: "Product Engineer · Portfolio",
+            DESCRIPTION: "Built this portfolio with Angular, product thinking, and full-stack delivery. The project highlights responsive UX, scalable architecture, API integration, and deployment-ready engineering practices.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
                 DESCRIPTION: "My personal portfolio is an open window into my passion for technology and professional growth. With a relaxed and natural style, I develop modern, interactive, and adaptive interfaces using Angular, Angular Material, Tailwind, and SCSS. Each project, whether in ecommerce, event organization, or logistics, is an opportunity to continue learning and enjoy the creative process."
@@ -432,12 +432,12 @@ export class TranslationService {
       },
       VOICE_PAGE: {
         HERO_TITLE: "Luca Mendoza",
-        HERO_SUBTITLE: "Senior Front-End Developer",
+        HERO_SUBTITLE: "Senior Full-Stack Engineer",
         VIDEO_PLACEHOLDER: "Video introduction.",
-        CONTEXT_PARAGRAPH: "I work as a Senior Front-End Developer with Angular, building scalable applications in production. I also take part in independent projects. I care about clean code, clear communication, and solid frontend ownership.",
-        CONTEXT_PARAGRAPH_1: "I'm a Senior Front-End Engineer specialized in Angular, with over five years of experience working on applications that evolve in real-world environments.",
-        CONTEXT_PARAGRAPH_2: "My focus lies in frontend architecture — state management with NgRx, performance optimization, and building scalable structures that support long-term product growth.",
-        CONTEXT_PARAGRAPH_3: "I value clarity, maintainability, and thoughtful technical decisions. I collaborate closely with design and backend teams, understanding frontend as a strategic layer where business requirements become reliable user experiences.",
+        CONTEXT_PARAGRAPH: "I work as a Senior Full-Stack Engineer with Angular and NestJS, building scalable applications in production. I also take part in independent projects that combine frontend, backend, and deployment. I care about clean code, clear communication, and product-oriented ownership.",
+        CONTEXT_PARAGRAPH_1: "I'm a Senior Full-Stack Engineer specialized in Angular and NestJS, with over five years of experience working on applications that evolve in real-world environments.",
+        CONTEXT_PARAGRAPH_2: "My focus lies in end-to-end architecture — state management with NgRx, API design, deployment pipelines, and scalable product delivery.",
+        CONTEXT_PARAGRAPH_3: "I value clarity, maintainability, and thoughtful technical decisions. I collaborate closely with design and backend teams, understanding full-stack engineering as a strategic layer where product requirements become reliable user experiences.",
         CONTEXT_PERSONAL: "Beyond the technical scope, I'm continuously refining how I design systems and approach software development with a calm, pragmatic mindset.",
         CTA_RESUME: "View Resume",
         CTA_CONTACT: "Contact",
@@ -470,38 +470,38 @@ export class TranslationService {
       },
       HOME: {
         TITLE: "Luca D. Mendoza",
-        SUBTITLE: "Ingeniero Senior Front-End",
-        DESCRIPTION: "Especializado en arquitectura Angular, sistemas front-end escalables<br>e ingeniería orientada a productos.",
-        OPEN_TO_FREELANCE: "Abierto a proyectos freelance y oportunidades de colaboración.",
+        SUBTITLE: "Ingeniero Full-Stack Senior / Product Engineer",
+        DESCRIPTION: "Entrega sistemas frontend Angular, servicios backend NestJS y pipelines de despliegue cloud-native para equipos remotos globales.",
+        OPEN_TO_FREELANCE: "Disponible para roles remotos full-stack y product engineering a nivel global.",
         LETS_CONNECT: {
           TITLE: "Conectemos",
-          DESCRIPTION: "Estoy abierto a proyectos freelance y oportunidades remotas — sobre todo en Angular o frontend. Si tenés algo en mente, ",
+          DESCRIPTION: "Estoy disponible para oportunidades remotas de full-stack y product engineering — especialmente para equipos que construyen con Angular, NestJS y plataformas SaaS escalables. Si tenés algo en mente, ",
           LINK_TEXT: "escribime"
         },
         ABOUT_SECTION: {
           TITLE: "Sobre mí",
-          SUMMARY: "Senior Front-End Developer especializado en Angular. Construyo aplicaciones escalables y mantenibles y trabajo en productos reales en producción. Valoro el código limpio, la comunicación clara y la responsabilidad sobre el frontend.",
+          SUMMARY: "Ingeniero Full-Stack Senior con ownership de extremo a extremo en frontend, backend y despliegue. Resuelvo problemas de producto complejos con una mentalidad orientada a resultados.",
           PARAGRAPH_1: "Comencé a programar en 2019 tomando cursos en línea. Me cautivó la idea de construir aplicaciones para facilitar el trabajo diario de otros, por lo que me inscribí en la Facultad de Ciencias Exactas de Unicen para estudiar Ingeniería en Sistemas y Tecnología Universitaria en Desarrollo de Aplicaciones Informáticas, con enfoque en desarrollo de aplicaciones web.",
-          PARAGRAPH_2: "En 2022, comencé a trabajar en \"Siete Ideas\" como desarrollador Frontend con Angular.",
+          PARAGRAPH_2: "En 2022, comencé a trabajar en \"Siete Ideas\" como desarrollador Frontend con Angular, ampliando mi enfoque hacia backend y product engineering.",
           PARAGRAPH_3: "En mi tiempo libre, disfruto del senderismo en las sierras de Tandil."
         },
         INTRO_VIDEO: {
           TITLE: "Sobre mí",
-          SUBTITLE: "Senior Front-End Engineer especializado en Angular, con más de cinco años trabajando en aplicaciones que evolucionan en entornos reales. Me enfoco en construir soluciones claras y mantenibles, priorizando la arquitectura, el rendimiento y decisiones técnicas que acompañen el crecimiento del producto."
+          SUBTITLE: "Ingeniero Full-Stack Senior y Product Engineer especializado en Angular y NestJS, con más de cinco años construyendo sistemas de producto que combinan arquitectura técnica, servicios backend y automatización de despliegues."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experiencia",
           EVENT_LOOP_CLUB: {
             DATE_FROM: "2023",
-            TITLE: "Co-fundador y Frontend Engineer · Event Loop Club",
-            PREVIEW: "Co-fundador • Aplicación Angular en producción • Liderazgo frontend con apoyo básico en backend • Colaboración con diseñadores y equipo backend",
-            DESCRIPTION: "Co-fundador de este proyecto desarrollado con un grupo de developers. Lidero como Frontend Engineer: aplicaciones Angular modernas, componentes reutilizables, manejo de estado e integración REST. También ayudo con tareas básicas de backend cuando hace falta. Contribuyo en la estrategia técnica, testing unitario e integral y en la colaboración con diseñadores y backend.",
+            TITLE: "Founder & Full-Stack Engineer · Event Loop Club",
+            PREVIEW: "Plataforma SaaS en equipo • Arquitectura compartida, entregas Git, metodologías ágiles • Angular modular y colaboración backend",
+            DESCRIPTION: "Founder & Full-Stack Engineer en un equipo multifuncional que construye herramientas para eventos y venta de entradas. Entrego UI Angular modular, alineo contratos de API y sincronizo la integración backend con procesos ágiles.",
             EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "Eventloop.ar",
             LINKEDIN_URL: "https://www.linkedin.com/company/eventloop-club",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Co-fundador y Frontend Engineer en un proyecto Angular con SSR. Lidero el desarrollo frontend: mantener y optimizar código, crear componentes reutilizables e integrar nuevas funcionalidades. También ayudo con tareas básicas de backend cuando se requiere. Trabajo junto al equipo en arquitectura y decisiones técnicas, asegurando una aplicación escalable y de alto rendimiento."
+                DESCRIPTION: "Founder & Full-Stack Engineer en un proyecto Angular SSR. Colaboro en arquitectura compartida, entregas con Git, componentes frontend modulares, servicios backend integrados y ejecución ágil. Mantengo la calidad del código, optimizo el rendimiento y aseguro alineación entre los objetivos de producto y la entrega técnica."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "Una plataforma de ticketing innovadora que permite a los productores publicar y gestionar sus eventos de manera integral. La aplicación facilita la gestión de eventos en tiempo real desde el dashboard, permitiendo control desde la publicación hasta el seguimiento de cada actividad. Colaboré con diseñadores y desarrolladores backend para implementar una interfaz intuitiva y componentes reutilizables, asegurando una experiencia óptima en cualquier dispositivo. La solución proporciona a los productores una herramienta completa para controlar y actualizar sus eventos en tiempo real, mejorando la eficiencia de gestión y la interacción con la audiencia."
@@ -543,10 +543,10 @@ export class TranslationService {
               DURATION: "2023 — Presente",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
               LINKS: {
-                WEBSITE: "eventloop.club",
+                WEBSITE: "eventloop.ar",
                 LOGO: "assets/imgs/eventloop_logo.webp",
                 GITHUB: "",
-                LINK: "https://eventloop.club/"
+                LINK: "https://eventloop.ar/"
               }
             }
           },
@@ -607,19 +607,19 @@ export class TranslationService {
           },
           XTECH: {
             DATE_FROM: "2024",
-            TITLE: "Co-fundador e Ingeniero Full-Stack Lead · XTECHARG",
-            PREVIEW: "Aplicación Angular a gran escala (liderada por frontend) • NgRx y arquitectura frontend • APIs backend con NestJS para soportar el frontend • Producto real en producción",
-            DESCRIPTION: "Co-fundador y líder técnico de XTECHARG, una plataforma B2B SaaS escalable que automatiza procesos de negocio y facilita transacciones comerciales directas. Arquitecto y desarrollador full-stack responsable de diseñar e implementar la arquitectura completa desde cero. Dirijo el equipo de desarrollo, defino la estrategia técnica, implemento patrones empresariales avanzados y garantizo la calidad del código mediante testing exhaustivo.",
+            TITLE: "Lead Full-Stack Engineer · XTECHARG",
+            PREVIEW: "Aplicación Angular a gran escala • NgRx, backend NestJS, OAuth2, OpenAI, PostgreSQL y Docker/Dokploy",
+            DESCRIPTION: "Ingeniero Full-Stack Lead de XTECHARG, una plataforma B2B SaaS que automatiza procesos de negocio y transacciones comerciales. Diseñé e implementé la arquitectura completa: backend NestJS, data layer PostgreSQL/TypeORM, seguridad OAuth2, lógica OpenAI, frontend Angular y despliegue Docker/Dokploy.",
             EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "XTECHARG",
             LINKEDIN_URL: "https://www.linkedin.com/company/xtecharg",
-            EXECUTIVE_SUMMARY: "Co-fundador y líder técnico de XTECHARG, una plataforma B2B SaaS escalable que automatiza procesos de negocio y facilita transacciones comerciales directas. Arquitecto y desarrollador full-stack responsable de diseñar e implementar la arquitectura completa desde cero. Dirijo un equipo de desarrollo, defino la estrategia técnica, implemento patrones empresariales avanzados y garantizo la calidad del código mediante testing exhaustivo. La plataforma maneja miles de transacciones concurrentes con tecnología de punta, garantizando escalabilidad, seguridad y performance en producción.",
+            EXECUTIVE_SUMMARY: "Ingeniero Full-Stack Lead de XTECHARG, una plataforma B2B SaaS que automatiza procesos de negocio y transacciones comerciales. Diseñé e implementé la arquitectura completa: backend NestJS, data layer PostgreSQL/TypeORM, seguridad OAuth2, lógica OpenAI, frontend Angular y despliegue Docker/Dokploy. La plataforma maneja miles de transacciones concurrentes con tecnología de punta, garantizando escalabilidad, seguridad y performance en producción.",
             KEY_FEATURES: "Arquitectura multi-módulo con 15+ módulos NestJS especializados · Integración de múltiples métodos de pago · Autenticación avanzada con OAuth2 + tokens JWT · Sistema de lealtad y beneficios promocionales · Módulo de facturación con generación de PDF · Gestión completa del ciclo de vida de órdenes · Dashboard administrativo con analytics · Control de acceso basado en roles (RBAC) · UI responsivo con Angular Material + Tailwind CSS",
             TECHNICAL_ARCHITECTURE: "Backend: NestJS 11.0 con TypeScript, PostgreSQL + TypeORM, OAuth2 + JWT, arquitectura modular con 15+ módulos independientes. Frontend: Angular 19 Standalone, gestión de estado NgRx, Angular Material + Tailwind CSS. Base de Datos: PostgreSQL 8.16 con TypeORM, optimización avanzada de índices y queries, connection pooling. Seguridad: OAuth2 + JWT con refresh tokens en httpOnly cookies, RBAC granular, rate limiting adaptativo.",
             METRICS: "Calidad de Código: >80% cobertura de tests en lógica crítica, 100% TypeScript strict mode, 0 errores ESLint. Escalabilidad: 1000+ usuarios simultáneos, 15+ módulos independientes, 50+ endpoints API.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Como Co-fundador y Líder Técnico, arquitecto e implemento la plataforma completa desde cero, tomando decisiones estratégicas en stack tecnológico, diseño de sistemas y estructura del equipo. Lidero el equipo de desarrollo, realizo code reviews, mentoricé a desarrolladores junior y garantizo adherencia a mejores prácticas. Mis responsabilidades incluyen diseño de API backend con NestJS, optimización frontend con Angular 19 Standalone, arquitectura y optimización de base de datos, implementación de seguridad y gestión de pipeline DevOps/CI-CD. Defino la hoja de ruta técnica, evalúo nuevas tecnologías y equilibro requerimientos de negocio con excelencia de ingeniería."
+                DESCRIPTION: "Como Lead Full-Stack Engineer, arquitecto e implemento la plataforma desde cero, tomando decisiones estratégicas en stack tecnológico, diseño de sistemas y despliegue. Gestiono flujos de desarrollo, reviso código, optimizo performance y alineo backend, frontend y DevOps con los objetivos de producto. Mis responsabilidades incluyen diseño de APIs con NestJS, optimización frontend con Angular 19 Standalone, arquitectura y optimización de base de datos, implementación de seguridad y gestión de pipelines DevOps/CI-CD."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "XTECHARG es una plataforma SaaS B2B que automatiza procesos empresariales y facilita transacciones comerciales. El sistema integra Angular 19 Standalone con NestJS, APIs REST para escalabilidad, PostgreSQL con indexación estratégica y optimización, y Docker/Dokploy para containerización y deployment. La plataforma integra pasarelas de pago (Mercado Pago, CoinPayments), implementa autenticación OAuth2/Google API con JWT, y proporciona logging integral. Toda la comunicación de datos utiliza HTTPS seguro con validación apropiada."
@@ -705,8 +705,8 @@ export class TranslationService {
         PROJECTS_SECTION: {
           TITLE: "Proyectos",
           PORTFOLIO: {
-            TITLE: "Web Frontend Engineer · Portafolio web",
-            DESCRIPTION: "Desarrollé y diseñé un sitio web de portafolio usando Angular y Angular Material. Este proyecto muestra varias habilidades frontend, incluyendo el uso de CSS/SCSS para estilos y Git/GitHub para control de versiones. El sitio es completamente responsivo y optimizado para el rendimiento, ofreciendo una experiencia de usuario atractiva e interactiva.",
+            TITLE: "Product Engineer · Portafolio web",
+            DESCRIPTION: "Construí este portafolio con Angular, pensamiento de producto y entrega full-stack. El proyecto muestra UX responsiva, arquitectura escalable, integración de APIs y prácticas de ingeniería listas para producción.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
                 DESCRIPTION: "Mi portafolio personal es una ventana abierta a mi pasión por la tecnología y crecimiento profesional. Con un estilo relajado y natural, desarrollo interfaces modernas, interactivas y adaptativas usando Angular, Angular Material, Tailwind y SCSS. Cada proyecto, ya sea en ecommerce, organización de eventos o logística, es una oportunidad para continuar aprendiendo y disfrutar del proceso creativo."
@@ -856,12 +856,12 @@ export class TranslationService {
       },
       VOICE_PAGE: {
         HERO_TITLE: "Luca Mendoza",
-        HERO_SUBTITLE: "Senior Front-End Developer",
+        HERO_SUBTITLE: "Ingeniero Full-Stack Senior",
         VIDEO_PLACEHOLDER: "Video de presentación.",
-        CONTEXT_PARAGRAPH: "Trabajo como Senior Front-End Developer con Angular, construyendo aplicaciones escalables en producción. También participo en proyectos independientes. Me importa el código limpio, la comunicación clara y asumir bien el frontend.",
-        CONTEXT_PARAGRAPH_1: "Soy Ingeniero Senior Front-End especializado en Angular, con más de cinco años de experiencia trabajando en aplicaciones que evolucionan en entornos reales.",
-        CONTEXT_PARAGRAPH_2: "Mi foco está en la arquitectura frontend: manejo de estado con NgRx, optimización de performance y construcción de estructuras escalables que acompañen el crecimiento del producto a largo plazo.",
-        CONTEXT_PARAGRAPH_3: "Valoro la claridad, la mantenibilidad y las decisiones técnicas bien pensadas. Colaboro de cerca con equipos de diseño y backend, entendiendo el frontend como una capa estratégica donde los requisitos de negocio se convierten en experiencias de usuario confiables.",
+        CONTEXT_PARAGRAPH: "Trabajo como Ingeniero Full-Stack Senior con Angular y NestJS, construyendo aplicaciones escalables en producción. También participo en proyectos independientes que combinan frontend, backend y despliegue. Me importa el código limpio, la comunicación clara y la responsabilidad orientada al producto.",
+        CONTEXT_PARAGRAPH_1: "Soy Ingeniero Full-Stack Senior especializado en Angular y NestJS, con más de cinco años de experiencia construyendo sistemas de producto que evolucionan en entornos reales.",
+        CONTEXT_PARAGRAPH_2: "Mi foco está en arquitectura de extremo a extremo: manejo de estado con NgRx, diseño de APIs, pipelines de despliegue y entrega de producto escalable.",
+        CONTEXT_PARAGRAPH_3: "Valoro la claridad, la mantenibilidad y las decisiones técnicas bien pensadas. Colaboro de cerca con equipos de diseño y backend, entendiendo la ingeniería full-stack como una capa estratégica donde los requisitos de negocio se convierten en experiencias de usuario confiables.",
         CONTEXT_PERSONAL: "Más allá de lo técnico, refino constantemente cómo diseño sistemas y abordo el desarrollo de software con una mentalidad tranquila y pragmática.",
         CTA_RESUME: "Ver CV",
         CTA_CONTACT: "Contacto",

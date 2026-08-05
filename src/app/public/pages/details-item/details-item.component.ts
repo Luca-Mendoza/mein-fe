@@ -3,7 +3,6 @@ import { LucideModule } from '../../../shared/lucide/lucide.module';
 import { MaterialModule } from '../../../shared/material/material.module';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { BreadcrumsComponent } from '@shared/components/breadcrums/breadcrums.component';
 import { NavigationComponent } from '@shared/components/navigation/navigation.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslationService, Language } from '@core/services/translation.service';
@@ -21,7 +20,7 @@ interface DetailAction {
 @Component({
   selector: 'app-details-item',
   standalone: true,
-  imports: [CommonModule, RouterModule, MaterialModule, LucideModule, BreadcrumsComponent, NavigationComponent, TranslatePipe, LanguageSelectorComponent],
+  imports: [CommonModule, RouterModule, MaterialModule, LucideModule, NavigationComponent, TranslatePipe, LanguageSelectorComponent],
   templateUrl: './details-item.component.html',
   styleUrl: './details-item.component.scss'
 })
@@ -29,12 +28,15 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
   item: any;
   isExperience: boolean = true;
   currentIndex: number = 0;
+  currentImageIndex: number = 0;
   prevLink: any;
   nextLink: any;
   prevLabel: string = '';
   nextLabel: string = '';
   currentLanguage: Language = 'en';
   breadcrumbLinks: any[] = [];
+  private imageRotationTimer: ReturnType<typeof setInterval> | null = null;
+  private readonly imageRotationDelay = 7000;
   private subscriptions = new Subscription();
 
   constructor(
@@ -63,6 +65,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+    this.stopImageRotation();
   }
 
   private loadItemById(id: string) {
@@ -116,14 +119,20 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
+      images: [
+        { src: 'assets/imgs/eventloop_logo.webp', alt: 'Event Loop Club preview' },
+        { src: 'assets/imgs/event_loop_club.svg', alt: 'Event Loop Club brand assets' }
+      ],
       links: {
         name: 'Event Loop Club',
-        link: 'https://eventloop.club/',
+        link: 'https://eventloop.ar/',
         assets: 'assets/imgs/eventloop_logo.webp'
       }
     };
     this.isExperience = true;
     this.currentIndex = 0;
+    this.currentImageIndex = 0;
+    this.startImageRotation();
     this.setNavigationLinks(['event_loop_club', 'siete_ideas']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
@@ -170,6 +179,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     };
     this.isExperience = true;
     this.currentIndex = 1;
+    this.currentImageIndex = 0;
+    this.startImageRotation();
     this.setNavigationLinks(['event_loop_club', 'siete_ideas']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
@@ -188,8 +199,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       date: '2024 - PRESENT',
       duration: this.translationService.translate('DETAILS.FULL_TIME'),
       summary: this.detailCopy(
-        'B2B SaaS platform built from scratch as co-founder and technical lead, covering Angular architecture, NestJS APIs, payments, security and deployment.',
-        'Plataforma SaaS B2B construida desde cero como cofundador y líder técnico, cubriendo arquitectura Angular, APIs NestJS, pagos, seguridad y despliegue.'
+        'B2B SaaS platform built from scratch as a Lead Full-Stack Engineer, covering Angular architecture, NestJS APIs, payments, security and deployment.',
+        'Plataforma SaaS B2B construida desde cero como Lead Full-Stack Engineer, cubriendo arquitectura Angular, APIs NestJS, pagos, seguridad y despliegue.'
       ),
       focus: [
         this.detailCopy('Technical leadership', 'Liderazgo técnico'),
@@ -215,6 +226,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     };
     this.isExperience = true;
     this.currentIndex = 2;
+    this.currentImageIndex = 0;
+    this.startImageRotation();
     this.setNavigationLinks(['event_loop_club', 'siete_ideas', 'xtech']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
@@ -255,6 +268,10 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       learnings: learnings,
       soft_skills: softSkills,
       technologies: technologies,
+      images: [
+        { src: 'assets/imgs/porfolio_web.png', alt: 'Portfolio case study preview' },
+        { src: 'assets/imgs/proyect_01.jpg', alt: 'Project experience screenshot' }
+      ],
       links: {
         name: 'Portfolio',
         link: 'https://lucadmendoza.dev/',
@@ -264,6 +281,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     };
     this.isExperience = false;
     this.currentIndex = 0;
+    this.currentImageIndex = 0;
+    this.startImageRotation();
     this.setNavigationLinks(['portfolio', 'gamezonia']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_PROJECT');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_PROJECT');
@@ -302,6 +321,10 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
+      images: [
+        { src: 'assets/imgs/gamezonia.png', alt: 'Gamezonia showcase' },
+        { src: 'assets/imgs/proyect_02.jpg', alt: 'Gamezonia interface preview' }
+      ],
       links: {
         name: 'Gamezonia',
         link: 'https://luca-mendoza.github.io/Frontend-meang-online-shop/#/',
@@ -312,6 +335,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     };
     this.isExperience = false;
     this.currentIndex = 1;
+    this.currentImageIndex = 0;
+    this.startImageRotation();
     this.setNavigationLinks(['portfolio', 'gamezonia']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_PROJECT');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_PROJECT');
@@ -354,6 +379,66 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
         icon: 'arrow-left' 
       }
     ];
+  }
+
+  get hasImages(): boolean {
+    return !!this.item?.images?.length;
+  }
+
+  get currentImage() {
+    return this.item?.images?.[this.currentImageIndex] ?? { src: '', alt: '' };
+  }
+
+  get mediaTitle(): string {
+    return this.currentLanguage === 'es' ? 'Vista del proyecto' : 'Project preview';
+  }
+
+  prevImage() {
+    if (this.currentImageIndex > 0) {
+      this.currentImageIndex -= 1;
+      this.resetImageRotation();
+    }
+  }
+
+  nextImage() {
+    if (this.item?.images && this.currentImageIndex < this.item.images.length - 1) {
+      this.currentImageIndex += 1;
+      this.resetImageRotation();
+    }
+  }
+
+  showImage(index: number) {
+    if (this.item?.images && index >= 0 && index < this.item.images.length) {
+      this.currentImageIndex = index;
+      this.resetImageRotation();
+    }
+  }
+
+  private resetImageRotation() {
+    this.stopImageRotation();
+    this.startImageRotation();
+  }
+
+  private startImageRotation() {
+    if (!this.item?.images?.length || this.item.images.length < 2) {
+      return;
+    }
+
+    this.stopImageRotation();
+    this.imageRotationTimer = setInterval(() => {
+      if (!this.item?.images?.length) {
+        return;
+      }
+
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.item.images.length;
+    }, this.imageRotationDelay);
+  }
+
+  private stopImageRotation() {
+    if (this.imageRotationTimer) {
+      clearInterval(this.imageRotationTimer);
+      this.imageRotationTimer = null;
+    }
   }
 
   getVisibleLinks(): DetailAction[] {

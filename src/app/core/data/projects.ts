@@ -79,21 +79,21 @@ export const projects = [
     {
         "id": "portfolio",
         "type": "project",
-        "title": "Web Frontend Engineer",
+        "title": "Product Engineer",
         "company": "Luca D. Mendoza",
         "date": "2019 — Present",
         "duration": "Full-Time",
-        "role": "Ingeniero en Sistemas y Desarrollador Web, siempre en búsqueda de innovación y actualización, especializado en el desarrollo de interfaces modernas y escalables con Angular.",
+        "role": "Ingeniero de Producto y Full-Stack, con entrega de soluciones completas en Angular, NestJS y arquitecturas escalables.",
         "responsibilities": [
-            "Desarrollar y mantener aplicaciones web responsivas utilizando Angular y tecnologías emergentes.",
-            "Implementar diseños UI/UX atractivos con Angular Material y Tailwind CSS, combinando estética y funcionalidad.",
-            "Optimizar el rendimiento mediante técnicas como Lazy Loading, prefetching y manejo avanzado del estado con RxJS.",
-            "Integrar soluciones backend mediante APIs REST y GraphQL para autenticación y gestión de datos en tiempo real.",
-            "Colaborar con equipos de diseño y desarrollo en proyectos de ecommerce, eventos y logística.",
-            "Realizar pruebas, debugging y mejoras continuas para garantizar la estabilidad y calidad de las aplicaciones."
+            "Desarrollar y mantener aplicaciones web responsivas utilizando Angular y tecnologías full-stack.",
+            "Diseñar UI/UX atractivos con Angular Material y Tailwind CSS, manteniendo foco en la experiencia de producto.",
+            "Optimizar rendimiento con Lazy Loading, prefetching y manejo avanzado del estado con RxJS.",
+            "Integrar backend con APIs REST y GraphQL, asegurando autenticación segura y gestión de datos confiable.",
+            "Coordinar con diseño y desarrollo en ecommerce, eventos y logística para alinear entregas con objetivos de negocio.",
+            "Implementar pruebas, debugging y mejoras continuas para mantener estabilidad y calidad en producción."
         ],
-        "description": "Mi portafolio personal es una ventana abierta a mi pasión por la tecnología y mi evolución profesional. Con un estilo relajado y natural, desarrollo interfaces modernas, interactivas y adaptativas usando Angular, Angular Material, Tailwind y SCSS. Cada proyecto, ya sea de ecommerce, organización de eventos o logística, es una oportunidad para seguir aprendiendo y disfrutar del proceso creativo.",
-        "project_description": "El proyecto abarca el desarrollo de soluciones web integrales: un ecommerce robusto, aplicaciones para organizadores de eventos y plataformas logísticas. Iniciado con Angular 9 y evolucionado a Angular 19, integra Node.js y GraphQL para construir APIs eficientes, aplicando técnicas avanzadas de rendimiento y un diseño intuitivo.",
+        "description": "Mi portafolio personal muestra mi evolución como ingeniero de producto full-stack. Desarrollo interfaces modernas y adaptativas con Angular, y también conecto soluciones backend y despliegue, entregando experiencias completas y generando valor real.",
+        "project_description": "El proyecto abarca soluciones web integrales: un ecommerce robusto, aplicaciones para organizadores de eventos y plataformas logísticas. Evolucionó desde Angular 9 hasta Angular 19, con integración de backend Node.js y GraphQL, APIs eficientes, rendimiento optimizado y diseño intuitivo.",
         "technologies": [
             "Angular 9 → 19",
             "Angular Material",
@@ -189,7 +189,7 @@ export const projects = [
             "Angular: De cero a experto (Angular 10+)",
             "Fundamentos de la gestión del tiempo"
         ],
-        "profile_summary": "Soy Luca Alberto Daniel Mendoza, Senior Front-End Engineer especializado en Angular. Construyo aplicaciones escalables y mantenibles, con foco en arquitectura frontend, rendimiento, UI/UX e integración con APIs. Fui Frontend Developer en Siete Ideas entre 2022 y 2026, y actualmente soy cofundador de XTECHARG y Event Loop Club."
+        "profile_summary": "Soy Luca Alberto Daniel Mendoza, Ingeniero Full-Stack Senior y Product Engineer especializado en Angular. Construyo aplicaciones escalables y mantenibles con ownership completo de frontend, backend y despliegue. Fui Frontend Developer en Siete Ideas entre 2022 y 2026, y actualmente lidero XTECHARG y colaboro en Event Loop Club."
     }
 
 ]
@@ -275,21 +275,21 @@ export const projects_ingles = [
     {
         "id": "portfolio",
         "type": "project",
-        "title": "Web Frontend Engineer",
+        "title": "Product Engineer",
         "company": "Luca D. Mendoza",
         "date": "2019 — Present",
         "duration": "Full-Time",
-        "role": "Systems Engineer and Web Developer, constantly seeking innovation and improvement, specialized in developing modern and scalable interfaces with Angular.",
+        "role": "Systems Engineer and Product Engineer, delivering end-to-end solutions with Angular, NestJS and scalable architecture.",
         "responsibilities": [
-            "Develop and maintain responsive web applications using Angular and emerging technologies.",
-            "Implement attractive UI/UX designs with Angular Material and Tailwind CSS, combining aesthetics and functionality.",
-            "Optimize performance through techniques such as Lazy Loading, prefetching, and advanced state management with RxJS.",
-            "Integrate backend solutions through REST and GraphQL APIs for secure authentication and real-time data management.",
-            "Collaborate with design and development teams on ecommerce, events, and logistics projects.",
-            "Conduct testing, debugging, and continuous improvements to ensure application stability and quality."
+            "Develop and maintain responsive web applications using Angular and full-stack technologies.",
+            "Design attractive UI/UX with Angular Material and Tailwind CSS, keeping product experience central.",
+            "Optimize performance with Lazy Loading, prefetching, and advanced RxJS state management.",
+            "Integrate backend systems through REST and GraphQL APIs for secure authentication and real-time data management.",
+            "Collaborate with design and development teams on ecommerce, events, and logistics projects to align delivery with business goals.",
+            "Implement testing, debugging, and continuous improvements to ensure stability and production readiness."
         ],
-        "description": "My personal portfolio is an open window into my passion for technology and professional growth. With a relaxed and natural style, I develop modern, interactive, and adaptive interfaces using Angular, Angular Material, Tailwind, and SCSS. Each project, whether in ecommerce, event organization, or logistics, is an opportunity to continue learning and enjoy the creative process.",
-        "project_description": "The project covers the development of comprehensive web solutions: a robust ecommerce platform, applications for event organizers, and logistics platforms. Started with Angular 9 and evolved to Angular 19, it integrates Node.js and GraphQL to build efficient APIs, applying advanced performance techniques and an intuitive design.",
+        "description": "My personal portfolio shows my evolution as a full-stack product engineer. I build modern, adaptive interfaces with Angular and connect backend and deployment services to deliver complete solutions and real product value.",
+        "project_description": "The project covers end-to-end web solutions: a robust ecommerce platform, event organizer applications, and logistics systems. It evolved from Angular 9 to Angular 19, integrating backend Node.js and GraphQL APIs, efficient performance, and intuitive product design.",
         "technologies": [
             "Angular 9 → 19",
             "Angular Material",
@@ -385,6 +385,6 @@ export const projects_ingles = [
             "Angular: From Zero to Expert (Angular 10+)",
             "Time Management Fundamentals"
         ],
-        "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Front-End Engineer specialized in Angular. I build scalable and maintainable applications with a focus on frontend architecture, performance, UI/UX, and API integration. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I am currently co-founder of XTECHARG and Event Loop Club."
+        "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Full-Stack Engineer and Product Engineer specialized in Angular. I build scalable and maintainable applications with full ownership of frontend, backend, and deployment. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I now lead XTECHARG and contribute to Event Loop Club."
     }
 ];
