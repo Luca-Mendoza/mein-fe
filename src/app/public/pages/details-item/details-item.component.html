@@ -138,7 +138,7 @@
       </section>
 
       <section class="details-shell details-grid" aria-label="Learnings and technologies">
-        <article class="detail-section">
+        <article class="detail-section" [class.detail-section--full]="!item?.soft_skills">
           <h2>
             <lucide-icon name="lamp-desk" size="18"></lucide-icon>
             {{ 'COMMON.KEY_LEARNINGS' | translate }}

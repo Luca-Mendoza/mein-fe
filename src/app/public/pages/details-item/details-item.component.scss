@@ -225,7 +225,12 @@
   text-transform: uppercase;
 }
 
-.details-overview,
+.details-overview {
+  display: grid;
+  grid-template-columns: minmax(13rem, 1fr) minmax(0, 2fr);
+  gap: 1rem;
+}
+
 .details-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -237,9 +242,8 @@
   padding: 1.25rem;
 }
 
-.overview-card--wide,
 .detail-section--full {
-  grid-column: span 1;
+  grid-column: 1 / -1;
 }
 
 .overview-card h2,
@@ -283,10 +287,18 @@
   }
 }
 
-.details-tags--dense span {
-  min-height: 1.8rem;
-  color: rgba(165, 243, 252, 0.95);
-  font-size: 0.8rem;
+.details-tags--dense {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.5rem;
+
+  span {
+    justify-content: center;
+    text-align: center;
+    min-height: 1.8rem;
+    color: rgba(165, 243, 252, 0.95);
+    font-size: 0.8rem;
+  }
 }
 
 .check-list {
