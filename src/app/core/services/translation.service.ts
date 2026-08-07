@@ -42,43 +42,49 @@ export class TranslationService {
       },
       HOME: {
         TITLE: "Luca D. Mendoza",
-        SUBTITLE: "Senior Front-End Engineer",
-        DESCRIPTION: "Specialized in Angular architecture, scalable front-end systems,<br>and product-oriented engineering.",
-        OPEN_TO_FREELANCE: "Open to freelance work and collaboration opportunities.",
+        SUBTITLE: "Full-Stack Engineer",
+        DESCRIPTION: "Angular architecture, scalable backend development, and product-driven engineering.",
+        OPEN_TO_FREELANCE: "Open to freelance projects and collaboration opportunities.",
         LETS_CONNECT: {
           TITLE: "Let's Connect",
-          DESCRIPTION: "I'm currently open to freelance and remote opportunities — especially exciting Angular or frontend-focused projects. If you have something in mind, feel free to ",
+          DESCRIPTION: "I'm currently open to freelance and remote opportunities — especially exciting Angular, NestJS or full-stack focused projects. If you have something in mind, feel free to ",
           LINK_TEXT: "reach out"
         },
         ABOUT_SECTION: {
           TITLE: "About",
-          SUMMARY: "Senior Front-End Developer specialized in Angular. I build scalable, maintainable applications and work on real products in production. I value clean code, clear communication, and ownership of the frontend.",
-          PARAGRAPH_1: "I started programming in 2019 by taking online courses. I was captivated by the idea of building applications to make others' daily work easier, so I enrolled at the Faculty of Exact Sciences at Unicen to study Systems Engineering and University Technology in IT Application Development, with a focus on web application development.",
-          PARAGRAPH_2: "In 2022, began working at \"Siete Ideas,\" Frontend development with Angular.",
-          PARAGRAPH_3: "In my free time, I usually enjoy hiking in the Tandil."
+          SUMMARY: "Full-Stack Developer with over 5 years of experience building web platforms and digital products in production. Proven track record in end-to-end development of digital wallets, payment systems, B2B platforms, e-commerce, and logistics solutions.\n\nCovering everything from conceiving reactive and modular Angular interfaces to implementing backend services and REST APIs/WebSockets with NestJS and Go, alongside relational database modeling and product-impact driven engineering.",
+          PARAGRAPH_1: "Full-Stack Developer with over 5 years of experience building web platforms and digital products in production. Proven track record in end-to-end development of digital wallets, payment systems, B2B platforms, e-commerce, and logistics solutions.\n\nCovering everything from conceiving reactive and modular Angular interfaces to implementing backend services and REST APIs/WebSockets with NestJS and Go, alongside relational database modeling and product-impact driven engineering."
         },
         INTRO_VIDEO: {
           TITLE: "About Me",
-          SUBTITLE: "Senior Front-End Engineer specialized in Angular, with over five years working on applications that evolve in real-world environments. I focus on building clear and maintainable solutions, prioritizing architecture, performance, and technical decisions that support product growth."
+          SUBTITLE: "Full-Stack Developer with over 5 years of experience building web platforms and digital products in production. Proven track record in end-to-end development of digital wallets, payment systems, B2B platforms, e-commerce, and logistics solutions.\n\nCovering everything from conceiving reactive and modular Angular interfaces to implementing backend services and REST APIs/WebSockets with NestJS and Go, alongside relational database modeling and product-impact driven engineering."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experience",
           EVENT_LOOP_CLUB: {
-            DATE_FROM: "2023",
-            TITLE: "Co-founder & Frontend Engineer · Event Loop Club",
-            PREVIEW: "Co-founder • Angular application in production • Frontend lead with basic backend support • Collaboration with designers and backend teams",
-            DESCRIPTION: "Co-founder of this project developed with a group of developers. I lead as Frontend Engineer, building modern Angular applications with reusable components, state management, and REST integration. I also support with basic backend tasks when needed. I contribute to technical strategy, unit and integration testing, and collaboration with designers and the backend team.",
-            EMPLOYMENT_STATUS: "Professional Independent",
+            DATE_FROM: "Dec 2023 - Present",
+            TITLE: "Fundador & Full-Stack Developer · Eventloop.ar",
+            PREVIEW: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
+            DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
+            EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "Eventloop.ar",
             LINKEDIN_URL: "https://www.linkedin.com/company/eventloop-club",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Co-founder and Frontend Engineer in an Angular project with SSR. I lead frontend development: maintaining and optimizing code, creating reusable components, and integrating new features. I also help with basic backend tasks when required. I work closely with the team on architecture and technical decisions, ensuring a scalable and high-performance application."
+                DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.\n\nKey Engineering Highlights:\n• Frontend Core (Angular & TypeScript): Built and maintained the frontend codebase from project inception, delivering modular components, responsive layouts with Tailwind CSS / Angular Material, and seamless REST API integrations.\n• State Management & Reactivity: Implemented NgRx and RxJS for global application state management and asynchronous data flow optimization.\n• Backend Contributions (Go): Engineered application updates, supported WebSocket integration for real-time notifications, and maintained backend API endpoints in Go.\n• Community Impact: Actively contributed to the platform's technical ecosystem to enhance community engagement and user experience."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "An innovative ticketing platform that enables producers to publish and manage their events comprehensively. The application facilitates real-time event management from the dashboard, allowing control from publication to tracking of every activity. I collaborated with designers and backend developers to implement an intuitive interface and reusable components, ensuring an optimal experience on any device. The solution provides producers with a complete tool for controlling and updating their events in real time, improving management efficiency and audience interaction."
               },
               CHALLENGES: [
+                {
+                  title: "Real-time Integration with WebSockets & NTFY",
+                  description: "Configured and implemented WebSockets and NTFY for the initial push notifications of the application. I collaborated closely with the development team to set up this real-time infrastructure, ensuring reliable communication between the backend and the frontend."
+                },
+                {
+                  title: "Development of Complex Interactive Sections",
+                  description: "Designed and developed advanced interactive sections for both frontend and backend, including a complete Community section and dynamic image carousels. This required complex state management and seamless integration with the backend to ensure a smooth user experience."
+                },
                 {
                   title: "Migration to Angular 19 Standalone",
                   description: "One of the most significant challenges was migrating the project from Angular 18 based on modules to Angular 19 with standalone components. This process required restructuring the architecture, updating dependencies, and adjusting the configuration to leverage new functionalities, optimizing maintainability and performance."
@@ -114,6 +120,12 @@ export class TranslationService {
               ],
               DURATION: "2023 — Present",
               EMPLOYMENT_TYPE: "Part-Time",
+              IMAGES: [
+                "assets/imgs/eventloop_01.png",
+                "assets/imgs/eventloop_02.png",
+                "assets/imgs/eventloop_03.png",
+                "assets/imgs/eventloop_04.png"
+              ],
               LINKS: {
                 WEBSITE: "eventloop.club",
                 LOGO: "assets/imgs/eventloop_logo.webp",
@@ -123,10 +135,11 @@ export class TranslationService {
             }
           },
           SIETE_IDEAS: {
-            TITLE: "Frontend Developer · Siete Ideas",
-            PREVIEW: "Large-scale Angular applications in production • Reusable components, performance & maintainability • REST API integration and unit/integration testing",
-            DESCRIPTION: "Developed and maintained web applications using Angular. Implemented responsive and attractive user interfaces, created reusable components, and integrated RESTful services. Conducted unit and integration testing, maintained the application, and supported production deployments.",
-            EMPLOYMENT_STATUS: "Full-Time",
+            DATE_FROM: "feb. 2022 - mar. 2026",
+            TITLE: "Frontend Web Developer · Siete Ideas",
+            PREVIEW: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
+            DESCRIPTION: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
+            EMPLOYMENT_STATUS: "Jornada completa",
             LINKEDIN_LABEL: "Siete Ideas",
             LINKEDIN_URL: "https://www.linkedin.com/company/siete-ideas",
             DETAILED_PAGE: {
@@ -177,11 +190,11 @@ export class TranslationService {
             }
           },
           XTECH: {
-            DATE_FROM: "2024",
-            TITLE: "Co-founder & Full-Stack Lead Engineer · XTECHARG",
-            PREVIEW: "Large-scale Angular application (frontend-led) • NgRx state management & frontend architecture • Backend APIs built with NestJS to support frontend needs • Real product running in production",
-            DESCRIPTION: "Co-founder and Technical Lead of XTECHARG, a scalable B2B SaaS platform that automates business processes and facilitates direct commercial transactions. Full-stack architect and developer responsible for designing and implementing the entire platform architecture from scratch. Leading the development team, defining technical strategy, implementing advanced enterprise patterns, and ensuring code quality through exhaustive testing.",
-            EMPLOYMENT_STATUS: "Professional Independent",
+            DATE_FROM: "oct. 2024 - mar. 2026",
+            TITLE: "Lead Full-Stack Engineer · XTECHARG",
+            PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
+            DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
+            EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "XTECHARG",
             LINKEDIN_URL: "https://www.linkedin.com/company/xtecharg",
             EXECUTIVE_SUMMARY: "Co-founder and Technical Lead of XTECHARG, a scalable B2B SaaS platform that automates business processes and facilitates direct commercial transactions. Full-stack architect and developer responsible for designing and implementing the entire platform architecture from scratch. I lead the development team, define technical strategy, implement advanced enterprise patterns, and ensure code quality through exhaustive testing. The platform handles thousands of concurrent transactions with cutting-edge technology, guaranteeing scalability, security, and performance in production.",
@@ -470,43 +483,49 @@ export class TranslationService {
       },
       HOME: {
         TITLE: "Luca D. Mendoza",
-        SUBTITLE: "Ingeniero Senior Front-End",
-        DESCRIPTION: "Especializado en arquitectura Angular, sistemas front-end escalables<br>e ingeniería orientada a productos.",
+        SUBTITLE: "Full-Stack Engineer",
+        DESCRIPTION: "Arquitectura Angular, desarrollo backend escalable e ingeniería orientada a productos.",
         OPEN_TO_FREELANCE: "Abierto a proyectos freelance y oportunidades de colaboración.",
         LETS_CONNECT: {
           TITLE: "Conectemos",
-          DESCRIPTION: "Estoy abierto a proyectos freelance y oportunidades remotas — sobre todo en Angular o frontend. Si tenés algo en mente, ",
+          DESCRIPTION: "Estoy abierto a proyectos freelance y oportunidades remotas — sobre todo en Angular, NestJS o desarrollo Full-Stack. Si tenés algo en mente, ",
           LINK_TEXT: "escribime"
         },
         ABOUT_SECTION: {
           TITLE: "Sobre mí",
-          SUMMARY: "Senior Front-End Developer especializado en Angular. Construyo aplicaciones escalables y mantenibles y trabajo en productos reales en producción. Valoro el código limpio, la comunicación clara y la responsabilidad sobre el frontend.",
-          PARAGRAPH_1: "Comencé a programar en 2019 tomando cursos en línea. Me cautivó la idea de construir aplicaciones para facilitar el trabajo diario de otros, por lo que me inscribí en la Facultad de Ciencias Exactas de Unicen para estudiar Ingeniería en Sistemas y Tecnología Universitaria en Desarrollo de Aplicaciones Informáticas, con enfoque en desarrollo de aplicaciones web.",
-          PARAGRAPH_2: "En 2022, comencé a trabajar en \"Siete Ideas\" como desarrollador Frontend con Angular.",
-          PARAGRAPH_3: "En mi tiempo libre, disfruto del senderismo en las sierras de Tandil."
+          SUMMARY: "Desarrollador Full-Stack con más de 5 años de experiencia construyendo plataformas web y productos digitales en producción. Cuento con trayectoria en el desarrollo end-to-end de billeteras digitales, sistemas de pago, plataformas B2B, e-commerce y soluciones de logística.\n\nAbarco desde la concepción de interfaces reactivas y modulares en Angular hasta la implementación de servicios backend y APIs REST/WebSockets con NestJS y Go, junto con el modelado de bases de datos relacionales e ingeniería enfocada en el impacto de producto.",
+          PARAGRAPH_1: "Desarrollador Full-Stack con más de 5 años de experiencia construyendo plataformas web y productos digitales en producción. Cuento con trayectoria en el desarrollo end-to-end de billeteras digitales, sistemas de pago, plataformas B2B, e-commerce y soluciones de logística.\n\nAbarco desde la concepción de interfaces reactivas y modulares en Angular hasta la implementación de servicios backend y APIs REST/WebSockets con NestJS y Go, junto con el modelado de bases de datos relacionales e ingeniería enfocada en el impacto de producto."
         },
         INTRO_VIDEO: {
           TITLE: "Sobre mí",
-          SUBTITLE: "Senior Front-End Engineer especializado en Angular, con más de cinco años trabajando en aplicaciones que evolucionan en entornos reales. Me enfoco en construir soluciones claras y mantenibles, priorizando la arquitectura, el rendimiento y decisiones técnicas que acompañen el crecimiento del producto."
+          SUBTITLE: "Desarrollador Full-Stack con más de 5 años de experiencia construyendo plataformas web y productos digitales en producción. Cuento con trayectoria en el desarrollo end-to-end de billeteras digitales, sistemas de pago, plataformas B2B, e-commerce y soluciones de logística.\n\nAbarco desde la concepción de interfaces reactivas y modulares en Angular hasta la implementación de servicios backend y APIs REST/WebSockets con NestJS y Go, junto con el modelado de bases de datos relacionales e ingeniería enfocada en el impacto de producto."
         },
         EXPERIENCE_SECTION: {
           TITLE: "Experiencia",
           EVENT_LOOP_CLUB: {
-            DATE_FROM: "2023",
-            TITLE: "Co-fundador y Frontend Engineer · Event Loop Club",
-            PREVIEW: "Co-fundador • Aplicación Angular en producción • Liderazgo frontend con apoyo básico en backend • Colaboración con diseñadores y equipo backend",
-            DESCRIPTION: "Co-fundador de este proyecto desarrollado con un grupo de developers. Lidero como Frontend Engineer: aplicaciones Angular modernas, componentes reutilizables, manejo de estado e integración REST. También ayudo con tareas básicas de backend cuando hace falta. Contribuyo en la estrategia técnica, testing unitario e integral y en la colaboración con diseñadores y backend.",
+            DATE_FROM: "dic. 2023 - actualidad",
+            TITLE: "Fundador & Full-Stack Developer · Eventloop.ar",
+            PREVIEW: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
+            DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "Eventloop.ar",
             LINKEDIN_URL: "https://www.linkedin.com/company/eventloop-club",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Co-fundador y Frontend Engineer en un proyecto Angular con SSR. Lidero el desarrollo frontend: mantener y optimizar código, crear componentes reutilizables e integrar nuevas funcionalidades. También ayudo con tareas básicas de backend cuando se requiere. Trabajo junto al equipo en arquitectura y decisiones técnicas, asegurando una aplicación escalable y de alto rendimiento."
+                DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.\n\nKey Engineering Highlights:\n• Frontend Core (Angular & TypeScript): Built and maintained the frontend codebase from project inception, delivering modular components, responsive layouts with Tailwind CSS / Angular Material, and seamless REST API integrations.\n• State Management & Reactivity: Implemented NgRx and RxJS for global application state management and asynchronous data flow optimization.\n• Backend Contributions (Go): Engineered application updates, supported WebSocket integration for real-time notifications, and maintained backend API endpoints in Go.\n• Community Impact: Actively contributed to the platform's technical ecosystem to enhance community engagement and user experience."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "Una plataforma de ticketing innovadora que permite a los productores publicar y gestionar sus eventos de manera integral. La aplicación facilita la gestión de eventos en tiempo real desde el dashboard, permitiendo control desde la publicación hasta el seguimiento de cada actividad. Colaboré con diseñadores y desarrolladores backend para implementar una interfaz intuitiva y componentes reutilizables, asegurando una experiencia óptima en cualquier dispositivo. La solución proporciona a los productores una herramienta completa para controlar y actualizar sus eventos en tiempo real, mejorando la eficiencia de gestión y la interacción con la audiencia."
               },
               CHALLENGES: [
+                {
+                  title: "Integración en Tiempo Real con WebSockets y NTFY",
+                  description: "Configuré e implementé WebSockets y NTFY para las notificaciones push iniciales de la aplicación. Colaboré estrechamente con el equipo de desarrollo para establecer esta infraestructura en tiempo real, asegurando una comunicación confiable entre el backend y el frontend."
+                },
+                {
+                  title: "Desarrollo de Secciones Interactivas Complejas",
+                  description: "Diseñé y desarrollé secciones interactivas avanzadas tanto en el frontend como en el backend, incluyendo una sección completa de Comunidad y creación de Carruseles dinámicos. Esto requirió una gestión compleja del estado y una integración fluida con el backend para garantizar una experiencia de usuario óptima."
+                },
                 {
                   title: "Migración a Angular 19 Standalone",
                   description: "Uno de los desafíos más significativos fue migrar el proyecto de Angular 18 basado en módulos a Angular 19 con componentes standalone. Este proceso requirió reestructurar la arquitectura, actualizar dependencias y ajustar la configuración para aprovechar las nuevas funcionalidades, optimizando la mantenibilidad y el rendimiento."
@@ -542,6 +561,12 @@ export class TranslationService {
               ],
               DURATION: "2023 — Presente",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
+              IMAGES: [
+                "assets/imgs/eventloop_01.png",
+                "assets/imgs/eventloop_02.png",
+                "assets/imgs/eventloop_03.png",
+                "assets/imgs/eventloop_04.png"
+              ],
               LINKS: {
                 WEBSITE: "eventloop.club",
                 LOGO: "assets/imgs/eventloop_logo.webp",
@@ -551,9 +576,10 @@ export class TranslationService {
             }
           },
           SIETE_IDEAS: {
-            TITLE: "Frontend Developer · Siete Ideas",
-            PREVIEW: "Aplicaciones Angular a gran escala en producción • Componentes reutilizables, performance y mantenibilidad • Integración de APIs REST y testing unitario e integral",
-            DESCRIPTION: "Desarrollé y mantuve aplicaciones web usando Angular. Implementé interfaces de usuario responsivas y atractivas, creé componentes reutilizables e integré servicios RESTful. Realicé pruebas unitarias e integrales, mantuve la aplicación y apoyé despliegues de producción.",
+            DATE_FROM: "feb. 2022 - mar. 2026",
+            TITLE: "Frontend Web Developer · Siete Ideas",
+            PREVIEW: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
+            DESCRIPTION: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
             EMPLOYMENT_STATUS: "Jornada completa",
             LINKEDIN_LABEL: "Siete Ideas",
             LINKEDIN_URL: "https://www.linkedin.com/company/siete-ideas",
@@ -606,10 +632,10 @@ export class TranslationService {
             }
           },
           XTECH: {
-            DATE_FROM: "2024",
-            TITLE: "Co-fundador e Ingeniero Full-Stack Lead · XTECHARG",
-            PREVIEW: "Aplicación Angular a gran escala (liderada por frontend) • NgRx y arquitectura frontend • APIs backend con NestJS para soportar el frontend • Producto real en producción",
-            DESCRIPTION: "Co-fundador y líder técnico de XTECHARG, una plataforma B2B SaaS escalable que automatiza procesos de negocio y facilita transacciones comerciales directas. Arquitecto y desarrollador full-stack responsable de diseñar e implementar la arquitectura completa desde cero. Dirijo el equipo de desarrollo, defino la estrategia técnica, implemento patrones empresariales avanzados y garantizo la calidad del código mediante testing exhaustivo.",
+            DATE_FROM: "oct. 2024 - mar. 2026",
+            TITLE: "Lead Full-Stack Engineer · XTECHARG",
+            PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
+            DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
             EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "XTECHARG",
             LINKEDIN_URL: "https://www.linkedin.com/company/xtecharg",

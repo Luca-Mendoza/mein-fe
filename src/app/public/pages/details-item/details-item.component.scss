@@ -423,6 +423,48 @@
   }
 }
 
+.details-gallery {
+  margin-top: 1rem;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.3) rgba(15, 23, 42, 0.5);
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(34, 211, 238, 0.3);
+    border-radius: 4px;
+    &:hover {
+      background: rgba(34, 211, 238, 0.6);
+    }
+  }
+}
+
+.gallery-image {
+  height: 24rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  flex-shrink: 0;
+  transition: transform 300ms ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
 .details-footer {
   min-height: 4.5rem;
   margin-top: 0.75rem;

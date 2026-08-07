@@ -112,7 +112,7 @@
             {{ 'HOME.INTRO_VIDEO.TITLE' | translate }}
           </h2>
           <section class="section section__intro">
-            <p class="min-h-[2rem] leading-relaxed text-white/90 mb-4">
+            <p class="min-h-[2rem] leading-relaxed text-white/90 mb-4 whitespace-pre-line">
               {{ 'HOME.INTRO_VIDEO.SUBTITLE' | translate }}
             </p>
           </section>
@@ -124,6 +124,85 @@
             {{ 'HOME.EXPERIENCE_SECTION.TITLE' | translate }}
           </h2>
           <section id="sectionExperience" class="section section__experience">
+            <!-- 1. Eventloop.ar (Actual) -->
+            <div
+              class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+              routerLink="d/event_loop_club"
+            >
+              <div
+                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3"
+              >
+                <img
+                  src="assets/imgs/eventloop_logo.webp"
+                  alt="Event Loop Club Logo"
+                  class="w-12 h-12 md:w-14 md:h-14 object-contain"
+                />
+                <span
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
+                  >{{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DATE_FROM' | translate }}</span
+                >
+              </div>
+
+              <div class="info flex flex-col h-full flex-1 min-w-0">
+                <h3
+                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
+                >
+                  <span
+                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                  >
+                    {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.TITLE' | translate }}
+                  </span>
+                </h3>
+                <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
+                  <span>
+                    {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.EMPLOYMENT_STATUS' | translate }}
+                  </span>
+                  <span class="text-white/30">·</span>
+                  <a
+                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
+                    [href]="'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_URL' | translate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    (click)="$event.stopPropagation()"
+                  >
+                    {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_LABEL' | translate }}
+                  </a>
+                </div>
+                <p class="flex-grow">
+                  {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.PREVIEW' | translate }}
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Angular Material</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Angular</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">NgRx</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">CSS</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Git</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">ClickUp</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Figma</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">HTML</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Tailwind</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">TypeScript</div>
+                </div>
+
+                <div class="experience__cta mt-auto w-full flex justify-end">
+                  <button
+                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                  >
+                    <span
+                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                    >
+                      {{ 'COMMON.SEE_MORE_INFO' | translate }}
+                    </span>
+                    <lucide-icon
+                      name="arrow-right"
+                      class="w-5 h-5 group-hover:text-[#00718f]"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. XTECHARG (Finalizado) -->
             <div
               class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
               routerLink="d/xtech"
@@ -171,176 +250,17 @@
                   {{ 'HOME.EXPERIENCE_SECTION.XTECH.PREVIEW' | translate }}
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Angular
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    NestJS
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    PostgreSQL
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    TypeORM
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    OAuth2/Google API
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Docker
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Dokploy
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Angular Material
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Tailwind CSS
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    GitHub Actions
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    OpenAI API
-                  </div>
-                </div>
-
-                <div class="experience__cta mt-auto w-full flex justify-end">
-                  <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
-                  >
-                    <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
-                      {{ 'COMMON.SEE_MORE_INFO' | translate }}
-                    </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-                         <div
-               class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
-               routerLink="d/event_loop_club"
-             >
-              <div
-                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3"
-              >
-                <img
-                  src="assets/imgs/eventloop_logo.webp"
-                  alt="Event Loop Club Logo"
-                  class="w-12 h-12 md:w-14 md:h-14 object-contain"
-                />
-                <span
-                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
-                  >{{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DATE_FROM' | translate }}</span
-                >
-              </div>
-                             <div class="info flex flex-col h-full flex-1 min-w-0">
-                 <h3
-                   class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                 >
-                   <span
-                     class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                   >
-                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.TITLE' | translate }}
-                   </span>
-                 </h3>
-                 <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
-                   <span>
-                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.EMPLOYMENT_STATUS' | translate }}
-                   </span>
-                   <span class="text-white/30">·</span>
-                   <a
-                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
-                     [href]="'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_URL' | translate"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                    (click)="$event.stopPropagation()"
-                   >
-                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_LABEL' | translate }}
-                   </a>
-                 </div>
-                 <p class="flex-grow">
-                   {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.PREVIEW' | translate }}
-                 </p>
-                <div class="flex flex-wrap gap-2">
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Angular Material
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Angular
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    NgRx
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    CSS
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Git
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    ClickUp
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Figma
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    HTML
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    Tailwind
-                  </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
-                    TypeScript
-                  </div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Angular</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">NestJS</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">PostgreSQL</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">TypeORM</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">OAuth2/Google API</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Docker</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Dokploy</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Angular Material</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Tailwind CSS</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">GitHub Actions</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">OpenAI API</div>
                 </div>
 
                 <div class="experience__cta mt-auto w-full flex justify-end">
@@ -372,16 +292,10 @@
                   alt="Siete Ideas Logo"
                   class="w-12 h-12 md:w-14 md:h-14 object-contain"
                 />
-                <div class="date__meta">
-                  <span
-                    class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
-                    >{{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.DURATION' | translate }}</span
-                  >
-                  <span
-                    class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
-                    >{{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.EMPLOYMENT_TYPE' | translate }}</span
-                  >
-                </div>
+                <span
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
+                  >{{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DATE_FROM' | translate }}</span
+                >
               </div>
 
                              <div class="info flex flex-col h-full flex-1 min-w-0">

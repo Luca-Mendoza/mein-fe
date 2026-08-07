@@ -116,6 +116,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
+      images: this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.IMAGES'),
       links: {
         name: 'Event Loop Club',
         link: 'https://eventloop.club/',

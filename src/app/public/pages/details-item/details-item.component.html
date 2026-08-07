@@ -177,6 +177,20 @@
         </article>
       </section>
 
+      @if (item?.images?.length) {
+        <section class="details-shell details-gallery" aria-label="Project Images">
+          <div class="gallery-container">
+            <img 
+              *ngFor="let img of item.images" 
+              [src]="img" 
+              alt="Project Screenshot"
+              class="gallery-image"
+              loading="lazy"
+            />
+          </div>
+        </section>
+      }
+
       @if (getVisibleLinks().length) {
         <section class="details-shell details-actions" aria-label="External links">
           <a
