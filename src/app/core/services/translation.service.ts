@@ -43,7 +43,7 @@ export class TranslationService {
       HOME: {
         TITLE: "Luca D. Mendoza",
         SUBTITLE: "Full-Stack Engineer",
-        DESCRIPTION: "Angular architecture, scalable backend development, and product-driven engineering.",
+        DESCRIPTION: "Specialized in Angular architecture, scalable backend development, and product engineering.",
         OPEN_TO_FREELANCE: "Open to freelance projects and collaboration opportunities.",
         LETS_CONNECT: {
           TITLE: "Let's Connect",
@@ -484,7 +484,7 @@ export class TranslationService {
       HOME: {
         TITLE: "Luca D. Mendoza",
         SUBTITLE: "Full-Stack Engineer",
-        DESCRIPTION: "Arquitectura Angular, desarrollo backend escalable e ingeniería orientada a productos.",
+        DESCRIPTION: "Especializado en arquitectura Angular, desarrollo backend escalable e ingeniería de producto.",
         OPEN_TO_FREELANCE: "Abierto a proyectos freelance y oportunidades de colaboración.",
         LETS_CONNECT: {
           TITLE: "Conectemos",
