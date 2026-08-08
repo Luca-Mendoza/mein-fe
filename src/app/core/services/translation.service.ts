@@ -8,6 +8,23 @@ export interface TranslationData {
   [key: string]: any;
 }
 
+export const EVENT_LOOP_CAROUSEL_IMAGES: string[] = [
+  'assets/imgs/eventloop_screenshot_01.svg',
+  'assets/imgs/eventloop_screenshot_02.svg',
+  'assets/imgs/eventloop_screenshot_03.svg',
+  'assets/imgs/eventloop_screenshot_04.svg',
+  'assets/imgs/eventloop_screenshot_05.svg',
+  'assets/imgs/eventloop_screenshot_06.svg',
+  'assets/imgs/eventloop_screenshot_07.svg',
+  'assets/imgs/eventloop_screenshot_08.svg',
+  'assets/imgs/eventloop_screenshot_09.svg',
+  'assets/imgs/eventloop_screenshot_10.svg',
+  'assets/imgs/eventloop_screenshot_11.svg',
+  'assets/imgs/eventloop_screenshot_12.svg',
+  'assets/imgs/eventloop_screenshot_13.svg',
+  'assets/imgs/eventloop_screenshot_14.svg',
+];
+
 @Injectable({
   providedIn: 'root'
 })
@@ -121,11 +138,7 @@ export class TranslationService {
               ],
               DURATION: "2023 — Present",
               EMPLOYMENT_TYPE: "Part-Time",
-              IMAGES: [
-                "assets/imgs/eventloop_screenshot_01.svg",
-                "assets/imgs/eventloop_screenshot_02.svg",
-                "assets/imgs/eventloop_logo.webp"
-              ],
+              IMAGES: EVENT_LOOP_CAROUSEL_IMAGES,
               LINKS: {
                 WEBSITE: "eventloop.club",
                 LOGO: "assets/imgs/eventloop_logo.webp",
@@ -567,11 +580,7 @@ export class TranslationService {
               ],
               DURATION: "2023 — Presente",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
-              IMAGES: [
-                "assets/imgs/eventloop_screenshot_01.svg",
-                "assets/imgs/eventloop_screenshot_02.svg",
-                "assets/imgs/eventloop_logo.webp"
-              ],
+              IMAGES: EVENT_LOOP_CAROUSEL_IMAGES,
               LINKS: {
                 WEBSITE: "eventloop.club",
                 LOGO: "assets/imgs/eventloop_logo.webp",
