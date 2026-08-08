@@ -140,10 +140,10 @@ export class TranslationService {
               EMPLOYMENT_TYPE: "Part-Time",
               IMAGES: EVENT_LOOP_CAROUSEL_IMAGES,
               LINKS: {
-                WEBSITE: "eventloop.club",
+                WEBSITE: "eventloop.ar",
                 LOGO: "assets/imgs/eventloop_logo.webp",
                 GITHUB: "",
-                LINK: "https://eventloop.club/"
+                LINK: "https://eventloop.ar/"
               }
             }
           },
@@ -582,10 +582,10 @@ export class TranslationService {
               EMPLOYMENT_TYPE: "Tiempo Parcial",
               IMAGES: EVENT_LOOP_CAROUSEL_IMAGES,
               LINKS: {
-                WEBSITE: "eventloop.club",
+                WEBSITE: "eventloop.ar",
                 LOGO: "assets/imgs/eventloop_logo.webp",
                 GITHUB: "",
-                LINK: "https://eventloop.club/"
+                LINK: "https://eventloop.ar/"
               }
             }
           },

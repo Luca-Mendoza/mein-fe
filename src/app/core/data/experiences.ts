@@ -27,7 +27,7 @@ export const experiences = [
     "images": ["/assets/placeholder.svg"],
     "links": {
       "github": "",
-      "link": "https://eventloop.club/",
+      "link": "https://eventloop.ar/",
       "name": "eventloop.ar",
       "assets": "assets/imgs/eventloop_logo.webp"
     },
@@ -186,7 +186,7 @@ export const experiences_ingles = [
     "images": ["/assets/placeholder.svg"],
     "links": {
       "github": "",
-      "link": "https://eventloop.club/",
+      "link": "https://eventloop.ar/",
       "name": "eventloop.ar",
       "assets": "assets/imgs/eventloop_logo.webp"
     },
