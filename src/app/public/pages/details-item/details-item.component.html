@@ -59,7 +59,7 @@
     </section>
 
     <section class="details-shell details-overview" [class.details-overview--with-preview]="item?.images?.length"
-      aria-label="Highlights">
+      [class.details-overview--no-preview]="!item?.images?.length" aria-label="Highlights">
       @if (item?.images?.length) {
       <div class="overview-card project-preview-card" ngSkipHydration>
         <div class="project-preview-card__header">
