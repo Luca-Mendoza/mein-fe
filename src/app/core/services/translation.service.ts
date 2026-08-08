@@ -122,6 +122,8 @@ export class TranslationService {
               DURATION: "2023 — Present",
               EMPLOYMENT_TYPE: "Part-Time",
               IMAGES: [
+                "assets/imgs/eventloop_screenshot_01.svg",
+                "assets/imgs/eventloop_screenshot_02.svg",
                 "assets/imgs/eventloop_logo.webp"
               ],
               LINKS: {
@@ -179,6 +181,11 @@ export class TranslationService {
               ],
               DURATION: "2022 — 2026",
               EMPLOYMENT_TYPE: "Full-Time",
+              IMAGES: [
+                "assets/imgs/7ideas_logo_dark.svg",
+                "assets/imgs/proyect_01.jpg",
+                "assets/imgs/proyect_02.jpg"
+              ],
               LINKS: {
                 WEBSITE: "sieteideas.com",
                 LOGO: "assets/imgs/7ideas_logo_dark.svg",
@@ -561,6 +568,8 @@ export class TranslationService {
               DURATION: "2023 — Presente",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
               IMAGES: [
+                "assets/imgs/eventloop_screenshot_01.svg",
+                "assets/imgs/eventloop_screenshot_02.svg",
                 "assets/imgs/eventloop_logo.webp"
               ],
               LINKS: {
@@ -619,6 +628,11 @@ export class TranslationService {
               ],
               DURATION: "2022 — 2026",
               EMPLOYMENT_TYPE: "Tiempo Completo",
+              IMAGES: [
+                "assets/imgs/7ideas_logo_dark.svg",
+                "assets/imgs/proyect_01.jpg",
+                "assets/imgs/proyect_02.jpg"
+              ],
               LINKS: {
                 WEBSITE: "sieteideas.com",
                 LOGO: "assets/imgs/7ideas_logo_dark.svg",

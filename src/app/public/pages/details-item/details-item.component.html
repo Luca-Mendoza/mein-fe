@@ -6,252 +6,242 @@
   </div>
 
   @if (item) {
-    <header class="details-shell details-topbar">
-      <a routerLink="/" class="details-home-link" aria-label="Back to home">
-        <lucide-icon name="arrow-left" size="18"></lucide-icon>
-        <span class="details-home-link__mark" aria-hidden="true">
-          <img src="favicon.ico" alt="" />
-        </span>
-        <span class="details-home-link__text">Luca D. Mendoza</span>
-      </a>
+  <header class="details-shell details-topbar">
+    <a routerLink="/" class="details-home-link" aria-label="Back to home">
+      <lucide-icon name="arrow-left" size="18"></lucide-icon>
+      <span class="details-home-link__mark" aria-hidden="true">
+        <img src="favicon.ico" alt="" />
+      </span>
+      <span class="details-home-link__text">Luca D. Mendoza</span>
+    </a>
 
-      <div class="details-topbar__actions">
-        <button
-          type="button"
-          class="details-copy"
-          (click)="copyToClipboard()"
-          [attr.aria-label]="'DETAILS.COPY_URL' | translate"
-          [title]="'DETAILS.COPY_URL' | translate"
-        >
-          <lucide-icon name="copy" size="20"></lucide-icon>
-        </button>
-      </div>
-    </header>
+    <div class="details-topbar__actions">
+      <button type="button" class="details-copy" (click)="copyToClipboard()"
+        [attr.aria-label]="'DETAILS.COPY_URL' | translate" [title]="'DETAILS.COPY_URL' | translate">
+        <lucide-icon name="copy" size="20"></lucide-icon>
+      </button>
+    </div>
+  </header>
 
-    <main class="details-content">
-      <section class="details-shell details-hero" aria-labelledby="detail-title">
-        <div class="details-hero__main">
-          <a
-            *ngIf="item.links?.link; else plainCompany"
-            [href]="item.links.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="details-hero__brand"
-          >
-            <img
-              *ngIf="item.links?.assets"
-              [src]="item.links.assets"
-              [alt]="item.company"
-              class="details-hero__logo"
-            />
+  <main class="details-content">
+    <section class="details-shell details-hero" aria-labelledby="detail-title">
+      <div class="details-hero__main">
+        <a *ngIf="item.links?.link; else plainCompany" [href]="item.links.link" target="_blank"
+          rel="noopener noreferrer" class="details-hero__brand">
+          <img *ngIf="item.links?.assets" [src]="item.links.assets" [alt]="item.company" class="details-hero__logo" />
+          <span id="detail-title">{{ item.company }}</span>
+        </a>
+
+        <ng-template #plainCompany>
+          <div class="details-hero__brand">
+            <lucide-icon name="building-2" size="28"></lucide-icon>
             <span id="detail-title">{{ item.company }}</span>
-          </a>
+          </div>
+        </ng-template>
 
-          <ng-template #plainCompany>
-            <div class="details-hero__brand">
-              <lucide-icon name="building-2" size="28"></lucide-icon>
-              <span id="detail-title">{{ item.company }}</span>
-            </div>
-          </ng-template>
+        <p class="details-hero__role">
+          <lucide-icon size="16" name="briefcase-business"></lucide-icon>
+          {{ item.title }}
+        </p>
+        <p class="details-hero__summary">{{ item.summary }}</p>
+      </div>
 
-          <p class="details-hero__role">
-            <lucide-icon size="16" name="briefcase-business"></lucide-icon>
-            {{ item.title }}
-          </p>
-          <p class="details-hero__summary">{{ item.summary }}</p>
+      <aside class="details-hero__meta" aria-label="Project metadata">
+        <div class="meta-card">
+          <span class="meta-card__label">{{ 'DETAILS.DURATION' | translate }}</span>
+          <strong>{{ item.date }}</strong>
+        </div>
+        <div class="meta-card">
+          <span class="meta-card__label">{{ 'DETAILS.EMPLOYMENT_TYPE' | translate }}</span>
+          <strong>{{ item.duration }}</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="details-shell details-overview" [class.details-overview--with-preview]="item?.images?.length"
+      aria-label="Highlights">
+      @if (item?.images?.length) {
+      <div class="overview-card project-preview-card">
+        <div class="project-preview-card__header">
+          <h2>
+            <lucide-icon name="camera" size="18"></lucide-icon>
+            {{ 'COMMON.PROJECT_PREVIEW' | translate }}
+          </h2>
+          <div class="carousel-header-actions">
+            <button type="button" class="carousel-action-btn" (click)="openFullscreen()" aria-label="Fullscreen view"
+              title="Pantalla completa">
+              <lucide-icon name="maximize-2" size="16"></lucide-icon>
+            </button>
+          </div>
         </div>
 
-        <aside class="details-hero__meta" aria-label="Project metadata">
-          <div class="meta-card">
-            <span class="meta-card__label">{{ 'DETAILS.DURATION' | translate }}</span>
-            <strong>{{ item.date }}</strong>
-          </div>
-          <div class="meta-card">
-            <span class="meta-card__label">{{ 'DETAILS.EMPLOYMENT_TYPE' | translate }}</span>
-            <strong>{{ item.duration }}</strong>
-          </div>
-        </aside>
-      </section>
-
-      <section class="details-shell details-overview" [class.details-overview--with-preview]="item?.images?.length" aria-label="Highlights">
-        @if (item?.images?.length) {
-          <div class="overview-card project-preview-card">
-            <div class="project-preview-card__header">
-              <h2>
-                <lucide-icon name="camera" size="18"></lucide-icon>
-                {{ 'COMMON.PROJECT_PREVIEW' | translate }}
-              </h2>
-              @if (item.images.length > 1) {
-                <div class="carousel-controls">
-                  <button type="button" class="carousel-btn" (click)="prevImage()" aria-label="Previous image">
-                    <lucide-icon name="chevron-left" size="16"></lucide-icon>
-                  </button>
-                  <button type="button" class="carousel-btn" (click)="nextImage()" aria-label="Next image">
-                    <lucide-icon name="chevron-right" size="16"></lucide-icon>
-                  </button>
-                </div>
-              }
-            </div>
-            <div class="project-preview-card__viewport">
-              <img
-                [src]="item.images[activeImageIndex]"
-                [alt]="item.company + ' preview'"
-                class="project-preview-card__img"
-              />
-            </div>
-            @if (item.images.length > 1) {
-              <div class="carousel-dots">
-                <span
-                  *ngFor="let img of item.images; let i = index"
-                  class="carousel-dot"
-                  [class.carousel-dot--active]="i === activeImageIndex"
-                  (click)="selectImage(i)"
-                ></span>
+        <div class="swiper-wrapper-container" ngSkipHydration>
+          <swiper-container slides-per-view="1" space-between="16" speed="1000" navigation="true" pagination="true"
+            pagination-clickable="true" autoplay="true" autoplay-delay="10000" autoplay-disable-on-interaction="false" grab-cursor="false" rewind="true" effect="fade" fade-effect-cross-fade="true"
+            [injectStyles]="swiperStyles" class="swiper-card-slider">
+            <swiper-slide *ngFor="let img of displayImages; trackBy: trackByText" (click)="openFullscreen()">
+              <div class="swiper-image-wrapper">
+                <img [src]="img" [alt]="item.company + ' preview'" class="swiper-preview-img" />
               </div>
-            }
-          </div>
-        }
-
-        <div class="overview-right-column">
-          <div class="overview-card">
-            <h2>
-              <lucide-icon name="target" size="18"></lucide-icon>
-              {{ 'COMMON.FOCUS' | translate }}
-            </h2>
-            <div class="details-tags">
-              <span *ngFor="let focus of item.focus; trackBy: trackByText">
-                {{ focus }}
-              </span>
-            </div>
-          </div>
-
-          <div class="overview-card overview-card--wide">
-            <h2>
-              <lucide-icon name="sparkles" size="18"></lucide-icon>
-              {{ 'COMMON.IMPACT' | translate }}
-            </h2>
-            <ul class="check-list">
-              <li *ngFor="let highlight of item.highlights; trackBy: trackByText">
-                {{ highlight }}
-              </li>
-            </ul>
-          </div>
+            </swiper-slide>
+          </swiper-container>
         </div>
-      </section>
+      </div>
+      }
 
-      <section class="details-shell details-grid" aria-label="Detail sections">
-        <article class="detail-section">
+      <div class="overview-right-column">
+        <div class="overview-card">
           <h2>
-            <lucide-icon name="circle-user-round" size="18"></lucide-icon>
-            {{ 'COMMON.ROLE_AND_RESPONSIBILITIES' | translate }}
+            <lucide-icon name="target" size="18"></lucide-icon>
+            {{ 'COMMON.FOCUS' | translate }}
           </h2>
-          <p>{{ item.description }}</p>
-        </article>
-
-        <article class="detail-section">
-          <h2>
-            <lucide-icon name="file-text" size="18"></lucide-icon>
-            {{ 'COMMON.PROJECT_DESCRIPTION' | translate }}
-          </h2>
-          <p>{{ item.project_description }}</p>
-        </article>
-      </section>
-
-      <section class="details-shell detail-section" aria-labelledby="challenges-title">
-        <h2 id="challenges-title">
-          <lucide-icon name="lightbulb" size="18"></lucide-icon>
-          {{ 'COMMON.CHALLENGES_AND_SOLUTIONS' | translate }}
-        </h2>
-
-        <div class="challenge-list">
-          <article
-            *ngFor="let challenge of item.challenges; let i = index; trackBy: trackByChallenge"
-            class="challenge-card"
-          >
-            <span class="challenge-card__index">{{ i + 1 }}</span>
-            <div>
-              <h3>{{ challenge.title }}</h3>
-              <p>{{ challenge.description }}</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="details-shell details-grid" aria-label="Learnings and technologies">
-        <article class="detail-section" [class.detail-section--full]="!item?.soft_skills">
-          <h2>
-            <lucide-icon name="lamp-desk" size="18"></lucide-icon>
-            {{ 'COMMON.KEY_LEARNINGS' | translate }}
-          </h2>
-          <ul class="check-list">
-            <li *ngFor="let learning of item.learnings; trackBy: trackByText">
-              {{ learning }}
-            </li>
-          </ul>
-        </article>
-
-        @if (item?.soft_skills) {
-          <article class="detail-section">
-            <h2>
-              <lucide-icon name="book-marked" size="18"></lucide-icon>
-              {{ 'COMMON.SOFT_SKILLS' | translate }}
-            </h2>
-            <ul class="check-list">
-              <li *ngFor="let softSkill of item.soft_skills; trackBy: trackByText">
-                {{ softSkill }}
-              </li>
-            </ul>
-          </article>
-        }
-
-        <article class="detail-section detail-section--full">
-          <h2>
-            <lucide-icon name="code-2" size="18"></lucide-icon>
-            {{ 'COMMON.TECHNOLOGIES_USED' | translate }}
-          </h2>
-          <div class="details-tags details-tags--dense">
-            <span *ngFor="let tech of item.technologies; trackBy: trackByText">
-              {{ tech }}
+          <div class="details-tags">
+            <span *ngFor="let focus of item.focus; trackBy: trackByText">
+              {{ focus }}
             </span>
           </div>
+        </div>
+
+        <div class="overview-card overview-card--wide">
+          <h2>
+            <lucide-icon name="sparkles" size="18"></lucide-icon>
+            {{ 'COMMON.IMPACT' | translate }}
+          </h2>
+          <ul class="check-list">
+            <li *ngFor="let highlight of item.highlights; trackBy: trackByText">
+              {{ highlight }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-shell details-grid" aria-label="Detail sections">
+      <article class="detail-section">
+        <h2>
+          <lucide-icon name="circle-user-round" size="18"></lucide-icon>
+          {{ 'COMMON.ROLE_AND_RESPONSIBILITIES' | translate }}
+        </h2>
+        @if (item.description && item.description.includes('•')) {
+          <ul class="check-list">
+            <li *ngFor="let point of parseBulletPoints(item.description); trackBy: trackByText">
+              {{ point }}
+            </li>
+          </ul>
+        } @else {
+          <p>{{ item.description }}</p>
+        }
+      </article>
+
+      <article class="detail-section">
+        <h2>
+          <lucide-icon name="file-text" size="18"></lucide-icon>
+          {{ 'COMMON.PROJECT_DESCRIPTION' | translate }}
+        </h2>
+        <p>{{ item.project_description }}</p>
+      </article>
+    </section>
+
+    <section class="details-shell detail-section" aria-labelledby="challenges-title">
+      <h2 id="challenges-title">
+        <lucide-icon name="lightbulb" size="18"></lucide-icon>
+        {{ 'COMMON.CHALLENGES_AND_SOLUTIONS' | translate }}
+      </h2>
+
+      <div class="challenge-list">
+        <article *ngFor="let challenge of item.challenges; let i = index; trackBy: trackByChallenge"
+          class="challenge-card">
+          <span class="challenge-card__index">{{ i + 1 }}</span>
+          <div>
+            <h3>{{ challenge.title }}</h3>
+            <p>{{ challenge.description }}</p>
+          </div>
         </article>
-      </section>
+      </div>
+    </section>
 
-      @if (getVisibleLinks().length) {
-        <section class="details-shell details-actions" aria-label="External links">
-          <a
-            *ngFor="let action of getVisibleLinks()"
-            [href]="action.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="details-action"
-            [class.details-action--secondary]="action.variant === 'secondary'"
-          >
-            @if (action.variant === 'primary' && item.links?.assets) {
-              <img
-                [src]="item.links.assets"
-                [alt]="item.company"
-                class="details-action__logo"
-              />
-            } @else {
-              <lucide-icon [name]="action.icon" size="20"></lucide-icon>
-            }
-            <span>{{ action.label }}</span>
-            @if (action.variant === 'primary') {
-              <lucide-icon name="external-link" size="18"></lucide-icon>
-            }
-          </a>
-        </section>
+    <section class="details-shell details-grid" aria-label="Learnings and technologies">
+      <article class="detail-section" [class.detail-section--full]="!item?.soft_skills">
+        <h2>
+          <lucide-icon name="lamp-desk" size="18"></lucide-icon>
+          {{ 'COMMON.KEY_LEARNINGS' | translate }}
+        </h2>
+        <ul class="check-list">
+          <li *ngFor="let learning of item.learnings; trackBy: trackByText">
+            {{ learning }}
+          </li>
+        </ul>
+      </article>
+
+      @if (item?.soft_skills) {
+      <article class="detail-section">
+        <h2>
+          <lucide-icon name="book-marked" size="18"></lucide-icon>
+          {{ 'COMMON.SOFT_SKILLS' | translate }}
+        </h2>
+        <ul class="check-list">
+          <li *ngFor="let softSkill of item.soft_skills; trackBy: trackByText">
+            {{ softSkill }}
+          </li>
+        </ul>
+      </article>
       }
-    </main>
 
-    <footer class="details-shell details-footer">
-      <app-navigation
-        [prevLabel]="prevLabel"
-        [nextLabel]="nextLabel"
-        [prevLink]="prevLink"
-        [nextLink]="nextLink"
-      ></app-navigation>
-    </footer>
+      <article class="detail-section detail-section--full">
+        <h2>
+          <lucide-icon name="code-2" size="18"></lucide-icon>
+          {{ 'COMMON.TECHNOLOGIES_USED' | translate }}
+        </h2>
+        <div class="details-tags details-tags--dense">
+          <span *ngFor="let tech of item.technologies; trackBy: trackByText">
+            {{ tech }}
+          </span>
+        </div>
+      </article>
+    </section>
+
+    @if (getVisibleLinks().length) {
+    <section class="details-shell details-actions" aria-label="External links">
+      <a *ngFor="let action of getVisibleLinks()" [href]="action.href" target="_blank" rel="noopener noreferrer"
+        class="details-action" [class.details-action--secondary]="action.variant === 'secondary'">
+        @if (action.variant === 'primary' && item.links?.assets) {
+        <img [src]="item.links.assets" [alt]="item.company" class="details-action__logo" />
+        } @else {
+        <lucide-icon [name]="action.icon" size="20"></lucide-icon>
+        }
+        <span>{{ action.label }}</span>
+        @if (action.variant === 'primary') {
+        <lucide-icon name="external-link" size="18"></lucide-icon>
+        }
+      </a>
+    </section>
+    }
+  </main>
+
+  <footer class="details-shell details-footer">
+    <app-navigation [prevLabel]="prevLabel" [nextLabel]="nextLabel" [prevLink]="prevLink"
+      [nextLink]="nextLink"></app-navigation>
+  </footer>
+  }
+
+  @if (isFullscreen && item?.images?.length) {
+  <div class="carousel-modal-backdrop" (click)="closeFullscreen()">
+    <div class="carousel-modal-content" (click)="$event.stopPropagation()">
+      <div class="carousel-modal-viewport">
+        <button type="button" class="carousel-modal-close" (click)="closeFullscreen()" aria-label="Close modal">
+          <lucide-icon name="x" size="18"></lucide-icon>
+        </button>
+        <swiper-container slides-per-view="1" space-between="20" speed="600" navigation="true" pagination="true"
+          pagination-clickable="true" grab-cursor="true" loop="true" effect="fade" fade-effect-cross-fade="true"
+          class="swiper-modal-slider">
+          <swiper-slide *ngFor="let img of item.images; trackBy: trackByText">
+            <div class="swiper-modal-image-wrapper">
+              <img [src]="img" [alt]="item.company + ' fullscreen preview'" class="carousel-modal-img" />
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+  </div>
   }
 </div>

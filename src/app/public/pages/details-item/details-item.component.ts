@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LucideModule } from '../../../shared/lucide/lucide.module';
 import { MaterialModule } from '../../../shared/material/material.module';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -10,6 +10,9 @@ import { TranslationService, Language } from '@core/services/translation.service
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import { LanguageSelectorComponent } from '@shared/components/language-selector/language-selector.component';
 import { Subscription } from 'rxjs';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 interface DetailAction {
   href: string;
@@ -22,6 +25,7 @@ interface DetailAction {
   selector: 'app-details-item',
   standalone: true,
   imports: [CommonModule, RouterModule, MaterialModule, LucideModule, BreadcrumsComponent, NavigationComponent, TranslatePipe, LanguageSelectorComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './details-item.component.html',
   styleUrl: './details-item.component.scss'
 })
@@ -36,6 +40,61 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
   currentLanguage: Language = 'en';
   breadcrumbLinks: any[] = [];
   activeImageIndex: number = 0;
+  isFullscreen: boolean = false;
+
+  creativeEffectConfig = {
+    prev: {
+      shadow: true,
+      translate: ['-20%', 0, -1],
+    },
+    next: {
+      translate: ['100%', 0, 0],
+    },
+  };
+
+  swiperStyles = [
+    `
+    :host {
+      --swiper-navigation-color: #ffffff;
+      --swiper-navigation-size: 40px;
+      --swiper-navigation-sides-offset: 8px;
+      --swiper-pagination-color: #ffffff;
+      --swiper-pagination-bullet-inactive-color: #ffffff;
+      --swiper-pagination-bullet-inactive-opacity: 0.3;
+      --swiper-pagination-bottom: 12px;
+    }
+
+    .swiper-button-prev::after {
+      content: '' !important;
+      width: 40px;
+      height: 40px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFFFFF"><circle cx="6" cy="12" r="1.5"/><circle cx="10" cy="8" r="1.5"/><circle cx="10" cy="16" r="1.5"/><circle cx="14" cy="4" r="1.5"/><circle cx="14" cy="12" r="1.5"/><circle cx="14" cy="20" r="1.5"/><circle cx="18" cy="8" r="1.5"/><circle cx="18" cy="16" r="1.5"/></svg>') !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      background-size: contain !important;
+    }
+
+    .swiper-button-next::after {
+      content: '' !important;
+      width: 40px;
+      height: 40px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFFFFF"><circle cx="18" cy="12" r="1.5"/><circle cx="14" cy="8" r="1.5"/><circle cx="14" cy="16" r="1.5"/><circle cx="10" cy="4" r="1.5"/><circle cx="10" cy="12" r="1.5"/><circle cx="10" cy="20" r="1.5"/><circle cx="6" cy="8" r="1.5"/><circle cx="6" cy="16" r="1.5"/></svg>') !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      background-size: contain !important;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      transform: scale(1.1);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #ffffff !important;
+      opacity: 1 !important;
+    }
+    `
+  ];
   private subscriptions = new Subscription();
 
   constructor(
@@ -60,6 +119,10 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     }));
     
     this.updateBreadcrumbs();
+  }
+
+  get displayImages(): string[] {
+    return this.item?.images || [];
   }
 
   ngOnDestroy(): void {
@@ -406,6 +469,17 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     return actions;
   }
 
+  parseBulletPoints(text: string | undefined): string[] {
+    if (!text) return [];
+    if (text.includes('•')) {
+      return text
+        .split('•')
+        .map(item => item.trim())
+        .filter(item => item.length > 0);
+    }
+    return [text];
+  }
+
   trackByText(index: number, value: string): string {
     return value || `${index}`;
   }
@@ -429,6 +503,14 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     if (index >= 0 && index < this.item.images.length) {
       this.activeImageIndex = index;
     }
+  }
+
+  openFullscreen() {
+    this.isFullscreen = true;
+  }
+
+  closeFullscreen() {
+    this.isFullscreen = false;
   }
 
   private detailCopy(en: string, es: string): string {

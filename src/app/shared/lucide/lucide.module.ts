@@ -120,6 +120,7 @@ import {
   Target,
   Sparkles,
   Code2,
+  Maximize2
 } from 'lucide-angular';
 
 export const LUCIDE_MODULES = [
@@ -253,7 +254,8 @@ export const LUCIDE_MODULES = [
     Linkedin,
     Target,
     Sparkles,
-    Code2
+    Code2,
+    Maximize2
   }),
 ];
 
