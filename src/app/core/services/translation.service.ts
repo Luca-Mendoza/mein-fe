@@ -32,6 +32,7 @@ export class TranslationService {
         TECHNOLOGIES_USED: "Technologies Used",
         FOCUS: "Focus",
         IMPACT: "Impact",
+        PROJECT_PREVIEW: "Project Preview",
         GO_TO_GITHUB_BACKEND: "Go to Github Back-end",
         GO_TO_GITHUB_FRONTEND: "Go to Github Front-end",
         GO_TO_GITHUB: "Go to Github",
@@ -121,10 +122,7 @@ export class TranslationService {
               DURATION: "2023 — Present",
               EMPLOYMENT_TYPE: "Part-Time",
               IMAGES: [
-                "assets/imgs/eventloop_01.png",
-                "assets/imgs/eventloop_02.png",
-                "assets/imgs/eventloop_03.png",
-                "assets/imgs/eventloop_04.png"
+                "assets/imgs/eventloop_logo.webp"
               ],
               LINKS: {
                 WEBSITE: "eventloop.club",
@@ -305,8 +303,8 @@ export class TranslationService {
               },
               CHALLENGES: [
                 {
-                  title: "Event Loop Club",
-                  description: "In the 'Event Loop Club' project, I served as an SSR Frontend Developer, contributing to the development of reusable components and integrating RESTful services. Managing state with NgRx was key to implementing technical strategies that optimized performance and scalability, overcoming challenges in real-time data synchronization."
+                  title: "Eventloop.ar",
+                  description: "In the 'Eventloop.ar' project, I served as an SSR Frontend Developer, contributing to the development of reusable components and integrating RESTful services. Managing state with NgRx was key to implementing technical strategies that optimized performance and scalability, overcoming challenges in real-time data synchronization."
                 },
                 {
                   title: "Siete Ideas",
@@ -473,6 +471,7 @@ export class TranslationService {
         TECHNOLOGIES_USED: "Tecnologías Utilizadas",
         FOCUS: "Foco",
         IMPACT: "Impacto",
+        PROJECT_PREVIEW: "Vista del Proyecto",
         GO_TO_GITHUB_BACKEND: "Ir a Github Back-end",
         GO_TO_GITHUB_FRONTEND: "Ir a Github Front-end",
         GO_TO_GITHUB: "Ir a Github",
@@ -562,10 +561,7 @@ export class TranslationService {
               DURATION: "2023 — Presente",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
               IMAGES: [
-                "assets/imgs/eventloop_01.png",
-                "assets/imgs/eventloop_02.png",
-                "assets/imgs/eventloop_03.png",
-                "assets/imgs/eventloop_04.png"
+                "assets/imgs/eventloop_logo.webp"
               ],
               LINKS: {
                 WEBSITE: "eventloop.club",
@@ -742,8 +738,8 @@ export class TranslationService {
               },
               CHALLENGES: [
                 {
-                  title: "Event Loop Club",
-                  description: "En el proyecto 'Event Loop Club', me desempeñé como Desarrollador Frontend SSR, contribuyendo al desarrollo de componentes reutilizables e integrando servicios RESTful. Gestionar el estado con NgRx fue clave para implementar estrategias técnicas que optimizaron el rendimiento y la escalabilidad, superando desafíos en la sincronización de datos en tiempo real."
+                  title: "Eventloop.ar",
+                  description: "En el proyecto 'Eventloop.ar', me desempeñé como Desarrollador Frontend SSR, contribuyendo al desarrollo de componentes reutilizables e integrando servicios RESTful. Gestionar el estado con NgRx fue clave para implementar estrategias técnicas que optimizaron el rendimiento y la escalabilidad, superando desafíos en la sincronización de datos en tiempo real."
                 },
                 {
                   title: "Siete Ideas",

@@ -127,8 +127,8 @@ export const projects = [
         ],
         "challenges": [
             {
-                "title": "Event Loop Club",
-                "description": "En el proyecto 'Event Loop Club', desempeñé el rol de SSR Frontend Developer, colaborando en el desarrollo de componentes reutilizables y en la integración de servicios RESTful. La gestión del estado con NgRx fue clave para implementar estrategias técnicas que optimizaron el rendimiento y la escalabilidad, superando desafíos en la sincronización de datos en tiempo real."
+                "title": "Eventloop.ar",
+                "description": "En el proyecto 'Eventloop.ar', desempeñé el rol de SSR Frontend Developer, colaborando en el desarrollo de componentes reutilizables y en la integración de servicios RESTful. La gestión del estado con NgRx fue clave para implementar estrategias técnicas que optimizaron el rendimiento y la escalabilidad, superando desafíos en la sincronización de datos en tiempo real."
             },
             {
                 "title": "Siete Ideas",
@@ -189,7 +189,7 @@ export const projects = [
             "Angular: De cero a experto (Angular 10+)",
             "Fundamentos de la gestión del tiempo"
         ],
-        "profile_summary": "Soy Luca Alberto Daniel Mendoza, Senior Front-End Engineer especializado en Angular. Construyo aplicaciones escalables y mantenibles, con foco en arquitectura frontend, rendimiento, UI/UX e integración con APIs. Fui Frontend Developer en Siete Ideas entre 2022 y 2026, y actualmente soy cofundador de XTECHARG y Event Loop Club."
+        "profile_summary": "Soy Luca Alberto Daniel Mendoza, Senior Front-End Engineer especializado en Angular. Construyo aplicaciones escalables y mantenibles, con foco en arquitectura frontend, rendimiento, UI/UX e integración con APIs. Fui Frontend Developer en Siete Ideas entre 2022 y 2026, y actualmente soy cofundador de XTECHARG y Eventloop.ar."
     }
 
 ]
@@ -323,8 +323,8 @@ export const projects_ingles = [
         ],
         "challenges": [
             {
-                "title": "Event Loop Club",
-                "description": "In the 'Event Loop Club' project, I served as an SSR Frontend Developer, contributing to the development of reusable components and integrating RESTful services. Managing state with NgRx was key to implementing technical strategies that optimized performance and scalability, overcoming challenges in real-time data synchronization."
+                "title": "Eventloop.ar",
+                "description": "In the 'Eventloop.ar' project, I served as an SSR Frontend Developer, contributing to the development of reusable components and integrating RESTful services. Managing state with NgRx was key to implementing technical strategies that optimized performance and scalability, overcoming challenges in real-time data synchronization."
             },
             {
                 "title": "Siete Ideas",
@@ -385,6 +385,6 @@ export const projects_ingles = [
             "Angular: From Zero to Expert (Angular 10+)",
             "Time Management Fundamentals"
         ],
-        "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Front-End Engineer specialized in Angular. I build scalable and maintainable applications with a focus on frontend architecture, performance, UI/UX, and API integration. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I am currently co-founder of XTECHARG and Event Loop Club."
+        "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Front-End Engineer specialized in Angular. I build scalable and maintainable applications with a focus on frontend architecture, performance, UI/UX, and API integration. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I am currently co-founder of XTECHARG and Eventloop.ar."
     }
 ];

@@ -35,6 +35,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
   nextLabel: string = '';
   currentLanguage: Language = 'en';
   breadcrumbLinks: any[] = [];
+  activeImageIndex: number = 0;
   private subscriptions = new Subscription();
 
   constructor(
@@ -66,6 +67,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
   }
 
   private loadItemById(id: string) {
+    this.activeImageIndex = 0;
     // Cargar datos basados en el idioma actual
     if (id === 'event_loop_club') {
       this.loadEventLoopClubData();
@@ -92,7 +94,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     this.item = {
       id: 'event_loop_club',
       type: this.detailCopy('Experience', 'Experiencia'),
-      company: 'Event Loop Club',
+      company: 'Event Loop',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.TITLE'),
       date: '2023 - PRESENT',
       duration: this.translationService.translate('DETAILS.PART_TIME'),
@@ -118,7 +120,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       technologies: technologies,
       images: this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.IMAGES'),
       links: {
-        name: 'Event Loop Club',
+        name: 'Eventloop.ar',
         link: 'https://eventloop.club/',
         assets: 'assets/imgs/eventloop_logo.webp'
       }
@@ -410,6 +412,23 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
 
   trackByChallenge(index: number, challenge: { title: string }): string {
     return challenge?.title || `${index}`;
+  }
+
+  prevImage() {
+    if (!this.item?.images?.length) return;
+    this.activeImageIndex = (this.activeImageIndex - 1 + this.item.images.length) % this.item.images.length;
+  }
+
+  nextImage() {
+    if (!this.item?.images?.length) return;
+    this.activeImageIndex = (this.activeImageIndex + 1) % this.item.images.length;
+  }
+
+  selectImage(index: number) {
+    if (!this.item?.images?.length) return;
+    if (index >= 0 && index < this.item.images.length) {
+      this.activeImageIndex = index;
+    }
   }
 
   private detailCopy(en: string, es: string): string {
