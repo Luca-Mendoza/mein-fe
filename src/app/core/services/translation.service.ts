@@ -367,8 +367,7 @@ export class TranslationService {
                 "End-to-end architecture of specialized e-commerce platforms with membership access controls.",
                 "Production-grade payment gateway integration (Mercado Pago API) with async webhooks.",
                 "Reactive frontend state management leveraging modern Angular Signals and RxJS.",
-                "Design system creation and glassmorphism UI/UX refinement for brand-driven web applications.",
-                "Environment isolation and custom port mapping (PostgreSQL 5436, NestJS 8081) for multi-project development."
+                "Design system creation and glassmorphism UI/UX refinement for brand-driven web applications."
               ],
               IMAGES: [
                 "assets/imgs/losjazmines/jazmines_main.png",
@@ -904,8 +903,7 @@ export class TranslationService {
                 "Arquitectura end-to-end de plataformas e-commerce con gestión de miembros y control de acceso.",
                 "Integración de pasarelas de pago a nivel producción (Mercado Pago API) con verificación por webhooks.",
                 "Manejo de estado reactivo moderno en Angular utilizando Signals y RxJS.",
-                "Creación de sistemas de diseño botánicos y modales glassmorphism orientados a marcas premium.",
-                "Aislamiento de entornos de desarrollo y mapeo de puertos personalizados (PostgreSQL 5436, NestJS 8081)."
+                "Creación de sistemas de diseño botánicos y modales glassmorphism orientados a marcas premium."
               ],
               IMAGES: [
                 "assets/imgs/losjazmines/jazmines_main.png",
