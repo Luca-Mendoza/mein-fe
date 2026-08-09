@@ -253,123 +253,154 @@ p {
           // height: 650px;
         }
 
-        .section__experience {
-          .experience:hover {
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.01);
-          }
+        .section__experience,
+        .section__projects {
+          width: 100%;
 
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+        }
           .experience {
             color: white;
-            // width: 90%;
-            // height: 120px;
             display: flex;
             flex-direction: column-reverse;
             justify-content: space-between;
-            // gap: 1rem;
-            gap: 0.5rem;
-            // margin: 1rem 0;
-            border-radius: 12px;
+            gap: 1.25rem;
+            margin: 1.25rem 0;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: transparent;
+            border: 1px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
 
-            /* En móvil: mismo padding lateral que el resto (coordina con .items 1rem) */
-            @media (max-width: 767px) {
-              flex-direction: column;
-              padding-left: 0;
-              padding-right: 0;
+            &:hover {
+              cursor: pointer;
+              background: rgba(255, 255, 255, 0.015);
+              border-color: rgba(255, 255, 255, 0.05);
+              box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.2);
+              transform: translateY(-1px);
+              border-radius: 4px 0 0 4px;
+
+              .experience__cta button {
+                color: #22d3ee;
+                lucide-icon {
+                  transform: translateX(3px);
+                  color: #22d3ee;
+                }
+              }
             }
 
-            /* En móvil: CTA a la derecha y divisor abajo para no confundir con la siguiente sección */
+            /* En móvil: mismo padding lateral */
+            @media (max-width: 767px) {
+              flex-direction: column;
+              padding: 1.25rem;
+            }
+
             .experience__cta {
-              @media (max-width: 767px) {
-                margin-top: 1.5rem;
-                padding-top: 1.25rem;
-                padding-bottom: 1.25rem;
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-                justify-content: flex-end;
+              margin-top: 1rem;
+              padding-top: 0.85rem;
+              border-top: 1px solid rgba(255, 255, 255, 0.06);
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              width: 100%;
+
+              button {
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                color: rgba(255, 255, 255, 0.6);
+                transition: all 0.3s ease;
+
+                lucide-icon {
+                  transition: transform 0.3s ease, color 0.3s ease;
+                }
               }
             }
 
             @include mixins.tablets {
-              width: 90%;
+              width: 100%;
               flex-direction: row;
-              padding: 1rem 1.5rem;
-              gap: 1rem;
-              margin: 1rem 0;
-
+              padding: 1.5rem 1.75rem;
+              gap: 1.5rem;
             }
 
             .date {
               width: 100%;
-              height: 100%;
               display: flex;
               flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: relative;
 
-              /* En móvil: fila con icono a la izquierda y fecha a la derecha */
+              /* En móvil: fila con icono y fecha */
               @media (max-width: 767px) {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
               }
 
-              /* Contenedor fecha + tipo (ej. Siete Ideas): siempre en columna para que no se corte el texto en pantalla grande */
-              .date__meta {
-                display: flex;
-                flex-direction: column;
-                gap: 0.25rem;
-                text-align: center;
+              @include mixins.tablets {
+                width: 22%;
+                padding-right: 1.25rem;
+                padding-left: 0.5rem;
 
-                @media (max-width: 767px) {
-                  align-items: flex-end;
-                  text-align: right;
-                }
-
-                @include mixins.tablets {
-                  align-items: center;
+                /* Divisor vertical sutil del 50% de alto a la derecha */
+                &::after {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  top: 25%;
+                  height: 50%;
+                  width: 1px;
+                  background: rgba(255, 255, 255, 0.08);
                 }
               }
 
-              @include mixins.tablets {
-                width: 20%;
-                justify-content: center;
-                align-items: center;
+              img {
+                margin: 0 auto;
+                transition: transform 0.3s ease;
               }
 
               span {
-                font-size: 11px;
+                font-size: 10px;
+                font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.4);
                 text-align: center;
-                white-space: normal;
-                word-break: break-word;
+                white-space: nowrap;
+                margin-top: 8px;
 
                 @include mixins.tablets {
-                  font-size: 0.7rem;
-                  line-height: 1.3rem;
+                  font-size: 0.65rem;
+                  line-height: 1.1rem;
                 }
               }
             }
+
             .info {
               width: 100%;
-              // min-width: 398px;
-              min-width: 308px;
+              min-width: 0;
 
               @include mixins.tablets {
-                min-width: 398px;
-                width: 75%;
+                width: 78%;
               }
 
               p {
-                font-size: .8rem;
-                line-height: 1.2rem;
+                font-size: 0.85rem;
+                line-height: 1.4rem;
+                color: rgba(255, 255, 255, 0.65);
+                margin-bottom: 1rem;
               }
             }
           }
         }
 
         .section__projects {
-          width: 90%; /* igual que Experience: section centrada, mismo espaciado left en ambas secciones */
+          width: 100%;
 
           @media (max-width: 767px) {
             width: 100%;
@@ -379,13 +410,8 @@ p {
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* alineado a la izquierda como Experience */
+            align-items: flex-start;
             gap: 1rem;
-          }
-
-          .experience:hover {
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.01);
           }
 
           .experience {
@@ -393,67 +419,125 @@ p {
             display: flex;
             flex-direction: column-reverse;
             justify-content: space-between;
-            gap: 0.5rem; /* igual que Experience en móvil */
-            margin: 1rem 0;
-            border-radius: 12px;
+            gap: 1.25rem;
+            margin: 1.25rem 0;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: transparent;
+            border: 1px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
             width: 100%;
-            min-width: 0;
 
-            /* En móvil: mismo padding lateral que el resto (coordina con .items 1rem) */
+            &:hover {
+              cursor: pointer;
+              background: rgba(255, 255, 255, 0.015);
+              border-color: rgba(255, 255, 255, 0.05);
+              box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.2);
+              transform: translateY(-1px);
+              border-radius: 4px 0 0 4px;
+
+              .experience__cta button {
+                color: #22d3ee;
+                lucide-icon {
+                  transform: translateX(3px);
+                  color: #22d3ee;
+                }
+              }
+            }
+
+            /* En móvil: mismo padding lateral */
             @media (max-width: 767px) {
               flex-direction: column;
-              padding-left: 0;
-              padding-right: 0;
+              padding: 1.25rem;
             }
 
             .experience__cta {
-              @media (max-width: 767px) {
-                margin-top: 1.5rem;
-                padding-top: 1.25rem;
-                padding-bottom: 1.25rem;
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-                justify-content: flex-end;
+              margin-top: 1rem;
+              padding-top: 0.85rem;
+              border-top: 1px solid rgba(255, 255, 255, 0.06);
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              width: 100%;
+
+              button {
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                color: rgba(255, 255, 255, 0.6);
+                transition: all 0.3s ease;
+
+                lucide-icon {
+                  transition: transform 0.3s ease, color 0.3s ease;
+                }
               }
             }
 
             @include mixins.tablets {
-              width: 90%;
+              width: 100%;
               flex-direction: row;
-              padding: 1rem 1.5rem;
-              gap: 1rem; /* igual que Experience en tablets */
+              padding: 1.5rem 1.75rem;
+              gap: 1.5rem;
             }
 
-            /* Columna izquierda 20% como Experience (.date) para mismo punto de inicio del texto */
+            /* Columna izquierda 22% idéntica a .date */
             .avatar {
               width: 100%;
-              min-width: 6rem;
-              height: auto;
-              flex-shrink: 0;
               display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+
+              @media (max-width: 767px) {
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0.5rem;
+              }
 
               @include mixins.tablets {
-                width: 20%;
+                width: 22%;
+                padding-right: 1.25rem;
+                padding-left: 0.5rem;
+
+                /* Divisor vertical sutil del 50% de alto a la derecha */
+                &::after {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  top: 25%;
+                  height: 50%;
+                  width: 1px;
+                  background: rgba(255, 255, 255, 0.08);
+                }
               }
 
               img {
                 width: 100%;
-                border-radius: 12px;
+                max-width: 5.5rem;
+                max-height: 5.5rem;
+                object-fit: cover;
+                border-radius: 10px;
+                margin: 0 auto;
+                transition: transform 0.3s ease;
+                border: 1px solid rgba(255, 255, 255, 0.08);
               }
             }
+
             .info {
               width: 100%;
-              min-width: 308px;
-              flex: 1 1 auto;
+              min-width: 0;
 
               @include mixins.tablets {
-                min-width: 398px;
-                width: 75%; /* igual que Experience */
+                width: 78%;
               }
 
               p {
-                font-size: .8rem;
-                line-height: 1.2rem;
+                font-size: 0.85rem;
+                line-height: 1.4rem;
+                color: rgba(255, 255, 255, 0.65);
+                margin-bottom: 1rem;
               }
             }
           }
@@ -461,20 +545,31 @@ p {
       }
     }
   }
+
+/* Sección Let's Connect: Estilo limpio sin background */
+.section__connect {
+  .connect-card {
+    background: transparent;
+    border: none;
+  }
+
+  .connect-btn {
+    border-radius: 4px;
+  }
+
+  .copy-toast {
+    animation: fadeInToast 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
 }
 
-/* Sección Let's Connect: mismo ritmo visual que Intro */
-.section__connect {
-  .connect-link {
-    cursor: pointer;
-    color: rgba(34, 211, 238, 0.95);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #00718f;
-    }
+@keyframes fadeInToast {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 

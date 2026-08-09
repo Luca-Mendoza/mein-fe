@@ -126,7 +126,7 @@
           <section id="sectionExperience" class="section section__experience">
             <!-- 1. Eventloop.ar (Actual) -->
             <div
-              class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+              class="experience group cursor-pointer w-full"
               routerLink="d/event_loop_club"
             >
               <div
@@ -204,7 +204,7 @@
 
             <!-- 2. XTECHARG (Finalizado) -->
             <div
-              class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+              class="experience group cursor-pointer w-full"
               routerLink="d/xtech"
             >
               <div
@@ -280,10 +280,10 @@
                 </div>
               </div>
             </div>
-                         <div
-               class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
-               routerLink="d/siete_ideas"
-             >
+            <div
+              class="experience group cursor-pointer w-full"
+              routerLink="d/siete_ideas"
+            >
               <div
                 class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3"
               >
@@ -396,27 +396,6 @@
                 </div>
               </div>
             </div>
-
-
-            <div class="actions">
-              <button
-                (click)="openPdf()"
-                class="cursor-pointer flex items-center gap-3 text-white transition-all duration-300 hover:text-[#00718f] text-sm tracking-widest relative group"
-                type="button"
-                aria-label="Download portfolio PDF"
-              >
-                <span
-                  class="pb-1 relative after:block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-cyan-400 after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100"
-                >
-                  {{ 'COMMON.DOWNLOAD_PORTFOLIO' | translate }}
-                </span>
-
-                <lucide-icon
-                  name="download"
-                  class="w-5 h-5 text-white transition-transform duration-300 group-hover:text-[#00718f] group-hover:translate-y-[-2px]"
-                ></lucide-icon>
-              </button>
-            </div>
           </section>
         </div>
         <div class="item item__projects">
@@ -428,7 +407,7 @@
                      <section id="sectionProjects" class="section section__projects">
             <div class="section__projects-content max-w-full flex flex-col items-start w-full">
               <div
-                class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
+                class="experience group cursor-pointer w-full"
                 routerLink="d/portfolio"
               >
                 <div class="avatar w-24 h-24 flex-shrink-0">
@@ -534,9 +513,9 @@
                  </div>
                </div>
             <div
-                class="experience my-2 group cursor-pointer min-h-[280px] w-full max-w-full md:max-w-4xl px-2 md:px-0"
-                routerLink="d/gamezonia"
-              >
+              class="experience group cursor-pointer w-full"
+              routerLink="d/gamezonia"
+            >
                  <div class="avatar w-24 h-24 flex-shrink-0">
                    <img src="assets/imgs/protect_01.png" alt="protect_01" class="w-full h-full object-cover rounded-md" />
                  </div>
@@ -623,20 +602,56 @@
         </div>
         <div class="item item__connect" id="sectionConnect">
           <h2
-            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
+            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center mb-2"
           >
             {{ 'HOME.LETS_CONNECT.TITLE' | translate }}
           </h2>
-          <section class="section section__connect">
-            <p class="min-h-[2rem] leading-relaxed text-white/90 mb-4">
-              {{ 'HOME.LETS_CONNECT.DESCRIPTION' | translate }}
-              <a
-                class="connect-link"
-                href="mailto:mendoza.d.luca@gmail.com"
-                (click)="$event.stopPropagation()"
-                >{{ 'HOME.LETS_CONNECT.LINK_TEXT' | translate }}</a
-              >.
-            </p>
+          <section class="section section__connect w-full">
+            <div class="connect-card relative w-full py-2">
+              <p class="leading-relaxed text-white/70 text-sm md:text-base mb-6">
+                {{ 'HOME.LETS_CONNECT.DESCRIPTION' | translate }}
+              </p>
+
+              <!-- Fila integrada con línea divisoria vertical (modo row) -->
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/[0.08]">
+                <div class="flex items-center gap-3 text-cyan-400/90">
+                  <div class="w-8 h-8 rounded bg-transparent border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                    <lucide-icon name="mail" class="w-4 h-4" />
+                  </div>
+                  <span class="text-sm font-medium tracking-wide text-white/90">mendoza.d.luca&#64;gmail.com</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 md:gap-4">
+                  <!-- Botón REACH OUT (Copiar email) -->
+                  <button
+                    type="button"
+                    class="connect-btn group relative inline-flex items-center gap-2 bg-transparent hover:bg-cyan-500/10 text-cyan-400 hover:text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 px-4 py-2 rounded text-xs font-semibold tracking-wider uppercase transition-all duration-300 cursor-pointer"
+                    (click)="copyEmailToClipboard($event)"
+                  >
+                    <lucide-icon *ngIf="!emailCopied" name="copy" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:scale-110" />
+                    <lucide-icon *ngIf="emailCopied" name="check" class="w-3.5 h-3.5 text-cyan-300" />
+                    <span>{{ (emailCopied ? 'HOME.LETS_CONNECT.EMAIL_COPIED' : 'HOME.LETS_CONNECT.LINK_TEXT') | translate }}</span>
+                  </button>
+
+                  <!-- Línea divisoria vertical sutil -->
+                  <div class="hidden sm:block w-[1px] h-5 bg-white/10"></div>
+
+                  <!-- Botón DOWNLOAD PORTFOLIO -->
+                  <button
+                    (click)="openPdf()"
+                    class="download-btn group cursor-pointer inline-flex items-center gap-2 bg-transparent hover:bg-cyan-500/10 text-cyan-400/80 hover:text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 px-4 py-2 rounded text-xs font-semibold tracking-wider uppercase transition-all duration-300"
+                    type="button"
+                    aria-label="Download portfolio PDF"
+                  >
+                    <span>{{ 'COMMON.DOWNLOAD_PORTFOLIO' | translate }}</span>
+                    <lucide-icon
+                      name="download"
+                      class="w-3.5 h-3.5 text-cyan-400/80 group-hover:text-cyan-300 transition-transform duration-300 group-hover:translate-y-[1px]"
+                    ></lucide-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
         <span

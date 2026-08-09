@@ -180,6 +180,44 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.activeLink = linkText;
   }
 
+  emailCopied = false;
+
+  copyEmailToClipboard(event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
+    const email = 'mendoza.d.luca@gmail.com';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(() => {
+        this.showCopyToast();
+      }).catch(() => {
+        this.fallbackCopy(email);
+      });
+    } else {
+      this.fallbackCopy(email);
+    }
+  }
+
+  private showCopyToast(): void {
+    this.emailCopied = true;
+    setTimeout(() => {
+      this.emailCopied = false;
+    }, 2500);
+  }
+
+  private fallbackCopy(text: string): void {
+    const textArea = this._document.createElement('textarea');
+    textArea.value = text;
+    this._document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      this._document.execCommand('copy');
+      this.showCopyToast();
+    } catch (err) {
+      console.error('Fallback copy failed', err);
+    }
+    this._document.body.removeChild(textArea);
+  }
+
   openPdf() {
 
     if (this.pdfUrl) {

@@ -66,7 +66,8 @@ export class TranslationService {
         LETS_CONNECT: {
           TITLE: "Let's Connect",
           DESCRIPTION: "I'm currently open to freelance and remote opportunities — especially exciting Angular, NestJS or full-stack focused projects. If you have something in mind, feel free to ",
-          LINK_TEXT: "reach out"
+          LINK_TEXT: "reach out",
+          EMAIL_COPIED: "Email copied to clipboard!"
         },
         ABOUT_SECTION: {
           TITLE: "About",
@@ -80,7 +81,7 @@ export class TranslationService {
         EXPERIENCE_SECTION: {
           TITLE: "Experience",
           EVENT_LOOP_CLUB: {
-            DATE_FROM: "Dec 2023 - Present",
+            DATE_FROM: "DEC 2023 – PRESENT",
             TITLE: "Fundador & Full-Stack Developer · Eventloop.ar",
             PREVIEW: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
@@ -148,57 +149,54 @@ export class TranslationService {
             }
           },
           SIETE_IDEAS: {
-            DATE_FROM: "feb. 2022 - mar. 2026",
+            DATE_FROM: "FEB. 2022\n-\nMAR. 2026",
             TITLE: "Frontend Web Developer · Siete Ideas",
-            PREVIEW: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
-            DESCRIPTION: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
+            PREVIEW: "End-to-end web engineering with Angular across Fintech digital wallets, public transport top-up integrations, B2B MVPs, and production logistics platforms.",
+            DESCRIPTION: "End-to-end web engineering with Angular across Fintech digital wallets, public transport top-up integrations, B2B MVPs, and production logistics platforms.",
             EMPLOYMENT_STATUS: "Jornada completa",
             LINKEDIN_LABEL: "Siete Ideas",
             LINKEDIN_URL: "https://www.linkedin.com/company/siete-ideas",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Frontend Developer in an Angular project using the Fuse template. Responsible for migrating and updating the project's architecture, implementing reusable components, and improving overall application performance."
+                DESCRIPTION: "Frontend Developer responsible for architecting and building high-availability Angular web applications using the Fuse template ecosystem. Collaborated closely with backend engineering teams (Java and Node.js) for consuming and defining REST/WebSocket API endpoints. Key focus on frontend migrations (Angular 9 → 11 → 18 Standalone), modular UI components, and web system performance optimization."
               },
               PROJECT_DESCRIPTION: {
-                DESCRIPTION: "I worked on updating and modernizing a platform based on Angular and Fuse. Two key migrations were carried out to improve scalability and code maintainability. Additionally, I collaborated on developing new functionalities and optimizing workflow."
+                DESCRIPTION: "Contributed to multiple digital products for software factory clients: from Fintech digital wallets with card top-ups and public transit payment integrations, to rapid B2B MVP prototyping, and production-grade enterprise logistics platforms. Seamless integration with backend microservices developed in Java."
               },
               CHALLENGES: [
                 {
-                  title: "Migration from Angular 11 with Modules to Angular 18 with Standalone",
-                  description: "I transitioned the project's architecture from Angular 11 with modules to Angular 18 using standalone components, which reduced complexity and enhanced performance."
+                  title: "Fintech & Digital Wallet Integrations",
+                  description: "Engineered responsive web interfaces for digital wallet products, including balance recharges, transaction history tracking, and integrations with transit and payment gateways."
                 },
                 {
-                  title: "Migration from Angular 9 to Angular 11 with Fuse",
-                  description: "I migrated the platform from Angular 9 with Fuse to Angular 11, improving code organization, optimizing dependencies, and refactoring critical components."
+                  title: "Enterprise Logistics & Java Backend Integration",
+                  description: "Worked closely with Java backend engineers to integrate REST API endpoints for production-grade fleet tracking and logistics operations, as well as rapidly prototyping scalable MVPs."
                 },
                 {
-                  title: "First Professional Experience",
-                  description: "This was my first professional experience, which allowed me to acquire key knowledge and open doors in my career."
+                  title: "Migration to Angular 18 Standalone Architecture",
+                  description: "Led the technical migration from module-based legacy Angular architecture to modern Angular 18 Standalone components, improving initial bundle sizes and developer experience."
                 }
               ],
               LEARNINGS: [
-                "Deepening my understanding of Angular and Fuse migrations, including the transition from module-based to standalone architecture.",
-                "Gaining more experience in code optimization and performance improvement.",
-                "Learning NestJS and its integration with Angular for efficient backend and frontend development.",
-                "Working as a team with collaboration three times a week in the city of Tandil."
+                "Mastery of modern Angular architecture, performance optimization, and Standalone component patterns.",
+                "Smooth collaboration with backend engineering teams integrating Java-based services and microservices.",
+                "Designing scalable UI flows for digital financial services and transaction-heavy platforms.",
+                "Building robust logistics and supply-chain management dashboards with complex data grids."
               ],
               TECHNOLOGIES: [
                 "Angular",
                 "Fuse Template",
                 "TypeScript",
                 "RxJS",
+                "Java Integrations",
                 "SCSS",
                 "HTML",
                 "NestJS",
-                "Node.js"
+                "RESTful APIs"
               ],
               DURATION: "2022 — 2026",
               EMPLOYMENT_TYPE: "Full-Time",
-              IMAGES: [
-                "assets/imgs/7ideas_logo_dark.svg",
-                "assets/imgs/proyect_01.jpg",
-                "assets/imgs/proyect_02.jpg"
-              ],
+              IMAGES: [],
               LINKS: {
                 WEBSITE: "sieteideas.com",
                 LOGO: "assets/imgs/7ideas_logo_dark.svg",
@@ -208,7 +206,7 @@ export class TranslationService {
             }
           },
           XTECH: {
-            DATE_FROM: "oct. 2024 - mar. 2026",
+            DATE_FROM: "OCT 2024 – MAR 2026",
             TITLE: "Lead Full-Stack Engineer · XTECHARG",
             PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
             DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
@@ -508,7 +506,8 @@ export class TranslationService {
         LETS_CONNECT: {
           TITLE: "Conectemos",
           DESCRIPTION: "Estoy abierto a proyectos freelance y oportunidades remotas — sobre todo en Angular, NestJS o desarrollo Full-Stack. Si tenés algo en mente, ",
-          LINK_TEXT: "escribime"
+          LINK_TEXT: "escribime",
+          EMAIL_COPIED: "¡Email copiado al portapapeles!"
         },
         ABOUT_SECTION: {
           TITLE: "Sobre mí",
@@ -522,7 +521,7 @@ export class TranslationService {
         EXPERIENCE_SECTION: {
           TITLE: "Experiencia",
           EVENT_LOOP_CLUB: {
-            DATE_FROM: "dic. 2023 - actualidad",
+            DATE_FROM: "DIC 2023 – ACTUALIDAD",
             TITLE: "Fundador & Full-Stack Developer · Eventloop.ar",
             PREVIEW: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
@@ -590,58 +589,54 @@ export class TranslationService {
             }
           },
           SIETE_IDEAS: {
-            DATE_FROM: "feb. 2022 - mar. 2026",
+            DATE_FROM: "FEB 2022 – MAR 2026",
             TITLE: "Frontend Web Developer · Siete Ideas",
-            PREVIEW: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
-            DESCRIPTION: "Ingeniería de aplicaciones web con Angular utilizando componentes, routing, gestión de estado y dependency injection.",
+            PREVIEW: "Desarrollo web end-to-end con Angular en billeteras digitales Fintech, integración de recargas de transporte público, MVPs B2B y plataformas de logística en producción.",
+            DESCRIPTION: "Desarrollo web end-to-end con Angular en billeteras digitales Fintech, integración de recargas de transporte público, MVPs B2B y plataformas de logística en producción.",
             EMPLOYMENT_STATUS: "Jornada completa",
             LINKEDIN_LABEL: "Siete Ideas",
             LINKEDIN_URL: "https://www.linkedin.com/company/siete-ideas",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Desarrollador Frontend en un proyecto Angular usando la plantilla Fuse. Responsable de migrar y actualizar la arquitectura del proyecto, implementar componentes reutilizables y mejorar el rendimiento general de la aplicación."
+                DESCRIPTION: "Desarrollador Frontend responsable de la arquitectura y desarrollo de aplicaciones web Angular de alta disponibilidad dentro del ecosistema de Fuse template. Trabajo colaborativo con equipos de backend (Java y Node.js) para el consumo y definición de endpoints REST/WebSockets. Enfoque clave en migraciones frontend (Angular 9 → 11 → 18 Standalone), implementación de componentes de UI modulares y optimización del rendimiento en sistemas empresariales."
               },
               PROJECT_DESCRIPTION: {
-                DESCRIPTION: "Trabajé en la actualización y modernización de una plataforma basada en Angular y Fuse. Se llevaron a cabo dos migraciones clave para mejorar la escalabilidad y mantenibilidad del código. Además, colaboré en el desarrollo de nuevas funcionalidades y optimización del flujo de trabajo."
+                DESCRIPTION: "Desarrollo de múltiples productos digitales para clientes de la fábrica de software: desde billeteras digitales Fintech con recargas de saldo e integración de pasarelas de pago y servicios transaccionales, hasta la maquetación y prototipado rápido de MVPs B2B, y plataformas de logística y gestión de flotas a nivel corporativo en producción. Integración constante con microservicios backend desarrollados en Java."
               },
               CHALLENGES: [
                 {
-                  title: "Migración de Angular 11 con Módulos a Angular 18 con Standalone",
-                  description: "Transicioné la arquitectura del proyecto de Angular 11 con módulos a Angular 18 usando componentes standalone, lo que redujo la complejidad y mejoró el rendimiento."
+                  title: "Integraciones Fintech y Billeteras Digitales",
+                  description: "Diseño e implementación de interfaces web adaptativas para productos de billetera digital, integrando módulos de recarga de saldo, historial de transacciones y conexión con servicios transaccionales de transporte y pagos."
                 },
                 {
-                  title: "Migración de Angular 9 a Angular 11 con Fuse",
-                  description: "Migré la plataforma de Angular 9 con Fuse a Angular 11, mejorando la organización del código, optimizando dependencias y refactorizando componentes críticos."
+                  title: "Plataformas de Logística Corporativa y Backend Java",
+                  description: "Colaboración directa con equipos backend en Java para integrar endpoints de plataformas de gestión logística y seguimiento de flota en producción, así como en la creación ágil de MVPs escalables."
                 },
                 {
-                  title: "Primera Experiencia Profesional",
-                  description: "Esta fue mi primera experiencia profesional, que me permitió adquirir conocimientos clave y abrir puertas en mi carrera."
+                  title: "Migración a Arquitectura Angular 18 Standalone",
+                  description: "Liderazgo técnico en la migración de la arquitectura legada basada en módulos a componentes independientes (Standalone) en Angular 18, reduciendo tiempos de carga e incrementando la productividad del equipo."
                 }
               ],
               LEARNINGS: [
-                "Profundización en mi comprensión de migraciones de Angular y Fuse, incluyendo la transición de arquitectura basada en módulos a standalone.",
-                "Ganancia de más experiencia en optimización de código y mejora de rendimiento.",
-                "Aprendizaje de NestJS y su integración con Angular para desarrollo eficiente de backend y frontend.",
-                "Formación en Angular, incluyendo la transición de arquitectura basada en módulos a standalone.",
-                "Trabajo en equipo con colaboración tres veces por semana en la ciudad de Tandil."
+                "Dominio avanzado de arquitectura Angular moderna, optimización de rendimiento y componentes Standalone.",
+                "Colaboración fluida con equipos backend integrando servicios y microservicios desarrollados en Java.",
+                "Diseño de flujos de interfaz escalables para servicios financieros digitales y plataformas transaccionales.",
+                "Construcción de dashboards de logística y cadena de suministro con grillas de datos complejas."
               ],
               TECHNOLOGIES: [
                 "Angular",
                 "Plantilla Fuse",
                 "TypeScript",
                 "RxJS",
+                "Java Integrations",
                 "SCSS",
                 "HTML",
                 "NestJS",
-                "Node.js"
+                "APIs RESTful"
               ],
               DURATION: "2022 — 2026",
               EMPLOYMENT_TYPE: "Tiempo Completo",
-              IMAGES: [
-                "assets/imgs/7ideas_logo_dark.svg",
-                "assets/imgs/proyect_01.jpg",
-                "assets/imgs/proyect_02.jpg"
-              ],
+              IMAGES: [],
               LINKS: {
                 WEBSITE: "sieteideas.com",
                 LOGO: "assets/imgs/7ideas_logo_dark.svg",
@@ -651,7 +646,7 @@ export class TranslationService {
             }
           },
           XTECH: {
-            DATE_FROM: "oct. 2024 - mar. 2026",
+            DATE_FROM: "OCT 2024 – MAR 2026",
             TITLE: "Lead Full-Stack Engineer · XTECHARG",
             PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
             DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",

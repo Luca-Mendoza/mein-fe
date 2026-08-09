@@ -206,22 +206,22 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       type: this.detailCopy('Experience', 'Experiencia'),
       company: 'Siete Ideas',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.TITLE'),
-      date: '2022 - 2026',
+      date: this.detailCopy('Feb 2022 — Mar 2026', 'Feb. 2022 — Mar. 2026'),
       duration: this.translationService.translate('DETAILS.FULL_TIME'),
       summary: this.detailCopy(
-        'Production Angular work focused on migrations, maintainability, reusable UI and reliable REST integrations in business applications.',
-        'Trabajo Angular en producción enfocado en migraciones, mantenibilidad, UI reutilizable e integraciones REST confiables en aplicaciones de negocio.'
+        'Production Angular web engineering across Fintech digital wallets, payment & transport card top-ups, enterprise logistics platforms, and B2B MVP products with Java backend integrations.',
+        'Ingeniería web Angular en producción abarcando billeteras digitales Fintech, recargas de saldo y tarjetas de transporte, plataformas de logística corporativa y productos MVP B2B integrados con backend en Java.'
       ),
       focus: [
-        this.detailCopy('Angular migrations', 'Migraciones Angular'),
-        this.detailCopy('Reusable UI', 'UI reutilizable'),
-        this.detailCopy('REST integration', 'Integración REST'),
-        this.detailCopy('Performance', 'Performance')
+        this.detailCopy('Fintech & Digital Wallets', 'Fintech y Billeteras Digitales'),
+        this.detailCopy('Enterprise Logistics', 'Logística Corporativa'),
+        this.detailCopy('Angular Standalone Migrations', 'Migraciones Angular Standalone'),
+        this.detailCopy('B2B MVPs', 'MVPs B2B')
       ],
       highlights: [
-        this.detailCopy('Modernized Angular/Fuse codebases across major version upgrades.', 'Modernicé bases Angular/Fuse en migraciones importantes de versión.'),
-        this.detailCopy('Built and maintained responsive production features.', 'Construí y mantuve funcionalidades responsivas en producción.'),
-        this.detailCopy('Strengthened testing, performance and delivery practices.', 'Fortalecí prácticas de testing, performance y entrega.')
+        this.detailCopy('Engineered web solutions for Fintech wallets with card balance top-ups and public transit payment integrations.', 'Desarrollé soluciones web para billeteras Fintech con recargas de saldo e integración de transporte y pasarelas de pago.'),
+        this.detailCopy('Collaborated with Java backend engineering teams to build high-availability logistics and fleet tracking dashboards.', 'Colaboré con equipos backend en Java para construir dashboards de logística y seguimiento de flotas de alta disponibilidad.'),
+        this.detailCopy('Prototyped and delivered scalable B2B MVPs and modernized legacy Angular architecture.', 'Desarrollé y entregué MVPs B2B escalables y modernicé la arquitectura Angular legada.')
       ],
       description: this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
