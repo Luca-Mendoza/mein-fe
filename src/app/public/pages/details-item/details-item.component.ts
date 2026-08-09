@@ -137,6 +137,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     // Cargar datos basados en el idioma actual
     if (id === 'event_loop_club') {
       this.loadEventLoopClubData();
+    } else if (id === 'los_jazmines') {
+      this.loadLosJazminesData();
     } else if (id === 'siete_ideas') {
       this.loadSieteIdeasData();
     } else if (id === 'xtech') {
@@ -193,7 +195,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     };
     this.isExperience = true;
     this.currentIndex = 0;
-    this.setNavigationLinks(['event_loop_club', 'siete_ideas']);
+    this.setNavigationLinks(['event_loop_club', 'xtech', 'los_jazmines', 'siete_ideas']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
   }
@@ -238,8 +240,54 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       }
     };
     this.isExperience = true;
-    this.currentIndex = 1;
-    this.setNavigationLinks(['event_loop_club', 'siete_ideas']);
+    this.currentIndex = 3;
+    this.setNavigationLinks(['event_loop_club', 'xtech', 'los_jazmines', 'siete_ideas']);
+    this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
+    this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
+  }
+
+  private loadLosJazminesData() {
+    const challenges = this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DETAILED_PAGE.CHALLENGES');
+    const learnings = this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DETAILED_PAGE.LEARNINGS');
+    const technologies = this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DETAILED_PAGE.TECHNOLOGIES');
+
+    this.item = {
+      id: 'los_jazmines',
+      type: this.detailCopy('Experience', 'Experiencia'),
+      company: 'Los Jazmines',
+      title: this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.TITLE'),
+      date: this.detailCopy('Oct 2024 — Jun 2025', 'Oct. 2024 — Jun. 2025'),
+      duration: this.translationService.translate('DETAILS.PART_TIME'),
+      summary: this.detailCopy(
+        'Full-stack e-commerce and dispensary membership platform with real-time digital catalog, member tracking, Mercado Pago payment integration, and administrative dashboard.',
+        'Desarrollo integral de plataforma web para dispensario e-commerce con catálogo digital en tiempo real, gestión de socios, membresías, integración de pasarela Mercado Pago y panel administrativo.'
+      ),
+      focus: [
+        this.detailCopy('Full-Stack Development', 'Desarrollo Full-Stack'),
+        this.detailCopy('E-commerce & Memberships', 'E-commerce y Membresías'),
+        'Mercado Pago API',
+        'Angular Standalone & NestJS'
+      ],
+      highlights: [
+        this.detailCopy('Engineered real-time synchronized digital catalog and checkout.', 'Desarrollé el catálogo digital dinámico y el checkout sincronizado en tiempo real.'),
+        this.detailCopy('Integrated Mercado Pago payment gateway with asynchronous webhooks.', 'Integré la pasarela de pagos Mercado Pago con notificaciones por webhooks.'),
+        this.detailCopy('Built comprehensive member management and admin backoffice module.', 'Construí el módulo de gestión integral de socios y panel de administración.')
+      ],
+      description: this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
+      project_description: this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
+      challenges: challenges,
+      learnings: learnings,
+      technologies: technologies,
+      images: this.translationService.translate('HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DETAILED_PAGE.IMAGES'),
+      links: {
+        name: 'Los Jazmines',
+        link: '',
+        assets: 'assets/imgs/eventloop_logo.webp'
+      }
+    };
+    this.isExperience = true;
+    this.currentIndex = 2;
+    this.setNavigationLinks(['event_loop_club', 'xtech', 'los_jazmines', 'siete_ideas']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
   }
@@ -254,7 +302,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       type: this.detailCopy('Experience', 'Experiencia'),
       company: 'XTECHARG',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.XTECH.TITLE'),
-      date: this.detailCopy('Oct 2024 — Mar 2026', 'Oct. 2024 — Mar. 2026'),
+      date: this.detailCopy('Jul 2025 — Mar 2026', 'Jul. 2025 — Mar. 2026'),
       duration: this.translationService.translate('DETAILS.PART_TIME'),
       summary: this.detailCopy(
         'B2B SaaS and e-commerce platform built from scratch as lead engineer, covering Angular architecture, NestJS APIs, payments, security and deployment.',
@@ -284,8 +332,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       }
     };
     this.isExperience = true;
-    this.currentIndex = 2;
-    this.setNavigationLinks(['event_loop_club', 'siete_ideas', 'xtech']);
+    this.currentIndex = 1;
+    this.setNavigationLinks(['event_loop_club', 'xtech', 'los_jazmines', 'siete_ideas']);
     this.prevLabel = this.translationService.translate('DETAILS.PREVIOUS_EXPERIENCE');
     this.nextLabel = this.translationService.translate('DETAILS.NEXT_EXPERIENCE');
   }

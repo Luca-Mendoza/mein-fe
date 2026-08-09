@@ -316,13 +316,96 @@ export class TranslationService {
                 "OpenAI API",
                 "Cloudinary API"
               ],
-              DURATION: "OCT 2024 — MAR 2026",
+              DURATION: "JUL 2025 — MAR 2026",
               EMPLOYMENT_TYPE: "Part-Time",
               LINKS: {
                 WEBSITE: "xtecharg.com",
                 LOGO: "assets/imgs/xtecharg.jpeg",
                 GITHUB: "https://github.com/xtecharg",
                 LINK: "https://xtecharg.com/"
+              }
+            }
+          },
+          LOS_JAZMINES: {
+            DATE_FROM: "OCT 2024 – JUN 2025",
+            TITLE: "Lead Full-Stack Developer · Los Jazmines",
+            PREVIEW: "Full-stack e-commerce & membership management platform featuring a real-time digital catalog, Mercado Pago multi-payment gateway integration with async webhooks, dynamic cart state management with Angular Signals, and administrative backoffice.",
+            DESCRIPTION: "Full-stack e-commerce & membership management platform featuring a real-time digital catalog, Mercado Pago multi-payment gateway integration with async webhooks, dynamic cart state management with Angular Signals, and administrative backoffice.",
+            EMPLOYMENT_STATUS: "Freelance Professional",
+            LINKEDIN_LABEL: "Los Jazmines",
+            LINKEDIN_URL: "",
+            EXECUTIVE_SUMMARY: "E-commerce platform and specialized membership club. Built an end-to-end web system featuring NestJS + PostgreSQL on backend and Angular Standalone + Tailwind CSS on frontend. Implemented an interactive digital catalog with real-time stock sync, a reactive slide-over shopping cart using Angular Signals and RxJS, Mercado Pago payment checkout with automated webhooks, member verification module, and an administrative backoffice.",
+            KEY_FEATURES: "Interactive Digital Catalog with Dynamic Filters · Real-time Reactive Cart & Multi-step Checkout · Mercado Pago Integrated Payment Gateway (OAuth2 + Async Webhooks) · Member Access & Management · Backoffice Dashboard for Inventory, Orders & Member Auditing · Isolated Development Environment & Custom Botanical Design System · Modern Glassmorphism UI with Angular Material & Tailwind CSS",
+            TECHNICAL_ARCHITECTURE: "Backend: NestJS with TypeScript, PostgreSQL + TypeORM, Mercado Pago Payment Strategy & Async Webhooks, Bcrypt Authentication, modular architecture. Frontend: Angular Standalone, Signals, RxJS, Angular Material & Tailwind CSS. Infrastructure: Docker Compose, isolated local dev environment.",
+            METRICS: "Real-time stock and order status synchronization. API request response latency < 100ms. 100% reactive state management with Signals.",
+            DETAILED_PAGE: {
+              ROLE_AND_RESPONSIBILITIES: {
+                DESCRIPTION: "Architected and built the complete platform solution from scratch: relational database modeling in PostgreSQL using TypeORM, modular REST API services in NestJS, security and bcrypt password hashing workflows, and Mercado Pago checkout integration. On the frontend, engineered an intuitive user experience with Angular Standalone, Signals for high-performance reactive state, and a custom botanical design system."
+              },
+              PROJECT_DESCRIPTION: {
+                DESCRIPTION: "Los Jazmines is an e-commerce platform and private membership club. It offers an end-to-end fluid experience for registered users to browse product categories, manage active memberships, process secure online payments via Mercado Pago, and monitor order fulfillment in real time."
+              },
+              CHALLENGES: [
+                {
+                  title: "Mercado Pago Strategy Integration & Webhooks Synchronization",
+                  description: "Designed a secure payment workflow with Mercado Pago API using OAuth2 credentials. Implemented asynchronous webhook handlers to automatically receive transaction status updates and reflect order transitions reactively in PostgreSQL without manual admin intervention."
+                },
+                {
+                  title: "High-Performance Reactive Cart with Angular Signals & RxJS",
+                  description: "Engineered global reactive state management combining Angular Signals and RxJS subjects. This ensured zero-latency synchronization across the slide-over cart, product detail views, stock indicators, and multi-step checkout."
+                },
+                {
+                  title: "Custom Botanical UI/UX & Design System Architecture",
+                  description: "Refactored the initial UI from generic styles to a refined botanical design system using Tailwind CSS and SCSS. Developed a cohesive palette with Deep Forest Green (#1F3526), Botanical Emerald (#2F7A4B), and Jasmine Pink (#F5B7C4) accents, paired with glassmorphism modals and Playfair Display typography."
+                },
+                {
+                  title: "Member Security & Granular Access Governance",
+                  description: "Implemented custom authorization guards and relational database schemas to manage member credentials, RBAC security roles, and granular administrative controls for membership renewals."
+                }
+              ],
+              LEARNINGS: [
+                "End-to-end architecture of specialized e-commerce platforms with membership access controls.",
+                "Production-grade payment gateway integration (Mercado Pago API) with async webhooks.",
+                "Reactive frontend state management leveraging modern Angular Signals and RxJS.",
+                "Design system creation and glassmorphism UI/UX refinement for brand-driven web applications.",
+                "Environment isolation and custom port mapping (PostgreSQL 5436, NestJS 8081) for multi-project development."
+              ],
+              IMAGES: [
+                "assets/imgs/losjazmines/jazmines_main.png",
+                "assets/imgs/losjazmines/jazmines_1.svg",
+                "assets/imgs/losjazmines/jazmines_2.svg",
+                "assets/imgs/losjazmines/jazmines_3.svg",
+                "assets/imgs/losjazmines/jazmines_4.svg",
+                "assets/imgs/losjazmines/jazmines_5.svg",
+                "assets/imgs/losjazmines/jazmines_6.svg",
+                "assets/imgs/losjazmines/jazmines_7.svg",
+                "assets/imgs/losjazmines/jazmines_8.svg",
+                "assets/imgs/losjazmines/jazmines_9.svg",
+                "assets/imgs/losjazmines/jazmines_10.svg",
+                "assets/imgs/losjazmines/jazmines_11.svg",
+                "assets/imgs/losjazmines/jazmines_12.svg",
+                "assets/imgs/losjazmines/jazmines_13.svg"
+              ],
+              TECHNOLOGIES: [
+                "Angular Standalone",
+                "Angular Material",
+                "Tailwind CSS",
+                "NestJS",
+                "PostgreSQL",
+                "TypeORM",
+                "Mercado Pago API",
+                "RxJS & Angular Signals",
+                "Docker Compose",
+                "Bcrypt",
+                "TypeScript"
+              ],
+              DURATION: "OCT 2024 — JUN 2025",
+              EMPLOYMENT_TYPE: "Freelance Professional",
+              LINKS: {
+                WEBSITE: "Los Jazmines",
+                LOGO: "assets/imgs/losjazmines/los_jazmines_text_logo.svg",
+                GITHUB: "",
+                LINK: ""
               }
             }
           }
@@ -770,13 +853,96 @@ export class TranslationService {
                 "OpenAI API",
                 "Cloudinary API"
               ],
-              DURATION: "OCT 2024 — MAR 2026",
+              DURATION: "JUL 2025 — MAR 2026",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
               LINKS: {
                 WEBSITE: "xtecharg.com",
                 LOGO: "assets/imgs/xtecharg.jpeg",
                 GITHUB: "https://github.com/xtecharg",
                 LINK: "https://xtecharg.com/"
+              }
+            }
+          },
+          LOS_JAZMINES: {
+            DATE_FROM: "OCT 2024 – JUN 2025",
+            TITLE: "Desarrollador Líder Full-Stack · Los Jazmines",
+            PREVIEW: "Plataforma e-commerce Full-Stack y club de membresías con catálogo digital en tiempo real, pasarela de pago Mercado Pago con webhooks asincrónicos, estado reactivo del carrito con Angular Signals y panel administrativo.",
+            DESCRIPTION: "Plataforma e-commerce Full-Stack y club de membresías con catálogo digital en tiempo real, pasarela de pago Mercado Pago con webhooks asincrónicos, estado reactivo del carrito con Angular Signals y panel administrativo.",
+            EMPLOYMENT_STATUS: "Profesional independiente",
+            LINKEDIN_LABEL: "Los Jazmines",
+            LINKEDIN_URL: "",
+            EXECUTIVE_SUMMARY: "Plataforma e-commerce B2C y club de membresías especializado. Solución end-to-end integrando NestJS + PostgreSQL en backend y Angular Standalone + Tailwind CSS en frontend. Desarrollé el catálogo digital interactivo con sincronización de inventario en tiempo real, carrito reactivo slide-over con Angular Signals y RxJS, checkout con Mercado Pago (OAuth2 + Webhooks automáticos), sistema de validación de socios y panel administrativo de control.",
+            KEY_FEATURES: "Catálogo interactivo con filtros dinámicos · Carrito reactivo slide-over y checkout multipaso · Pasarela integrada de pagos con Mercado Pago (OAuth2 + Webhooks asincrónicos) · Módulo de gestión integral de socios · Panel de administración backoffice para inventario, clientes y órdenes · Entorno de desarrollo aislado con puerto custom PostgreSQL y NestJS · Sistema de diseño botánico premium con Tailwind CSS y Glassmorphism UI",
+            TECHNICAL_ARCHITECTURE: "Backend: NestJS con TypeScript, PostgreSQL + TypeORM, estrategia de pagos Mercado Pago y Webhooks, seguridad Bcrypt, arquitectura modular. Frontend: Angular Standalone, Signals, RxJS, Angular Material y Tailwind CSS. Infraestructura: Docker Compose, puertos locales aislados, servidor privado.",
+            METRICS: "Sincronización en tiempo real de inventario y estados de pedido. Latencia en respuestas de API < 100ms. Estado 100% reactivo con Signals.",
+            DETAILED_PAGE: {
+              ROLE_AND_RESPONSIBILITIES: {
+                DESCRIPTION: "Arquitectura y desarrollo completo de punto a punto: modelado de base de datos relacional PostgreSQL con TypeORM, servicios API REST modulares en NestJS, lógica de hashing de contraseñas con bcrypt, e integración con Mercado Pago. En frontend, interfaz adaptativa con Angular Standalone, Signals para estado reactivo sin latencia y un sistema de diseño botánico a medida."
+              },
+              PROJECT_DESCRIPTION: {
+                DESCRIPTION: "Los Jazmines es una plataforma e-commerce de membresías y catálogo especializado. Ofrece una experiencia fluida e intuitiva para que usuarios registrados exploren categorías de productos, gestionen membresías activas, procesen pagos seguros a través de Mercado Pago y hagan seguimiento del estado de sus órdenes en tiempo real."
+              },
+              CHALLENGES: [
+                {
+                  title: "Integración Completa con Mercado Pago y Webhooks Asincrónicos",
+                  description: "Diseño e implementación del flujo seguro de pagos con la API de Mercado Pago utilizando OAuth2. Se configuraron controladores de webhooks asincrónicos para procesar notificaciones de estados de transacción y reflejar los cambios de órdenes de manera reactiva en PostgreSQL sin intervención manual."
+                },
+                {
+                  title: "Arquitectura Reactiva del Carrito con Angular Signals y RxJS",
+                  description: "Implementación del manejo de estado global combinando Signals de Angular y RxJS. Esto garantizó una sincronización sin latencia entre el carrito flotante slide-over, la vista de detalle de productos, los indicadores de stock y la pantalla de checkout."
+                },
+                {
+                  title: "Sistema de Diseño Botánico UI/UX & Refinamiento Estético",
+                  description: "Refactorización del sistema de estilos predeterminado hacia un diseño botánico profesional usando Tailwind CSS y SCSS. Integración de una paleta refinada en Verde Bosque (#1F3526), Verde Botánico (#2F7A4B) y Rosa Jazmín (#F5B7C4), con modales en glassmorphism y tipografía elegante Playfair Display."
+                },
+                {
+                  title: "Gestión de Seguridad y Control de Acceso de Socios",
+                  description: "Creación de guards de autorización y tablas relacionales para gestionar credenciales de socios, roles de acceso y el control administrativo de renovaciones de membresías."
+                }
+              ],
+              LEARNINGS: [
+                "Arquitectura end-to-end de plataformas e-commerce con gestión de miembros y control de acceso.",
+                "Integración de pasarelas de pago a nivel producción (Mercado Pago API) con verificación por webhooks.",
+                "Manejo de estado reactivo moderno en Angular utilizando Signals y RxJS.",
+                "Creación de sistemas de diseño botánicos y modales glassmorphism orientados a marcas premium.",
+                "Aislamiento de entornos de desarrollo y mapeo de puertos personalizados (PostgreSQL 5436, NestJS 8081)."
+              ],
+              IMAGES: [
+                "assets/imgs/losjazmines/jazmines_main.png",
+                "assets/imgs/losjazmines/jazmines_1.svg",
+                "assets/imgs/losjazmines/jazmines_2.svg",
+                "assets/imgs/losjazmines/jazmines_3.svg",
+                "assets/imgs/losjazmines/jazmines_4.svg",
+                "assets/imgs/losjazmines/jazmines_5.svg",
+                "assets/imgs/losjazmines/jazmines_6.svg",
+                "assets/imgs/losjazmines/jazmines_7.svg",
+                "assets/imgs/losjazmines/jazmines_8.svg",
+                "assets/imgs/losjazmines/jazmines_9.svg",
+                "assets/imgs/losjazmines/jazmines_10.svg",
+                "assets/imgs/losjazmines/jazmines_11.svg",
+                "assets/imgs/losjazmines/jazmines_12.svg",
+                "assets/imgs/losjazmines/jazmines_13.svg"
+              ],
+              TECHNOLOGIES: [
+                "Angular Standalone",
+                "Angular Material",
+                "Tailwind CSS",
+                "NestJS",
+                "PostgreSQL",
+                "TypeORM",
+                "Mercado Pago API",
+                "RxJS & Angular Signals",
+                "Docker Compose",
+                "Bcrypt",
+                "TypeScript"
+              ],
+              DURATION: "OCT 2024 — JUN 2025",
+              EMPLOYMENT_TYPE: "Profesional independiente",
+              LINKS: {
+                WEBSITE: "Los Jazmines",
+                LOGO: "assets/imgs/losjazmines/los_jazmines_text_logo.svg",
+                GITHUB: "",
+                LINK: ""
               }
             }
           }

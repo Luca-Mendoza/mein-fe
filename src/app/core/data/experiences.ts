@@ -61,9 +61,9 @@ export const experiences = [
     "type": "experience",
     "title": "Lead Full-Stack Engineer",
     "company": "XTECHARG",
-    "date": "oct. 2024 - mar. 2026",
+    "date": "jul. 2025 - mar. 2026",
     "position": "Lead Full-Stack Engineer",
-    "duration": "1 año 6 meses",
+    "duration": "8 meses",
     "employment_type": "Tiempo parcial",
     "employment_status": "Tiempo parcial",
     "linkedIn_label": "XTECHARG",
@@ -127,6 +127,78 @@ export const experiences = [
       "Liderazgo técnico en plataformas SaaS B2B.",
       "Implementación de arquitecturas de seguridad e integraciones de pago.",
       "Gestión de infraestructura y despliegue con Docker y Dokploy."
+    ]
+  },
+  {
+    "id": 'los_jazmines',
+    "type": "experience",
+    "title": "Lead Full-Stack Developer",
+    "company": "Los Jazmines",
+    "date": "oct. 2024 - jun. 2025",
+    "position": "Lead Full-Stack Developer",
+    "duration": "8 meses",
+    "employment_type": "Tiempo parcial",
+    "employment_status": "Tiempo parcial",
+    "linkedIn_label": "Los Jazmines",
+    "linkedIn_url": "",
+    "description": "Desarrollo integral de plataforma web para dispensario e-commerce con catálogo digital en tiempo real, gestión de socios, membresías e integración de pasarela Mercado Pago.",
+    "project_description": "Desarrollo integral de plataforma web para dispensario e-commerce con catálogo digital en tiempo real, gestión de socios, membresías e integración de pasarela Mercado Pago.",
+    "executive_summary": "Desarrollo integral de plataforma web para dispensario e-commerce con catálogo digital en tiempo real, gestión de socios, membresías e integración de pasarela Mercado Pago.",
+    "key_features": [
+      "Catálogo interactivo de productos",
+      "Carrito y Checkout en tiempo real",
+      "Pasarela de pagos Mercado Pago (OAuth2 + Webhooks)",
+      "Gestión integral de socios y miembros",
+      "Panel de administración integral"
+    ],
+    "technologies": [
+      "Angular Standalone",
+      "Angular Material",
+      "Tailwind CSS",
+      "NestJS",
+      "PostgreSQL",
+      "TypeORM",
+      "Mercado Pago API",
+      "Docker"
+    ],
+    "images": [
+      "assets/imgs/losjazmines/jazmines_main.png",
+      "assets/imgs/losjazmines/jazmines_1.svg",
+      "assets/imgs/losjazmines/jazmines_2.svg",
+      "assets/imgs/losjazmines/jazmines_3.svg",
+      "assets/imgs/losjazmines/jazmines_4.svg",
+      "assets/imgs/losjazmines/jazmines_5.svg",
+      "assets/imgs/losjazmines/jazmines_6.svg",
+      "assets/imgs/losjazmines/jazmines_7.svg",
+      "assets/imgs/losjazmines/jazmines_8.svg",
+      "assets/imgs/losjazmines/jazmines_9.svg",
+      "assets/imgs/losjazmines/jazmines_10.svg",
+      "assets/imgs/losjazmines/jazmines_11.svg",
+      "assets/imgs/losjazmines/jazmines_12.svg",
+      "assets/imgs/losjazmines/jazmines_13.svg"
+    ],
+    "links": {
+      "github": "",
+      "link": "",
+      "name": "Los Jazmines",
+      "assets": "assets/imgs/losjazmines/los_jazmines_text_logo.svg"
+    },
+    "role": "Lead Full-Stack Developer",
+    "technical_architecture": {
+      "backend": "NestJS con TypeScript, PostgreSQL y Webhooks de Mercado Pago",
+      "frontend": "Angular Standalone, Signals y Tailwind CSS",
+      "infrastructure": "Docker Compose"
+    },
+    "challenges": [
+      {
+        "title": "Integración Completa con Mercado Pago y Webhooks",
+        "description": "Implementación de flujo seguro de pago con Notificaciones asincrónicas por Webhooks."
+      }
+    ],
+    "learnings": [
+      "Diseño de plataformas e-commerce con membresías.",
+      "Integración avanzada de pasarelas de pago.",
+      "Gestión reactiva en Angular con Signals."
     ]
   },
   {
@@ -223,9 +295,9 @@ export const experiences_ingles = [
     "type": "experience",
     "title": "Lead Full-Stack Engineer",
     "company": "XTECHARG",
-    "date": "Oct 2024 - Mar 2026",
+    "date": "Jul 2025 - Mar 2026",
     "position": "Lead Full-Stack Engineer",
-    "duration": "1 yr 6 mos",
+    "duration": "8 mos",
     "employment_type": "Part-Time",
     "employment_status": "Part-Time",
     "linkedIn_label": "XTECHARG",
@@ -276,6 +348,64 @@ export const experiences_ingles = [
     "learnings": [
       "Technical leadership on B2B SaaS platforms.",
       "Security architecture and payment gateway integrations."
+    ]
+  },
+  {
+    "id": "los_jazmines",
+    "type": "experience",
+    "title": "Lead Full-Stack Developer",
+    "company": "Los Jazmines",
+    "date": "Oct 2024 - Jun 2025",
+    "position": "Lead Full-Stack Developer",
+    "duration": "8 mos",
+    "employment_type": "Freelance",
+    "employment_status": "Freelance",
+    "linkedIn_label": "Los Jazmines",
+    "linkedIn_url": "",
+    "description": "Full-stack development of e-commerce web platform for dispensary & membership club featuring real-time digital catalog, member management, and Mercado Pago integration.",
+    "project_description": "Full-stack development of e-commerce web platform for dispensary & membership club featuring real-time digital catalog, member management, and Mercado Pago integration.",
+    "technologies": [
+      "Angular Standalone",
+      "Angular Material",
+      "Tailwind CSS",
+      "NestJS",
+      "PostgreSQL",
+      "TypeORM",
+      "Mercado Pago API",
+      "Docker"
+    ],
+    "images": [
+      "assets/imgs/losjazmines/jazmines_main.png",
+      "assets/imgs/losjazmines/jazmines_1.svg",
+      "assets/imgs/losjazmines/jazmines_2.svg",
+      "assets/imgs/losjazmines/jazmines_3.svg",
+      "assets/imgs/losjazmines/jazmines_4.svg",
+      "assets/imgs/losjazmines/jazmines_5.svg",
+      "assets/imgs/losjazmines/jazmines_6.svg",
+      "assets/imgs/losjazmines/jazmines_7.svg",
+      "assets/imgs/losjazmines/jazmines_8.svg",
+      "assets/imgs/losjazmines/jazmines_9.svg",
+      "assets/imgs/losjazmines/jazmines_10.svg",
+      "assets/imgs/losjazmines/jazmines_11.svg",
+      "assets/imgs/losjazmines/jazmines_12.svg",
+      "assets/imgs/losjazmines/jazmines_13.svg"
+    ],
+    "links": {
+      "github": "",
+      "link": "",
+      "name": "Los Jazmines",
+      "assets": "assets/imgs/losjazmines/los_jazmines_text_logo.svg"
+    },
+    "role": "Lead Full-Stack Developer",
+    "challenges": [
+      {
+        "title": "Mercado Pago Gateway Integration",
+        "description": "Implementing secure payment flow with asynchronous webhooks."
+      }
+    ],
+    "learnings": [
+      "E-commerce architecture for membership clubs.",
+      "Reactive state management with Angular Signals."
     ]
   },
   {

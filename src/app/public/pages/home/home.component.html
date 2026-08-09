@@ -282,6 +282,78 @@
             </div>
             <div
               class="experience group cursor-pointer w-full"
+              routerLink="d/los_jazmines"
+            >
+              <div
+                class="date w-full h-full flex flex-col justify-center items-center md:justify-center md:items-center tablets:w-1/5 tablets:justify-center tablets:items-center gap-2"
+              >
+                <img
+                  src="assets/imgs/losjazmines/los_jazmines_text_logo.svg"
+                  alt="Los Jazmines Logo"
+                  class="w-44 h-12 md:w-48 md:h-14 object-contain mx-auto"
+                />
+                <span
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6 text-center"
+                  >{{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DATE_FROM' | translate }}</span
+                >
+              </div>
+
+              <div class="info flex flex-col h-full flex-1 min-w-0">
+                <h3
+                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
+                >
+                  <span
+                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                  >
+                    {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.TITLE' | translate }}
+                  </span>
+                </h3>
+                <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
+                  <span>
+                    {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.EMPLOYMENT_STATUS' | translate }}
+                  </span>
+                  <span class="text-white/30">·</span>
+                  <a
+                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
+                    [href]="'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.LINKEDIN_URL' | translate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    (click)="$event.stopPropagation()"
+                  >
+                    {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.LINKEDIN_LABEL' | translate }}
+                  </a>
+                </div>
+                <p class="flex-grow">
+                  {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.PREVIEW' | translate }}
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Angular Standalone</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">NestJS</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">PostgreSQL</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Mercado Pago API</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Tailwind CSS</div>
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">Docker</div>
+                </div>
+
+                <div class="experience__cta mt-auto w-full flex justify-end">
+                  <button
+                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
+                  >
+                    <span
+                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
+                    >
+                      {{ 'COMMON.SEE_MORE_INFO' | translate }}
+                    </span>
+                    <lucide-icon
+                      name="arrow-right"
+                      class="w-5 h-5 group-hover:text-[#00718f]"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="experience group cursor-pointer w-full"
               routerLink="d/siete_ideas"
             >
               <div
