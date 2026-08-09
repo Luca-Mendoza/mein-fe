@@ -1,4 +1,4 @@
-<div class="details-page" ngSkipHydration>
+<div class="details-page">
   <div class="details-page__bg" aria-hidden="true"></div>
 
   <div class="floating-language-selector">
@@ -61,14 +61,14 @@
     <section class="details-shell details-overview" [class.details-overview--with-preview]="item?.images?.length"
       [class.details-overview--no-preview]="!item?.images?.length" aria-label="Highlights">
       @if (item?.images?.length) {
-      <div class="overview-card project-preview-card" ngSkipHydration>
+      <div class="overview-card project-preview-card">
         <div class="project-preview-card__header">
           <h2>
             <lucide-icon name="camera" size="18"></lucide-icon>
             {{ 'COMMON.PROJECT_PREVIEW' | translate }}
           </h2>
           <div class="carousel-header-actions">
-            <button type="button" class="carousel-action-btn" (click)="openFullscreen()" aria-label="Fullscreen view"
+            <button type="button" class="carousel-action-btn" (click)="openFullscreen($event)" aria-label="Fullscreen view"
               title="Pantalla completa">
               <lucide-icon name="maximize-2" size="16"></lucide-icon>
             </button>
@@ -224,7 +224,7 @@
   </footer>
   }
 
-  @if (isFullscreen && item?.images?.length) {
+  @if (isFullscreen && displayImages.length) {
   <div class="carousel-modal-backdrop" (click)="closeFullscreen()">
     <div class="carousel-modal-content" (click)="$event.stopPropagation()">
       <div class="carousel-modal-viewport">
@@ -234,9 +234,9 @@
         <swiper-container slides-per-view="1" space-between="20" speed="600" navigation="true" pagination="true"
           pagination-clickable="true" grab-cursor="true" loop="true" effect="fade" fade-effect-cross-fade="true"
           class="swiper-modal-slider">
-          <swiper-slide *ngFor="let img of item.images; trackBy: trackByText">
+          <swiper-slide *ngFor="let img of displayImages; trackBy: trackByText">
             <div class="swiper-modal-image-wrapper">
-              <img [src]="img" [alt]="item.company + ' fullscreen preview'" class="carousel-modal-img" />
+              <img [src]="img" [alt]="(item?.company || 'Project') + ' fullscreen preview'" class="carousel-modal-img" />
             </div>
           </swiper-slide>
         </swiper-container>

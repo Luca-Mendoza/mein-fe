@@ -144,8 +144,7 @@
 .details-hero__main,
 .details-hero__meta,
 .overview-card,
-.detail-section,
-.details-actions {
+.detail-section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   background: rgba(15, 23, 42, 0.74);
@@ -358,6 +357,8 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  position: relative;
+  z-index: 10;
 }
 
 .carousel-action-btn {
@@ -372,6 +373,9 @@
   color: rgba(226, 232, 240, 0.85);
   cursor: pointer;
   transition: all 180ms ease;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 
   &:hover {
     background: rgba(34, 211, 238, 0.18);
@@ -614,7 +618,10 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 0.75rem 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .details-action {

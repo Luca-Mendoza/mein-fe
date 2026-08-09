@@ -26,6 +26,9 @@ interface DetailAction {
   standalone: true,
   imports: [CommonModule, RouterModule, MaterialModule, LucideModule, BreadcrumsComponent, NavigationComponent, TranslatePipe, LanguageSelectorComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  host: {
+    'ngSkipHydration': ''
+  },
   templateUrl: './details-item.component.html',
   styleUrl: './details-item.component.scss'
 })
@@ -251,11 +254,11 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       type: this.detailCopy('Experience', 'Experiencia'),
       company: 'XTECHARG',
       title: this.translationService.translate('HOME.EXPERIENCE_SECTION.XTECH.TITLE'),
-      date: '2024 - PRESENT',
-      duration: this.translationService.translate('DETAILS.FULL_TIME'),
+      date: this.detailCopy('Oct 2024 — Mar 2026', 'Oct. 2024 — Mar. 2026'),
+      duration: this.translationService.translate('DETAILS.PART_TIME'),
       summary: this.detailCopy(
-        'B2B SaaS platform built from scratch as co-founder and technical lead, covering Angular architecture, NestJS APIs, payments, security and deployment.',
-        'Plataforma SaaS B2B construida desde cero como cofundador y líder técnico, cubriendo arquitectura Angular, APIs NestJS, pagos, seguridad y despliegue.'
+        'B2B SaaS and e-commerce platform built from scratch as lead engineer, covering Angular architecture, NestJS APIs, payments, security and deployment.',
+        'Plataforma SaaS B2B y e-commerce construida desde cero como líder técnico, cubriendo arquitectura Angular, APIs NestJS, pagos, seguridad y despliegue.'
       ),
       focus: [
         this.detailCopy('Technical leadership', 'Liderazgo técnico'),
@@ -273,9 +276,10 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
+      images: this.translationService.translate('HOME.EXPERIENCE_SECTION.XTECH.DETAILED_PAGE.IMAGES'),
       links: {
-        name: 'xtech.com.ar',
-        link: 'https://xtech.com.ar/',
+        name: 'xtecharg.com',
+        link: 'https://xtecharg.com/',
         assets: 'assets/imgs/xtecharg.jpeg'
       }
     };
@@ -505,7 +509,11 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     }
   }
 
-  openFullscreen() {
+  openFullscreen(event?: Event) {
+    if (event) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
     this.isFullscreen = true;
   }
 

@@ -208,21 +208,21 @@ export class TranslationService {
           XTECH: {
             DATE_FROM: "OCT 2024 – MAR 2026",
             TITLE: "Lead Full-Stack Engineer · XTECHARG",
-            PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
-            DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
-            EMPLOYMENT_STATUS: "Profesional independiente",
+            PREVIEW: "Technical leadership and end-to-end development of high-performance B2B SaaS platform. Modular architecture, payment gateways, AI chat assistant, and advanced store configuration.",
+            DESCRIPTION: "Technical leadership and end-to-end development of high-performance B2B SaaS platform. Modular architecture, payment gateways, AI chat assistant, and advanced store configuration.",
+            EMPLOYMENT_STATUS: "Freelance Professional",
             LINKEDIN_LABEL: "XTECHARG",
             LINKEDIN_URL: "https://www.linkedin.com/company/xtecharg",
-            EXECUTIVE_SUMMARY: "Co-founder and Technical Lead of XTECHARG, a scalable B2B SaaS platform that automates business processes and facilitates direct commercial transactions. Full-stack architect and developer responsible for designing and implementing the entire platform architecture from scratch. I lead the development team, define technical strategy, implement advanced enterprise patterns, and ensure code quality through exhaustive testing. The platform handles thousands of concurrent transactions with cutting-edge technology, guaranteeing scalability, security, and performance in production.",
-            KEY_FEATURES: "Multi-module architecture with 15+ specialized NestJS modules · Multi-payment method integration · Advanced user authentication with OAuth2 + JWT tokens · Loyalty and promotional benefits system · Invoicing module with PDF generation · Complete order lifecycle management · Admin dashboard with analytics · Role-based access control (RBAC) · Responsive Angular Material + Tailwind CSS UI",
-            TECHNICAL_ARCHITECTURE: "Backend: NestJS 11.0 with TypeScript, PostgreSQL + TypeORM, OAuth2 + JWT, modular architecture with 15+ independent modules. Frontend: Angular 19 Standalone, NgRx state management, Angular Material + Tailwind CSS. Database: PostgreSQL 8.16 with TypeORM, advanced index optimization and query optimization, connection pooling. Security: OAuth2 + JWT with refresh tokens in httpOnly cookies, granular RBAC, adaptive rate limiting.",
-            METRICS: "Code Quality: >80% test coverage on critical logic, 100% TypeScript strict mode, 0 ESLint errors. Scalability: 1000+ simultaneous users, 15+ independent modules, 50+ API endpoints.",
+            EXECUTIVE_SUMMARY: "Technical Lead and Full-Stack Architect of XTECHARG, a scalable B2B SaaS and e-commerce platform built from scratch (NestJS + Angular Standalone + PostgreSQL). Designed and implemented the complete system architecture, administration backoffice (multimedia banners, drag & drop categories/tags), multi-level discount/benefit coupon engine, user loyalty program, payment strategy (MercadoPago & CoinPayments Crypto), and AI-driven conversational assistant.",
+            KEY_FEATURES: "Modular admin panel (Multimedia Banners, Categories, Tags with Drag&Drop) · Advanced Coupons/Promotions System · Loyalty & Rewards Program · Multi-Payment Gateway (MercadoPago, CoinPayments Crypto) · In-App AI Assistant (NestJS + OpenAI API streaming) · Invoicing with PDF generation · Expenses & Investment Control · Complete Order Lifecycle & Returns · Analytics Dashboard · Granular RBAC with OAuth2 + JWT · Responsive Angular Material + Tailwind CSS UI",
+            TECHNICAL_ARCHITECTURE: "Backend: NestJS with TypeScript, PostgreSQL + TypeORM, OAuth2 + JWT (refresh tokens in httpOnly cookies), modular architecture with 25+ independent modules. Frontend: Angular Standalone, NgRx state management (Effects, Selectors, Signals), Angular Material + Tailwind CSS, CDK Drag&Drop. Database: PostgreSQL with TypeORM, query optimization, connection pooling, and strategic indexes. Infrastructure & DevOps: Docker (multi-stage builds), Docker Compose, Dokploy, GitHub Actions CI/CD.",
+            METRICS: "Code Quality: >80% test coverage on critical logic, 100% TypeScript strict mode, 0 ESLint errors. Scalability: 1000+ simultaneous users, 25+ independent backend modules, 60+ REST/WebSocket API endpoints.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "As Co-founder and Technical Lead, I architect and implement the entire platform from zero, making strategic decisions on technology stack, system design, and team structure. I lead the development team, conduct code reviews, mentor junior developers, and ensure adherence to best practices. My responsibilities include backend API design with NestJS, frontend optimization with Angular 19 Standalone, database architecture and optimization, security implementation, and DevOps/CI-CD pipeline management. I define the technical roadmap, evaluate new technologies, and balance business requirements with engineering excellence."
+                DESCRIPTION: "As Lead Full-Stack Engineer, I architected and implemented the entire platform from scratch using NestJS and Angular Standalone. Led technical decision-making, system design, database modeling in PostgreSQL with TypeORM, admin backoffice engineering, crypto/fiat payment integrations, security protocols, and CI/CD pipelines with Docker and Dokploy."
               },
               PROJECT_DESCRIPTION: {
-                DESCRIPTION: "XTECHARG is a B2B SaaS platform that automates business processes and enables direct commercial transactions. The system integrates Angular 19 Standalone with NestJS modular REST APIs for scalability, PostgreSQL with strategic indexing and optimization, and Docker/Dokploy for containerization and deployment. The platform integrates payment gateways (Mercado Pago, CoinPayments), implements OAuth2/Google API authentication with JWT, and provides comprehensive logging. All data communication uses secure HTTPS with proper validation."
+                DESCRIPTION: "XTECHARG is a comprehensive B2B SaaS and enterprise e-commerce platform. Features a powerful administration backoffice for managing interactive banners (image/video support), category & tag hierarchies with drag-and-drop ordering, flexible coupon & promotion engines (wallet credit, raffle tickets, point multipliers), loyalty programs, automated PDF invoicing, order workflow control, and AI chatbot support."
               },
               CHALLENGES: [
                 {
@@ -271,11 +271,29 @@ export class TranslationService {
                 "Responsive design: Angular Material, Tailwind CSS, mobile-first, accessibility (a11y), performance.",
                 "In-app AI chat assistant: NestJS + OpenAI API, Angular widget, streaming responses, prompt engineering."
               ],
+              IMAGES: [
+                "assets/imgs/xtech/xtech_15.png",
+                "assets/imgs/xtech/xtech_14.png",
+                "assets/imgs/xtech/xtech_1.svg",
+                "assets/imgs/xtech/xtech_2.svg",
+                "assets/imgs/xtech/xtech_3.svg",
+                "assets/imgs/xtech/xtech_4.svg",
+                "assets/imgs/xtech/xtech_5.svg",
+                "assets/imgs/xtech/xtech_6.svg",
+                "assets/imgs/xtech/xtech_7.svg",
+                "assets/imgs/xtech/xtech_8.svg",
+                "assets/imgs/xtech/xtech_9.svg",
+                "assets/imgs/xtech/xtech_10.svg",
+                "assets/imgs/xtech/xtech_11.svg",
+                "assets/imgs/xtech/xtech_12.svg",
+                "assets/imgs/xtech/xtech_13.svg"
+              ],
               TECHNOLOGIES: [
                 "Angular 19 Standalone",
                 "Angular Material",
                 "Tailwind CSS",
-                "RxJS",
+                "Angular CDK (Drag & Drop)",
+                "RxJS & Angular Signals",
                 "NgRx with Effects and Selectors",
                 "NestJS",
                 "TypeORM",
@@ -294,15 +312,17 @@ export class TranslationService {
                 "Google Cloud Storage",
                 "Google Cloud SQL",
                 "Mercado Pago API",
-                "OpenAI API"
+                "CoinPayments Crypto API",
+                "OpenAI API",
+                "Cloudinary API"
               ],
-              DURATION: "2024 — Present",
-              EMPLOYMENT_TYPE: "Full-Time",
+              DURATION: "OCT 2024 — MAR 2026",
+              EMPLOYMENT_TYPE: "Part-Time",
               LINKS: {
-                WEBSITE: "xtech.com.ar",
+                WEBSITE: "xtecharg.com",
                 LOGO: "assets/imgs/xtecharg.jpeg",
                 GITHUB: "https://github.com/xtecharg",
-                LINK: "https://xtech.com.ar/"
+                LINK: "https://xtecharg.com/"
               }
             }
           }
@@ -343,12 +363,12 @@ export class TranslationService {
                 "Automation of integration and continuous deployment processes using CI/CD (GitHub Actions).",
                 "Courses and certifications in Full Web Development, Node, JavaScript, Angular, and NestJS."
               ],
-                             SOFT_SKILLS: [
-                 "Effective communication and collaboration in multidisciplinary teams",
-                 "Analytical thinking and complex problem resolution",
-                 "Continuous learning and rapid adaptation to new technologies",
-                 "Efficient time management and meeting deadlines in agile environments"
-               ],
+              SOFT_SKILLS: [
+                "Effective communication and collaboration in multidisciplinary teams",
+                "Analytical thinking and complex problem resolution",
+                "Continuous learning and rapid adaptation to new technologies",
+                "Efficient time management and meeting deadlines in agile environments"
+              ],
               TECHNOLOGIES: [
                 "Angular 9 → 19",
                 "Angular Material",
@@ -648,18 +668,18 @@ export class TranslationService {
           XTECH: {
             DATE_FROM: "OCT 2024 – MAR 2026",
             TITLE: "Lead Full-Stack Engineer · XTECHARG",
-            PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
-            DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B. Arquitectura de software, infraestructura, seguridad e integraciones de pago.",
+            PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B e e-commerce de alto rendimiento. Arquitectura modular en 25+ servicios, configuración avanzada de tienda/banners multimedia, cupones multinivel, programa de fidelización, pagos pasarela múltiple y chatbot IA.",
+            DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B e e-commerce de alto rendimiento. Arquitectura modular en 25+ servicios, configuración avanzada de tienda/banners multimedia, cupones multinivel, programa de fidelización, pagos pasarela múltiple y chatbot IA.",
             EMPLOYMENT_STATUS: "Profesional independiente",
             LINKEDIN_LABEL: "XTECHARG",
             LINKEDIN_URL: "https://www.linkedin.com/company/xtecharg",
-            EXECUTIVE_SUMMARY: "Co-fundador y líder técnico de XTECHARG, una plataforma B2B SaaS escalable que automatiza procesos de negocio y facilita transacciones comerciales directas. Arquitecto y desarrollador full-stack responsable de diseñar e implementar la arquitectura completa desde cero. Dirijo un equipo de desarrollo, defino la estrategia técnica, implemento patrones empresariales avanzados y garantizo la calidad del código mediante testing exhaustivo. La plataforma maneja miles de transacciones concurrentes con tecnología de punta, garantizando escalabilidad, seguridad y performance en producción.",
-            KEY_FEATURES: "Arquitectura multi-módulo con 15+ módulos NestJS especializados · Integración de múltiples métodos de pago · Autenticación avanzada con OAuth2 + tokens JWT · Sistema de lealtad y beneficios promocionales · Módulo de facturación con generación de PDF · Gestión completa del ciclo de vida de órdenes · Dashboard administrativo con analytics · Control de acceso basado en roles (RBAC) · UI responsivo con Angular Material + Tailwind CSS",
-            TECHNICAL_ARCHITECTURE: "Backend: NestJS 11.0 con TypeScript, PostgreSQL + TypeORM, OAuth2 + JWT, arquitectura modular con 15+ módulos independientes. Frontend: Angular 19 Standalone, gestión de estado NgRx, Angular Material + Tailwind CSS. Base de Datos: PostgreSQL 8.16 con TypeORM, optimización avanzada de índices y queries, connection pooling. Seguridad: OAuth2 + JWT con refresh tokens en httpOnly cookies, RBAC granular, rate limiting adaptativo.",
-            METRICS: "Calidad de Código: >80% cobertura de tests en lógica crítica, 100% TypeScript strict mode, 0 errores ESLint. Escalabilidad: 1000+ usuarios simultáneos, 15+ módulos independientes, 50+ endpoints API.",
+            EXECUTIVE_SUMMARY: "Líder Técnico y Arquitecto Full-Stack de XTECHARG, una plataforma B2B SaaS y e-commerce escalable construida completamente desde cero (NestJS + Angular Standalone + PostgreSQL). Diseñé e implementé la arquitectura integral del sistema, el panel de administración backoffice (banners multimedia, categorías y etiquetas con drag-and-drop), motor flexible de cupones con beneficios dinámicos (descuentos %, créditos en billetera virtual, tickets de sorteos y multiplicadores de puntos), programa de fidelización, pasarelas de pago (MercadoPago y CoinPayments Crypto) y asistente conversacional in-app con IA (OpenAI API).",
+            KEY_FEATURES: "Panel de administración modular (Banners multimedia, Categorías, Tags con Drag&Drop) · Sistema avanzado de Cupones/Promociones (Descuentos %, Montos fijos, Créditos en Billetera, Tickets de Sorteo y Bonus de Puntos) · Programa de Puntos y Fidelización de Usuarios · Pasarela multi-pago (Mercado Pago, Crypto CoinPayments, Transferencias) · Asistente IA in-app (NestJS + OpenAI API con streaming) · Facturación electrónica con generación de PDF · Módulo de control de Gastos e Inversiones · Gestión completa de Pedidos, Devoluciones y Arrepentimientos · Dashboard de Analytics y Métricas · Control de acceso granular (RBAC) con OAuth2 + JWT · UI responsiva con Angular Material + Tailwind CSS",
+            TECHNICAL_ARCHITECTURE: "Backend: NestJS con TypeScript, PostgreSQL + TypeORM, OAuth2 + JWT (refresh tokens en httpOnly cookies), arquitectura en 25+ módulos de negocio independientes. Frontend: Angular Standalone, arquitectura reactiva con NgRx (Effects, Selectors memorizados, Signals), Angular Material + Tailwind CSS, CDK Drag&Drop. Base de Datos: PostgreSQL con TypeORM, optimización de queries, connection pooling e índices estratégicos. Infraestructura & DevOps: Containerización con Docker (multi-stage builds), Docker Compose, Dokploy, GitHub Actions CI/CD y Google Cloud Platform.",
+            METRICS: "Calidad de Código: >80% cobertura de tests en lógica crítica, 100% TypeScript strict mode, 0 errores ESLint. Escalabilidad: 1000+ usuarios simultáneos, 25+ módulos independientes backend, 60+ endpoints API REST/WebSockets.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Como Co-fundador y Líder Técnico, arquitecto e implemento la plataforma completa desde cero, tomando decisiones estratégicas en stack tecnológico, diseño de sistemas y estructura del equipo. Lidero el equipo de desarrollo, realizo code reviews, mentoricé a desarrolladores junior y garantizo adherencia a mejores prácticas. Mis responsabilidades incluyen diseño de API backend con NestJS, optimización frontend con Angular 19 Standalone, arquitectura y optimización de base de datos, implementación de seguridad y gestión de pipeline DevOps/CI-CD. Defino la hoja de ruta técnica, evalúo nuevas tecnologías y equilibro requerimientos de negocio con excelencia de ingeniería."
+                DESCRIPTION: "Como Líder Técnico y Arquitecto Full-Stack, arquitecté e implementé la plataforma completa desde cero. Mis responsabilidades incluyeron la concepción de la arquitectura modular NestJS en el backend y Angular Standalone en el frontend, diseño del modelado relacional en PostgreSQL con TypeORM, desarrollo del backoffice de administración (banners multimedia, categorías, tags con drag & drop, cupones multinivel, fidelización, sorteos, gastos y órdenes), integración de pasarelas de pago cripto y tradicionales, implementación de seguridad multinivel y despliegue continuo con Docker y Dokploy."
               },
               PROJECT_DESCRIPTION: {
                 DESCRIPTION: "XTECHARG es una plataforma SaaS B2B que automatiza procesos empresariales y facilita transacciones comerciales. El sistema integra Angular 19 Standalone con NestJS, APIs REST para escalabilidad, PostgreSQL con indexación estratégica y optimización, y Docker/Dokploy para containerización y deployment. La plataforma integra pasarelas de pago (Mercado Pago, CoinPayments), implementa autenticación OAuth2/Google API con JWT, y proporciona logging integral. Toda la comunicación de datos utiliza HTTPS seguro con validación apropiada."
@@ -705,15 +725,33 @@ export class TranslationService {
                 "Seguridad multinivel: OAuth2/Google API, JWT con refresh tokens, RBAC granular, validación de datos, HTTPS.",
                 "Asistente de chat con IA in-app: NestJS + OpenAI API, widget Angular, respuestas en streaming, prompt engineering."
               ],
+              IMAGES: [
+                "assets/imgs/xtech/xtech_15.png",
+                "assets/imgs/xtech/xtech_14.png",
+                "assets/imgs/xtech/xtech_1.svg",
+                "assets/imgs/xtech/xtech_2.svg",
+                "assets/imgs/xtech/xtech_3.svg",
+                "assets/imgs/xtech/xtech_4.svg",
+                "assets/imgs/xtech/xtech_5.svg",
+                "assets/imgs/xtech/xtech_6.svg",
+                "assets/imgs/xtech/xtech_7.svg",
+                "assets/imgs/xtech/xtech_8.svg",
+                "assets/imgs/xtech/xtech_9.svg",
+                "assets/imgs/xtech/xtech_10.svg",
+                "assets/imgs/xtech/xtech_11.svg",
+                "assets/imgs/xtech/xtech_12.svg",
+                "assets/imgs/xtech/xtech_13.svg"
+              ],
               TECHNOLOGIES: [
                 "Angular 19 Standalone",
                 "Angular Material",
                 "Tailwind CSS",
-                "RxJS",
+                "Angular CDK (Drag & Drop)",
+                "RxJS & Angular Signals",
                 "NgRx con Effects y Selectors",
-                "NestJS",
+                "NestJS 11",
                 "TypeORM",
-                "PostgreSQL",
+                "PostgreSQL 17",
                 "JWT Authentication",
                 "OAuth2/Google API Auth",
                 "Docker (Multi-stage builds)",
@@ -729,15 +767,16 @@ export class TranslationService {
                 "Google Cloud SQL",
                 "Mercado Pago API",
                 "CoinPayments API",
-                "OpenAI API"
+                "OpenAI API",
+                "Cloudinary API"
               ],
-              DURATION: "2024 — Presente",
-              EMPLOYMENT_TYPE: "Profesional independiente",
+              DURATION: "OCT 2024 — MAR 2026",
+              EMPLOYMENT_TYPE: "Tiempo Parcial",
               LINKS: {
-                WEBSITE: "xtech.com.ar",
+                WEBSITE: "xtecharg.com",
                 LOGO: "assets/imgs/xtecharg.jpeg",
                 GITHUB: "https://github.com/xtecharg",
-                LINK: "https://xtech.com.ar/"
+                LINK: "https://xtecharg.com/"
               }
             }
           }
@@ -778,12 +817,12 @@ export class TranslationService {
                 "Automatización de procesos de integración y despliegue continuo usando CI/CD (GitHub Actions).",
                 "Cursos y certificaciones en Desarrollo Web Full, Node, JavaScript, Angular y NestJS."
               ],
-                             SOFT_SKILLS: [
-                 "Comunicación efectiva y colaboración en equipos multidisciplinarios",
-                 "Pensamiento analítico y resolución de problemas complejos",
-                 "Aprendizaje continuo y rápida adaptación a nuevas tecnologías",
-                 "Gestión eficiente del tiempo y cumplimiento de plazos en entornos ágiles"
-               ],
+              SOFT_SKILLS: [
+                "Comunicación efectiva y colaboración en equipos multidisciplinarios",
+                "Pensamiento analítico y resolución de problemas complejos",
+                "Aprendizaje continuo y rápida adaptación a nuevas tecnologías",
+                "Gestión eficiente del tiempo y cumplimiento de plazos en entornos ágiles"
+              ],
               TECHNOLOGIES: [
                 "Angular 9 → 19",
                 "Angular Material",
