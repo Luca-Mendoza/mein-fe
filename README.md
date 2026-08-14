@@ -41,12 +41,30 @@ npm run build
 
 The build outputs to `dist/main-fe/browser` and creates `404.html` for GitHub Pages path routing.
 
-## Deploy
+## Build & Deployment (GitHub Pages)
 
-Deploys are handled by GitHub Actions on pushes to `main`. Manual deploy is also available:
+### Automático (Recomendado via CI/CD)
+El proyecto utiliza **GitHub Actions** (`.github/workflows/deploy.yml`). Cada vez que haces un `push` a la rama `main`, la aplicación se compila y publica automáticamente en **GitHub Pages** en [lucadmendoza.dev](https://lucadmendoza.dev).
 
 ```bash
+# 1. Fusionar cambios a main
+git checkout main
+git merge tu-rama-de-trabajo
+
+# 2. Subir a GitHub usando tu host/SSH configurado (ej: github-personal)
+git push upstream main
+```
+
+### Manual (Vía Angular CLI / angular-cli-ghpages)
+Si deseas realizar un despliegue manual a la rama `gh-pages` sin esperar a GitHub Actions:
+
+```bash
+# Opción 1: Usando la CLI con cname y base-href
 npx ng deploy --cname=lucadmendoza.dev --base-href="/"
+
+# Opción 2: Compilando y desplegando con angular-cli-ghpages
+npm run build
+npx ngh --dir=dist/main-fe/browser --cname=lucadmendoza.dev
 ```
 
 ## Author
