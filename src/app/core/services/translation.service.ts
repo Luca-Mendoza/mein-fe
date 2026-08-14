@@ -206,7 +206,7 @@ export class TranslationService {
             }
           },
           XTECH: {
-            DATE_FROM: "OCT 2024 – MAR 2026",
+            DATE_FROM: "JUL 2025 – MAR 2026",
             TITLE: "Lead Full-Stack Engineer · XTECHARG",
             PREVIEW: "Technical leadership and end-to-end development of high-performance B2B SaaS platform. Modular architecture, payment gateways, AI chat assistant, and advanced store configuration.",
             DESCRIPTION: "Technical leadership and end-to-end development of high-performance B2B SaaS platform. Modular architecture, payment gateways, AI chat assistant, and advanced store configuration.",
@@ -748,7 +748,7 @@ export class TranslationService {
             }
           },
           XTECH: {
-            DATE_FROM: "OCT 2024 – MAR 2026",
+            DATE_FROM: "JUL 2025 – MAR 2026",
             TITLE: "Lead Full-Stack Engineer · XTECHARG",
             PREVIEW: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B e e-commerce de alto rendimiento. Arquitectura modular en 25+ servicios, configuración avanzada de tienda/banners multimedia, cupones multinivel, programa de fidelización, pagos pasarela múltiple y chatbot IA.",
             DESCRIPTION: "Liderazgo técnico y desarrollo end-to-end de plataforma SaaS B2B e e-commerce de alto rendimiento. Arquitectura modular en 25+ servicios, configuración avanzada de tienda/banners multimedia, cupones multinivel, programa de fidelización, pagos pasarela múltiple y chatbot IA.",
