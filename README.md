@@ -59,12 +59,9 @@ git push upstream main
 Si deseas realizar un despliegue manual a la rama `gh-pages` sin esperar a GitHub Actions:
 
 ```bash
-# Opción 1: Usando la CLI con cname y base-href
-npx ng deploy --cname=lucadmendoza.dev --base-href="/"
-
-# Opción 2: Compilando y desplegando con angular-cli-ghpages
+# Compilar proyecto y publicar los archivos generados en dist/main-fe/browser a la rama gh-pages
 npm run build
-npx ngh --dir=dist/main-fe/browser --cname=lucadmendoza.dev
+npx ngh --dir=dist/main-fe/browser --cname=lucadmendoza.dev --repo=git@github-personal:Luca-Mendoza/mein-fe.git
 ```
 
 ## Author
