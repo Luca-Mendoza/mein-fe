@@ -2,10 +2,10 @@ export const experiences = [
   {
     "id": 'event_loop_club',
     "type": "experience",
-    "title": "Fundador & Full-Stack Developer",
+    "title": "Co-fundador & Full-Stack Developer",
     "company": "Eventloop.ar",
     "date": "dic. 2023 - actualidad",
-    "position": "Fundador & Full-Stack Developer",
+    "position": "Co-fundador & Full-Stack Developer",
     "duration": "2 años 9 meses",
     "employment_type": "Profesional independiente",
     "employment_status": "Profesional independiente",
@@ -31,7 +31,7 @@ export const experiences = [
       "name": "eventloop.ar",
       "assets": "assets/imgs/eventloop_logo.webp"
     },
-    "role": "Fundador & Full-Stack Developer",
+    "role": "Co-fundador & Full-Stack Developer",
     "challenges": [
       {
         "title": "Frontend Core (Angular & TypeScript)",
@@ -249,10 +249,10 @@ export const experiences_ingles = [
   {
     "id": "event_loop_club",
     "type": "experience",
-    "title": "Founder & Full-Stack Developer",
+    "title": "Co-founder & Full-Stack Developer",
     "company": "Eventloop.ar",
     "date": "Dec 2023 - Present",
-    "position": "Founder & Full-Stack Developer",
+    "position": "Co-founder & Full-Stack Developer",
     "duration": "2 yrs 9 mos",
     "employment_type": "Freelance",
     "employment_status": "Freelance",
@@ -278,7 +278,7 @@ export const experiences_ingles = [
       "name": "eventloop.ar",
       "assets": "assets/imgs/eventloop_logo.webp"
     },
-    "role": "Founder & Full-Stack Developer",
+    "role": "Co-founder & Full-Stack Developer",
     "challenges": [
       {
         "title": "End-to-End Development",

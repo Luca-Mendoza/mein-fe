@@ -82,7 +82,7 @@ export class TranslationService {
           TITLE: "Experience",
           EVENT_LOOP_CLUB: {
             DATE_FROM: "DEC 2023 – PRESENT",
-            TITLE: "Fundador & Full-Stack Developer · Eventloop.ar",
+            TITLE: "Co-founder & Full-Stack Developer · Eventloop.ar",
             PREVIEW: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             EMPLOYMENT_STATUS: "Profesional independiente",
@@ -624,7 +624,7 @@ export class TranslationService {
           TITLE: "Experiencia",
           EVENT_LOOP_CLUB: {
             DATE_FROM: "DIC 2023 – ACTUALIDAD",
-            TITLE: "Fundador & Full-Stack Developer · Eventloop.ar",
+            TITLE: "Co-fundador & Full-Stack Developer · Eventloop.ar",
             PREVIEW: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             DESCRIPTION: "Web platform development from initial stages, leading the Angular UI construction from day one while collaborating on backend engineering tasks.",
             EMPLOYMENT_STATUS: "Profesional independiente",
