@@ -1,5 +1,5 @@
 <div class="w-screen h-screen flex flex-col justify-center items-center bg-[hsla(222,46%,11%)] overflow-hidden relative">
-  <div class="circle" [style.top.px]="mouseY" [style.left.px]="mouseX"></div>
+  <div class="spotlight-overlay" [style.--mouse-x.px]="mouseX" [style.--mouse-y.px]="mouseY"></div>
 
   <router-outlet></router-outlet>
 </div>
