@@ -328,7 +328,7 @@ export class TranslationService {
           },
           LOS_JAZMINES: {
             DATE_FROM: "OCT 2024 – JUN 2025",
-            TITLE: "Lead Full-Stack Developer · Los Jazmines",
+            TITLE: "Lead Full-Stack Engineer · Los Jazmines",
             PREVIEW: "Full-stack e-commerce & membership management platform featuring a real-time digital catalog, Mercado Pago multi-payment gateway integration with async webhooks, dynamic cart state management with Angular Signals, and administrative backoffice.",
             DESCRIPTION: "Full-stack e-commerce & membership management platform featuring a real-time digital catalog, Mercado Pago multi-payment gateway integration with async webhooks, dynamic cart state management with Angular Signals, and administrative backoffice.",
             EMPLOYMENT_STATUS: "Freelance Professional",
@@ -864,7 +864,7 @@ export class TranslationService {
           },
           LOS_JAZMINES: {
             DATE_FROM: "OCT 2024 – JUN 2025",
-            TITLE: "Desarrollador Líder Full-Stack · Los Jazmines",
+            TITLE: "Lead Full-Stack Engineer · Los Jazmines",
             PREVIEW: "Plataforma e-commerce Full-Stack y club de membresías con catálogo digital en tiempo real, pasarela de pago Mercado Pago con webhooks asincrónicos, estado reactivo del carrito con Angular Signals y panel administrativo.",
             DESCRIPTION: "Plataforma e-commerce Full-Stack y club de membresías con catálogo digital en tiempo real, pasarela de pago Mercado Pago con webhooks asincrónicos, estado reactivo del carrito con Angular Signals y panel administrativo.",
             EMPLOYMENT_STATUS: "Profesional independiente",
