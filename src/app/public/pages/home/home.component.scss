@@ -267,21 +267,37 @@ p {
             flex-direction: column-reverse;
             justify-content: space-between;
             gap: 1.25rem;
-            margin: 1.25rem 0;
+            margin: 0;
             padding: 1.5rem;
-            border-radius: 16px;
+            border-radius: 0;
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
 
+            &:first-child {
+              border-radius: 4px 0 0 0;
+            }
+
+            &:last-child {
+              border-radius: 0 0 0 4px;
+            }
+
+            &:first-child:last-child {
+              border-radius: 4px 0 0 4px;
+            }
+
+            & + .experience {
+              margin-top: -1px;
+            }
+
             &:hover {
+              z-index: 1;
               cursor: pointer;
               background: rgba(255, 255, 255, 0.015);
               border-color: rgba(255, 255, 255, 0.15);
               box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.2);
               transform: translateY(-1px);
-              border-radius: 4px 0 0 4px;
 
               .experience__cta button {
                 color: #22d3ee;
@@ -411,7 +427,7 @@ p {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 0;
           }
 
           .experience {
@@ -420,22 +436,38 @@ p {
             flex-direction: column-reverse;
             justify-content: space-between;
             gap: 1.25rem;
-            margin: 1.25rem 0;
+            margin: 0;
             padding: 1.5rem;
-            border-radius: 16px;
+            border-radius: 0;
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             width: 100%;
 
+            &:first-child {
+              border-radius: 4px 0 0 0;
+            }
+
+            &:last-child {
+              border-radius: 0 0 0 4px;
+            }
+
+            &:first-child:last-child {
+              border-radius: 4px 0 0 4px;
+            }
+
+            & + .experience {
+              margin-top: -1px;
+            }
+
             &:hover {
+              z-index: 1;
               cursor: pointer;
               background: rgba(255, 255, 255, 0.015);
               border-color: rgba(255, 255, 255, 0.15);
               box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.2);
               transform: translateY(-1px);
-              border-radius: 4px 0 0 4px;
 
               .experience__cta button {
                 color: #22d3ee;
