@@ -271,14 +271,14 @@ p {
             padding: 1.5rem;
             border-radius: 16px;
             background: transparent;
-            border: 1px solid transparent;
+            border: 1px solid rgba(255, 255, 255, 0.07);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
 
             &:hover {
               cursor: pointer;
               background: rgba(255, 255, 255, 0.015);
-              border-color: rgba(255, 255, 255, 0.05);
+              border-color: rgba(255, 255, 255, 0.15);
               box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.2);
               transform: translateY(-1px);
               border-radius: 4px 0 0 4px;
@@ -424,7 +424,7 @@ p {
             padding: 1.5rem;
             border-radius: 16px;
             background: transparent;
-            border: 1px solid transparent;
+            border: 1px solid rgba(255, 255, 255, 0.07);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             width: 100%;
@@ -432,7 +432,7 @@ p {
             &:hover {
               cursor: pointer;
               background: rgba(255, 255, 255, 0.015);
-              border-color: rgba(255, 255, 255, 0.05);
+              border-color: rgba(255, 255, 255, 0.15);
               box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.2);
               transform: translateY(-1px);
               border-radius: 4px 0 0 4px;
