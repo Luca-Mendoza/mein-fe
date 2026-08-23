@@ -7,10 +7,9 @@
   <div class="home">
     <div class="left flex-col">
       <header
-        class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding"
-      >
+        class="home-header home-header--sticky home-header--top home-header--flex home-header--max-height home-header--width home-header--column home-header--justify home-header--padding">
         <div class="home-header__content">
-          
+
           <h1 class="home-header__title">
             <a class="home-header__title-link" href="/">{{ 'HOME.TITLE' | translate }}</a>
           </h1>
@@ -18,30 +17,18 @@
           <p class="home-header__description" [innerHTML]="'HOME.DESCRIPTION' | translate"></p>
           <p class="home-header__freelance">{{ 'HOME.OPEN_TO_FREELANCE' | translate }}</p>
 
-          <nav
-            class="home-nav home-nav--hidden home-nav--lg"
-            aria-label="In-page jump links"
-          >
+          <nav class="home-nav home-nav--hidden home-nav--lg" aria-label="In-page jump links">
             <ul class="home-nav__list">
               <li class="home-nav__item" *ngFor="let link of navLinks">
-                <a
-                  [href]="link.href"
-                  (click)="$event.preventDefault(); scrollToSection(link.id)"
-                  [attr.aria-current]="activeLink === link.text ? 'location' : null"
-                  [ngClass]="{
+                <a [href]="link.href" (click)="$event.preventDefault(); scrollToSection(link.id)"
+                  [attr.aria-current]="activeLink === link.text ? 'location' : null" [ngClass]="{
                     'home-nav__item--active': activeLink === link.text
-                  }"
-                  class="home-nav__link home-nav__link--group"
-                >
-                  <span
-                    [ngClass]="{
+                  }" class="home-nav__link home-nav__link--group">
+                  <span [ngClass]="{
                       'home-nav__indicator--active': activeLink === link.text
-                    }"
-                    class="home-nav__indicator"
-                  ></span>
+                    }" class="home-nav__indicator"></span>
                   <span
-                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus"
-                  >
+                    class="home-nav__text home-nav__text--bold home-nav__text--uppercase home-nav__text--tracking home-nav__text--hover home-nav__text--focus">
                     {{ 'COMMON.' + link.text.toUpperCase() | translate }}
                   </span>
                 </a>
@@ -51,54 +38,30 @@
         </div>
         <ul class="home-social" aria-label="Social media">
           <li class="home-social__item">
-            <a
-              class="home-social__link home-social__link--github"
-              href="https://github.com/Luca-Mendoza"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="GitHub (opens in a new tab)"
-              title="GitHub"
-            >
+            <a class="home-social__link home-social__link--github" href="https://github.com/Luca-Mendoza"
+              target="_blank" rel="noreferrer noopener" aria-label="GitHub (opens in a new tab)" title="GitHub">
               <span class="sr-only">GitHub</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="home-social__icon"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="home-social__icon">
                 <path
-                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12"
-                />
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.806 8.207 11.385.6.11.793-.26.793-.577 0-.284-.01-1.223-.014-2.222-3.338.724-4.042-1.627-4.042-1.627-.547-1.387-1.336-1.756-1.336-1.756-1.092-.745.083-.73.083-.73 1.207.085 1.842 1.24 1.842 1.24 1.07 1.836 2.805 1.305 3.487.998.108-.776.42-1.305.763-1.605-2.675-.3-5.487-1.337-5.487-5.93 0-1.312.465-2.38 1.235-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.265 1.98-.398 3-.402 1.02.004 2.043.137 3 .402 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.876.118 3.176.77.84 1.233 1.908 1.233 3.22 0 4.61-2.815 5.625-5.492 5.92.432.372.823 1.102.823 2.22 0 1.604-.014 2.893-.014 3.286 0 .32.19.694.8.576C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12" />
               </svg>
             </a>
           </li>
           <li class="home-social__item">
-            <a
-              class="home-social__link home-social__link--linkedin"
-              href="https://www.linkedin.com/in/luca-d-mendoza-470575180/"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="LinkedIn (opens in a new tab)"
-              title="LinkedIn"
-            >
+            <a class="home-social__link home-social__link--linkedin"
+              href="https://www.linkedin.com/in/luca-d-mendoza-470575180/" target="_blank" rel="noreferrer noopener"
+              aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
               <span class="sr-only">LinkedIn</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="home-social__icon"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="home-social__icon">
                 <path
-                  d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
-                ></path>
+                  d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                </path>
               </svg>
             </a>
           </li>
         </ul>
       </header>
-      <span
-        class="p-4 hidden lg:block w-full text-center text-sm text-white/20"
-      >
+      <span class="p-4 hidden lg:block w-full text-center text-sm text-white/20">
         © {{ currentYear }} Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
       </span>
     </div>
@@ -107,8 +70,7 @@
       <div #scrollContainer class="items">
         <div class="item item__intro" id="sectionIntro">
           <h2
-            class="w-full px-4 text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
-          >
+            class="w-full px-4 text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center">
             {{ 'HOME.INTRO_VIDEO.TITLE' | translate }}
           </h2>
           <section class="section section__intro">
@@ -119,52 +81,38 @@
         </div>
         <div class="item item__experience">
           <h2
-            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
-          >
+            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center">
             {{ 'HOME.EXPERIENCE_SECTION.TITLE' | translate }}
           </h2>
           <section id="sectionExperience" class="section section__experience">
             <!-- 1. Eventloop.ar (Actual) -->
-            <div
-              class="experience group cursor-pointer w-full"
-              routerLink="d/event_loop_club"
-            >
+            <div class="experience group cursor-pointer w-full" routerLink="d/event_loop_club">
               <div
-                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3"
-              >
-                <img
-                  src="assets/imgs/eventloop_logo.webp"
-                  alt="Event Loop Club Logo"
-                  class="w-12 h-12 md:w-14 md:h-14 object-contain"
-                />
+                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3">
+                <img src="assets/imgs/eventloop_logo.webp" alt="Event Loop Club Logo"
+                  class="w-12 h-12 md:w-14 md:h-14 object-contain" />
                 <span
-                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
-                  >{{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DATE_FROM' | translate }}</span
-                >
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6">{{
+                  'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DATE_FROM' | translate }}</span>
               </div>
 
               <div class="info flex flex-col h-full flex-1 min-w-0">
                 <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
+                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]">
                   <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
+                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.TITLE' | translate }}
                   </span>
                 </h3>
-                <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
+                <div
+                  class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
                   <span>
                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.EMPLOYMENT_STATUS' | translate }}
                   </span>
                   <span class="text-white/30">·</span>
-                  <a
-                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
-                    [href]="'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_URL' | translate"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    (click)="$event.stopPropagation()"
-                  >
+                  <a class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
+                    [href]="'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_URL' | translate" target="_blank"
+                    rel="noopener noreferrer" (click)="$event.stopPropagation()">
                     {{ 'HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.LINKEDIN_LABEL' | translate }}
                   </a>
                 </div>
@@ -186,63 +134,45 @@
 
                 <div class="experience__cta mt-auto w-full flex justify-end">
                   <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
-                  >
+                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer">
                     <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
+                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                       {{ 'COMMON.SEE_MORE_INFO' | translate }}
                     </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
+                    <lucide-icon name="arrow-right" class="w-5 h-5 group-hover:text-[#00718f]" />
                   </button>
                 </div>
               </div>
             </div>
 
             <!-- 2. XTECHARG (Finalizado) -->
-            <div
-              class="experience group cursor-pointer w-full"
-              routerLink="d/xtech"
-            >
+            <div class="experience group cursor-pointer w-full" routerLink="d/xtech">
               <div
-                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3"
-              >
-                <img
-                  src="assets/imgs/xtecharg.jpeg"
-                  alt="XTECH Logo"
-                  class="w-12 h-12 md:w-14 md:h-14 object-contain rounded"
-                />
+                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3">
+                <img src="assets/imgs/xtecharg.jpeg" alt="XTECH Logo"
+                  class="w-12 h-12 md:w-14 md:h-14 object-contain rounded" />
                 <span
-                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
-                  >{{ 'HOME.EXPERIENCE_SECTION.XTECH.DATE_FROM' | translate }}</span
-                >
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6">{{
+                  'HOME.EXPERIENCE_SECTION.XTECH.DATE_FROM' | translate }}</span>
               </div>
 
               <div class="info flex flex-col h-full flex-1 min-w-0">
                 <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
+                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]">
                   <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
+                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                     {{ 'HOME.EXPERIENCE_SECTION.XTECH.TITLE' | translate }}
                   </span>
                 </h3>
-                <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
+                <div
+                  class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
                   <span>
                     {{ 'HOME.EXPERIENCE_SECTION.XTECH.EMPLOYMENT_STATUS' | translate }}
                   </span>
                   <span class="text-white/30">·</span>
-                  <a
-                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
-                    [href]="'HOME.EXPERIENCE_SECTION.XTECH.LINKEDIN_URL' | translate"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    (click)="$event.stopPropagation()"
-                  >
+                  <a class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
+                    [href]="'HOME.EXPERIENCE_SECTION.XTECH.LINKEDIN_URL' | translate" target="_blank"
+                    rel="noopener noreferrer" (click)="$event.stopPropagation()">
                     {{ 'HOME.EXPERIENCE_SECTION.XTECH.LINKEDIN_LABEL' | translate }}
                   </a>
                 </div>
@@ -265,61 +195,43 @@
 
                 <div class="experience__cta mt-auto w-full flex justify-end">
                   <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
-                  >
+                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer">
                     <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
+                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                       {{ 'COMMON.SEE_MORE_INFO' | translate }}
                     </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
+                    <lucide-icon name="arrow-right" class="w-5 h-5 group-hover:text-[#00718f]" />
                   </button>
                 </div>
               </div>
             </div>
-            <div
-              class="experience group cursor-pointer w-full"
-              routerLink="d/los_jazmines"
-            >
+            <div class="experience group cursor-pointer w-full" routerLink="d/los_jazmines">
               <div
-                class="date w-full h-full flex flex-col justify-center items-center md:justify-center md:items-center tablets:w-1/5 tablets:justify-center tablets:items-center gap-2"
-              >
-                <img
-                  src="assets/imgs/losjazmines/los_jazmines_text_logo.svg"
-                  alt="Los Jazmines Logo"
-                  class="w-44 h-12 md:w-48 md:h-14 object-contain mx-auto"
-                />
+                class="date w-full h-full flex flex-col justify-center items-center md:justify-center md:items-center tablets:w-1/5 tablets:justify-center tablets:items-center gap-2">
+                <img src="assets/imgs/losjazmines/los_jazmines_text_logo.svg" alt="Los Jazmines Logo"
+                  class="w-44 h-12 md:w-48 md:h-14 object-contain mx-auto" />
                 <span
-                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6 text-center"
-                  >{{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DATE_FROM' | translate }}</span
-                >
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6 text-center">{{
+                  'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.DATE_FROM' | translate }}</span>
               </div>
 
               <div class="info flex flex-col h-full flex-1 min-w-0">
                 <h3
-                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                >
+                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]">
                   <span
-                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                  >
+                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                     {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.TITLE' | translate }}
                   </span>
                 </h3>
-                <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
+                <div
+                  class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
                   <span>
                     {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.EMPLOYMENT_STATUS' | translate }}
                   </span>
                   <span class="text-white/30">·</span>
-                  <a
-                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
-                    [href]="'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.LINKEDIN_URL' | translate"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    (click)="$event.stopPropagation()"
-                  >
+                  <a class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
+                    [href]="'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.LINKEDIN_URL' | translate" target="_blank"
+                    rel="noopener noreferrer" (click)="$event.stopPropagation()">
                     {{ 'HOME.EXPERIENCE_SECTION.LOS_JAZMINES.LINKEDIN_LABEL' | translate }}
                   </a>
                 </div>
@@ -337,133 +249,90 @@
 
                 <div class="experience__cta mt-auto w-full flex justify-end">
                   <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
-                  >
+                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer">
                     <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
+                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                       {{ 'COMMON.SEE_MORE_INFO' | translate }}
                     </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
+                    <lucide-icon name="arrow-right" class="w-5 h-5 group-hover:text-[#00718f]" />
                   </button>
                 </div>
               </div>
             </div>
-            <div
-              class="experience group cursor-pointer w-full"
-              routerLink="d/siete_ideas"
-            >
+            <div class="experience group cursor-pointer w-full" routerLink="d/siete_ideas">
               <div
-                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3"
-              >
-                <img
-                  src="assets/imgs/7ideas_logo_dark.svg"
-                  alt="Siete Ideas Logo"
-                  class="w-12 h-12 md:w-14 md:h-14 object-contain"
-                />
+                class="date w-full h-full flex flex-col justify-end items-end md:justify-start md:items-start tablets:w-1/5 tablets:justify-center tablets:items-center gap-3">
+                <img src="assets/imgs/7ideas_logo_dark.svg" alt="Siete Ideas Logo"
+                  class="w-12 h-12 md:w-14 md:h-14 object-contain" />
                 <span
-                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6"
-                  >{{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DATE_FROM' | translate }}</span
-                >
+                  class="text-[11px] uppercase tracking-widest text-white/50 tablets:text-[0.7rem] tablets:leading-6">{{
+                  'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DATE_FROM' | translate }}</span>
               </div>
 
-                             <div class="info flex flex-col h-full flex-1 min-w-0">
-                 <h3
-                   class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                 >
-                   <span
-                     class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                   >
-                     {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.TITLE' | translate }}
-                   </span>
-                 </h3>
-                 <div class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
-                   <span>
-                     {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.EMPLOYMENT_STATUS' | translate }}
-                   </span>
-                   <span class="text-white/30">·</span>
-                   <a
-                    class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
-                     [href]="'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.LINKEDIN_URL' | translate"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                    (click)="$event.stopPropagation()"
-                   >
-                     {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.LINKEDIN_LABEL' | translate }}
-                   </a>
-                 </div>
-                 <p class="flex-grow">
-                   {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.PREVIEW' | translate }}
-                 </p>
+              <div class="info flex flex-col h-full flex-1 min-w-0">
+                <h3
+                  class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]">
+                  <span
+                    class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                    {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.TITLE' | translate }}
+                  </span>
+                </h3>
+                <div
+                  class="flex items-center gap-2 text-[0.8rem] font-semibold tracking-widest text-cyan-400/60 -mt-2 mb-3">
+                  <span>
+                    {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.EMPLOYMENT_STATUS' | translate }}
+                  </span>
+                  <span class="text-white/30">·</span>
+                  <a class="relative z-10 text-cyan-400/60 hover:text-[#00718f] transition-colors duration-300"
+                    [href]="'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.LINKEDIN_URL' | translate" target="_blank"
+                    rel="noopener noreferrer" (click)="$event.stopPropagation()">
+                    {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.LINKEDIN_LABEL' | translate }}
+                  </a>
+                </div>
+                <p class="flex-grow">
+                  {{ 'HOME.EXPERIENCE_SECTION.SIETE_IDEAS.PREVIEW' | translate }}
+                </p>
                 <div class="flex flex-wrap gap-2">
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Angular Material
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Angular
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     CSS
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Fuse
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Git
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     HTML
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Jasmine
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Karma
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     Scrum
                   </div>
-                  <div
-                    class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                  >
+                  <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
                     TypeScript
                   </div>
                 </div>
 
                 <div class="experience__cta mt-auto w-full flex justify-end">
                   <button
-                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
-                  >
+                    class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer">
                     <span
-                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                    >
+                      class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                       {{ 'COMMON.SEE_MORE_INFO' | translate }}
                     </span>
-                    <lucide-icon
-                      name="arrow-right"
-                      class="w-5 h-5 group-hover:text-[#00718f]"
-                    />
+                    <lucide-icon name="arrow-right" class="w-5 h-5 group-hover:text-[#00718f]" />
                   </button>
                 </div>
               </div>
@@ -472,104 +341,74 @@
         </div>
         <div class="item item__projects">
           <h2
-            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center"
-          >
+            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center">
             {{ 'HOME.PROJECTS_SECTION.TITLE' | translate }}
           </h2>
-                     <section id="sectionProjects" class="section section__projects">
+          <section id="sectionProjects" class="section section__projects">
             <div class="section__projects-content max-w-full flex flex-col items-start w-full">
-              <div
-                class="experience group cursor-pointer w-full"
-                routerLink="d/gamezonia"
-              >
+              <div class="experience group cursor-pointer w-full" routerLink="d/gamezonia">
                 <div class="avatar flex-shrink-0 flex items-center justify-center p-0 border-none bg-transparent shadow-none">
                   <img src="assets/imgs/gamezonia.png" alt="Gamezonia" class="w-full max-h-12 object-contain border-none bg-transparent shadow-none" />
                 </div>
-                                   <div class="info flex flex-col h-full flex-1 min-w-0">
-                    <h3
-                      class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]"
-                    >
-                      <span
-                        class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                      >
-                        {{ 'HOME.PROJECTS_SECTION.GAMEZONIA.TITLE' | translate }}
-                      </span>
-                    </h3>
-                    <p class="flex-grow">
-                      {{ 'HOME.PROJECTS_SECTION.GAMEZONIA.DESCRIPTION' | translate }}
-                    </p>
-                   <div class="flex flex-wrap gap-2 mb-4">
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Angular
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Express.js
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       GraphQL
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Heroku
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       MongoDB
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Netlify
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Node.js
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Nodemailer
-                     </div>
-                     <div
-                       class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm"
-                     >
-                       Stripe
-                     </div>
-                   </div>
+                <div class="info flex flex-col h-full flex-1 min-w-0">
+                  <h3
+                    class="relative text-white text-2xlg tracking-wide pb-2 transition-all duration-300 group-hover:text-[#00718f]">
+                    <span
+                      class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                      {{ 'HOME.PROJECTS_SECTION.GAMEZONIA.TITLE' | translate }}
+                    </span>
+                  </h3>
+                  <p class="flex-grow">
+                    {{ 'HOME.PROJECTS_SECTION.GAMEZONIA.DESCRIPTION' | translate }}
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Angular
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Express.js
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      GraphQL
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Heroku
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      MongoDB
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Netlify
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Node.js
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Nodemailer
+                    </div>
+                    <div class="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md text-sm">
+                      Stripe
+                    </div>
+                  </div>
 
-                   <div class="experience__cta mt-auto w-full flex justify-end">
-                     <button
-                       class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer"
-                     >
-                       <span
-                         class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left"
-                       >
-                         {{ 'COMMON.SEE_MORE_INFO' | translate }}
-                       </span>
-                       <lucide-icon
-                         name="arrow-right"
-                         class="w-5 h-5 group-hover:text-[#00718f]"
-                       />
-                     </button>
-                   </div>
-                 </div>
-               </div>
+                  <div class="experience__cta mt-auto w-full flex justify-end">
+                    <button
+                      class="flex items-center gap-2 text-white transition-all duration-300 group-hover:text-[#00718f] group-hover:shadow-lg cursor-pointer">
+                      <span
+                        class="relative group-hover:text-[#00718f] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#00718f] after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                        {{ 'COMMON.SEE_MORE_INFO' | translate }}
+                      </span>
+                      <lucide-icon name="arrow-right" class="w-5 h-5 group-hover:text-[#00718f]" />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
         <div class="item item__connect" id="sectionConnect">
           <h2
-            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center mb-2"
-          >
+            class="px-4 w-full text-left text-[1.2rem] tracking-widest text-slate-200/90 drop-shadow-[2px_2px_5px_rgba(255,255,255,0.3)] min-h-[2rem] flex items-center mb-2">
             {{ 'HOME.LETS_CONNECT.TITLE' | translate }}
           </h2>
           <section class="section section__connect w-full">
@@ -581,7 +420,8 @@
               <!-- Fila integrada con línea divisoria vertical (modo row) -->
               <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/[0.08]">
                 <div class="flex items-center gap-3 text-cyan-400/90">
-                  <div class="w-8 h-8 rounded bg-transparent border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                  <div
+                    class="w-8 h-8 rounded bg-transparent border border-cyan-500/30 flex items-center justify-center text-cyan-400">
                     <lucide-icon name="mail" class="w-4 h-4" />
                   </div>
                   <span class="text-sm font-medium tracking-wide text-white/90">mendoza.d.luca&#64;gmail.com</span>
@@ -589,40 +429,33 @@
 
                 <div class="flex flex-wrap items-center gap-3 md:gap-4">
                   <!-- Botón REACH OUT (Copiar email) -->
-                  <button
-                    type="button"
+                  <button type="button"
                     class="connect-btn group relative inline-flex items-center gap-2 bg-transparent hover:bg-cyan-500/10 text-cyan-400 hover:text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 px-4 py-2 rounded text-xs font-semibold tracking-wider uppercase transition-all duration-300 cursor-pointer"
-                    (click)="copyEmailToClipboard($event)"
-                  >
-                    <lucide-icon *ngIf="!emailCopied" name="copy" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:scale-110" />
+                    (click)="copyEmailToClipboard($event)">
+                    <lucide-icon *ngIf="!emailCopied" name="copy"
+                      class="w-3.5 h-3.5 transition-transform duration-300 group-hover:scale-110" />
                     <lucide-icon *ngIf="emailCopied" name="check" class="w-3.5 h-3.5 text-cyan-300" />
-                    <span>{{ (emailCopied ? 'HOME.LETS_CONNECT.EMAIL_COPIED' : 'HOME.LETS_CONNECT.LINK_TEXT') | translate }}</span>
+                    <span>{{ (emailCopied ? 'HOME.LETS_CONNECT.EMAIL_COPIED' : 'HOME.LETS_CONNECT.LINK_TEXT') |
+                      translate }}</span>
                   </button>
 
                   <!-- Línea divisoria vertical sutil -->
                   <div class="hidden sm:block w-[1px] h-5 bg-white/10"></div>
 
                   <!-- Botón DOWNLOAD PORTFOLIO -->
-                  <button
-                    (click)="openPdf()"
+                  <button (click)="openPdf()"
                     class="download-btn group cursor-pointer inline-flex items-center gap-2 bg-transparent hover:bg-cyan-500/10 text-cyan-400/80 hover:text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 px-4 py-2 rounded text-xs font-semibold tracking-wider uppercase transition-all duration-300"
-                    type="button"
-                    aria-label="Download portfolio PDF"
-                  >
+                    type="button" aria-label="Download portfolio PDF">
                     <span>{{ 'COMMON.DOWNLOAD_PORTFOLIO' | translate }}</span>
-                    <lucide-icon
-                      name="download"
-                      class="w-3.5 h-3.5 text-cyan-400/80 group-hover:text-cyan-300 transition-transform duration-300 group-hover:translate-y-[1px]"
-                    ></lucide-icon>
+                    <lucide-icon name="download"
+                      class="w-3.5 h-3.5 text-cyan-400/80 group-hover:text-cyan-300 transition-transform duration-300 group-hover:translate-y-[1px]"></lucide-icon>
                   </button>
                 </div>
               </div>
             </div>
           </section>
         </div>
-        <span
-          class="block lg:hidden w-full text-center text-sm text-white/20 p-4"
-        >
+        <span class="block lg:hidden w-full text-center text-sm text-white/20 p-4">
           © {{ currentYear }} Luca D. Mendoza. {{ 'COMMON.ALL_RIGHTS_RESERVED' | translate }}.
         </span>
       </div>

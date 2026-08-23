@@ -101,8 +101,8 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
   private subscriptions = new Subscription();
 
   constructor(
-    private route: ActivatedRoute, 
-    private router: Router, 
+    private route: ActivatedRoute,
+    private router: Router,
     private _snackBar: MatSnackBar,
     private translationService: TranslationService
   ) { }
@@ -120,7 +120,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       }
       this.updateBreadcrumbs();
     }));
-    
+
     this.updateBreadcrumbs();
   }
 
@@ -158,7 +158,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     const challenges = this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.CHALLENGES');
     const learnings = this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.LEARNINGS');
     const technologies = this.translationService.translate('HOME.EXPERIENCE_SECTION.EVENT_LOOP_CLUB.DETAILED_PAGE.TECHNOLOGIES');
-    
+
     this.item = {
       id: 'event_loop_club',
       type: this.detailCopy('Experience', 'Experiencia'),
@@ -205,7 +205,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     const challenges = this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.CHALLENGES');
     const learnings = this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.LEARNINGS');
     const technologies = this.translationService.translate('HOME.EXPERIENCE_SECTION.SIETE_IDEAS.DETAILED_PAGE.TECHNOLOGIES');
-    
+
     this.item = {
       id: 'siete_ideas',
       type: this.detailCopy('Experience', 'Experiencia'),
@@ -344,7 +344,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     const learnings = this.translationService.translate('HOME.PROJECTS_SECTION.PORTFOLIO.DETAILED_PAGE.LEARNINGS');
     const technologies = this.translationService.translate('HOME.PROJECTS_SECTION.PORTFOLIO.DETAILED_PAGE.TECHNOLOGIES');
     const softSkills = this.translationService.translate('HOME.PROJECTS_SECTION.PORTFOLIO.DETAILED_PAGE.SOFT_SKILLS');
-    
+
     this.item = {
       id: 'portfolio',
       type: this.detailCopy('Project', 'Proyecto'),
@@ -392,35 +392,34 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     const challenges = this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.CHALLENGES');
     const learnings = this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.LEARNINGS');
     const technologies = this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.TECHNOLOGIES');
-    
+
     this.item = {
       id: 'gamezonia',
-      type: this.detailCopy('Full-Stack Project', 'Proyecto Full-Stack'),
+      type: this.detailCopy('Project', 'Proyecto'),
       company: 'Gamezonia',
       title: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.TITLE'),
-      date: '2020 — 2021',
-      duration: this.detailCopy('Full-Stack Engineer', 'Full-Stack Engineer'),
+      date: '2023',
+      duration: 'Personal Project',
       summary: this.detailCopy(
-        'End-to-end MEAN+G e-commerce platform with GraphQL API, Apollo Server, Node.js backend, Stripe payments, Nodemailer automated receipts and Angular frontend.',
-        'Plataforma ecommerce Full-Stack MEAN+G con API GraphQL, Apollo Server, backend Node.js, cobros Stripe, correos transaccionales Nodemailer y cliente Angular.'
+        'MEAN+GraphQL e-commerce project with admin workflows, authentication, payments, email notifications and cloud deployment.',
+        'Proyecto ecommerce MEAN+GraphQL con panel administrativo, autenticación, pagos, notificaciones por email y despliegue cloud.'
       ),
       focus: [
         'Angular',
-        'Node.js & Express',
-        'GraphQL / Apollo',
-        'Stripe API & MongoDB Atlas'
+        'GraphQL',
+        this.detailCopy('E-commerce', 'Ecommerce'),
+        this.detailCopy('Cloud deployment', 'Deploy cloud')
       ],
       highlights: [
-        this.detailCopy('Architected complete backend with Node.js, Express, Apollo Server & MongoDB.', 'Arquitecturé backend completo con Node.js, Express, Apollo Server y MongoDB.'),
-        this.detailCopy('Integrated JWT authentication, Stripe API payments and Nodemailer notifications.', 'Integré autenticación JWT, cobros con Stripe API y notificaciones Nodemailer.'),
-        this.detailCopy('Engineered responsive Angular storefront and admin dashboard.', 'Desarrollé cliente responsivo Angular y panel de control administrativo.')
+        this.detailCopy('Built the storefront and admin panel flows.', 'Construí flujos de tienda y panel administrativo.'),
+        this.detailCopy('Integrated JWT authentication, Stripe and Nodemailer.', 'Integré autenticación JWT, Stripe y Nodemailer.'),
+        this.detailCopy('Deployed frontend, backend and database on cloud platforms.', 'Desplegué frontend, backend y base de datos en plataformas cloud.')
       ],
       description: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
-      images: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.IMAGES'),
       links: {
         name: 'Gamezonia',
         link: 'https://luca-mendoza.github.io/Frontend-meang-online-shop/#/',
@@ -467,10 +466,10 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
 
   private updateBreadcrumbs() {
     this.breadcrumbLinks = [
-      { 
-        label: this.translationService.translate('COMMON.HOME'), 
-        path: '', 
-        icon: 'arrow-left' 
+      {
+        label: this.translationService.translate('COMMON.HOME'),
+        path: '',
+        icon: 'arrow-left'
       }
     ];
   }

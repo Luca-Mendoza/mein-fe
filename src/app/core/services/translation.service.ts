@@ -25,21 +25,6 @@ export const EVENT_LOOP_CAROUSEL_IMAGES: string[] = [
   'assets/imgs/eventloop_screenshot_14.svg',
 ];
 
-export const GAMEZONIA_CAROUSEL_IMAGES: string[] = [
-  'assets/imgs/gamezonia/gamezonia_01.jpeg',
-  'assets/imgs/gamezonia/gamezonia_02.jpeg',
-  'assets/imgs/gamezonia/gamezonia_03.jpeg',
-  'assets/imgs/gamezonia/gamezonia_04.jpeg',
-  'assets/imgs/gamezonia/gamezonia_05.jpeg',
-  'assets/imgs/gamezonia/gamezonia_06.jpeg',
-  'assets/imgs/gamezonia/gamezonia_07.jpeg',
-  'assets/imgs/gamezonia/gamezonia_08.jpeg',
-  'assets/imgs/gamezonia/gamezonia_09.jpeg',
-  'assets/imgs/gamezonia/gamezonia_10.jpeg',
-  'assets/imgs/gamezonia/gamezonia_11.jpeg',
-  'assets/imgs/gamezonia/gamezonia_12.png',
-];
-
 @Injectable({
   providedIn: 'root'
 })
@@ -501,58 +486,53 @@ export class TranslationService {
             }
           },
           GAMEZONIA: {
-            TITLE: "Full-Stack Engineer · Gamezonia",
-            DESCRIPTION: "Designed and built an end-to-end full-stack e-commerce platform using Node.js, Express, and GraphQL with Apollo Server on the backend, alongside Angular and RxJS on the frontend. Architected secure JWT authentication, automated transactional email notifications with Nodemailer, Stripe customer and charge payment workflows, dynamic catalog management, and seamless deployment across cloud environments.",
+            TITLE: "Web Engineer · Gamezonia",
+            DESCRIPTION: "Developed a comprehensive e-commerce platform using the MEAN stack (MongoDB, Express.js, Angular, Node.js) combined with GraphQL. The project involved implementing payment processing with Stripe, automatic email notifications with Nodemailer, and deploying the application on various platforms including Netlify, Heroku, and MongoDB Atlas.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "As Lead Full-Stack Engineer on Gamezonia, I designed the platform's modular architecture from scratch across both frontend and backend. I engineered custom GraphQL schemas, mutations, and query resolvers connected to MongoDB, implemented JWT authentication with salted bcrypt hashing and role-based route protection, integrated Stripe payment processing, created responsive Angular interfaces with modular state management, and optimized cloud database operations."
+                DESCRIPTION: "Gamezonia is an innovative e-commerce project based on the MEAN+G stack, integrating a full online store along with an admin panel solution. Its architecture utilizes Angular on the frontend and Node.js with GraphQL on the backend, enabling secure authentication with JWT, payment processing via Stripe, and cloud deployment to provide a robust and scalable experience."
               },
               PROJECT_DESCRIPTION: {
-                DESCRIPTION: "Gamezonia encompasses both a customer-facing storefront and a complete administrative management dashboard. Key capabilities include complex GraphQL query pagination and dynamic product filtering, shopping cart persistence, automated order placement receipts via Nodemailer, Stripe webhooks/customer sync, user account management, and database backup routines for scalable cloud operations."
+                DESCRIPTION: "The project focuses on developing a comprehensive e-commerce solution that includes an intuitive admin panel for managing products, users, and orders. Employing Angular 9 for a responsive frontend and Node.js with GraphQL for the API, it implements advanced functionalities such as Lazy Loading, pagination, filtering, and automatic backups, ensuring an efficient solution adaptable to diverse needs."
               },
               CHALLENGES: [
                 {
-                  title: "GraphQL API Architecture over MongoDB",
-                  description: "Designing structured GraphQL schemas, query resolvers, and mutation handlers using Apollo Server to support complex relational product catalogs and nested order items efficiently on top of document stores."
+                  title: "Integrating GraphQL in a MEAN Stack",
+                  description: "Implementing GraphQL as an API instead of REST using Apollo Server and adapting the structure of resolvers and schemas for efficient data management."
                 },
                 {
-                  title: "End-to-End Secure Payment Integration",
-                  description: "Building a secure checkout flow with Stripe API, handling customer registration, payment intent processing, receipt generation, and real-time transaction error handling."
+                  title: "Optimizing the Frontend with Angular 9",
+                  description: "Adapting HTML templates within the Angular project, improving performance with Lazy Loading, and optimizing the user experience in a large-scale application."
                 },
                 {
-                  title: "Modular Full-Stack State & Auth Synchronization",
-                  description: "Synchronizing JWT-based authentication tokens across Angular guards and Apollo HTTP headers, ensuring seamless session persistence and security for admin and client roles."
+                  title: "Cost-Free Deployment",
+                  description: "Properly configuring the backend on Heroku, the frontend on Netlify, and the database on MongoDB Atlas, ensuring a scalable architecture without additional costs."
                 }
               ],
               LEARNINGS: [
-                "Deep mastery of GraphQL schema definition language (SDL), resolvers, and Apollo Server architecture in Node.js.",
-                "Implementation of secure authentication patterns with JWT, bcrypt password encryption, and role-based authorization.",
-                "Building production-ready e-commerce checkout solutions integrated with Stripe API and transactional emails via Nodemailer.",
-                "Optimization of Angular application performance through lazy loading modules, custom reactive services, and clean component hierarchy.",
-                "Architecting scalable cloud deployments using MongoDB Atlas, Netlify, and cloud backend hosts."
+                "Deepened knowledge in Angular and GraphQL with Apollo Server.",
+                "Advanced management of authentication and security in web applications.",
+                "Performance optimization of MEAN applications.",
+                "Implementation of payments with Stripe in e-commerce.",
+                "Managing cloud deployments using free tools."
               ],
               TECHNOLOGIES: [
-                "Angular",
+                "Angular 9",
                 "Node.js",
                 "GraphQL",
-                "Apollo Server",
-                "Express",
                 "MongoDB",
-                "MongoDB Atlas",
-                "Stripe API",
+                "Express",
                 "JWT",
+                "Stripe",
                 "Nodemailer",
-                "RxJS",
-                "HTML",
-                "CSS / SCSS",
-                "Git",
-                "GitHub",
+                "NgBootstrap",
                 "Netlify",
-                "Heroku"
+                "Heroku",
+                "MongoDB Atlas",
+                "GitHub"
               ],
-              DURATION: "2020 — 2021",
-              EMPLOYMENT_TYPE: "Full-Stack Project",
-              IMAGES: GAMEZONIA_CAROUSEL_IMAGES,
+              DURATION: "11/2020 — 11/2021",
+              EMPLOYMENT_TYPE: "Part-Time",
               LINKS: {
                 WEBSITE: "gamezonia.com",
                 LOGO: "assets/imgs/gamezonia.png",
@@ -1042,58 +1022,53 @@ export class TranslationService {
             }
           },
           GAMEZONIA: {
-            TITLE: "Full-Stack Engineer · Gamezonia",
-            DESCRIPTION: "Diseñé y construí una plataforma de comercio electrónico Full-Stack de extremo a extremo utilizando Node.js, Express y GraphQL con Apollo Server en el backend, junto con Angular y RxJS en el frontend. Arquitecturé autenticación segura con JWT, notificaciones transaccionales automáticas por email con Nodemailer, flujos de pago y clientes con Stripe, gestión dinámica de catálogo y despliegues optimizados en la nube.",
+            TITLE: "Web Engineer · Gamezonia",
+            DESCRIPTION: "Desarrollé una plataforma de comercio electrónico integral usando el stack MEAN (MongoDB, Express.js, Angular, Node.js) combinado con GraphQL. El proyecto involucró implementar procesamiento de pagos con Stripe, notificaciones automáticas por email con Nodemailer, y desplegar la aplicación en varias plataformas incluyendo Netlify, Heroku y MongoDB Atlas.",
             DETAILED_PAGE: {
               ROLE_AND_RESPONSIBILITIES: {
-                DESCRIPTION: "Como Lead Full-Stack Engineer en Gamezonia, diseñé la arquitectura modular de la plataforma desde cero tanto en el frontend como en el backend. Creé esquemas, mutaciones y resolvers de GraphQL personalizados conectados a MongoDB, implementé autenticación JWT con cifrado bcrypt y protección de rutas según roles, integré pasarela de pagos Stripe, desarrollé la interfaz responsiva en Angular con gestión modular de estado y optimicé las operaciones de base de datos en la nube."
+                DESCRIPTION: "Gamezonia es un proyecto de comercio electrónico innovador basado en el stack MEAN+G, integrando una tienda en línea completa junto con una solución de panel administrativo. Su arquitectura utiliza Angular en el frontend y Node.js con GraphQL en el backend, permitiendo autenticación segura con JWT, procesamiento de pagos a través de Stripe, y despliegue en la nube para proporcionar una experiencia robusta y escalable."
               },
               PROJECT_DESCRIPTION: {
-                DESCRIPTION: "Gamezonia abarca tanto una tienda orientada al cliente final como un panel administrativo completo de gestión. Sus funcionalidades clave incluyen paginación avanzada y filtrado dinámico mediante queries GraphQL, persistencia del carrito de compras, emisión automática de recibos de compra con Nodemailer, sincronización de clientes y cobros con Stripe, gestión de usuarios y rutinas de respaldo de base de datos para operaciones cloud escalables."
+                DESCRIPTION: "El proyecto se enfoca en desarrollar una solución de comercio electrónico integral que incluye un panel administrativo intuitivo para gestionar productos, usuarios y pedidos. Empleando Angular 9 para un frontend responsivo y Node.js con GraphQL para la API, implementa funcionalidades avanzadas como Lazy Loading, paginación, filtrado y respaldos automáticos, asegurando una solución eficiente adaptable a diversas necesidades."
               },
               CHALLENGES: [
                 {
-                  title: "Arquitectura de API GraphQL sobre MongoDB",
-                  description: "Diseño de esquemas GraphQL estructurados, resolvers de consulta y mutaciones utilizando Apollo Server para gestionar eficientemente catálogos de productos relacionales y órdenes compuestas sobre bases de datos de documentos."
+                  title: "Integración de GraphQL en un Stack MEAN",
+                  description: "Implementar GraphQL como API en lugar de REST usando Apollo Server y adaptar la estructura de resolvers y schemas para una gestión eficiente de datos."
                 },
                 {
-                  title: "Integración Segura de Pagos de Extremo a Extremo",
-                  description: "Desarrollo de un flujo de compra robusto con Stripe API, gestionando el registro de clientes, procesamiento de transacciones, generación de recibos por correo y manejo en tiempo real de estados de cobro."
+                  title: "Optimización del Frontend con Angular 9",
+                  description: "Adaptar plantillas HTML dentro del proyecto Angular, mejorar el rendimiento con Lazy Loading y optimizar la experiencia del usuario en una aplicación de gran escala."
                 },
                 {
-                  title: "Sincronización de Estado y Autenticación Modular",
-                  description: "Sincronización de tokens de autenticación JWT entre los guards de Angular y los headers HTTP de Apollo, garantizando la persistencia de sesión y seguridad para usuarios y administradores."
+                  title: "Despliegue Sin Costos",
+                  description: "Configurar correctamente el backend en Heroku, el frontend en Netlify y la base de datos en MongoDB Atlas, asegurando una arquitectura escalable sin costos adicionales."
                 }
               ],
               LEARNINGS: [
-                "Dominio profundo del lenguaje de definición de esquemas (SDL) de GraphQL, resolvers y arquitectura Apollo Server en Node.js.",
-                "Implementación de patrones de autenticación seguros con JWT, encriptación bcrypt de contraseñas y autorización basada en roles.",
-                "Desarrollo de soluciones de pago para ecommerce listas para producción integradas con Stripe API y correos transaccionales con Nodemailer.",
-                "Optimización del rendimiento frontend en Angular mediante carga perezosa de módulos (lazy loading), servicios reactivos y jerarquía limpia de componentes.",
-                "Arquitectura y despliegue de soluciones cloud escalables utilizando MongoDB Atlas, Netlify y servidores de aplicaciones."
+                "Profundización del conocimiento en Angular y GraphQL con Apollo Server.",
+                "Gestión avanzada de autenticación y seguridad en aplicaciones web.",
+                "Optimización de rendimiento de aplicaciones MEAN.",
+                "Implementación de pagos con Stripe en comercio electrónico.",
+                "Gestión de despliegues en la nube usando herramientas gratuitas."
               ],
               TECHNOLOGIES: [
-                "Angular",
+                "Angular 9",
                 "Node.js",
                 "GraphQL",
-                "Apollo Server",
-                "Express",
                 "MongoDB",
-                "MongoDB Atlas",
-                "Stripe API",
+                "Express",
                 "JWT",
+                "Stripe",
                 "Nodemailer",
-                "RxJS",
-                "HTML",
-                "CSS / SCSS",
-                "Git",
-                "GitHub",
+                "NgBootstrap",
                 "Netlify",
-                "Heroku"
+                "Heroku",
+                "MongoDB Atlas",
+                "GitHub"
               ],
-              DURATION: "2020 — 2021",
-              EMPLOYMENT_TYPE: "Proyecto Full-Stack",
-              IMAGES: GAMEZONIA_CAROUSEL_IMAGES,
+              DURATION: "11/2020 — 11/2021",
+              EMPLOYMENT_TYPE: "Tiempo Parcial",
               LINKS: {
                 WEBSITE: "gamezonia.com",
                 LOGO: "assets/imgs/gamezonia.png",
