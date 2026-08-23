@@ -2,10 +2,10 @@ export const projects = [
     {
         "id": "gamezonia",
         "type": "project",
-        "title": "Web Engineer",
+        "title": "Full-Stack Engineer",
         "company": "Gamezonia",
-        "date": " 11/2020 — 11/2021",
-        "duration": "Part-Time",
+        "date": "11/2020 — 11/2021",
+        "duration": "Proyecto Personal",
         "description": "Gamezonia es un proyecto innovador de comercio electrónico basado en el stack MEAN+G, que integra una tienda online completa junto con una solución de panel de administración. Su arquitectura utiliza Angular en el frontend y Node.js con GraphQL en el backend, permitiendo autenticación segura con JWT, procesamiento de pagos mediante Stripe y despliegue en la nube para brindar una experiencia robusta y escalable.",
         "project_description": "El proyecto se centra en desarrollar un ecommerce integral que incorpora un panel de administración intuitivo para la gestión de productos, usuarios y pedidos. Empleando Angular 9 para un frontend responsivo y Node.js con GraphQL para la API, se implementan funcionalidades avanzadas como Lazy Loading, paginación, filtros y backups automáticos, garantizando una solución eficiente y adaptable a diversas necesidades.",
         "technologies": [
@@ -73,7 +73,18 @@ export const projects = [
             "assets": "assets/imgs/gamezonia.png"
         },
         "images": [
-            "/assets/gamezonia-preview.png"
+            "assets/imgs/gamezonia/gamezonia_01.jpeg",
+            "assets/imgs/gamezonia/gamezonia_02.jpeg",
+            "assets/imgs/gamezonia/gamezonia_03.jpeg",
+            "assets/imgs/gamezonia/gamezonia_04.jpeg",
+            "assets/imgs/gamezonia/gamezonia_05.jpeg",
+            "assets/imgs/gamezonia/gamezonia_06.jpeg",
+            "assets/imgs/gamezonia/gamezonia_07.jpeg",
+            "assets/imgs/gamezonia/gamezonia_08.jpeg",
+            "assets/imgs/gamezonia/gamezonia_09.jpeg",
+            "assets/imgs/gamezonia/gamezonia_10.jpeg",
+            "assets/imgs/gamezonia/gamezonia_11.jpeg",
+            "assets/imgs/gamezonia/gamezonia_12.png"
         ]
     },
     {
@@ -198,10 +209,10 @@ export const projects_ingles = [
     {
         "id": "gamezonia",
         "type": "project",
-        "title": "Web Engineer",
+        "title": "Full-Stack Engineer",
         "company": "Gamezonia",
         "date": "11/2020 — 11/2021",
-        "duration": "Part-Time",
+        "duration": "Personal Project",
         "description": "Gamezonia is an innovative e-commerce project based on the MEAN+G stack, integrating a full online store along with an admin panel solution. Its architecture utilizes Angular on the frontend and Node.js with GraphQL on the backend, enabling secure authentication with JWT, payment processing via Stripe, and cloud deployment to provide a robust and scalable experience.",
         "project_description": "The project focuses on developing a comprehensive e-commerce solution that includes an intuitive admin panel for managing products, users, and orders. Employing Angular 9 for a responsive frontend and Node.js with GraphQL for the API, it implements advanced functionalities such as Lazy Loading, pagination, filtering, and automatic backups, ensuring an efficient solution adaptable to diverse needs.",
         "technologies": [
@@ -269,7 +280,18 @@ export const projects_ingles = [
             "assets": "assets/imgs/gamezonia.png"
         },
         "images": [
-            "/assets/gamezonia-preview.png"
+            "assets/imgs/gamezonia/gamezonia_01.jpeg",
+            "assets/imgs/gamezonia/gamezonia_02.jpeg",
+            "assets/imgs/gamezonia/gamezonia_03.jpeg",
+            "assets/imgs/gamezonia/gamezonia_04.jpeg",
+            "assets/imgs/gamezonia/gamezonia_05.jpeg",
+            "assets/imgs/gamezonia/gamezonia_06.jpeg",
+            "assets/imgs/gamezonia/gamezonia_07.jpeg",
+            "assets/imgs/gamezonia/gamezonia_08.jpeg",
+            "assets/imgs/gamezonia/gamezonia_09.jpeg",
+            "assets/imgs/gamezonia/gamezonia_10.jpeg",
+            "assets/imgs/gamezonia/gamezonia_11.jpeg",
+            "assets/imgs/gamezonia/gamezonia_12.png"
         ]
     },
     {
@@ -386,15 +408,5 @@ export const projects_ingles = [
             "Time Management Fundamentals"
         ],
         "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Front-End Engineer specialized in Angular. I build scalable and maintainable applications with a focus on frontend architecture, performance, UI/UX, and API integration. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I am currently co-founder of XTECHARG and Eventloop.ar."
-    }
-];
-"certifications": [
-    "Complete Web Development with HTML5, CSS3, JS, AJAX, PHP, and MySQL",
-    "Node: From Zero to Expert",
-    "JavaScript: From Zero to the Details (ES5)",
-    "Angular: From Zero to Expert (Angular 10+)",
-    "Time Management Fundamentals"
-],
-    "profile_summary": "I am Luca Alberto Daniel Mendoza, a Senior Front-End Engineer specialized in Angular. I build scalable and maintainable applications with a focus on frontend architecture, performance, UI/UX, and API integration. I worked as a Frontend Developer at Siete Ideas from 2022 to 2026, and I am currently co-founder of XTECHARG and Eventloop.ar."
     }
 ];
