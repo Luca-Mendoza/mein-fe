@@ -25,6 +25,21 @@ export const EVENT_LOOP_CAROUSEL_IMAGES: string[] = [
   'assets/imgs/eventloop_screenshot_14.svg',
 ];
 
+export const GAMEZONIA_CAROUSEL_IMAGES: string[] = [
+  'assets/imgs/gamezonia/gamezonia_01.jpeg',
+  'assets/imgs/gamezonia/gamezonia_02.jpeg',
+  'assets/imgs/gamezonia/gamezonia_03.jpeg',
+  'assets/imgs/gamezonia/gamezonia_04.jpeg',
+  'assets/imgs/gamezonia/gamezonia_05.jpeg',
+  'assets/imgs/gamezonia/gamezonia_06.jpeg',
+  'assets/imgs/gamezonia/gamezonia_07.jpeg',
+  'assets/imgs/gamezonia/gamezonia_08.jpeg',
+  'assets/imgs/gamezonia/gamezonia_09.jpeg',
+  'assets/imgs/gamezonia/gamezonia_10.jpeg',
+  'assets/imgs/gamezonia/gamezonia_11.jpeg',
+  'assets/imgs/gamezonia/gamezonia_12.png',
+];
+
 @Injectable({
   providedIn: 'root'
 })
@@ -533,6 +548,7 @@ export class TranslationService {
               ],
               DURATION: "11/2020 — 11/2021",
               EMPLOYMENT_TYPE: "Part-Time",
+              IMAGES: GAMEZONIA_CAROUSEL_IMAGES,
               LINKS: {
                 WEBSITE: "gamezonia.com",
                 LOGO: "assets/imgs/gamezonia.png",
@@ -1069,6 +1085,7 @@ export class TranslationService {
               ],
               DURATION: "11/2020 — 11/2021",
               EMPLOYMENT_TYPE: "Tiempo Parcial",
+              IMAGES: GAMEZONIA_CAROUSEL_IMAGES,
               LINKS: {
                 WEBSITE: "gamezonia.com",
                 LOGO: "assets/imgs/gamezonia.png",

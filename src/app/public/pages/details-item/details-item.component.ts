@@ -420,6 +420,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
+      images: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.IMAGES'),
       links: {
         name: 'Gamezonia',
         link: 'https://luca-mendoza.github.io/Frontend-meang-online-shop/#/',

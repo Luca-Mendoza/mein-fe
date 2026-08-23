@@ -73,7 +73,18 @@ export const projects = [
             "assets": "assets/imgs/gamezonia.png"
         },
         "images": [
-            "/assets/gamezonia-preview.png"
+            "assets/imgs/gamezonia/gamezonia_01.jpeg",
+            "assets/imgs/gamezonia/gamezonia_02.jpeg",
+            "assets/imgs/gamezonia/gamezonia_03.jpeg",
+            "assets/imgs/gamezonia/gamezonia_04.jpeg",
+            "assets/imgs/gamezonia/gamezonia_05.jpeg",
+            "assets/imgs/gamezonia/gamezonia_06.jpeg",
+            "assets/imgs/gamezonia/gamezonia_07.jpeg",
+            "assets/imgs/gamezonia/gamezonia_08.jpeg",
+            "assets/imgs/gamezonia/gamezonia_09.jpeg",
+            "assets/imgs/gamezonia/gamezonia_10.jpeg",
+            "assets/imgs/gamezonia/gamezonia_11.jpeg",
+            "assets/imgs/gamezonia/gamezonia_12.png"
         ]
     },
     {
@@ -269,7 +280,18 @@ export const projects_ingles = [
             "assets": "assets/imgs/gamezonia.png"
         },
         "images": [
-            "/assets/gamezonia-preview.png"
+            "assets/imgs/gamezonia/gamezonia_01.jpeg",
+            "assets/imgs/gamezonia/gamezonia_02.jpeg",
+            "assets/imgs/gamezonia/gamezonia_03.jpeg",
+            "assets/imgs/gamezonia/gamezonia_04.jpeg",
+            "assets/imgs/gamezonia/gamezonia_05.jpeg",
+            "assets/imgs/gamezonia/gamezonia_06.jpeg",
+            "assets/imgs/gamezonia/gamezonia_07.jpeg",
+            "assets/imgs/gamezonia/gamezonia_08.jpeg",
+            "assets/imgs/gamezonia/gamezonia_09.jpeg",
+            "assets/imgs/gamezonia/gamezonia_10.jpeg",
+            "assets/imgs/gamezonia/gamezonia_11.jpeg",
+            "assets/imgs/gamezonia/gamezonia_12.png"
         ]
     },
     {
