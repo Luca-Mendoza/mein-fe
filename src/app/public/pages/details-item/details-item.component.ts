@@ -397,9 +397,9 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       id: 'gamezonia',
       type: this.detailCopy('Project', 'Proyecto'),
       company: 'Gamezonia',
-      title: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.TITLE'),
-      date: '2023',
-      duration: 'Personal Project',
+      title: 'Full-Stack Engineer',
+      date: '11/2020 — 11/2021',
+      duration: this.detailCopy('Personal Project', 'Proyecto Personal'),
       summary: this.detailCopy(
         'MEAN+GraphQL e-commerce project with admin workflows, authentication, payments, email notifications and cloud deployment.',
         'Proyecto ecommerce MEAN+GraphQL con panel administrativo, autenticación, pagos, notificaciones por email y despliegue cloud.'
@@ -420,6 +420,7 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
       challenges: challenges,
       learnings: learnings,
       technologies: technologies,
+      images: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.IMAGES'),
       links: {
         name: 'Gamezonia',
         link: 'https://luca-mendoza.github.io/Frontend-meang-online-shop/#/',
