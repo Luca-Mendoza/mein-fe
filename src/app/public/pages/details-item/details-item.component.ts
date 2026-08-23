@@ -395,25 +395,25 @@ export class DetailsItemComponent implements OnInit, OnDestroy {
     
     this.item = {
       id: 'gamezonia',
-      type: this.detailCopy('Project', 'Proyecto'),
+      type: this.detailCopy('Full-Stack Project', 'Proyecto Full-Stack'),
       company: 'Gamezonia',
       title: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.TITLE'),
-      date: '2023',
-      duration: 'Personal Project',
+      date: '2020 — 2021',
+      duration: this.detailCopy('Full-Stack Engineer', 'Full-Stack Engineer'),
       summary: this.detailCopy(
-        'MEAN+GraphQL e-commerce project with admin workflows, authentication, payments, email notifications and cloud deployment.',
-        'Proyecto ecommerce MEAN+GraphQL con panel administrativo, autenticación, pagos, notificaciones por email y despliegue cloud.'
+        'End-to-end MEAN+G e-commerce platform with GraphQL API, Apollo Server, Node.js backend, Stripe payments, Nodemailer automated receipts and Angular frontend.',
+        'Plataforma ecommerce Full-Stack MEAN+G con API GraphQL, Apollo Server, backend Node.js, cobros Stripe, correos transaccionales Nodemailer y cliente Angular.'
       ),
       focus: [
         'Angular',
-        'GraphQL',
-        this.detailCopy('E-commerce', 'Ecommerce'),
-        this.detailCopy('Cloud deployment', 'Deploy cloud')
+        'Node.js & Express',
+        'GraphQL / Apollo',
+        'Stripe API & MongoDB Atlas'
       ],
       highlights: [
-        this.detailCopy('Built the storefront and admin panel flows.', 'Construí flujos de tienda y panel administrativo.'),
-        this.detailCopy('Integrated JWT authentication, Stripe and Nodemailer.', 'Integré autenticación JWT, Stripe y Nodemailer.'),
-        this.detailCopy('Deployed frontend, backend and database on cloud platforms.', 'Desplegué frontend, backend y base de datos en plataformas cloud.')
+        this.detailCopy('Architected complete backend with Node.js, Express, Apollo Server & MongoDB.', 'Arquitecturé backend completo con Node.js, Express, Apollo Server y MongoDB.'),
+        this.detailCopy('Integrated JWT authentication, Stripe API payments and Nodemailer notifications.', 'Integré autenticación JWT, cobros con Stripe API y notificaciones Nodemailer.'),
+        this.detailCopy('Engineered responsive Angular storefront and admin dashboard.', 'Desarrollé cliente responsivo Angular y panel de control administrativo.')
       ],
       description: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.ROLE_AND_RESPONSIBILITIES.DESCRIPTION'),
       project_description: this.translationService.translate('HOME.PROJECTS_SECTION.GAMEZONIA.DETAILED_PAGE.PROJECT_DESCRIPTION.DESCRIPTION'),
